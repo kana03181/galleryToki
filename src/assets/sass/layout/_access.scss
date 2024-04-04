@@ -1,0 +1,39 @@
+@charset 'UTF-8';
+@use "sass:math";
+@use "../global" as *;
+
+/*
+  access_top
+-----------------------------------------------------*/
+
+.l-access {
+  &__index {
+    margin: 0 0 calc(88 / 320 * 100vw); //viw:320-1023px
+
+    @include mq(md) {
+      margin: 0 0 calc(88 / 768 * 100vw); //viw:320-1023px
+    }
+
+    @include mq(lg) {
+      margin: 0;
+    }
+  }
+
+  &__contents {
+    padding-top: clamp(72 / 16 * 1rem, 4.142rem + 1.79vw, 80 / 16 * 1rem); //viw:320-767px
+
+    @include mq(md) {
+      padding-top: clamp(100 / 16 * 1rem, 2.485rem + 7.84vw, 120 / 16 * 1rem); //viw:768-1023px
+    }
+    @include mq(lg) {
+      width: calc(672 / 1280 * 100vw);
+      max-width: 1000px;
+      margin: auto;
+      // padding-left: calc(32 / 1024 * 100vw);
+    }
+
+    // @include mq(xl) {
+    //   padding-left: calc(32 / 1280 * 100vw);
+    // }
+  }
+}

@@ -1,0 +1,11 @@
+@charset 'UTF-8';
+@use "sass:math";
+@use "../global" as *;
+
+/*
+  Base
+-----------------------------------------------------*/
+*[lang="en"] {
+  font-family: "Fira Sans", sans-serif;
+  // text-transform: capitalize;
+}

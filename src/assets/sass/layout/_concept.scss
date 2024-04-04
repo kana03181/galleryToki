@@ -1,0 +1,18 @@
+@charset 'UTF-8';
+@use "sass:math";
+@use "../global" as *;
+
+/*
+  concept
+-----------------------------------------------------*/
+.l-concept {
+  margin-bottom: pxToRem(80px);
+
+  @include mq(md) {
+    margin-bottom: calc(100 / 768 * 100vw);
+  }
+
+  @include mq(lg) {
+    margin-bottom: clamp(100 / 16 * 1rem, -28.75rem + 54.69vw, 160 / 16 * 1rem); //viw:1024-1280px
+  }
+}

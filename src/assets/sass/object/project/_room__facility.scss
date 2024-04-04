@@ -1,0 +1,135 @@
+@charset 'UTF-8';
+@use "sass:math";
+@use "../../global" as *;
+
+/*
+  room__facility
+*/
+
+.p-room__facility__slide {
+  margin-bottom: pxToRem(40px);
+
+  @include mq(md) {
+    margin-bottom: pxToRem(72px);
+  }
+
+  &:last-of-type {
+    margin-bottom: pxToRem(32px);
+
+    @include mq(md) {
+      margin-bottom: pxToRem(64px);
+    }
+  }
+}
+
+.p-room__facility__text__wrap {
+  width: 89.5%;
+  padding: pxToRem(32px) 0 pxToRem(24px) pxToRem(8px);
+  text-align: left;
+
+  @include mq(md) {
+    width: 100%;
+    padding: pxToRem(40px) 0 pxToRem(32px);
+    text-align: center;
+  }
+
+  @include mq(lg) {
+    padding: pxToRem(40px) 0 pxToRem(80px);
+  }
+}
+
+.p-room__facility__text {
+  font-size: pxToRem(15px);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  line-height: 1.8;
+
+  @include mq(md) {
+    font-size: pxToRem(16px);
+  }
+}
+
+.p-room__facility__name {
+  position: relative;
+  padding: 0 0 pxToRem(24px) pxToRem(36px);
+  color: $secondary-text-color;
+  font-size: clamp(20 / 16 * 1rem, 1.083rem + 0.83vw, 24 / 16 * 1rem); //最小：20px 最大：24px viw:320-1280px
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 1.35;
+
+  @include mq(md) {
+    padding: 0 0 pxToRem(28px) pxToRem(56px);
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: clamp(14 / 16 * 1rem, 0.833rem + 0.21vw, 16 / 16 * 1rem); //viw:320-1280px
+    left: 0;
+    width: 20px;
+    height: 1px;
+    background-color: $secondary-text-color;
+
+    @include mq(md) {
+      width: 40px;
+    }
+  }
+}
+
+.p-room__facility__swiper {
+  overflow-x: hidden;
+}
+
+.p-room__facility__image {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+  aspect-ratio: 288 / 191;
+
+  @include mq(lg) {
+    aspect-ratio: 500 / 336;
+  }
+}
+
+.p-room__facility__image img {
+  object-fit: cover;
+  height: 100%;
+}
+
+.p-swiper__wrapper {
+  display: flex;
+}
+
+.p-room__facility__contents {
+  position: relative;
+  width: 100%;
+  max-width: 691px;
+  margin: auto;
+
+  @include mq(lg) {
+    margin: 0;
+  }
+}
+
+.p-room__facility__contents:nth-child(even) {
+  &::before {
+    left: 0;
+    border-radius: 65px 0 0 65px;
+  }
+}
+
+.p-room__facility__slides {
+  width: 100%;
+  margin: auto;
+
+  padding-bottom: pxToRem(32px);
+
+  @include mq(md) {
+    padding-bottom: pxToRem(56px);
+  }
+
+  @include mq(lg) {
+    padding-bottom: pxToRem(64px);
+  }
+}

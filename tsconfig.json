@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "sourceMap": true,
+    "target": "es5",
+    "module": "es2015",
+    "moduleResolution": "node",
+    "noImplicitAny": false,
+    "lib": ["dom", "ES5","ScriptHost","ES2015.Core"]
+  }
+}

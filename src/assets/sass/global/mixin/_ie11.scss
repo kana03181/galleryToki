@@ -1,0 +1,11 @@
+@charset 'UTF-8';
+@use "../setting" as *;
+@use "sass:map";
+
+//  IE11
+//--------------------------------------------
+@mixin ie11() {
+  @media all and (-ms-high-contrast: none) {
+    @content;
+  }
+}

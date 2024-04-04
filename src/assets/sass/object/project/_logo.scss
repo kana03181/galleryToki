@@ -1,0 +1,40 @@
+@charset 'UTF-8';
+@use "sass:math";
+@use "../../global" as *;
+
+/*
+  Logo
+*/
+
+.p-logo {
+  flex: 1 0 auto;
+  font-size: 1rem;
+
+  &.-footer {
+    text-align: center;
+
+    @include mq(lg) {
+      text-align: left;
+    }
+  }
+}
+
+.p-logo__link {
+  display: inline-block;
+  margin: 0 auto;
+
+  &.-header {
+    width: calc(80 / 320 * 100vw);
+    max-width: 80px;
+
+    @include mq(md) {
+      width: calc(120 / 768 * 100vw);
+      max-width: 120px;
+    }
+
+    @include mq(lg) {
+      width: calc(140 / 1024 * 100vw);
+      max-width: 140px;
+    }
+  }
+}

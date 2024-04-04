@@ -1,0 +1,19 @@
+@charset 'UTF-8';
+@use "sass:math";
+@use "../global" as *;
+/*
+  Footer
+-----------------------------------------------------*/
+.l-footer {
+  padding: pxToRem(64px) 0 pxToRem(5px);
+  clear: both;
+  background-color: $secondary-accent-color;
+
+  @include mq(md) {
+    padding: pxToRem(80px) 0 pxToRem(5px);
+  }
+
+  @include mq(lg) {
+    padding: pxToRem(40px) 0 pxToRem(5px);
+  }
+}

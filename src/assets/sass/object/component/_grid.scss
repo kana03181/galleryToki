@@ -1,0 +1,561 @@
+@charset 'UTF-8';
+@use "sass:math";
+@use "../../global" as *;
+
+/*
+  grid
+*/
+
+.c-grid {
+  &__items {
+    &.-kitchen {
+      @include mq(md) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+      }
+    }
+  }
+
+  &__item {
+    &.-mainImg {
+      grid-area: 1 / 1 / 2 / 3;
+
+      @include mq(lg) {
+        grid-area: 1 / 1 / 3 / 2;
+      }
+    }
+
+    &.-thumbnailImg {
+      grid-area: 2 / 1 / 3 / 2;
+      align-self: end;
+      width: 43.29%;
+
+      @include mq(md) {
+        width: 39.366%;
+        margin-left: calc(40 / 768 * 100vw);
+      }
+
+      @include mq(lg) {
+        grid-area: 1 / 2 / 2 / 3;
+        width: 100%;
+        margin-left: 0;
+        justify-self: center;
+      }
+    }
+
+    &.-button {
+      grid-area: 2 / 2 / 3 / 3;
+      width: 50%;
+      max-width: 140px;
+
+      @include mq(lg) {
+        grid-area: 2 / 2 / 3 / 3;
+        justify-self: center;
+      }
+    }
+
+    &.-living__Text {
+      @include mq(lg) {
+        align-self: flex-end;
+        width: 57%;
+      }
+
+      @include mq(xl) {
+        width: 62%;
+      }
+    }
+
+    &.-kitchen__facility {
+      @include mq(lg) {
+        grid-area: 1 / 1 / 2 / 2;
+      }
+    }
+
+    &.-kitchenware {
+      @include mq(lg) {
+        grid-area: 1 / 2 / 2 / 4;
+      }
+    }
+
+    &.-seasoning {
+      @include mq(lg) {
+        grid-area: 2 / 1 / 3 / 3;
+      }
+    }
+
+    &.-drink {
+      @include mq(lg) {
+        grid-area: 2 / 3 / 3 / 4;
+      }
+    }
+
+    &.-other {
+      @include mq(lg) {
+        grid-area: 3 / 1 / 4 / 4;
+      }
+    }
+
+    //room1 設備
+    &.-bed__single.-room1 {
+      grid-area: 1 / 1 / 2 / 2;
+    }
+
+    &.-hangerRack {
+      grid-area: 2 / 1 / 3 / 2;
+    }
+
+    &.-map {
+      grid-area: 3 / 1 / 4 / 2;
+    }
+
+    &.-deskLamp {
+      grid-area: 4 / 1 / 5 / 2;
+
+      @include mq(lg) {
+        grid-area: 1 / 2 / 2 / 3;
+      }
+    }
+
+    &.-airconditioner1 {
+      grid-area: 5 / 1 / 6 / 2;
+      @include mq(lg) {
+        grid-area: 2 / 2 / 3 / 3;
+      }
+    }
+
+    &.-sofa__single {
+      grid-area: 1 / 2 / 2 / 3;
+      @include mq(lg) {
+        grid-area: 3 / 2 / 4 / 3;
+      }
+    }
+
+    &.-chair {
+      grid-area: 2 / 2 / 3 / 3;
+      @include mq(lg) {
+        grid-area: 1 / 3 / 2 / 4;
+      }
+    }
+
+    &.-desk {
+      grid-area: 3 / 2 / 4 / 3;
+      @include mq(lg) {
+        grid-area: 2 / 3 / 3 / 4;
+      }
+    }
+
+    &.-mirror1 {
+      grid-area: 4 / 2 / 5 / 3;
+      @include mq(lg) {
+        grid-area: 3 / 3 / 4 / 4;
+      }
+    }
+
+    //room2 設備
+    &.-airconditioner2 {
+      grid-area: 1 / 1 / 2 / 2;
+    }
+
+    &.-bed__dobble {
+      grid-area: 2 / 1 / 3 / 2;
+    }
+
+    &.-compo {
+      grid-area: 3 / 1 / 4 / 2;
+    }
+
+    &.-mirror2 {
+      grid-area: 1 / 2 / 2 / 3;
+    }
+
+    &.-bed__single.-room2 {
+      grid-area: 2 / 2 / 3 / 3;
+    }
+
+    //キッチン 設備
+    &.-microwave {
+      grid-area: 1 / 1 / 2 / 2;
+    }
+
+    &.-refrigerator {
+      grid-area: 2 / 1 / 3 / 2;
+    }
+
+    &.-racemaker {
+      grid-area: 3 / 1 / 4 / 2;
+
+      @include mq(md) {
+        grid-area: 1 / 2 / 2 / 3;
+      }
+
+      @include mq(lg) {
+        grid-area: 3 / 1 / 4 / 2;
+      }
+    }
+
+    &.-gus {
+      grid-area: 1 / 2 / 2 / 3;
+
+      @include mq(md) {
+        grid-area: 2 / 2 / 3 / 3;
+      }
+
+      @include mq(lg) {
+        grid-area: 1 / 2 / 2 / 3;
+      }
+    }
+
+    &.-toaster {
+      grid-area: 2 / 2 / 3 / 3;
+
+      @include mq(md) {
+        grid-area: 1 / 3 / 2 / 4;
+      }
+
+      @include mq(lg) {
+        grid-area: 2 / 2 / 3 / 3;
+      }
+    }
+
+    &.-kettle {
+      grid-area: 3 / 2 / 4 / 3;
+
+      @include mq(md) {
+        grid-area: 2 / 3 / 3 / 4;
+      }
+
+      @include mq(lg) {
+        grid-area: 3 / 2 / 4 / 3;
+      }
+    }
+
+    //キッチン 調理器具
+    &.-fryingPan {
+      grid-area: 1 / 1 / 2 / 2;
+    }
+
+    &.-pot {
+      grid-area: 2 / 1 / 3 / 2;
+    }
+
+    &.-ladle {
+      grid-area: 3 / 1 / 4 / 2;
+    }
+
+    &.-whisk {
+      grid-area: 4 / 1 / 5 / 2;
+
+      @include mq(md) {
+        grid-area: 1 / 2 / 2 / 3;
+      }
+    }
+
+    &.-turner {
+      grid-area: 5 / 1 / 6 / 2;
+
+      @include mq(md) {
+        grid-area: 2 / 2 / 3 / 3;
+      }
+    }
+
+    &.-peeler {
+      grid-area: 1 / 2 / 2 / 3;
+
+      @include mq(md) {
+        grid-area: 3 / 2 / 4 / 3;
+      }
+    }
+
+    &.-kitchenKnife {
+      grid-area: 2 / 2 / 3 / 3;
+
+      @include mq(md) {
+        grid-area: 1 / 3 / 2 / 4;
+      }
+    }
+
+    &.-bowl {
+      grid-area: 3 / 2 / 4 / 3;
+
+      @include mq(md) {
+        grid-area: 2 / 3 / 3 / 4;
+      }
+    }
+
+    &.-colander {
+      grid-area: 4 / 2 / 5 / 3;
+
+      @include mq(md) {
+        grid-area: 3 / 3 / 4 / 4;
+      }
+    }
+
+    &.-cuttingBoard {
+      grid-area: 5 / 2 / 6 / 3;
+
+      @include mq(md) {
+        grid-area: 1 / 4 / 2 / 5;
+      }
+
+      @include mq(lg) {
+        grid-area: 1 / 4 / 2 / 5;
+      }
+    }
+
+    //キッチン 調理料
+    &.-solt {
+      grid-area: 1 / 1 / 2 / 2;
+    }
+
+    &.-paper {
+      grid-area: 2 / 1 / 3 / 2;
+    }
+
+    &.-mayonnaise {
+      grid-area: 3 / 1 / 4 / 2;
+    }
+
+    &.-ketchup {
+      grid-area: 4 / 1 / 5 / 2;
+
+      @include mq(md) {
+        grid-area: 1 / 2 / 2 / 3;
+      }
+    }
+
+    &.-dressing {
+      grid-area: 5 / 1 / 6 / 2;
+
+      @include mq(md) {
+        grid-area: 2 / 2 / 3 / 3;
+      }
+    }
+
+    &.-soysauce {
+      grid-area: 1 / 2 / 2 / 3;
+
+      @include mq(md) {
+        grid-area: 3 / 2 / 4 / 3;
+      }
+    }
+
+    &.-sake {
+      grid-area: 2 / 2 / 3 / 3;
+
+      @include mq(md) {
+        grid-area: 1 / 3 / 2 / 4;
+      }
+    }
+
+    &.-mirin {
+      grid-area: 3 / 2 / 4 / 3;
+
+      @include mq(md) {
+        grid-area: 2 / 3 / 3 / 4;
+      }
+    }
+
+    &.-oil {
+      grid-area: 4 / 2 / 5 / 3;
+
+      @include mq(md) {
+        grid-area: 3 / 3 / 4 / 4;
+      }
+    }
+
+    &.-sugur {
+      grid-area: 5 / 2 / 6 / 3;
+
+      @include mq(md) {
+        grid-area: 1 / 4 / 2 / 5;
+      }
+    }
+
+    //キッチン その他
+    &.-plate {
+      grid-area: 1 / 1 / 2 / 2;
+    }
+
+    &.-bowl-small {
+      grid-area: 2 / 1 / 3 / 2;
+    }
+
+    &.-glass {
+      grid-area: 3 / 1 / 4 / 2;
+    }
+
+    &.-sponge {
+      grid-area: 4 / 1 / 5 / 2;
+
+      @include mq(md) {
+        grid-area: 1 / 2 / 2 / 3;
+      }
+    }
+
+    &.-kitchenSorp {
+      grid-area: 5 / 1 / 6 / 2;
+
+      @include mq(md) {
+        grid-area: 2 / 2 / 3 / 3;
+      }
+    }
+
+    &.-knife {
+      grid-area: 1 / 2 / 2 / 3;
+
+      @include mq(md) {
+        grid-area: 3 / 2 / 4 / 3;
+      }
+    }
+
+    &.-fork {
+      grid-area: 2 / 2 / 3 / 3;
+
+      @include mq(md) {
+        grid-area: 1 / 3 / 2 / 4;
+      }
+    }
+
+    &.-spoon {
+      grid-area: 3 / 2 / 4 / 3;
+
+      @include mq(md) {
+        grid-area: 2 / 3 / 3 / 4;
+      }
+    }
+
+    &.-chopstick {
+      grid-area: 4 / 2 / 5 / 3;
+
+      @include mq(md) {
+        grid-area: 3 / 3 / 4 / 4;
+      }
+    }
+
+    &.-papercup {
+      grid-area: 5 / 2 / 6 / 3;
+
+      @include mq(md) {
+        grid-area: 1 / 4 / 2 / 5;
+      }
+    }
+
+    //お風呂・洗面所
+    &.-MakeupRemover {
+      grid-area: 1 / 1 / 2 / 2;
+    }
+
+    &.-shampoo {
+      grid-area: 2 / 1 / 3 / 2;
+    }
+
+    &.-rinse {
+      grid-area: 3 / 1 / 4 / 2;
+    }
+
+    &.-bodysoap {
+      grid-area: 4 / 1 / 5 / 2;
+
+      @include mq(lg) {
+        grid-area: 1 / 2 / 2 / 3;
+      }
+    }
+
+    &.-facewash {
+      grid-area: 5 / 1 / 6 / 2;
+
+      @include mq(lg) {
+        grid-area: 2 / 2 / 3 / 3;
+      }
+    }
+
+    &.-toothpaste {
+      grid-area: 6 / 1 / 7 / 2;
+
+      @include mq(lg) {
+        grid-area: 3 / 2 / 4 / 3;
+      }
+    }
+
+    &.-hanger {
+      grid-area: 1 / 2 / 2 / 3;
+
+      @include mq(lg) {
+        grid-area: 1 / 3 / 2 / 4;
+      }
+    }
+
+    &.-laundryDetergent {
+      grid-area: 2 / 2 / 3 / 3;
+
+      @include mq(lg) {
+        grid-area: 2 / 3 / 3 / 4;
+      }
+    }
+
+    &.-softener {
+      grid-area: 3 / 2 / 4 / 3;
+
+      @include mq(lg) {
+        grid-area: 3 / 3 / 4 / 4;
+      }
+    }
+
+    &.-raundry {
+      grid-area: 4 / 2 / 5 / 3;
+
+      @include mq(lg) {
+        grid-area: 1 / 4 / 2 / 5;
+      }
+    }
+
+    &.-hairdryer {
+      grid-area: 5 / 2 / 6 / 3;
+
+      @include mq(lg) {
+        grid-area: 2 / 4 / 3 / 5;
+      }
+    }
+
+    &.-towel {
+      grid-area: 6 / 2 / 7 / 3;
+
+      @include mq(lg) {
+        grid-area: 3 / 4 / 4 / 5;
+      }
+    }
+    //リビング
+    &.-sofa {
+      grid-area: 1 / 1 / 2 / 2;
+    }
+
+    &.-livingTable {
+      grid-area: 2 / 1 / 3 / 2;
+    }
+
+    &.-airconditioner3 {
+      grid-area: 3 / 1 / 4 / 2;
+    }
+
+    &.-wifi {
+      grid-area: 1 / 2 / 2 / 3;
+    }
+
+    &.-airCleaner {
+      grid-area: 2 / 2 / 3 / 3;
+    }
+
+    &.-mirror3 {
+      grid-area: 3 / 2 / 4 / 3;
+    }
+
+    //access
+    // &.-access__index {
+    //   grid-area: 1 / 1 / 4 / 2;
+    // }
+
+    // &.-access__mainContents {
+    //   grid-area: 1 / 2 / 4 / 4;
+    // }
+  }
+}

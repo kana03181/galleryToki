@@ -1,0 +1,41 @@
+@charset 'UTF-8';
+@use "sass:math";
+@use "../global" as *;
+
+/*
+  about
+-----------------------------------------------------*/
+.l-about {
+  position: relative;
+  padding: pxToRem(32px) 0 pxToRem(64px);
+  overflow-x: hidden;
+
+  @include mq(md) {
+    padding: pxToRem(64px) 0 pxToRem(80px);
+  }
+
+  @include mq(lg) {
+    padding: 0 0 clamp(6.25rem, 1.25rem + 7.81vw, 7.5rem); //最小：100px 最大：120px viw:1024-1280px
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $background-color;
+
+    @include mq(md) {
+      right: 0;
+      left: initial;
+    }
+
+    @include mq(lg) {
+      content: initial;
+      border-radius: 65px 0 0 65px;
+    }
+  }
+}

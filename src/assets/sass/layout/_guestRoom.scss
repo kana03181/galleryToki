@@ -1,0 +1,11 @@
+@charset 'UTF-8';
+@use "sass:math";
+@use "../global" as *;
+
+/*
+  room1
+-----------------------------------------------------*/
+
+.l-guestRoom {
+  margin-bottom: clamp(72 / 16 * 1rem, 3.5rem + 5vw, 120 / 16 * 1rem); //viw:320-1024px
+}

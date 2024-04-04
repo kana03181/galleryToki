@@ -1,0 +1,29 @@
+@charset 'UTF-8';
+@use "sass:math";
+@use "../global" as *;
+
+/*
+  rooms
+-----------------------------------------------------*/
+
+.l-rooms {
+  @include mq(lg) {
+    margin-right: calc(-28.5 / 1024 * 100vw);
+  }
+
+  @include mq(xl) {
+    margin-right: calc(-28.5 / 1280 * 100vw);
+  }
+
+  // &.-room1 {
+  //   margin-top: clamp(24 / 16 * 1rem, 1.167rem + 1.67vw, 40 / 16 * 1rem); //viw:320-1024px
+  // }
+
+  &.-restRoom {
+    width: 100%;
+
+    @include mq(lg) {
+      margin-right: auto;
+    }
+  }
+}

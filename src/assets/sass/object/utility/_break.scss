@@ -1,0 +1,28 @@
+@charset 'UTF-8';
+@use "sass:math";
+@use "../../global" as *;
+
+//====================================
+//  Break
+//====================================
+
+/*
+  Break
+*/
+.u-break {
+  &.-xxs {
+    @include mq(sm) {
+      display: none;
+    }
+    display: inline-block;
+  }
+
+  &.-md {
+    @include mq(md) {
+      display: inline-block;
+    }
+    @include mq(lg) {
+      display: none;
+    }
+  }
+}

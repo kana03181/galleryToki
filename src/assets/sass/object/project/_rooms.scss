@@ -1,0 +1,261 @@
+@charset 'UTF-8';
+@use "sass:math";
+@use "../../global" as *;
+
+// /*
+//   room1
+// */
+
+.p-rooms {
+  &__contents {
+    position: relative;
+    width: 100%;
+    margin-top: clamp(48 / 16 * 1rem, 2.545rem + 2.27vw, 64 / 16 * 1rem); //viw:320-1024px
+    padding: 0 clamp(10 / 16 * 1rem, -0.227rem + 4.26vw, 40 / 16 * 1rem)
+      clamp(24 / 16 * 1rem, 0.591rem + 4.55vw, 56 / 16 * 1rem); //viw:320-1024px
+    border-radius: 15px 30px;
+    background-color: $base-color;
+
+    @include mq(md) {
+      max-width: 691px;
+      margin-left: calc(20 / 768 * 100vw);
+      padding: 0 calc(40 / 768 * 100vw) 0 0;
+      border-radius: 15px 65px;
+    }
+
+    @include mq(lg) {
+      width: calc(832 / 1024 * 100vw);
+      max-width: initial;
+      margin-left: calc(32 / 1024 * 100vw);
+      padding: pxToRem(16px) 0 0 0;
+    }
+
+    @include mq(xl) {
+      width: calc(994 / 1280 * 100vw);
+      margin-left: calc(32 / 1280 * 100vw);
+      padding: 0;
+    }
+  }
+
+  &__header {
+    width: 100%;
+    max-width: 900px;
+    margin: clamp(24 / 16 * 1rem, 1.273rem + 1.14vw, 32 / 16 * 1rem) auto
+      clamp(32 / 16 * 1rem, 1.091rem + 4.55vw, 64 / 16 * 1rem); //viw:320-1024px
+  }
+
+  &__text {
+    text-align: center;
+  }
+
+  &__sentence {
+    display: inline-block;
+    color: $caution-text-color;
+    font-size: clamp(16 / 16 * 1rem, 0.943rem + 0.28vw, 18 / 16 * 1rem); //viw:320-1024px
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    line-height: 1.6875;
+    text-align: left;
+    text-decoration: underline;
+  }
+
+  &__caution {
+    margin-top: pxToRem(32px);
+    padding: clamp(24 / 16 * 1rem, 1.273rem + 1.14vw, 32 / 16 * 1rem)
+      clamp(10 / 16 * 1rem, 0.341rem + 1.42vw, 20 / 16 * 1rem) clamp(24 / 16 * 1rem, 1.273rem + 1.14vw, 32 / 16 * 1rem)
+      clamp(10 / 16 * 1rem, 0.341rem + 1.42vw, 20 / 16 * 1rem); //viw:320-1024px
+    border-radius: 30px;
+    background-color: $base-color;
+
+    &__title {
+      margin-bottom: clamp(16 / 16 * 1rem, 0.833rem + 0.83vw, 24 / 16 * 1rem); //viw:320-1280px
+      font-size: clamp(18 / 16 * 1rem, 1.068rem + 0.28vw, 20 / 16 * 1rem); //viw:320-1024px
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-align: center;
+    }
+
+    &__list {
+      padding-left: pxToRem(15px);
+      list-style: initial;
+    }
+
+    &__marker {
+      font-size: clamp(15 / 16 * 1rem, 0.917rem + 0.1vw, 16 / 16 * 1rem); //viw:320-1280px
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      line-height: 1.5;
+
+      &::marker {
+        font-size: calc(8 / 16 * 1em);
+      }
+    }
+
+    &__text {
+      vertical-align: middle;
+    }
+  }
+
+  &__grid__items {
+    @include mq(md) {
+      padding: 0 0 clamp(40 / 16 * 1rem, 1.75rem + 1.56vw, 48 / 16 * 1rem)
+        clamp(40 / 16 * 1rem, 1.75rem + 1.56vw, 48 / 16 * 1rem);
+    }
+  }
+
+  &__items {
+    &.-room1 {
+      @include mq(lg) {
+        width: calc(452 / 1024 * 100vw);
+      }
+      @include mq(xl) {
+        width: calc(452 / 1280 * 100vw);
+      }
+    }
+
+    &.-room2 {
+      @include mq(lg) {
+        width: calc(290 / 1024 * 100vw);
+      }
+      @include mq(xl) {
+        width: calc(290 / 1280 * 100vw);
+      }
+    }
+
+    &.-living {
+      @include mq(lg) {
+        width: calc(248 / 1024 * 100vw);
+      }
+
+      @include mq(xl) {
+        width: calc(248 / 1280 * 100vw);
+      }
+    }
+  }
+
+  &__item {
+    display: flex;
+    gap: pxToRem(5px);
+    align-items: center;
+    line-height: 1.2;
+  }
+
+  &__icon {
+    display: inline-block;
+    width: clamp(20 / 16 * 1rem, 1.108rem + 0.71vw, 25 / 16 * 1rem);
+  }
+
+  &__itemName {
+    font-size: clamp(15 / 16 * 1rem, 0.909rem + 0.14vw, 16 / 16 * 1rem); //viw:320-1024px
+    font-weight: 500;
+    letter-spacing: 0.08em;
+  }
+}
+
+.p-rooms__caution__marker + .p-rooms__caution__marker {
+  padding-top: pxToRem(16px);
+}
+
+//** swiper main **//
+
+.p-rooms__swipers__wrapper {
+  margin-top: pxToRem(-24px);
+
+  @include mq(md) {
+    margin-top: pxToRem(-32px);
+  }
+
+  @include mq(lg) {
+    margin-left: pxToRem(-64px);
+  }
+}
+
+.p-rooms__swiper {
+  margin-left: calc(50% - 50vw);
+  overflow-x: hidden;
+
+  @include mq(md) {
+    width: 100%;
+    max-width: 691px;
+    margin-left: pxToRem(-40px);
+  }
+
+  @include mq(lg) {
+    width: 100%;
+    max-width: initial;
+    margin-left: 0;
+  }
+
+  &__image {
+    overflow: hidden;
+    border-radius: 0 50px 15px 0;
+    aspect-ratio: 294 / 195;
+
+    @include mq(md) {
+      border-radius: 15px 65px;
+    }
+
+    @include mq(lg) {
+      aspect-ratio: 790 / 546;
+    }
+
+    &.-restroom {
+      width: 100%;
+
+      @include mq(lg) {
+        width: 89.979%;
+      }
+    }
+
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.p-room__swiper__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+//** swiper thumbnail **//
+
+.p-rooms__swiper__thumbnail {
+  width: 17.177%;
+  margin-top: pxToRem(-32px);
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    gap: clamp(8 / 16 * 1rem, 0.045rem + 2.27vw, 24 / 16 * 1rem); //viw:320-1024px
+
+    @include mq(lg) {
+      flex-direction: column;
+      align-items: end;
+    }
+  }
+
+  &__slide {
+    width: 100% !important ;
+    height: auto;
+    transition: opacity 0.5s;
+    opacity: 0.5;
+  }
+
+  &__image {
+    overflow: hidden;
+    border-radius: 10px;
+    aspect-ratio: 180 / 120;
+
+    @include mq(lg) {
+      border-radius: 15px;
+    }
+  }
+}
+
+.p-rooms__swiper__thumbnail .swiper-slide.swiper-slide-thumb-active {
+  opacity: 1;
+}

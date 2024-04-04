@@ -1,0 +1,11 @@
+@charset 'UTF-8';
+@use "sass:math";
+@use "../../global" as *;
+
+/*
+  main
+*/
+
+.p-body.-room__facility {
+  background-color: $background-color;
+}

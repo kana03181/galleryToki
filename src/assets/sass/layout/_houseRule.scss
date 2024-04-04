@@ -1,0 +1,11 @@
+@charset 'UTF-8';
+@use "sass:math";
+@use "../global" as *;
+
+/*
+  houseRule
+-----------------------------------------------------*/
+
+.l-houseRule {
+  margin-bottom: clamp(64 / 16 * 1rem, 3.25rem + 3.75vw, 100 / 16 * 1rem);
+}

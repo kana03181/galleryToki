@@ -1,0 +1,166 @@
+@charset 'UTF-8';
+@use "sass:math";
+@use "../../global" as *;
+
+.c-common__title {
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-align: center;
+
+  &__en {
+    --h_size: 5px;
+    --w_size: 100%;
+    display: inline-block;
+    position: relative;
+    width: fit-content;
+    // padding-bottom: pxToRem(8px);
+    font-size: clamp(32 / 16 * 1rem, 1.018rem + 4.91vw, 54 / 16 * 1rem);
+    line-height: 0.8;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -13px;
+      left: 0;
+      width: var(--w_size);
+      height: var(--h_size);
+      background-color: $main-color;
+    }
+
+    &.-rooms {
+      &::before {
+        content: "";
+        background-color: initial;
+      }
+    }
+  }
+
+  &__ja {
+    display: block;
+    padding-top: pxToRem(16px);
+    font-family: "Zen Kaku Gothic Antique", sans-serif;
+    font-size: pxToRem(15px);
+    line-height: 1;
+  }
+
+  &__sideLine {
+    position: relative;
+    padding-left: clamp(32 / 16 * 1rem, 1.241rem + 3.79vw, 49 / 16 * 1rem); //viw:320-768px
+    color: $secondary-text-color;
+    font-size: clamp(24 / 16 * 1rem, 1.159rem + 1.7vw, 36 / 16 * 1rem); //viw:320-1024px
+    letter-spacing: 0.08em;
+    line-height: 1;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: calc(20 / 320 * 100vw);
+      height: 1px;
+      background-color: $secondary-text-color;
+
+      @include mq(md) {
+        width: pxToRem(40px);
+      }
+    }
+
+    &.-shareSpace {
+      font-size: clamp(22 / 16 * 1rem, 1.091rem + 1.42vw, 32 / 16 * 1rem); //viw:320-1280px
+    }
+
+    &.-cancelPolicy {
+      font-size: pxToRem(18px);
+      font-weight: 500;
+    }
+  }
+
+  &__circle {
+    position: relative;
+    padding-left: clamp(21 / 16 * 1rem, 1.199rem + 0.57vw, 25 / 16 * 1rem); //viw:320-1024px
+    color: $quaternary-text-color;
+    font-size: clamp(18 / 16 * 1rem, 0.841rem + 1.42vw, 28 / 16 * 1rem); //viw:320-1024px
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    line-height: 1;
+
+    @include mq(md) {
+      margin-left: pxToRem(-20px);
+    }
+
+    @include mq(lg) {
+      margin-left: pxToRem(-33px);
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: clamp(16 / 16 * 1rem, 0.886rem + 0.57vw, 20 / 16 * 1rem);
+      height: clamp(16 / 16 * 1rem, 0.886rem + 0.57vw, 20 / 16 * 1rem);
+      margin: auto 0;
+      border-radius: 50%;
+      background-color: $main-color;
+    }
+
+    &.-restroom {
+      @include mq(lg) {
+        margin-left: 0;
+      }
+    }
+  }
+
+  &.-access {
+    display: flex;
+    align-items: center;
+    column-gap: clamp(5 / 16 * 1rem, 0.227rem + 0.43vw, 8 / 16 * 1rem);
+    line-height: 0.5;
+  }
+
+  &__underline {
+    --h_size: 5px;
+    --w_size: 100%;
+    position: relative;
+    width: fit-content;
+    margin: 0 auto;
+    // padding-bottom: pxToRem(8px);
+    // border-bottom: 5px solid $main-color;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -13px;
+      left: 0;
+      width: var(--w_size);
+      height: var(--h_size);
+      background-color: $main-color;
+    }
+
+    &.-rooms {
+      font-size: clamp(20 / 16 * 1rem, 1.023rem + 1.14vw, 28 / 16 * 1rem); //viw:320-1024px
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      line-height: 1;
+    }
+  }
+}
+
+// .c-common__title__underline {
+//   width: fit-content;
+//   margin: 0 auto;
+//   padding-bottom: pxToRem(8px);
+//   border-bottom: 5px solid $main-color;
+//   font-weight: 700;
+//   letter-spacing: 0.08em;
+//   line-height: 1;
+
+//   &.-rooms {
+//     font-size: clamp(20 / 16 * 1rem, 1.023rem + 1.14vw, 28 / 16 * 1rem); //viw:320-1024px
+//   }
+// }
+
+.js-title > span {
+  display: inline-block;
+}

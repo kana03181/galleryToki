@@ -1,0 +1,152 @@
+@charset 'UTF-8';
+@use "sass:math";
+@use "../../global" as *;
+/*
+  Inview
+*/
+
+// ==============================
+//  Setings
+// ==============================
+$duration-fast: 0.5s;
+$duration-normal: 0.8s;
+$duration-slow: 2s;
+
+.c-inview {
+  backface-visibility: hidden;
+  transition-property: opacity, transform, letter-spacing;
+  transition-duration: $duration-normal;
+  transition-timing-function: $easing;
+  will-change: transform;
+
+  // ==============================
+  //  Option Duration
+  // ==============================
+  &[data-duration="fast"] {
+    transition-duration: $duration-fast;
+  }
+
+  &[data-duration="normal"] {
+    transition-duration: $duration-normal;
+  }
+
+  &[data-duration="slow"] {
+    transition-duration: $duration-slow;
+  }
+
+  // ==============================
+  //  Option Type
+  // ==============================
+
+  // FadeIn
+  &[data-type~="fadeIn"] {
+    &.is-inviewReady {
+      opacity: 0;
+    }
+    &.is-inviewActive {
+      opacity: 1;
+    }
+  }
+
+  // slideUpIn
+  &[data-type~="slideUpIn"] {
+    &.is-inviewReady {
+      transform: translateY(2.5rem);
+      opacity: 0;
+    }
+    &.is-inviewActive {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  // slideDownIn
+  &[data-type~="slideDownIn"] {
+    &.is-inviewReady {
+      transform: translateY(-2.5rem);
+      opacity: 0;
+    }
+
+    &.is-inviewActive {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  // slideLeftIn
+  &[data-type~="slideLeftIn"] {
+    &.is-inviewReady {
+      transform: translateX(2.5rem);
+    }
+
+    &.is-inviewActive {
+      transform: translateX(0);
+    }
+  }
+
+  // slideRightIn
+  &[data-type~="slideRightIn"] {
+    &.is-inviewReady {
+      transform: translateX(-2.5rem);
+      opacity: 0;
+    }
+
+    &.is-inviewActive {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  // slideCubeIn
+  &[data-type~="slideCubeIn"] {
+    &.is-inviewReady {
+      transform: translate3d(2.5rem, 2.5rem, 0);
+      opacity: 0;
+    }
+
+    &.is-inviewActive {
+      transform: translate3d(0, 0, 0);
+      opacity: 1;
+    }
+  }
+
+  // zoomIn
+  &[data-type~="zoomIn"] {
+    &.is-inviewReady {
+      transform: scale(0);
+    }
+    &.is-inviewActive {
+      transform: scale(1);
+    }
+  }
+
+  // Cut In
+  &[data-type="cutIn"] {
+    transition-property: clip-path, opacity;
+
+    transition-timing-function: $easing-cut;
+    &.is-inviewReady {
+      clip-path: polygon(0 0, 1px 0, 1px 100%, 0% 100%);
+      visibility: hidden;
+    }
+    &.is-inviewActive {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+      visibility: visible;
+    }
+  }
+
+  // グループ
+  &[data-group~="lg:3"] {
+    @include mq(lg) {
+      &:nth-child(1) {
+        transition-delay: 0s;
+      }
+      &:nth-child(2) {
+        transition-delay: 0.4s;
+      }
+      &:nth-child(3) {
+        transition-delay: 0.8s;
+      }
+    }
+  }
+}

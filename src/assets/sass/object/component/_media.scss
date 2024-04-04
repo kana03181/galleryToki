@@ -1,0 +1,40 @@
+@charset 'UTF-8';
+@use "sass:math";
+@use "../../global" as *;
+/*
+  Media
+*/
+.c-media {
+  display: flex;
+  position: relative;
+  flex: 1 0 auto;
+  flex-direction: row;
+  color: inherit;
+  text-decoration: none;
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    order: 1;
+    width: percentage(math.div(512px, 776px));
+  }
+
+  &__thumbnail {
+    position: relative;
+    flex-shrink: 0;
+
+    width: percentage(math.div(248px, 776px));
+  }
+
+  &__figure {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    img {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+@charset 'UTF-8';
+@use "sass:math";
+@use "../global" as *;
+
+/*
+  feature
+-----------------------------------------------------*/
+.l-feature {
+  padding: pxToRem(56px) 0 pxToRem(88px);
+  overflow-x: hidden;
+
+  @include mq(md) {
+    padding: pxToRem(80px) 0 pxToRem(100px);
+  }
+}

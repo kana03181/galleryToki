@@ -1,0 +1,11 @@
+@charset 'UTF-8';
+@use "sass:math";
+@use "../global" as *;
+
+/*
+  shareSpace
+-----------------------------------------------------*/
+
+.l-shareSpace {
+  margin-bottom: clamp(88 / 16 * 1rem, 3.417rem + 10.42vw, 188 / 16 * 1rem);
+}

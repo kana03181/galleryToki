@@ -1,0 +1,71 @@
+@charset 'UTF-8';
+@use "sass:math";
+@use "../../global" as *;
+
+/*
+  label
+*/
+
+.c-label {
+  &__number {
+    display: block;
+    position: absolute;
+    // border-radius: 30px 30px 0;
+    background-color: $main-color;
+    color: #fff;
+    font-family: $font-en;
+    font-weight: 700;
+    line-height: 1.2;
+
+    @include mq(md) {
+      top: -36px;
+      // padding: pxToRem(18px) pxToRem(20px) pxToRem(18px) pxToRem(19px);
+      border-radius: 50px 50px 0;
+      // font-size: pxToRem(28px);
+    }
+
+    @include mq(lg) {
+      top: -25px;
+      font-size: pxToRem(24px);
+    }
+
+    &.-feature {
+      top: -31px;
+      left: 0;
+      padding: clamp(15 / 16 * 1rem, 0.804rem + 0.67vw, 18 / 16 * 1rem)
+        clamp(18 / 16 * 1rem, 1.036rem + 0.45vw, 20 / 16 * 1rem)
+        clamp(16 / 16 * 1rem, 0.911rem + 0.45vw, 18 / 16 * 1rem)
+        clamp(17 / 16 * 1rem, 0.973rem + 0.45vw, 19 / 16 * 1rem); //viw:320-1024px
+      border-radius: 30px 30px 0;
+      font-size: clamp(24 / 16 * 1rem, 1.321rem + 0.89vw, 28 / 16 * 1rem); //viw:320-1024px
+      letter-spacing: 0.03em;
+
+      @include mq(md) {
+        top: -36px;
+      }
+
+      @include mq(lg) {
+        top: -25px;
+      }
+    }
+
+    &.-access {
+      top: -15px;
+      right: 0;
+      padding: clamp(8 / 16 * 1rem, 0.188rem + 1.56vw, 19 / 16 * 1rem)
+        clamp(8 / 16 * 1rem, 0.244rem + 1.28vw, 17 / 16 * 1rem);
+      border-radius: 30px 30px 30px 0;
+      font-size: clamp(12 / 16 * 1rem, 0.409rem + 1.7vw, 24 / 16 * 1rem); //viw:320-1024px
+      letter-spacing: 0.03em;
+      line-height: 1;
+
+      @include mq(md) {
+        top: -25px;
+      }
+
+      @include mq(lg) {
+        top: -30px;
+      }
+    }
+  }
+}

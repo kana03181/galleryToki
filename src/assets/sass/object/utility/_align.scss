@@ -1,0 +1,26 @@
+@charset 'UTF-8';
+@use "sass:math";
+@use "../../global" as *;
+
+//====================================
+//  Align
+//====================================
+
+/*
+  Align
+*/
+.u-align {
+  @each $device, $breakpoint in $breakpoints {
+    @media screen and (min-width: $breakpoint) {
+      &[data-align~="#{$device}:left"] {
+        text-align: left;
+      }
+      &[data-align~="#{$device}:center"] {
+        text-align: center;
+      }
+      &[data-align~="#{$device}:right"] {
+        text-align: right;
+      }
+    }
+  }
+}

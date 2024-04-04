@@ -1,0 +1,14 @@
+@charset 'UTF-8';
+@use "sass:math";
+@use "../../global" as *;
+/*
+  Embed
+*/
+
+.c-embed {
+  &.-video {
+    @include ar(16, 9);
+  }
+
+  width: 100%;
+}

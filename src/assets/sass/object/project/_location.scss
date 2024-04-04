@@ -1,0 +1,108 @@
+@charset 'UTF-8';
+@use "sass:math";
+@use "../../global" as *;
+
+/*
+  location
+*/
+
+.p-location__accordion {
+  padding: pxToRem(32px) 0;
+
+  @include mq(md) {
+    padding: pxToRem(48px) 0 clamp(32 / 16 * 1rem, -1.5rem + 9.38vw, 72 / 16 * 1rem); //viw: 768-1024px;
+  }
+}
+
+.p-location__shop__text,
+.p-location__text {
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-align: center;
+}
+
+.p-location__shop__text {
+  padding-top: pxToRem(24px);
+  font-size: clamp(15 / 16 * 1rem, 0.917rem + 0.1vw, 16 / 16 * 1rem); //最小：15px 最大：16px viw:320-1280px
+
+  @include mq(md) {
+    padding-top: pxToRem(32px);
+  }
+}
+
+.p-location__text {
+  font-size: clamp(18 / 16 * 1rem, 0.917rem + 0.1vw, 20 / 16 * 1rem); //最小：18px 最大：20px viw:320-1280px
+}
+
+.p-location__link {
+  transition: color 0.3s ease;
+  color: $primary-text-color;
+  text-decoration: underline;
+
+  &:hover {
+    color: $text-link-color-hover;
+  }
+}
+
+.p-location__shop__thumnail {
+  overflow: hidden;
+  border-radius: 10px;
+  aspect-ratio: 287 / 184;
+
+  @include mq(lg) {
+    aspect-ratio: 600 / 352;
+  }
+}
+
+.p-location__shop__thumnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 100%;
+
+  @include mq(lg) {
+    &.-cocosu {
+      object-position: 50% 75%;
+    }
+
+    &.-superkid {
+      object-position: 50% 90%;
+    }
+
+    &.-ashibi {
+      object-position: 50% 30%;
+    }
+
+    &.-momotaro {
+      object-position: 50% 20%;
+    }
+
+    &.-berushe {
+      object-position: 50% 20%;
+    }
+
+    &.-hakatatorokaratei {
+      object-position: 50% 90%;
+    }
+
+    &.-okashinotobira {
+      object-position: 50% 50%;
+    }
+  }
+}
+
+.p-location__swiper {
+  width: 100%;
+  margin: auto;
+  padding-bottom: pxToRem(35px);
+  overflow-x: hidden;
+
+  @include mq(md) {
+    max-width: 691px;
+    padding-bottom: pxToRem(40px);
+  }
+
+  @include mq(lg) {
+    max-width: 800px;
+  }
+}

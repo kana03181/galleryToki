@@ -1,0 +1,17 @@
+@charset 'UTF-8';
+@use "sass:math";
+@use "../../global" as *;
+
+/*
+  access_top
+*/
+.p-access {
+  position: relative;
+  background-color: $background-color;
+}
+
+.p-access__map {
+  aspect-ratio: 288 / 195;
+  display: block;
+  border-radius: pxToRem(10px);
+}

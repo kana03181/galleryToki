@@ -1,0 +1,42 @@
+@charset 'UTF-8';
+@use "sass:math";
+@use "../global" as *;
+
+/*
+  Header
+-----------------------------------------------------*/
+.l-header {
+  position: relative;
+  z-index: 5;
+  top: 0;
+  right: 0;
+  left: 0;
+  padding: pxToRem(12px) 0;
+  transform: translateY(-120%);
+  animation: toDown 1s cubic-bezier(0.02, 0.33, 0.58, 1) forwards;
+
+  @include mq(md) {
+    padding: pxToRem(24px) 0;
+  }
+
+  @include mq(lg) {
+    position: absolute;
+    padding: pxToRem(28px) 0;
+  }
+}
+
+@keyframes toDown {
+  from {
+    transform: translateY(-100%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+.l-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

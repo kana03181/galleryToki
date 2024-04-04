@@ -1,0 +1,63 @@
+@charset 'UTF-8';
+@use "sass:math";
+@use "../../global" as *;
+
+/*
+  cancelPolicy
+*/
+
+.p-cancelPolicy {
+  &__wrapper {
+    width: 100%;
+    background-color: $base-color;
+
+    @include mq(lg) {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+  }
+
+  &__text {
+    padding: clamp(32 / 16 * 1rem, 1.773rem + 1.14vw, 40 / 16 * 1rem) 0
+      clamp(24 / 16 * 1rem, 1.273rem + 1.14vw, 32 / 16 * 1rem);
+    text-align: center;
+  }
+
+  &__sentence {
+    display: inline-block;
+    padding-bottom: pxToRem(16px);
+    font-size: pxToRem(15px);
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    line-height: 1.8;
+    text-align: left;
+
+    @include mq(md) {
+      font-size: pxToRem(16px);
+    }
+  }
+
+  &__inner {
+    position: relative;
+    width: 100%;
+    max-width: 540px;
+    margin: auto;
+
+    @include mq(md) {
+      width: 88%;
+      max-width: 575px;
+    }
+    &.-top {
+      &::before {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: 42px;
+        left: 0;
+        width: 145px;
+        margin: 0 auto;
+        border: 1px solid $quaternary-text-color;
+      }
+    }
+  }
+}

@@ -1,0 +1,119 @@
+@charset 'UTF-8';
+@use "sass:math";
+@use "../../global" as *;
+
+//** swiper **//
+
+//slide pagination
+.swiper-pagination {
+  z-index: initial;
+  right: 0;
+  left: 0;
+}
+
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  opacity: initial;
+  background: $swiper-scrollbar-base;
+
+  @include mq(lg) {
+    width: 15px;
+    height: 15px;
+  }
+}
+
+.swiper-pagination-bullet + .swiper-pagination-bullet {
+  margin-left: pxToRem(5px);
+
+  @include mq(md) {
+    margin-left: pxToRem(8px);
+  }
+
+  @include mq(lg) {
+    margin-left: pxToRem(10px);
+  }
+}
+
+.swiper-pagination-bullet-active {
+  background: $main-color;
+}
+
+//slide button
+.swiper-button-prev,
+.swiper-button-next {
+  position: relative;
+  top: initial;
+  right: 0;
+  left: 0;
+  width: clamp(32 / 16 * 1rem, 1.196rem + 4.02vw, 50 / 16 * 1rem); //viw:320-768px
+  height: clamp(32 / 16 * 1rem, 1.196rem + 4.02vw, 50 / 16 * 1rem); //viw:320-768px
+  margin-top: initial;
+  border-radius: 50%;
+
+  // @include mq(md) {
+  //   width: 50px;
+  //   height: 50px;
+  // }
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+  }
+}
+
+.swiper-button-prev {
+  &::after {
+    // width: 17px;
+    width: clamp(17 / 16 * 1rem, 0.884rem + 0.89vw, 21 / 16 * 1rem); //viw:320-768px
+    height: calc(tan(60deg) * clamp(14 / 16 * 1rem, 0.741rem + 0.67vw, 17 / 16 * 1rem) / 2); //viw:320-768px
+    margin-right: clamp(9 / 16 * 1rem, 0.25rem + 1.56vw, 16 / 16 * 1rem); //viw:320-768px
+    transform: rotate(-90deg);
+    clip-path: polygon(50% 0, 100% 100%, 0 100%);
+
+    // @include mq(md) {
+    //   width: 21px;
+    //   height: calc(tan(60deg) * 17px / 2);
+    //   margin-right: pxToRem(16px);
+    // }
+  }
+}
+
+.swiper-button-next {
+  &::after {
+    width: clamp(17 / 16 * 1rem, 0.884rem + 0.89vw, 21 / 16 * 1rem); //viw:320-768px
+    height: calc(tan(60deg) * clamp(14 / 16 * 1rem, 0.741rem + 0.67vw, 17 / 16 * 1rem) / 2); //viw:320-768px
+    margin-left: clamp(9 / 16 * 1rem, 0.205rem + 1.79vw, 17 / 16 * 1rem);
+    transform: rotate(90deg);
+    clip-path: polygon(50% 0, 100% 100%, 0 100%);
+
+    // @include mq(md) {
+    //   width: 21px;
+    //   height: calc(tan(60deg) * 17px / 2);
+    //   margin-left: pxToRem(17px);
+    // }
+  }
+}
+
+.swiper-button-disabled {
+  opacity: 0 !important;
+}
+
+.swiper-container-horizontal > .swiper-scrollbar {
+  right: 0;
+  left: 0;
+  width: 72.32%;
+  margin: auto;
+  background-color: $swiper-scrollbar-base;
+
+  @include mq(lg) {
+    display: none;
+  }
+}
+
+.swiper-scrollbar-drag {
+  background-color: $main-color;
+}

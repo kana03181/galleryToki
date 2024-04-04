@@ -1,0 +1,37 @@
+@charset 'UTF-8';
+@use "sass:math";
+@use "../global" as *;
+
+/*
+  room__facility
+-----------------------------------------------------*/
+.l-room__facility {
+  position: relative;
+  padding: pxToRem(56px) 0 pxToRem(64px);
+
+  @include mq(md) {
+    padding: pxToRem(80px) 0 pxToRem(100px);
+  }
+
+  @include mq(lg) {
+    padding: pxToRem(100px) 0 pxToRem(100px);
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0 65px 65px 0;
+    background-color: #fff6c5;
+
+    @include mq(lg) {
+      right: initial;
+      left: 0;
+      width: 91.719%;
+    }
+  }
+}

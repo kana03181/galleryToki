@@ -1,0 +1,126 @@
+@charset 'UTF-8';
+@use "sass:math";
+@use "../../global" as *;
+
+.c-swiper {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  order: -1;
+  overflow-x: hidden;
+}
+
+.c-swiper__buttons {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  margin: pxToRem(24px) auto 0;
+  // padding-right: 5px;
+  // padding-left: 5px;
+
+  @include mq(md) {
+    margin: pxToRem(40px) auto 0;
+  }
+
+  &.-shareSpace {
+    width: 60.55%;
+
+    @include mq(lg) {
+      width: 70%;
+    }
+  }
+
+  &.-location {
+    width: 85%;
+    max-width: 463px;
+
+    @include mq(md) {
+      width: 78.872%;
+      max-width: initial;
+    }
+
+    @include mq(lg) {
+      width: 72%;
+    }
+  }
+
+  &.-rooms {
+    width: 27%;
+    margin: 0 0 0 auto;
+
+    @include mq(lg) {
+      width: 100%;
+      margin: 0;
+    }
+  }
+
+  &.-access {
+    width: 90.28%;
+    margin: pxToRem(24px) auto pxToRem(3px);
+
+    @include mq(md) {
+      width: 55%;
+      max-width: 600px;
+    }
+
+    @include mq(lg) {
+      width: 90.28%;
+    }
+  }
+}
+
+.c-swiper__button__next,
+.c-swiper__button__prev {
+  transition: background-color 0.4s cubic-bezier(0.33, -0.01, 0.66, 0.97);
+  border: 1px solid $main-color;
+  background-color: $main-color;
+
+  &::after {
+    transition: background-color 0.4s cubic-bezier(0.33, -0.01, 0.66, 0.97);
+    background-color: $base-color;
+  }
+
+  &:hover {
+    transition: background-color 0.4s cubic-bezier(0.33, -0.01, 0.66, 0.97);
+    border: 1px solid $main-color;
+    background-color: $base-color;
+
+    &::after {
+      transition: background-color 0.4s cubic-bezier(0.33, -0.01, 0.66, 0.97);
+      background-color: $main-color;
+    }
+  }
+}
+
+.c-swiper__button__next.-shareSpace,
+.c-swiper__button__prev.-shareSpace {
+  background-color: $base-color;
+
+  &::after {
+    background-color: $main-color;
+  }
+
+  &:hover {
+    background-color: $main-color;
+
+    &::after {
+      background-color: $base-color;
+    }
+  }
+}
+
+.c-swiper-pagination {
+  &.-location {
+    width: 54%;
+    max-width: 251px;
+    margin: 0 auto;
+    text-align: left;
+
+    @include mq(md) {
+      width: 100%;
+      max-width: initial;
+      text-align: center;
+    }
+  }
+}

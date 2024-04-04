@@ -1,0 +1,111 @@
+@charset 'UTF-8';
+@use "sass:math";
+@use "../../global" as *;
+
+/*
+  Button
+*/
+.c-button {
+  display: inline-block;
+  width: 100%;
+  border: 0;
+  border-radius: 30px;
+  background-color: transparent;
+  color: inherit;
+  font-size: pxToRem(16px);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  appearance: none;
+}
+
+.c-button.-common {
+  display: block;
+  max-width: 350px;
+  margin: 0 auto;
+  padding: pxToRem(16px);
+  transition: 0.3s ease-in-out;
+
+  @include mq(md) {
+    max-width: 400px;
+  }
+}
+
+.c-button.-book {
+  transition: color 0.6s cubic-bezier(0.05, 0.31, 0.73, 1.02),
+    background-color 0.6s cubic-bezier(0.05, 0.31, 0.73, 1.02);
+  border: 1px solid $primary-button-color;
+  background-color: $primary-button-color;
+  color: $base-color;
+
+  &:hover {
+    transition: color 0.6s cubic-bezier(0.05, 0.31, 0.73, 1.02),
+      background-color 0.6s cubic-bezier(0.05, 0.31, 0.73, 1.02);
+    background-color: $base-color;
+    color: $primary-button-color;
+  }
+
+  &.-footer {
+    @include mq(lg) {
+      padding: pxToRem(16px) pxToRem(24px);
+    }
+    @include mq(xl) {
+      padding: pxToRem(16px) clamp(24 / 16 * 1rem, -6.5rem + 10vw, 40 / 16 * 1rem);
+    }
+  }
+}
+
+.c-button.-toPage {
+  transition: color 0.6s cubic-bezier(0.05, 0.31, 0.73, 1.02),
+    background-color 0.6s cubic-bezier(0.05, 0.31, 0.73, 1.02);
+  border: 1px solid $primary-button-color;
+  background-color: $base-color;
+  color: $primary-button-color;
+
+  &:hover {
+    transition: color 0.6s cubic-bezier(0.05, 0.31, 0.73, 1.02),
+      background-color 0.6s cubic-bezier(0.05, 0.31, 0.73, 1.02);
+    background-color: $primary-button-color;
+    color: $base-color;
+  }
+}
+
+.c-button.-allow {
+  display: block;
+  width: clamp(1.875rem, 1.652rem + 1.12vw, 2.188rem); //最小：30px 最大：35px viw:320-768px
+  height: clamp(1.875rem, 1.652rem + 1.12vw, 2.188rem); //最小：30px 最大：35px viw:320-768px
+  margin: pxToRem(56px) auto pxToRem(16px);
+  padding: pxToRem(9px);
+  transition: transform 0.4s cubic-bezier(0.06, 0.18, 0.56, 1);
+  border-radius: 50%;
+  background-color: $base-color;
+
+  &:hover {
+    transform: scale(1.1, 1.1);
+    transition: transform 0.4s cubic-bezier(0.06, 0.18, 0.56, 1);
+  }
+
+  @include mq(md) {
+    width: 50px;
+    height: 50px;
+    margin: pxToRem(72px) auto pxToRem(32px);
+  }
+}
+
+.c-button.-reservation {
+  transition: color 0.6s cubic-bezier(0.05, 0.31, 0.73, 1.02),
+    background-color 0.6s cubic-bezier(0.05, 0.31, 0.73, 1.02);
+  border: 1px solid $primary-button-color;
+  border-radius: pxToRem(10px);
+  background-color: $base-color;
+  color: $primary-button-color;
+
+  &:hover {
+    transition: color 0.6s cubic-bezier(0.05, 0.31, 0.73, 1.02),
+      background-color 0.6s cubic-bezier(0.05, 0.31, 0.73, 1.02);
+    background-color: $primary-button-color;
+    color: $base-color;
+  }
+}

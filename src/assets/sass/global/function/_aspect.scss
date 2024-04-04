@@ -1,0 +1,21 @@
+@charset 'UTF-8';
+@use "sass:math";
+@use "../setting" as *;
+
+//  Aspect Ratio
+//--------------------------------------------
+
+@function gcd($x, $y) {
+  @if ($y == 0) {
+    @return $x;
+  } @else {
+    @return gcd($y, $x % $y);
+  }
+}
+
+@function aspect($width, $height) {
+  $g: gcd($width, $height);
+  $x: calc($width / $g);
+  $y: calc($height / $g);
+  @return #{$x} / #{$y};
+}

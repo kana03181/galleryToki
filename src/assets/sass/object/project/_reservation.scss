@@ -1,0 +1,22 @@
+@charset 'UTF-8';
+@use "sass:math";
+@use "../../global" as *;
+
+/*
+  reservation
+*/
+
+.p-reservation {
+  &__website__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: clamp(16 / 16 * 1rem, 0.833rem + 0.83vw, 24 / 16 * 1rem); //viw:320-1280px
+    margin-bottom: clamp(88 / 16 * 1rem, 4.417rem + 5.42vw, 140 / 16 * 1rem);
+  }
+
+  &__website {
+    width: 100%;
+  }
+}

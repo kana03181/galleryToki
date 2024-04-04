@@ -1,0 +1,160 @@
+@charset 'UTF-8';
+@use "sass:math";
+@use "../../global" as *;
+
+/*
+  Card
+*/
+.c-card {
+  display: flex;
+  position: relative;
+  flex: 1 1 auto;
+  flex-direction: column;
+  color: inherit;
+  text-decoration: none;
+
+  &__body {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    order: 1;
+  }
+
+  &__thumbnail {
+    order: 0;
+    overflow: hidden;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.c-card.-feature {
+  padding: pxToRem(16px);
+  border: 1px solid $main-color;
+  border-radius: 10px 50px 10px 10px;
+
+  @include mq(md) {
+    max-width: 691px;
+    margin: auto;
+    padding: pxToRem(32px);
+  }
+
+  @include mq(lg) {
+    max-width: fit-content;
+    margin: initial;
+    padding: pxToRem(24px);
+  }
+}
+
+.c-card.-plan {
+  position: relative;
+  width: 100%;
+  margin: auto;
+  padding: clamp(1rem, 0.643rem + 1.79vw, 1.5rem) clamp(0.75rem, -0.143rem + 4.46vw, 2rem)
+    clamp(3rem, 1.786rem + 3.57vw, 3.5rem) clamp(1.5rem, 0.429rem + 5.36vw, 3rem);
+  border-radius: 10px 30px 10px 42px;
+  background-color: rgba($color: $secondary-accent-color, $alpha: 0.55);
+
+  @include mq(md) {
+    width: 100%;
+    max-width: 691px;
+    padding: pxToRem(40px) pxToRem(32px) pxToRem(56px) pxToRem(48px);
+  }
+
+  @include mq(lg) {
+    padding: pxToRem(24px) pxToRem(24px) pxToRem(48px) pxToRem(48px);
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -12px;
+    right: -12px;
+    width: 100%;
+    height: 100%;
+    border: 1px solid $main-color;
+    border-radius: 10px 42px 10px 30px;
+
+    @include mq(md) {
+      top: -24px;
+      right: -24px;
+    }
+  }
+}
+
+.c-card__body.-plan {
+  padding-top: pxToRem(24px);
+
+  @include mq(md) {
+    padding-top: pxToRem(32px);
+  }
+
+  @include mq(lg) {
+    padding-top: pxToRem(24px);
+  }
+}
+
+.c-card__body.-feature {
+  align-items: flex-start;
+}
+
+.c-card__text {
+  font-weight: 500;
+}
+
+.c-card__text.-feature {
+  flex: 1 1 auto;
+  color: $secondary-text-color;
+  font-size: clamp(14 / 16 * 1rem, 0.833rem + 0.21vw, 16 / 16 * 1rem); //最小：14px 最大：16px viw:320-1280px
+  letter-spacing: 0.04em;
+  line-height: 1.7;
+
+  @include mq(md) {
+    font-size: pxToRem(16px);
+  }
+
+  @include mq(lg) {
+    min-height: 140px;
+  }
+}
+
+.c-card__text.-plan {
+  flex: 1 1 auto;
+  font-size: pxToRem(12px);
+  font-size: clamp(12 / 16 * 1rem, 0.667rem + 0.42vw, 16 / 16 * 1rem); //最小：12px 最大：16px viw:320-1280px
+  letter-spacing: 0.08em;
+  line-height: 1.97;
+
+  @include mq(xl) {
+    min-height: 168px;
+    line-height: 1.75;
+  }
+}
+
+.c-card__thumbnail.-feature {
+  border-radius: 10px 34px 10px 10px;
+  aspect-ratio: 256 / 181;
+
+  @include mq(md) {
+    aspect-ratio: 297 / 198;
+  }
+}
+
+.c-card__thumbnail.-plan {
+  border-radius: 10px;
+  aspect-ratio: 240 / 187;
+
+  @include mq(xl) {
+    aspect-ratio: 300 / 242;
+  }
+}
+
+.c-card__thumbnail.-plan img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}

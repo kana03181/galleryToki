@@ -1,0 +1,34 @@
+@charset 'UTF-8';
+@use "sass:math";
+@use "../global" as *;
+
+/*
+  access_top
+-----------------------------------------------------*/
+
+.l-access {
+  padding: pxToRem(56px) 0 pxToRem(88px);
+
+  @include mq(md) {
+    padding: clamp(80 / 16 * 1rem, 1.25rem + 7.81vw, 100 / 16 * 1rem) 0
+      clamp(100 / 16 * 1rem, 4.375rem + 3.91vw, 110 / 16 * 1rem);
+  }
+
+  @include mq(lg) {
+    margin-bottom: pxToRem(140px);
+  }
+}
+
+.l-access__map {
+  width: 100%;
+  margin: pxToRem(32px) auto pxToRem(40px);
+
+  @include mq(md) {
+    margin: pxToRem(40px) auto pxToRem(48px);
+  }
+
+  @include mq(lg) {
+    max-width: $lg-content-width;
+    aspect-ratio: 600 / 352;
+  }
+}

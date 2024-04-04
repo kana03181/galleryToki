@@ -1,0 +1,110 @@
+@charset 'UTF-8';
+@use "sass:math";
+@use "../global" as *;
+/*
+  Spacer
+-----------------------------------------------------*/
+.l-spacer {
+  @each $size, $val in $spaces {
+    &.-#{$size} {
+      padding: pxToRem(calc($val / 2)) 0;
+
+      @include mq(md) {
+        padding: pxToRem(calc($val / 1.5)) 0;
+      }
+
+      @include mq(lg) {
+        padding: pxToRem($val) 0;
+      }
+    }
+    &.-#{$size}Top {
+      padding-top: pxToRem(calc($val / 2));
+
+      @include mq(md) {
+        padding-top: pxToRem(calc($val / 1.5));
+      }
+
+      @include mq(lg) {
+        padding-top: pxToRem($val);
+      }
+    }
+    &.-#{$size}Bottom {
+      padding-bottom: pxToRem(calc($val / 2));
+
+      @include mq(md) {
+        padding-bottom: pxToRem(calc($val / 1.5));
+      }
+
+      @include mq(lg) {
+        padding-bottom: pxToRem($val);
+      }
+    }
+  }
+
+  @each $device, $breakpoint in $breakpoints {
+    @media screen and (min-width: $breakpoint) {
+      $ratio: 2;
+
+      @if $breakpoint >= 768px {
+        $ratio: 1.5;
+      }
+      @if $breakpoint >= 992px {
+        $ratio: 1;
+      }
+
+      @each $size, $val in $spaces {
+        @if $breakpoint == 0 or $breakpoint == 768px or $breakpoint == 992px {
+          &[data-space~="#{$size}"] {
+            padding: pxToRem(math.div($val, $ratio)) 0;
+          }
+          &[data-space~="#{$size}Top"] {
+            padding-top: pxToRem(math.div($val, $ratio));
+          }
+          &[data-space~="#{$size}Bottom"] {
+            padding-bottom: pxToRem(math.div($val, $ratio));
+          }
+        }
+
+        &[class][data-space~="#{$device}:#{$size}"] {
+          padding: pxToRem($val) 0;
+        }
+
+        &[class][data-space~="#{$device}:#{$size}Top"] {
+          padding-top: pxToRem($val);
+        }
+
+        &[class][data-space~="#{$device}:#{$size}Bottom"] {
+          padding-bottom: pxToRem($val);
+        }
+      }
+
+      &[class][data-space~="#{$device}:reset"] {
+        padding: 0;
+      }
+
+      &[class][data-space~="#{$device}:resetTop"] {
+        padding-top: 0;
+      }
+
+      &[class][data-space~="#{$device}:resetBottom"] {
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  &.-line {
+    border-bottom: 1px solid $primary-border-color;
+  }
+
+  &.-bgGrey {
+    background-color: #ddd;
+  }
+
+  &.-bgMain {
+    background-color: $main-color;
+  }
+
+  &.-overflow {
+    overflow: hidden;
+  }
+}

@@ -1,0 +1,20 @@
+@charset 'UTF-8';
+@use "sass:math";
+@use "../../global" as *;
+
+/*
+  TextField
+*/
+.c-textfield {
+  $this: &;
+  display: block;
+  width: 100%;
+  border: 0;
+  background-color: #fff;
+  font-size: pxToRem(16px);
+  appearance: none;
+
+  &::placeholder {
+    color: #a7a7a7;
+  }
+}

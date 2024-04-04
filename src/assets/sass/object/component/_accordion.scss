@@ -1,0 +1,390 @@
+@charset 'UTF-8';
+@use "sass:math";
+@use "../../global" as *;
+
+/*
+  accordion
+*/
+.c-accordion__items {
+  border: 2px solid $main-color;
+  border-radius: 10px;
+  background-color: $base-color;
+}
+
+.c-accordion__items + .c-accordion__items {
+  margin-top: pxToRem(24px);
+
+  @include mq(md) {
+    margin-top: pxToRem(32px);
+  }
+}
+
+.c-accordion__button {
+  position: relative;
+  width: 100%;
+  padding: clamp(1.125rem, 1.083rem + 0.21vw, 1.25rem) clamp(1rem, 0.958rem + 0.21vw, 1.125rem); //上下 最小：18px 最大：20px 左右 最小：16px 最大：18px viw:320-1280px
+  border: 0;
+  background-color: transparent;
+  color: inherit;
+  font-size: clamp(0.938rem, 0.917rem + 0.1vw, 1rem); //最小：15px 最大：16px viw:320-1280px
+  letter-spacing: 0.08em;
+  line-height: 1.4;
+  cursor: pointer;
+  appearance: none;
+
+  &.-faq {
+    font-weight: 500;
+    text-align: left;
+  }
+
+  // &::before {
+  //   content: "";
+  //   position: absolute;
+  //   z-index: -1;
+  //   top: 0;
+  //   right: 0;
+  //   bottom: 0;
+  //   left: 0;
+  //   border: 2px solid $main-color;
+  //   border-radius: 10px;
+  //   background-color: $base-color;
+  // }
+}
+
+.c-accordion__label {
+  color: $tertiary-text-color;
+}
+
+.c-accordion__label[title] {
+  text-decoration: none;
+}
+
+.c-accordion__contents {
+  display: flex;
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 12px;
+    height: 2px;
+    margin: auto 0;
+    background-color: $main-color;
+
+    @include mq(md) {
+      width: 15px;
+    }
+  }
+
+  &::after {
+    transform: rotate(90deg);
+    transition: transform 0.3s;
+  }
+}
+
+.c-accordion__button.active .c-accordion__contents::after {
+  transform: rotate(0deg);
+  transition: transform 0.3s;
+}
+
+.c-accordion__contents.-location {
+  justify-content: center;
+}
+
+.c-accordion__contents.-faq {
+  padding-right: pxToRem(24px);
+}
+
+.c-accordion__contents__text.-faq {
+  padding-left: pxToRem(8px);
+}
+
+.c-accordion__contents__text.-location {
+  padding-right: pxToRem(5px);
+  font-size: pxToRem(16px);
+  font-weight: 700;
+}
+
+.c-accordion__box__inner {
+  display: flex;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  line-height: 1.6;
+  text-align: left;
+
+  &.-faq {
+    padding: clamp(1rem, 0.958rem + 0.21vw, 1.125rem) clamp(2rem, 1.917rem + 0.42vw, 2.25rem)
+      clamp(1rem, 0.958rem + 0.21vw, 1.125rem) clamp(1rem, 0.958rem + 0.21vw, 1.125rem); //右以外 最小：16px 最大：18px viw:320-1280px 右 最小：32px 最大：36px viw:320-1280px
+
+    font-size: pxToRem(15px);
+  }
+
+  &.-location {
+    flex-direction: column;
+    padding: clamp(1rem, 0.667rem + 1.67vw, 2rem) clamp(2rem, 1.917rem + 0.42vw, 2.25rem)
+      clamp(1.5rem, 1.333rem + 0.83vw, 2rem) clamp(1rem, 0.958rem + 0.21vw, 1.125rem); //上 最小：16px 最大：32px viw:320-1280px 左 最小：16px 最大：18px viw:320-1280px 右 最小：32px 最大：36px viw:320-1280px 右 最小：24px 最大：32px viw:320-1280px
+  }
+}
+
+.c-accordion__text__wrap {
+  padding-bottom: pxToRem(24px);
+
+  @include mq(md) {
+    padding-bottom: pxToRem(32px);
+  }
+}
+
+.c-accordion__text.-caution {
+  color: $caution-text-color;
+  font-size: pxToRem(15px);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  line-height: 1.6;
+
+  @include mq(md) {
+    white-space: nowrap;
+  }
+}
+
+.c-accordion__box__list + .c-accordion__box__list {
+  position: relative;
+  padding-top: pxToRem(80px);
+
+  @include mq(md) {
+    padding-top: pxToRem(100px);
+  }
+
+  @include mq(lg) {
+    padding-top: pxToRem(120px);
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 40px;
+    right: 0;
+    left: 0;
+    width: 145px;
+    margin: 0 auto;
+    border-top: 1px solid $tertiary-text-color;
+
+    @include mq(md) {
+      top: 53px;
+    }
+
+    @include mq(lg) {
+      top: 65px;
+    }
+  }
+}
+
+.c-accordion__box__title {
+  width: fit-content;
+  padding: pxToRem(4px) pxToRem(15px);
+  border-radius: 15px;
+  color: $base-color;
+  font-size: pxToRem(13px);
+
+  @include mq(md) {
+    font-size: pxToRem(14px);
+  }
+
+  &.-restaurant {
+    background-color: $main-color;
+  }
+
+  &.-shop {
+    background-color: $tertiary-accent-color;
+  }
+
+  &.-life {
+    background-color: $quaternary-accent-color;
+  }
+
+  &.-time {
+    border-radius: 5px;
+    background-color: $quinary-accent-color;
+    color: $primary-text-color;
+    font-size: pxToRem(15px);
+
+    @include mq(md) {
+      font-size: pxToRem(16px);
+    }
+  }
+}
+
+.c-accordion__box__list__items + .c-accordion__box__list__items {
+  padding-top: pxToRem(16px);
+}
+
+.c-accordion__box__list__items:last-of-type .c-accordion__box__title.-time {
+  width: 161px;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+
+  @include mq(md) {
+    width: fit-content;
+  }
+}
+
+.c-accordion__box__items {
+  padding-top: pxToRem(16px);
+}
+
+.c-accordion__box__item {
+  display: flex;
+  align-items: center;
+  padding-top: pxToRem(8px);
+
+  &.-time {
+    min-height: pxToRem(56px);
+  }
+}
+
+.c-accordion__box__time {
+  display: flex;
+  position: relative;
+  align-items: center;
+
+  &.-car {
+    min-width: 90px;
+    padding-right: calc(1rem + 0.75vw);
+  }
+
+  &.-other {
+    position: relative;
+    min-width: 123px;
+    padding-left: pxToRem(16px);
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 1px;
+      height: 15px;
+      margin: auto 0;
+      background-color: $primary-text-color;
+    }
+  }
+}
+
+.c-accordion__box__time.-long {
+  @include mq(xs) {
+    padding-right: pxToRem(16px);
+  }
+}
+
+.c-accordion__box__time__text {
+  order: 1;
+  font-size: clamp(0.938rem, 0.917rem + 0.1vw, 1rem); //最小：15px 最大：16px viw:320-1280px
+  word-break: keep-all;
+  overflow-wrap: break-word;
+
+  &.-car {
+    padding-left: pxToRem(5px);
+  }
+}
+
+.p-accordion__box__imgs {
+  display: flex;
+  position: relative;
+  align-items: center;
+  min-width: pxToRem(50px);
+  margin-right: pxToRem(5px);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 1px;
+    height: 10px;
+    margin: auto 0;
+    background-color: $primary-text-color;
+
+    @include mq(md) {
+      left: 53%;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 1px;
+    height: 10px;
+    margin: auto 0;
+    transform: rotate(90deg);
+    background-color: $primary-text-color;
+
+    @include mq(md) {
+      left: 53%;
+    }
+  }
+}
+
+.p-accordion__box__img {
+  width: clamp(0.938rem, 0.58rem + 1.79vw, 1.438rem);
+
+  &.-car {
+    order: -1;
+  }
+
+  &.-bus {
+    position: relative;
+    order: 0;
+  }
+
+  &.-walk {
+    order: 0;
+  }
+}
+
+.p-accordion__box__img + .p-accordion__box__img {
+  margin-left: pxToRem(20px);
+}
+
+.c-accordion__box__text.-faq {
+  padding-left: pxToRem(8px);
+
+  @include mq(lg) {
+    padding-left: pxToRem(16px);
+  }
+}
+
+.c-accordion__box__text.-location {
+  font-size: clamp(0.938rem, 0.917rem + 0.1vw, 1rem);
+}
+
+.c-accordion__box__text.-location .-small {
+  font-size: pxToRem(12px);
+
+  @include mq(md) {
+    font-size: pxToRem(14px);
+  }
+}
+
+.c-accordion__box__text.-location + .c-accordion__box__text.-location {
+  padding-top: pxToRem(8px);
+
+  @include mq(md) {
+    padding-top: pxToRem(10px);
+  }
+}
+
+.js-accordion__box {
+  visibility: hidden;
+  height: 0;
+  overflow: hidden;
+  transition: opacity 1s;
+  opacity: 0;
+}

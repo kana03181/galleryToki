@@ -1,0 +1,199 @@
+@charset 'UTF-8';
+@use "sass:math";
+@use "../../global" as *;
+
+/*
+  feature
+*/
+.p-feature__grid {
+  padding: pxToRem(62px) 0 pxToRem(72px);
+
+  @include mq(md) {
+    padding: pxToRem(72px) 0 pxToRem(100px);
+  }
+
+  @include mq(xl) {
+    padding: pxToRem(72px) pxToRem(15px) pxToRem(100px);
+  }
+}
+
+.p-feature__card__titles {
+  flex: 1 1 auto;
+}
+
+// .p-feature__card__number {
+//   display: block;
+//   position: absolute;
+//   top: -31px;
+//   left: 0;
+//   padding: pxToRem(15px) pxToRem(18px) pxToRem(16px) pxToRem(17px);
+//   border-radius: 30px 30px 0;
+//   background-color: $main-color;
+//   color: #fff;
+//   font-family: $font-en;
+//   font-size: pxToRem(24px);
+//   font-weight: 700;
+//   line-height: 1.2;
+
+//   @include mq(md) {
+//     top: -36px;
+//     padding: pxToRem(18px) pxToRem(20px) pxToRem(18px) pxToRem(19px);
+//     border-radius: 50px 50px 0;
+//     font-size: pxToRem(32px);
+//   }
+
+//   @include mq(lg) {
+//     top: -25px;
+//     font-size: pxToRem(24px);
+//   }
+// }
+
+.p-feature__card__title {
+  display: block;
+  padding: pxToRem(16px) 0;
+  font-size: clamp(20 / 16 * 1rem, 1.167rem + 0.42vw, 24/ 16 * 1rem); //viw:320-1280px
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-align: left;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+
+  @include mq(md) {
+    padding: pxToRem(20px) 0;
+  }
+
+  @include mq(lg) {
+    padding: pxToRem(24px) 0;
+  }
+}
+
+.p-feature__purpose__title {
+  position: relative;
+  width: clamp(218 / 16 * 1rem, 9.205rem + 22.1vw, 317 / 16 * 1rem); //最小：218px 最大：317px viw:320-1280px
+  margin: 0 auto;
+  font-size: clamp(19 / 16 * 1rem, 0.786rem + 2.01vw, 28 / 16 * 1rem); //最小：19px 最大：28px viw:320-1280px
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: clamp(1.25rem, 0.987rem + 1.32vw, 1.563rem); //最小：20px 最大：25px viw:320-700px
+    background-color: $primary-text-color;
+  }
+
+  &::before {
+    bottom: -1px;
+    left: -13px;
+    transform: rotate(-45deg);
+
+    @include mq(md) {
+      left: -26 px;
+    }
+  }
+
+  &::after {
+    right: -10px;
+    bottom: -1px;
+    transform: rotate(45deg);
+
+    @include mq(md) {
+      right: -10px;
+    }
+  }
+}
+
+.js-feature__purpose__title span {
+  display: inline-block;
+}
+
+.p-feature__swiper {
+  margin-left: 11.785%;
+  padding-top: clamp(2rem, 1.318rem + 3.41vw, 3.5rem); //32px-56px min-:320-1024px
+
+  @include mq(md) {
+    margin-left: 21%;
+  }
+
+  @include mq(lg) {
+    margin-left: 0;
+  }
+}
+
+.p-feature__swiper-wrapper {
+  padding-bottom: pxToRem(40px);
+
+  @include mq(md) {
+    padding-bottom: pxToRem(64px);
+  }
+
+  @include mq(lg) {
+    justify-content: center;
+    gap: pxToRem(40px);
+  }
+}
+
+.p-feature__swiper-slide {
+  position: relative;
+  width: 46%;
+  min-width: 140px;
+
+  @include mq(md) {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+.p-feature__purpose__label__wrap {
+  position: absolute;
+  top: -14px;
+  left: -17px;
+  width: 40.63%;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.p-feature__purpose__label {
+  position: relative;
+  height: 0;
+  padding-top: 100%;
+  background-color: $secondary-accent-color;
+}
+
+.p-feature__purpose__label__text {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  left: 0;
+  margin: 0;
+  transform: translateY(-50%);
+  font-size: clamp(0.75rem, 0.616rem + 0.67vw, 0.938rem); //12-15px min-:320-768px
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  line-height: 1;
+  text-align: center;
+}
+
+.p-feature__purpose__label__word {
+  display: block;
+}
+
+.p-feature__purpose__image {
+  max-height: 299px;
+  padding: pxToRem(30px) pxToRem(35px);
+  padding: clamp(1.875rem, 0.179rem + 8.48vw, 4.25rem) clamp(2.188rem, 0.893rem + 6.47vw, 4rem); //上下30px-68px 左右35-64px min-:320-768px
+  border-radius: 999999px;
+  background-color: rgba($color: $primary-accent-color, $alpha: 0.8);
+
+  @include mq(md) {
+    padding: pxToRem(68px) pxToRem(64px);
+  }
+}
+
+.p-feature__purpose__image.-boy img {
+  aspect-ratio: 70 / 122;
+  object-fit: contain;
+}

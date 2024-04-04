@@ -1,0 +1,112 @@
+@charset 'UTF-8';
+@use "sass:math";
+@use "../../global" as *;
+
+/*
+  contact
+*/
+
+.p-contact {
+  &__header {
+    width: 100%;
+    max-width: 900px;
+    margin: clamp(24 / 16 * 1rem, 1.333rem + 0.83vw, 32 / 16 * 1rem) auto
+      clamp(32 / 16 * 1rem, 1.333rem + 3.33vw, 64 / 16 * 1rem); //viw:320-1280px
+    border: 1px solid $main-color;
+    border-radius: 30px;
+  }
+
+  &__text {
+    width: fit-content;
+    margin: auto;
+    padding: clamp(24 / 16 * 1rem, 1.273rem + 1.14vw, 32 / 16 * 1rem)
+      clamp(10 / 16 * 1rem, 0.341rem + 1.42vw, 20 / 16 * 1rem) clamp(24 / 16 * 1rem, 1.273rem + 1.14vw, 32 / 16 * 1rem)
+      clamp(10 / 16 * 1rem, 0.341rem + 1.42vw, 20 / 16 * 1rem); //viw:320-1024px
+  }
+
+  &__sentence {
+    font-size: clamp(15 / 16 * 1rem, 0.917rem + 0.1vw, 16 / 16 * 1rem); //viw:320-1280px
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    line-height: 1.6;
+  }
+}
+
+.p-contact__form {
+  width: 100%;
+  margin: auto;
+  margin-bottom: clamp(88 / 16 * 1rem, 5.167rem + 1.67vw, 104 / 16 * 1rem);
+
+  @include mq(md) {
+    width: fit-content;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: clamp(5 / 16 * 1rem, 0.25rem + 0.31vw, 8 / 16 * 1rem);
+  }
+
+  &__item {
+    &.-privacyPolicy {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      column-gap: clamp(5 / 16 * 1rem, 0.25rem + 0.31vw, 8 / 16 * 1rem);
+    }
+  }
+
+  &__title {
+    font-size: clamp(15 / 16 * 1rem, 0.917rem + 0.1vw, 16 / 16 * 1rem); //viw:320-1280px
+    font-weight: 500;
+    letter-spacing: 0.08em;
+  }
+
+  &__label {
+    display: inline-block;
+    margin-left: clamp(5 / 16 * 1rem, 0.25rem + 0.31vw, 8 / 16 * 1rem); //viw:320-1280px
+    color: $caution-text-color;
+    font-size: pxToRem(12px);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+  }
+
+  &__text {
+    font-size: clamp(15 / 16 * 1rem, 0.917rem + 0.1vw, 16 / 16 * 1rem); //viw:320-1280px
+    font-weight: 500;
+    letter-spacing: 0.08em;
+  }
+
+  &__textfield {
+    width: 100%;
+    padding: pxToRem(8px) pxToRem(16px);
+    border: none;
+    border-radius: pxToRem(5px);
+    background-color: $background-color-index;
+    appearance: none;
+  }
+
+  &__checkbox {
+    width: pxToRem(20px);
+    height: pxToRem(20px);
+    border: none;
+    border-radius: pxToRem(5px);
+    background-color: $background-color-index;
+    appearance: none;
+  }
+
+  &__link {
+    color: $primary-text-color;
+    font-weight: 700;
+    text-decoration: underline;
+  }
+
+  &__button {
+    padding-top: clamp(32 / 16 * 1rem, 1.833rem + 0.83vw, 40 / 16 * 1rem);
+  }
+}
+
+.p-contact__form__item + .p-contact__form__item {
+  padding-top: pxToRem(24px);
+}
