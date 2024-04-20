@@ -150,6 +150,152 @@
     font-weight: 500;
     letter-spacing: 0.08em;
   }
+
+  //** houseRule **//
+  &__houseRule {
+    &__wrapper {
+      @include mq(md) {
+        width: 88%;
+        max-width: 575px;
+        margin: 0 auto;
+      }
+
+      &.-top {
+        position: relative;
+        padding: 0 0 clamp(64 / 16 * 1rem, 3.333rem + 3.33vw, 96 / 16 * 1rem); //viw:320-1280px
+
+        &::before {
+          content: "";
+          position: absolute;
+          right: 0;
+          bottom: clamp(32 / 16 * 1rem, 1.667rem + 1.67vw, 48 / 16 * 1rem);
+          left: 0;
+          width: 145px;
+          margin: 0 auto;
+          border: 1px solid $quaternary-text-color;
+        }
+      }
+
+      &.-bottom {
+        position: relative;
+        padding: clamp(64 / 16 * 1rem, 3.333rem + 3.33vw, 96 / 16 * 1rem) 0 0; //viw:320-1280px
+
+        &::before {
+          content: "";
+          position: absolute;
+          // bottom: calc(24 / 320 * 100vw);
+          top: clamp(32 / 16 * 1rem, 1.667rem + 1.67vw, 48 / 16 * 1rem);
+          right: 0;
+          left: 0;
+          width: 145px;
+          margin: 0 auto;
+          border: 1px solid $quaternary-text-color;
+        }
+      }
+    }
+
+    &__time {
+      padding-bottom: pxToRem(12px);
+    }
+
+    &__text {
+      position: relative;
+      text-align: center;
+    }
+
+    &__list__text {
+      font-size: clamp(15 / 16 * 1rem, 0.917rem + 0.1vw, 16 / 16 * 1rem);
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      line-height: 1.8;
+      text-align: left;
+    }
+
+    &__lists {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      text-align: center;
+
+      &.-top {
+        max-width: 400px;
+        margin: auto;
+        padding-bottom: pxToRem(16px);
+        column-gap: pxToRem(16px);
+        gap: pxToRem(5px);
+
+        @include mq(md) {
+          padding-left: pxToRem(32px);
+        }
+      }
+
+      &.-middle {
+        max-width: 400px;
+        margin: auto;
+        padding-bottom: pxToRem(16px);
+        column-gap: pxToRem(16px);
+        gap: pxToRem(20px);
+
+        @include mq(md) {
+          max-width: 432px;
+          padding-left: pxToRem(32px);
+        }
+      }
+
+      &.-bottom {
+        padding-left: pxToRem(16px);
+        gap: pxToRem(8px);
+      }
+    }
+
+    &__list__item {
+      list-style-type: disc;
+      font-size: calc(8 / 16 * 1em);
+    }
+  }
+
+  //** common **//
+  &__content {
+    &__wrapper {
+      width: 100%;
+      padding: clamp(24 / 16 * 1rem, 0.591rem + 4.55vw, 56 / 16 * 1rem)
+        clamp(16 / 16 * 1rem, -0.136rem + 5.68vw, 56 / 16 * 1rem);
+      border-radius: 10px;
+      background-color: $base-color;
+
+      @include mq(lg) {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+    }
+
+    &__inner {
+      padding-top: clamp(32 / 16 * 1rem, 1.333rem + 3.33vw, 64 / 16 * 1rem);
+    }
+
+    &__text {
+      text-align: center;
+    }
+
+    &__sentence {
+      display: inline-block;
+      font-size: clamp(15 / 16 * 1rem, 0.917rem + 0.1vw, 16 / 16 * 1rem);
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      line-height: 1.8;
+      text-align: left;
+    }
+  }
+}
+
+.p-rooms__houseRule__lists .p-rooms__houseRule__list__item:last-child .p-rooms__houseRule__list__text {
+  word-break: keep-all;
+  overflow-wrap: break-word;
+
+  @include mq(md) {
+    display: flex;
+    flex-wrap: nowrap;
+  }
 }
 
 .p-rooms__caution__marker + .p-rooms__caution__marker {

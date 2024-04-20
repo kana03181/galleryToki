@@ -1,0 +1,100 @@
+@charset 'UTF-8';
+@use "sass:math";
+@use "../../global" as *;
+
+/*
+  privacyPolicy
+*/
+
+.p-privacyPolicy__content + .p-privacyPolicy__content {
+  margin-top: clamp(48 / 16 * 1rem, 2.667rem + 1.67vw, 64 / 16 * 1rem); //viw:320-1280px
+}
+
+.p-privacyPolicy {
+  &__bg {
+    padding: clamp(40 / 16 * 1rem, 2.167rem + 1.67vw, 56 / 16 * 1rem)
+      clamp(16 / 16 * 1rem, -0.167rem + 5.83vw, 72 / 16 * 1rem); //viw:320-1280px
+    border-radius: pxToRem(32px);
+    background-color: $base-color;
+  }
+
+  &__lead {
+    margin-bottom: clamp(48 / 16 * 1rem, 2.667rem + 1.67vw, 64 / 16 * 1rem); //viw:320-1280px
+    text-align: center;
+  }
+
+  &__title {
+    padding-bottom: clamp(16 / 16 * 1rem, 0.833rem + 0.83vw, 24 / 16 * 1rem); //viw:320-1280px
+    font-size: clamp(20 / 16 * 1rem, 1.167rem + 0.42vw, 24 / 16 * 1rem); //viw:320-1280px
+    letter-spacing: 0.03em;
+    line-height: 1;
+  }
+
+  &__lists {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: clamp(8 / 16 * 1rem, 0.333rem + 0.83vw, 16 / 16 * 1rem);
+  }
+
+  &__number {
+    display: inline-block;
+    padding-right: pxToRem(5px);
+  }
+
+  &__list__item {
+    font-size: clamp(15 / 16 * 1rem, 0.917rem + 0.1vw, 16 / 16 * 1rem); //viw:320-1280px
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    line-height: 1.8;
+
+    &.-lowercase {
+      list-style-type: lower-latin;
+    }
+
+    &.-number {
+      list-style-type: decimal;
+    }
+
+    &__wrap {
+      padding-left: pxToRem(32px);
+
+      &.-lowercase__list {
+        padding-top: clamp(8 / 16 * 1rem, 0.333rem + 0.83vw, 16 / 16 * 1rem);
+      }
+    }
+  }
+
+  &__text {
+    font-size: clamp(15 / 16 * 1rem, 0.917rem + 0.1vw, 16 / 16 * 1rem); //viw:320-1280px
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    line-height: 1.8;
+    text-align: left;
+
+    &.-lead {
+      display: inline-block;
+    }
+
+    &__link {
+      color: $primary-text-color;
+      text-decoration: underline;
+    }
+  }
+
+  &__address {
+    font-size: clamp(15 / 16 * 1rem, 0.917rem + 0.1vw, 16 / 16 * 1rem); //viw:320-1280px
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    line-height: 1.8;
+    text-align: left;
+
+    &.-tel {
+      color: $primary-text-color;
+    }
+  }
+}
+
+.p-privacyPolicy__lists + .p-privacyPolicy__lists {
+  margin-top: pxToRem(16px);
+}

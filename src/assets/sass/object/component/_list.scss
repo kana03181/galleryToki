@@ -56,7 +56,7 @@
       width: 100%;
       max-width: 400px;
       margin: auto;
-      padding-bottom: pxToRem(32px);
+      padding-bottom: pxToRem(16px);
       gap: pxToRem(5px);
       column-gap: pxToRem(16px);
 
@@ -69,7 +69,7 @@
       width: 100%;
       max-width: 400px;
       margin: auto;
-      padding-bottom: pxToRem(32px);
+      padding-bottom: pxToRem(16px);
       gap: pxToRem(20px);
       column-gap: pxToRem(16px);
 
@@ -77,25 +77,6 @@
         max-width: 432px;
         padding-left: pxToRem(32px);
       }
-    }
-
-    &.-cancelPolicy__top {
-      width: 100%;
-      max-width: 400px;
-      margin: auto;
-      padding: clamp(16 / 16 * 1rem, 0.773rem + 1.14vw, 24 / 16 * 1rem) 0
-        clamp(80 / 16 * 1rem, 4.545rem + 2.27vw, 96 / 16 * 1rem);
-      column-gap: pxToRem(16px);
-      gap: pxToRem(8px);
-    }
-
-    &.-cancelPolicy__bottom {
-      width: 100%;
-      max-width: 400px;
-      margin: auto;
-      padding-top: pxToRem(16px);
-      column-gap: pxToRem(16px);
-      gap: pxToRem(8px);
     }
   }
 
@@ -119,7 +100,7 @@
     &.-left::before {
       content: "";
       position: absolute;
-      width: 47px;
+      width: clamp(35 / 16 * 1rem, -2.176rem + 21.82vw, 47 / 16 * 1rem); //viw:320-375px
       margin: auto;
       border-bottom: 2px dotted;
     }
@@ -145,32 +126,13 @@
       right: 0;
     }
 
-    // &.-time {
-    //   justify-self: end;
-    // }
-
-    // &.-place {
-    //   @include mq(md) {
-    //     justify-self: end;
-    //   }
-    // }
-
-    // &.-fee {
-    //   @include mq(md) {
-    //     justify-self: end;
-    //   }
-    // }
-
     &__text {
       &.-smokingSpace,
       &.-parkingPlace {
         display: block;
-        text-align: justify;
+        word-break: keep-all;
+        overflow-wrap: break-word;
       }
     }
   }
-}
-
-.c-list__item__text.-smokingSpace + .c-list__item__text.-smokingSpace {
-  padding-top: pxToRem(8px);
 }

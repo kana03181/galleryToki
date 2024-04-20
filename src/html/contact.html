@@ -55,7 +55,7 @@
                   <li class="p-global-nav__item"><a href="#plan" class="p-global-nav__link"><span class="p-global-nav__text -en" lang="en">Plan</span><span class="p-global-nav__text -ja">料金</span></a></li>
                   <li class="p-global-nav__item"><a href="#faq" class="p-global-nav__link"><span class="p-global-nav__text -en" lang="en">Faq</span><span class="p-global-nav__text -ja">よくあるご質問</span></a></li>
                   <li class="p-global-nav__item"><a href="access.html" class="p-global-nav__link"><span class="p-global-nav__text -en" lang="en">Access</span><span class="p-global-nav__text -ja">アクセス</span></a></li>
-                  <li class="p-global-nav__item"><a href="#contact" class="p-global-nav__link"><span class="p-global-nav__text -en" lang="en">Contact</span><span class="p-global-nav__text -ja">お問い合わせ</span></a></li>
+                  <li class="p-global-nav__item"><a href="contact.html" class="p-global-nav__link"><span class="p-global-nav__text -en" lang="en">Contact</span><span class="p-global-nav__text -ja">お問い合わせ</span></a></li>
                 </ul>
                 <p class=" p-header__button"><a href="reservation.html" class="c-button -common -book">ご予約はこちら</a></p>
               </div>
@@ -77,51 +77,61 @@
       <section class="l-contact">
         <div class="l-container">
           <div class="p-contact__header">
-            <div class="p-contact__text js-toUp">
+            <div class="p-contact__text">
               <p class="p-contact__sentence">内容を確認し次第、できるだけ早くご連絡いたします。</p>
               <p class="p-contact__sentence">お急ぎの方はお電話よりお問い合わせください。</p>
             </div>
             <!-- /.p-contact__caution -->
           </div>
           <div class="p-contact__form">
-            <form action="#" method="post">
+            <form action="#" method="post" id="contactForm" class="contactForm">
                 <p class="p-contact__form__item">
                   <label class="p-contact__form__inner">
-                    <span class="p-contact__form__title">お名前<span class="p-contact__form__label">*必須項目</span></span>
-                    <span class="p-contact__form__box"><input type="text" name="name" class="p-contact__form__textfield" size="80" placeholder="例）山田太郎" required></span>
+                    <span class="p-contact__form__title">お名前<span class="p-contact__form__label">*必須</span></span>
+                    <span class="p-contact__form__box">
+                      <input type="text" name="name" class="p-contact__form__textfield js-form-name" size="80" placeholder="例）山田太郎" required>
+                    </span>
                   </label>
                 </p>
                 <p class="p-contact__form__item">
                   <label class="p-contact__form__inner">
-                    <span class="p-contact__form__title">お名前(フリガナ)<span class="p-contact__form__label">*必須項目</span></span>
-                    <span class="p-contact__form__box"><input type="text" name="name" class="p-contact__form__textfield" size="80" placeholder="例）ヤマダタロウ" required></span>
+                    <span class="p-contact__form__title">お名前(フリガナ)<span class="p-contact__form__label">*必須</span></span>
+                    <span class="p-contact__form__box">
+                      <input type="text" name="name" class="p-contact__form__textfield js-form-name" size="80" placeholder="例）ヤマダタロウ" required>
+                    </span>
                   </label>
                 </p>
                 <p class="p-contact__form__item">
                   <label class="p-contact__form__inner">
-                    <span class="p-contact__form__title">メールアドレス<span class="p-contact__form__label">*必須項目</span></span>
-                    <span class="p-contact__form__box"><input type="email" name="email" class="p-contact__form__textfield" size="80" placeholder="例）example@co.jp" required></span>
+                    <span class="p-contact__form__title">メールアドレス<span class="p-contact__form__label">*必須</span></span>
+                    <span class="p-contact__form__box">
+                      <input type="email" name="email" id="email" class="p-contact__form__textfield js-form-email" size="80" placeholder="例）example@co.jp" required>
+                    </span>
                   </label>
                 </p>
                 <p class="p-contact__form__item">
                   <label class="p-contact__form__inner">
-                    <span class="p-contact__form__title">電話番号<span class="p-contact__form__label">*必須項目</span></span>
-                    <span class="p-contact__form__box"><input type="tel" name="tel" class="p-contact__form__textfield" size="80" placeholder="例）000-0000-0000" required></span>
+                    <span class="p-contact__form__title">電話番号<span class="p-contact__form__label">*必須</span></span>
+                    <span class="p-contact__form__box">
+                      <input type="tel" name="tel" id="tel" class="p-contact__form__textfield js-form-tel" size="80" placeholder="例）000-0000-0000" required>
+                    </span>
                   </label>
                 </p>
                 <p class="p-contact__form__item">
                   <label class="p-contact__form__inner">
-                  <span class="p-contact__form__title">お問い合わせ内容<span class="p-contact__form__label">*必須項目</span></span>
-                  <span class="p-contact__form__box"><textarea name="content" class="p-contact__form__textfield" cols="80" rows="5" placeholder="お問い合わせ内容を記入してください。" required></textarea></span>
+                  <span class="p-contact__form__title">お問い合わせ内容<span class="p-contact__form__label">*必須</span></span>
+                  <span class="p-contact__form__box">
+                    <textarea name="massage" id="massage" class="p-contact__form__textfield js-form-msg" cols="80" rows="5" placeholder="お問い合わせ内容を記入してください。" required></textarea>
+                  </span>
                   </label>
                 </p>
                 <p class="p-contact__form__item -privacyPolicy">
-                  <label>
-                    <input type="checkbox" name="agree" class="p-contact__form__checkbox" value="同意" required>
-                    <span class="p-contact__form__text"><a href="#" class="p-contact__form__link">個人情報保護方針</a>に同意します</span>
+                  <label class="p-contact__form__inner -privacyPolicy">
+                    <input type="checkbox" name="agree" id="agree" class="p-contact__form__checkbox" value="同意" required>
+                    <span class="p-contact__form__text -privacyPolicy"><a href="privacyPolicy.html" class="p-contact__form__link">個人情報保護方針</a>に同意します</span>
                   </label>
                 </p>
-                <p class="p-contact__form__button"><button type="submit" class="c-button -common -toPage">送信</button></p>
+                <p class="p-contact__form__button"><button type="submit" id="submitButton" class="c-button -common -toPage" >送信</button></p>
               </form>
           </div>
           <!-- /.p-contact__form -->
@@ -153,7 +163,7 @@
               <li class="p-footer__nav__item" lang="en"><a href="#plan" class="p-footer__nav__link"><span class="p-footer__nav__text">Plan</span></a></li>
               <li class="p-footer__nav__item" lang="en"><a href="#faq" class="p-footer__nav__link"><span class="p-footer__nav__text">Faq</span></a></li>
               <li class="p-footer__nav__item" lang="en"><a href="access.html" class="p-footer__nav__link"><span class="p-footer__nav__text">Access</span></a></li>
-              <li class="p-footer__nav__item" lang="en"><a href="#" class="p-footer__nav__link"><span class="p-footer__nav__text">Contact</span></a></li>
+              <li class="p-footer__nav__item" lang="en"><a href="contact.html" class="p-footer__nav__link"><span class="p-footer__nav__text">Contact</span></a></li>
             </ul>
             <p class="p-footer__button"><a href="reservation.html" target="_self" class="c-button -common -book -footer">ご予約はこちら</a></p>
           </div>

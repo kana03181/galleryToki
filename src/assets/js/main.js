@@ -22,6 +22,8 @@ import hamburger from "./lib/hamburger";
 import windowResize from "./lib/windowResize";
 import toTop from "./lib/toTop";
 import accordion from "./lib/accordion";
+// import validation from "./lib/validation";
+import { form_Tel, form_Email } from "./lib/validation";
 import Swiper from "swiper/bundle";
 import "swiper/swiper-bundle.css";
 
@@ -30,45 +32,107 @@ new toTop();
 new hamburger();
 new windowResize();
 new accordion();
+// new validation();
+new form_Tel();
+new form_Email();
 // swiper();
 // new swiper();
 // new Loading();
 // new Toggle(".js-drawer");
 // new SmoothScroll('a[href*="#"]');
 
-const breakPoint = 1023;
+const breakpoints = {
+  hero: {
+    768: {
+      spaceBetween: 180,
+    },
+    1024: {
+      spaceBetween: 64,
+    },
+  },
+  shareSpace: {
+    768: {
+      spaceBetween: 180,
+    },
+    1024: {
+      spaceBetween: 64,
+    },
+  },
+  roomFacility: {
+    768: {
+      spaceBetween: 180,
+    },
+    1024: {
+      spaceBetween: 40,
+    },
+  },
+  access: {
+    768: {
+      spaceBetween: 180,
+    },
+    1024: {
+      spaceBetween: 40,
+    },
+  },
+};
+
+const createSwiper = (selector, options) => {
+  return new Swiper(selector, options);
+};
+
+const createThumbnailSwiper = (swiperSelector, thumbnailSelector, options) => {
+  const thumbnailSwiper = new Swiper(thumbnailSelector, {
+    watchSlidesProgress: true,
+    slidesPerView: 3,
+  });
+
+  return new Swiper(swiperSelector, {
+    ...options,
+    thumbs: {
+      swiper: thumbnailSwiper,
+    },
+  });
+};
+
+/** swiper(feature) **/
+const featureBreakPoint = 1023;
 let featureSwiper;
-let swiperBool;
 
-window.addEventListener(
-  "load",
-  () => {
-    if (breakPoint <= window.innerWidth) {
-      swiperBool = false;
-    } else {
-      createSwiper();
-      swiperBool = true;
-    }
-  },
-  false
-);
-
-window.addEventListener(
-  "resize",
-  () => {
-    if (breakPoint < window.innerWidth && swiperBool) {
+function manageSwiper() {
+  if (window.innerWidth > featureBreakPoint) {
+    if (featureSwiper) {
       featureSwiper.destroy(false, true);
-      swiperBool = false;
-    } else if (breakPoint >= window.innerWidth && !swiperBool) {
-      createSwiper();
-      swiperBool = true;
+      featureSwiper = null;
     }
-  },
-  false
-);
+  } else {
+    if (!featureSwiper) {
+      featureSwiper = new Swiper(".p-feature__swiper", {
+        loop: false,
+        spaceBetween: 36,
+        slidesPerView: "auto",
+        grabCursor: true,
+        pagination: {
+          el: ".swiper-pagination",
+          type: "bullets",
+          clickable: "clickable",
+        },
+        scrollbar: {
+          el: ".swiper-scrollbar",
+          hide: false,
+          draggable: true,
+        },
+      });
+    }
+  }
+}
+
+window.addEventListener("load", manageSwiper);
+window.addEventListener("resize", manageSwiper);
+
+manageSwiper();
 
 /** swiper(hero) **/
-new Swiper(".p-hero__swiper", {
+createSwiper(".p-hero__swiper", {
   loop: true,
   speed: 2000,
   effect: "fade",
@@ -76,17 +140,7 @@ new Swiper(".p-hero__swiper", {
   autoplay: {
     delay: 2500,
   },
-
-  breakpoints: {
-    768: {
-      spaceBetween: 180,
-    },
-
-    1024: {
-      spaceBetween: 64,
-    },
-  },
-
+  breakpoints: breakpoints.hero,
   pagination: {
     el: ".p-hero__swiper__pagination",
     type: "bullets",
@@ -94,51 +148,17 @@ new Swiper(".p-hero__swiper", {
   },
 });
 
-/** swiper(feature)**/
-
-const createSwiper = () => {
-  featureSwiper = new Swiper(".p-feature__swiper", {
-    loop: false,
-    spaceBetween: 36,
-    slidesPerView: "auto",
-    grabCursor: true,
-
-    pagination: {
-      el: ".swiper-pagination",
-      type: "bullets",
-      clickable: "clickable",
-    },
-
-    scrollbar: {
-      el: ".swiper-scrollbar",
-      hide: false,
-      draggable: true,
-    },
-  });
-};
-
-/** swiper(room&facility shareSpace) **/
-new Swiper(".p-room__facility__swiper.-shareSpace", {
+/** swiper(index:room&facility shareSpace) **/
+createSwiper(".p-room__facility__swiper.-shareSpace", {
   loop: false,
   spaceBetween: 32,
   slidesPerView: "auto",
-
-  breakpoints: {
-    768: {
-      spaceBetween: 180,
-    },
-
-    1024: {
-      spaceBetween: 64,
-    },
-  },
-
+  breakpoints: breakpoints.shareSpace,
   navigation: {
     nextEl: ".c-swiper__button__next.-shareSpace",
     prevEl: ".c-swiper__button__prev.-shareSpace",
     disabledClass: "swiper-button-disabled",
   },
-
   pagination: {
     el: ".p-room__facility__pagination.-shareSpace",
     type: "bullets",
@@ -147,16 +167,10 @@ new Swiper(".p-room__facility__swiper.-shareSpace", {
 });
 
 /** swiper(location) **/
-new Swiper(".p-location__swiper", {
+createSwiper(".p-location__swiper", {
   loop: false,
   spaceBetween: 32,
   slidesPerView: "auto",
-
-  // breakpoints: {
-  //   768: {
-  //     spaceBetween: 32,
-  //   },
-  // },
 
   navigation: {
     nextEl: ".c-swiper__button__next",
@@ -171,26 +185,13 @@ new Swiper(".p-location__swiper", {
 });
 
 /** swiper(room&facility room1) **/
-const sliderThumbnail__room1 = new Swiper(".p-rooms__swiper__thumbnail.-room1", {
-  watchSlidesProgress: true,
-  slidesPerView: 3,
-});
-
-new Swiper(".p-rooms__swiper.-room1", {
+createThumbnailSwiper(".p-rooms__swiper.-room1", ".p-rooms__swiper__thumbnail.-room1", {
   loop: false,
   spaceBetween: 32,
   slidesPerView: "auto",
   grabCursor: true,
 
-  breakpoints: {
-    768: {
-      spaceBetween: 180,
-    },
-
-    1024: {
-      spaceBetween: 40,
-    },
-  },
+  breakpoints: breakpoints.roomFacility,
 
   navigation: {
     nextEl: ".c-swiper__button__next.-room1",
@@ -203,32 +204,16 @@ new Swiper(".p-rooms__swiper.-room1", {
     type: "bullets",
     clickable: "clickable",
   },
-
-  thumbs: {
-    swiper: sliderThumbnail__room1,
-  },
 });
 
 /** swiper(room&facility room2) **/
-const sliderThumbnail__room2 = new Swiper(".p-rooms__swiper__thumbnail.-room2", {
-  slidesPerView: 3,
-});
-
-new Swiper(".p-rooms__swiper.-room2", {
+createThumbnailSwiper(".p-rooms__swiper.-room2", ".p-rooms__swiper__thumbnail.-room2", {
   loop: false,
   spaceBetween: 32,
   slidesPerView: "auto",
   grabCursor: true,
 
-  breakpoints: {
-    768: {
-      spaceBetween: 180,
-    },
-
-    1024: {
-      spaceBetween: 40,
-    },
-  },
+  breakpoints: breakpoints.roomFacility,
 
   navigation: {
     nextEl: ".c-swiper__button__next.-room2",
@@ -241,32 +226,16 @@ new Swiper(".p-rooms__swiper.-room2", {
     type: "bullets",
     clickable: "clickable",
   },
-
-  thumbs: {
-    swiper: sliderThumbnail__room2,
-  },
 });
 
 /** swiper(room&facility living) **/
-const sliderThumbnail__living = new Swiper(".p-rooms__swiper__thumbnail.-living", {
-  slidesPerView: 3,
-});
-
-new Swiper(".p-rooms__swiper.-living", {
+createThumbnailSwiper(".p-rooms__swiper.-living", ".p-rooms__swiper__thumbnail.-living", {
   loop: false,
   spaceBetween: 32,
   slidesPerView: "auto",
   grabCursor: true,
 
-  breakpoints: {
-    768: {
-      spaceBetween: 180,
-    },
-
-    1024: {
-      spaceBetween: 40,
-    },
-  },
+  breakpoints: breakpoints.roomFacility,
 
   navigation: {
     nextEl: ".c-swiper__button__next.-living",
@@ -279,32 +248,16 @@ new Swiper(".p-rooms__swiper.-living", {
     type: "bullets",
     clickable: "clickable",
   },
-
-  thumbs: {
-    swiper: sliderThumbnail__living,
-  },
 });
 
 /** swiper(room&facility bathRoom) **/
-const sliderThumbnail__bathroom = new Swiper(".p-rooms__swiper__thumbnail.-bathroom", {
-  slidesPerView: 3,
-});
-
-new Swiper(".p-rooms__swiper.-bathroom", {
+createThumbnailSwiper(".p-rooms__swiper.-bathroom", ".p-rooms__swiper__thumbnail.-bathroom", {
   loop: false,
   spaceBetween: 32,
   slidesPerView: "auto",
   grabCursor: true,
 
-  breakpoints: {
-    768: {
-      spaceBetween: 180,
-    },
-
-    1024: {
-      spaceBetween: 40,
-    },
-  },
+  breakpoints: breakpoints.roomFacility,
 
   navigation: {
     nextEl: ".c-swiper__button__next.-bathroom",
@@ -317,33 +270,16 @@ new Swiper(".p-rooms__swiper.-bathroom", {
     type: "bullets",
     clickable: "clickable",
   },
-
-  thumbs: {
-    swiper: sliderThumbnail__bathroom,
-  },
 });
 
 /** swiper(room&facility kitchen) **/
-const sliderThumbnail__kitchen = new Swiper(".p-rooms__swiper__thumbnail.-kitchen", {
-  slidesPerView: 3,
-  width: "180px",
-});
-
-new Swiper(".p-rooms__swiper.-kitchen", {
+createThumbnailSwiper(".p-rooms__swiper.-kitchen", ".p-rooms__swiper__thumbnail.-kitchen", {
   loop: false,
   spaceBetween: 32,
   slidesPerView: "auto",
   grabCursor: true,
 
-  breakpoints: {
-    768: {
-      spaceBetween: 180,
-    },
-
-    1024: {
-      spaceBetween: 40,
-    },
-  },
+  breakpoints: breakpoints.roomFacility,
 
   navigation: {
     nextEl: ".c-swiper__button__next.-kitchen",
@@ -356,27 +292,16 @@ new Swiper(".p-rooms__swiper.-kitchen", {
     type: "bullets",
     clickable: "clickable",
   },
-
-  thumbs: {
-    swiper: sliderThumbnail__kitchen,
-  },
 });
 
-new Swiper(".p-access__swiper.-airplane__bus", {
+/** swiper(access airplane__bus) **/
+createSwiper(".p-access__swiper.-airplane__bus", {
   loop: false,
   spaceBetween: 32,
   slidesPerView: "auto",
   grabCursor: true,
 
-  breakpoints: {
-    768: {
-      spaceBetween: 180,
-    },
-
-    1024: {
-      spaceBetween: 40,
-    },
-  },
+  breakpoints: breakpoints.access,
 
   navigation: {
     nextEl: ".c-swiper__button__next.-airplane__bus",
@@ -391,21 +316,14 @@ new Swiper(".p-access__swiper.-airplane__bus", {
   },
 });
 
-new Swiper(".p-access__swiper.-airplane__car", {
+/** swiper(access airplane__car) **/
+createSwiper(".p-access__swiper.-airplane__car", {
   loop: false,
   spaceBetween: 32,
   slidesPerView: "auto",
   grabCursor: true,
 
-  breakpoints: {
-    768: {
-      spaceBetween: 180,
-    },
-
-    1024: {
-      spaceBetween: 40,
-    },
-  },
+  breakpoints: breakpoints.access,
 
   navigation: {
     nextEl: ".c-swiper__button__next.-airplane__car",
@@ -420,21 +338,14 @@ new Swiper(".p-access__swiper.-airplane__car", {
   },
 });
 
-new Swiper(".p-access__swiper.-shinkansen__bus__direct", {
+/** swiper(access shinkansen__bus__direct) **/
+createSwiper(".p-access__swiper.-shinkansen__bus__direct", {
   loop: false,
   spaceBetween: 32,
   slidesPerView: "auto",
   grabCursor: true,
 
-  breakpoints: {
-    768: {
-      spaceBetween: 180,
-    },
-
-    1024: {
-      spaceBetween: 40,
-    },
-  },
+  breakpoints: breakpoints.access,
 
   navigation: {
     nextEl: ".c-swiper__button__next.-shinkansen__bus__direct",
@@ -449,21 +360,14 @@ new Swiper(".p-access__swiper.-shinkansen__bus__direct", {
   },
 });
 
-new Swiper(".p-access__swiper.-shinkansen__bus__transfer", {
+/** swiper(access shinkansen__bus__transfer) **/
+createSwiper(".p-access__swiper.-shinkansen__bus__transfer", {
   loop: false,
   spaceBetween: 32,
   slidesPerView: "auto",
   grabCursor: true,
 
-  breakpoints: {
-    768: {
-      spaceBetween: 180,
-    },
-
-    1024: {
-      spaceBetween: 40,
-    },
-  },
+  breakpoints: breakpoints.access,
 
   navigation: {
     nextEl: ".c-swiper__button__next.-shinkansen__bus__transfer",
@@ -478,21 +382,14 @@ new Swiper(".p-access__swiper.-shinkansen__bus__transfer", {
   },
 });
 
-new Swiper(".p-access__swiper.-shinkansen__tram", {
+/** swiper(access shinkansen__tram) **/
+createSwiper(".p-access__swiper.-shinkansen__tram", {
   loop: false,
   spaceBetween: 32,
   slidesPerView: "auto",
   grabCursor: true,
 
-  breakpoints: {
-    768: {
-      spaceBetween: 180,
-    },
-
-    1024: {
-      spaceBetween: 40,
-    },
-  },
+  breakpoints: breakpoints.access,
 
   navigation: {
     nextEl: ".c-swiper__button__next.-shinkansen__tram",
@@ -507,21 +404,14 @@ new Swiper(".p-access__swiper.-shinkansen__tram", {
   },
 });
 
-new Swiper(".p-access__swiper.-shinkansen__train", {
+/** swiper(access shinkansen__train) **/
+createSwiper(".p-access__swiper.-shinkansen__train", {
   loop: false,
   spaceBetween: 32,
   slidesPerView: "auto",
   grabCursor: true,
 
-  breakpoints: {
-    768: {
-      spaceBetween: 180,
-    },
-
-    1024: {
-      spaceBetween: 40,
-    },
-  },
+  breakpoints: breakpoints.access,
 
   navigation: {
     nextEl: ".c-swiper__button__next.-shinkansen__train",
@@ -536,21 +426,14 @@ new Swiper(".p-access__swiper.-shinkansen__train", {
   },
 });
 
-new Swiper(".p-access__swiper.-expressBus", {
+/** swiper(access expressBus) **/
+createSwiper(".p-access__swiper.-expressBus", {
   loop: false,
   spaceBetween: 32,
   slidesPerView: "auto",
   grabCursor: true,
 
-  breakpoints: {
-    768: {
-      spaceBetween: 180,
-    },
-
-    1024: {
-      spaceBetween: 40,
-    },
-  },
+  breakpoints: breakpoints.access,
 
   navigation: {
     nextEl: ".c-swiper__button__next.-expressBus",

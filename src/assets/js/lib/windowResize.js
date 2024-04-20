@@ -1,15 +1,23 @@
 export default function () {
   let body = document.body;
-  console.log(body);
+  let resizeTimer;
 
   window.addEventListener("resize", function () {
-    let windowWidth = document.documentElement.clientWidth;
-    // console.log(windowWidth);
+    clearTimeout(resizeTimer);
 
-    if (windowWidth <= 1023) {
-      body.classList.add("is-resize");
-    } else {
-      body.classList.remove("is-resize");
+    function addClassOnResize() {
+      let windowWidth = document.documentElement.clientWidth;
+      if (windowWidth <= 1023) {
+        body.classList.add("is-resize");
+      } else {
+        body.classList.remove("is-resize");
+      }
     }
+
+    addClassOnResize();
+
+    resizeTimer = setTimeout(function () {
+      body.classList.remove("is-resize");
+    }, 250);
   });
 }

@@ -1,0 +1,39 @@
+@charset 'UTF-8';
+@use "sass:math";
+@use "../../global" as *;
+
+/*
+  thanks
+*/
+
+.p-thanks {
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    gap: pxToRem(16px);
+    text-align: center;
+  }
+
+  &__img {
+    width: pxToRem(100px);
+  }
+
+  &__text {
+    font-size: clamp(15 / 16 * 1rem, 0.875rem + 0.31vw, 18 / 16 * 1rem); //viw:320-1280px
+    font-weight: 500;
+    letter-spacing: 0.08em;
+
+    &.-toTop {
+      padding-top: pxToRem(16px);
+      font-size: clamp(18 / 16 * 1rem, 1.083rem + 0.21vw, 20 / 16 * 1rem);
+    }
+
+    &__link {
+      color: $primary-text-color;
+      text-decoration: underline;
+    }
+  }
+}

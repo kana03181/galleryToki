@@ -44,7 +44,7 @@
   }
 
   @include mq(lg) {
-    max-width: fit-content;
+    // max-width: fit-content;
     margin: initial;
     padding: pxToRem(24px);
   }
@@ -98,19 +98,15 @@
   }
 }
 
-.c-card__body.-feature {
-  align-items: flex-start;
-}
-
 .c-card__text {
+  flex: 1 1 auto;
   font-weight: 500;
+  letter-spacing: 0.08em;
 }
 
 .c-card__text.-feature {
-  flex: 1 1 auto;
   color: $secondary-text-color;
   font-size: clamp(14 / 16 * 1rem, 0.833rem + 0.21vw, 16 / 16 * 1rem); //最小：14px 最大：16px viw:320-1280px
-  letter-spacing: 0.04em;
   line-height: 1.7;
 
   @include mq(md) {
@@ -123,10 +119,7 @@
 }
 
 .c-card__text.-plan {
-  flex: 1 1 auto;
-  font-size: pxToRem(12px);
-  font-size: clamp(12 / 16 * 1rem, 0.667rem + 0.42vw, 16 / 16 * 1rem); //最小：12px 最大：16px viw:320-1280px
-  letter-spacing: 0.08em;
+  font-size: clamp(14 / 16 * 1rem, 0.833rem + 0.21vw, 16 / 16 * 1rem); //最小：14px 最大：16px viw:320-1280px
   line-height: 1.97;
 
   @include mq(xl) {
@@ -136,6 +129,7 @@
 }
 
 .c-card__thumbnail.-feature {
+  order: -1;
   border-radius: 10px 34px 10px 10px;
   aspect-ratio: 256 / 181;
 
@@ -145,6 +139,7 @@
 }
 
 .c-card__thumbnail.-plan {
+  order: -1;
   border-radius: 10px;
   aspect-ratio: 240 / 187;
 

@@ -1,0 +1,11 @@
+@charset 'UTF-8';
+@use "sass:math";
+@use "../global" as *;
+
+/*
+  privacyPolicy
+-----------------------------------------------------*/
+
+.l-privacyPolicy {
+  margin-bottom: clamp(80 / 16 * 1rem, 4.583rem + 2.08vw, 100 / 16 * 1rem); //viw:320-1280px
+}

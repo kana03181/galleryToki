@@ -6,6 +6,12 @@
   main
 */
 
-.p-body.-room__facility {
-  background-color: $background-color;
+.p-body {
+  &.-room__facility {
+    background-color: $background-color;
+  }
+
+  &.-privacyPolicy {
+    background-color: $background-color;
+  }
 }

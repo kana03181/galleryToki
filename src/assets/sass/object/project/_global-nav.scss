@@ -11,7 +11,7 @@
   z-index: 2;
   width: 100%;
   height: 100vh;
-  padding-bottom: pxToRem(80px);
+  padding: 0 5% pxToRem(80px);
   overflow-y: auto;
   // transform: translateX(100%);
   transition-property: opacity, visibility;
@@ -22,7 +22,7 @@
   inset: 0;
 
   @include mq(md) {
-    padding-bottom: 0;
+    padding: 0 6%;
   }
 
   @include mq(lg) {
@@ -31,7 +31,7 @@
     position: static;
     align-items: center;
     height: auto;
-
+    padding: 0;
     overflow-y: initial;
     transform: none;
     transition: none;
@@ -56,10 +56,10 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: pxToRem(48px) 5%;
+  padding: pxToRem(48px) 0;
 
   @include mq(md) {
-    padding: pxToRem(88px) 6% pxToRem(56px);
+    padding: pxToRem(88px) 0 pxToRem(56px);
     gap: pxToRem(16px);
   }
 
