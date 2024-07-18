@@ -46,18 +46,25 @@
                 <span class="u-visuallyHidden">メニューを開閉する</span>
               </span>
             </button>
-              <div id="global-nav" class="p-global-nav">
-                <ul class="p-global-nav__list">
-                  <li class="p-global-nav__item"><a href="index.html" class="p-global-nav__link"><span class="p-global-nav__text -en" lang="en">Top</span><span class="p-global-nav__text -ja">トップページ</span></a></li>
-                  <li class="p-global-nav__item"><a href="index.html#about" class="p-global-nav__link"><span class="p-global-nav__text -en" lang="en">About</span><span class="p-global-nav__text -ja">民泊&nbsp;ギャラリー鴇について</span></a></li>
-                  <li class="p-global-nav__item"><a href="index.html#feature" class="p-global-nav__link"><span class="p-global-nav__text -en" lang="en">Feature</span><span class="p-global-nav__text -ja">民泊&nbsp;ギャラリー鴇の特徴</span></a></li>
-                  <li class="p-global-nav__item"><a href="room__facility.html" class="p-global-nav__link"><span class="p-global-nav__text -en" lang="en">Room・Facility</span><span class="p-global-nav__text -ja">お部屋・設備</span></a></li>
-                  <li class="p-global-nav__item"><a href="index.html#plan" class="p-global-nav__link"><span class="p-global-nav__text -en" lang="en">Plan</span><span class="p-global-nav__text -ja">料金</span></a></li>
-                  <li class="p-global-nav__item"><a href="access.html" class="p-global-nav__link"><span class="p-global-nav__text -en" lang="en">Access</span><span class="p-global-nav__text -ja">アクセス</span></a></li>
-                  <li class="p-global-nav__item"><a href="contact.html" class="p-global-nav__link"><span class="p-global-nav__text -en" lang="en">Contact</span><span class="p-global-nav__text -ja">お問い合わせ</span></a></li>
-                </ul>
-                <p class=" p-header__button"><a href="reservation.html" class="c-button -common -book">ご予約はこちら</a></p>
+              <div id="global-nav" class="p-global-nav -index">
+                <div class="p-global-nav__inner">
+                  <ul class="p-global-nav__list -lg">
+                    <li class="p-global-nav__item"><a href="index.html" class="p-global-nav__link"><span class="p-global-nav__text -en" lang="en">Home</span><span class="p-global-nav__text -ja">トップページ</span></a></li>
+                    <li class="p-global-nav__item"><a href="/#about" class="p-global-nav__link"><span class="p-global-nav__text -en" lang="en">About</span><span class="p-global-nav__text -ja">民泊&nbsp;ギャラリー鴇について</span></a></li>
+                    <li class="p-global-nav__item"><a href="/#feature" class="p-global-nav__link"><span class="p-global-nav__text -en" lang="en">Feature</span><span class="p-global-nav__text -ja">民泊&nbsp;ギャラリー鴇の特徴</span></a></li>
+                    <li class="p-global-nav__item"><a href="room__facility.html" class="p-global-nav__link"><span class="p-global-nav__text -en" lang="en">Room・Facility</span><span class="p-global-nav__text -ja">お部屋・設備</span></a></li>
+                  </ul>
+                  <ul class="p-global-nav__list -sm">
+                    <li class="p-global-nav__item"><a href="/#plan" class="p-global-nav__link"><span class="p-global-nav__text -en -sm" lang="en">Plan</span><span class="p-global-nav__text -ja">料金</span></a></li>
+                    <li class="p-global-nav__item"><a href="/#faq" class="p-global-nav__link"><span class="p-global-nav__text -en -sm" lang="en">Faq</span><span class="p-global-nav__text -ja">よくあるご質問</span></a></li>
+                    <li class="p-global-nav__item"><a href="access.html" class="p-global-nav__link"><span class="p-global-nav__text -en -sm" lang="en">Access</span><span class="p-global-nav__text -ja">アクセス</span></a></li>
+                    <li class="p-global-nav__item"><a href="contact.html" class="p-global-nav__link"><span class="p-global-nav__text -en -sm" lang="en">Contact</span><span class="p-global-nav__text -ja">お問い合わせ</span></a></li>
+                  </ul>
+                </div>
+                <!-- /.p-global-nav__inner -->
+                <p class="p-header__button"><a href="reservation.html" class="c-button -common -book -header">ご予約はこちら</a></p>
               </div>
+              <!-- /.p-global-nav -->
           </nav>
         </div>
       </div>
@@ -66,7 +73,7 @@
       <div class="c-pageHeader">
         <div class="l-container">
           <h2 class="c-common__title -room1" lang="en">
-            <span class="c-common__title__en js-title -rooms">Room・Facility</span>
+            <span class="c-common__title__en js-title-lg">Room・Facility</span>
             <span class="c-common__title__ja">お部屋・設備</span>
           </h2>
           <div class="c-pageHeader__text">
@@ -79,7 +86,7 @@
       <!-- /.c-pageHeader -->
       <section class="l-guestRoom">
         <div class="l-container">
-          <h3 class="c-common__title__sideLine js-common__title__sideLine" lang="en">Rooms</h3>
+          <h3 class="c-common__title__sideLine" lang="en">Rooms</h3>
             <div class="p-rooms__header">
               <div class="p-rooms__caution js-toUp">
                 <ul class="p-rooms__caution__list">
@@ -90,48 +97,48 @@
               <!-- /.p-rooms__caution -->
             </div>
             <!-- /.p-rooms__header -->
-          <div class="l-grid__container">
+          <div class="l-grid__container -rooms">
             <div class="l-rooms -room1 js-toUp">
-              <h4 class="c-common__title__circle" lang="en">Room1</h4>
+              <h4 class="c-common__title__circle -rooms" lang="en">Room1</h4>
               <div class="l-grid p-rooms__contents -contents__wrapper">
                 <div class="l-grid__items c-grid__items -rooms p-rooms__grid__items">
                   <div class="p-rooms__items c-grid__item -room1">
                     <p class="c-list__label">設備</p>
                     <ul class="l-grid -house__detail -room1">
                       <li class="p-rooms__item c-grid__item -bed__single -room1">
-                        <p class="p-rooms__icon"><img src="assets/img/room_facility/guestroom/icon_bed-single.png" width="40" height="40" alt="" decoding="async"></p>
+                        <p class="p-rooms__icon -bed__single"><img src="assets/img/room_facility/guestroom/icon_bed-single.svg" width="32" height="32" alt="" decoding="async"></p>
                         <p class="p-rooms__itemName">シングルベッド×2</p>
                       </li>
                       <li class="p-rooms__item c-grid__item -hangerRack">
-                        <p class="p-rooms__icon"><img src="assets/img/room_facility/guestroom/icon_hangerRack.png" width="40" height="40" alt="" decoding="async"></p>
+                        <p class="p-rooms__icon -hangerRack"><img src="assets/img/room_facility/guestroom/icon_hangerRack.svg" width="32" height="32" alt="" decoding="async"></p>
                         <p class="p-rooms__itemName">ハンガーラック</p>
                       </li>
                       <li class="p-rooms__item c-grid__item -map">
-                        <p class="p-rooms__icon"><img src="assets/img/room_facility/guestroom/icon_map.png" width="40" height="40" alt="" decoding="async"></p>
+                        <p class="p-rooms__icon -map"><img src="assets/img/room_facility/guestroom/icon_map.svg" width="32" height="32" alt="" decoding="async"></p>
                         <p class="p-rooms__itemName">交通系ガイドマップ</p>
                       </li>
                       <li class="p-rooms__item c-grid__item -deskLamp">
-                        <p class="p-rooms__icon"><img src="assets/img/room_facility/guestroom/icon_deskLamp.png" width="40" height="40" alt="" decoding="async"></p>
+                        <p class="p-rooms__icon"><img src="assets/img/room_facility/guestroom/icon_deskLamp.svg" width="32" height="32" alt="" decoding="async"></p>
                         <p class="p-rooms__itemName">デスクライト</p>
                       </li>
                       <li class="p-rooms__item c-grid__item -airconditioner1">
-                        <p class="p-rooms__icon"><img src="assets/img/room_facility/guestroom/icon_airconditioner.png" width="40" height="40" alt="" decoding="async"></p>
+                        <p class="p-rooms__icon -airconditioner"><img src="assets/img/room_facility/guestroom/icon_airconditioner.svg" width="32" height="32" alt="" decoding="async"></p>
                         <p class="p-rooms__itemName">エアコン</p>
                       </li>
                       <li class="p-rooms__item c-grid__item -sofa__single">
-                        <p class="p-rooms__icon"><img src="assets/img/room_facility/guestroom/icon_sofa.png" width="40" height="40" alt="" decoding="async"></p>
+                        <p class="p-rooms__icon -sofa__single"><img src="assets/img/room_facility/guestroom/icon_sofa.svg" width="32" height="32" alt="" decoding="async"></p>
                         <p class="p-rooms__itemName">ソファ</p>
                       </li>
                       <li class="p-rooms__item c-grid__item -chair">
-                        <p class="p-rooms__icon"><img src="assets/img/room_facility/guestroom/icon_chair.png" width="40" height="40" alt="" decoding="async"></p>
+                        <p class="p-rooms__icon -chair"><img src="assets/img/room_facility/guestroom/icon_chair.svg" width="32" height="32" alt="" decoding="async"></p>
                         <p class="p-rooms__itemName">椅子</p>
                       </li>
                       <li class="p-rooms__item c-grid__item -desk">
-                        <p class="p-rooms__icon"><img src="assets/img/room_facility/guestroom/icon_desk.png" width="40" height="40" alt="" decoding="async"></p>
+                        <p class="p-rooms__icon -desk"><img src="assets/img/room_facility/guestroom/icon_desk.svg" width="32" height="32" alt="" decoding="async"></p>
                         <p class="p-rooms__itemName">机</p>
                       </li>
                       <li class="p-rooms__item c-grid__item -mirror1">
-                        <p class="p-rooms__icon"><img src="assets/img/room_facility/guestroom/icon_mirror.png" width="40" height="48" alt="" decoding="async"></p>
+                        <p class="p-rooms__icon -mirror_sm"><img src="assets/img/room_facility/guestroom/icon_mirror_small.svg" width="32" height="32" alt="" decoding="async"></p>
                         <p class="p-rooms__itemName">鏡</p>
                       </li>
                     </ul>
@@ -188,32 +195,23 @@
                     <!-- <div class="swiper-pagination p-rooms__pagination -room1"></div> -->
                   </div>
                   <!-- /.p-room__facility__buttons -->
-                  <div class="swiper -room1 p-rooms__swiper__thumbnail c-grid__item -thumbnailImg">
-                    <div class="swiper-wrapper p-rooms__swiper__thumbnail__wrapper">
-                      <div class="swiper-slide p-rooms__swiper__thumbnail__slide">
-                        <figure class="p-rooms__swiper__thumbnail__image">
-                          <picture>
-                            <source type="image/webp" srcset="assets/img/room_facility/guestroom/room1_img1_sp.webp 1x, assets/img/room_facility/guestroom/room1_img1_sp_2x.webp 2x" width="768" height="506" media="(max-width:768px)">
-                            <img src="assets/img/room_facility/guestroom/room1_img1_pc.jpg" srcset="assets/img/room_facility/guestroom/room1_img1_pc_2x.jpg 2x" width="1000" height="659" alt="宿泊部屋room1。日当たりの良い東向きの部屋にシングルベッドを2台設置しています。" decoding="async">
-                          </picture>
+                  <div class="swiper -room1 c-swiper__thumbnail c-grid__item -thumbnailImg">
+                    <div class="swiper-wrapper c-swiper__thumbnail__wrapper -room1 -rooms">
+                      <div class="swiper-slide c-swiper__thumbnail__slide -room1 -rooms">
+                        <figure class="c-swiper__thumbnail__image -room1 -rooms">
+                          <img src="assets/img/room_facility/guestroom/room1_img1_thumb.jpg" srcset="assets/img/room_facility/guestroom/room1_img1_thumb_2x.jpg 2x" width="300" height="200" alt="" decoding="async">
                         </figure>
                       </div>
                       <!-- /.swiper-slide p-room__facility__swiper__slide -->
-                      <div class="swiper-slide p-rooms__swiper__thumbnail__slide">
-                        <figure class="p-rooms__swiper__thumbnail__image">
-                          <picture>
-                            <source type="image/webp" srcset="assets/img/room_facility/guestroom/room1_img2_sp.webp 1x, assets/img/room_facility/guestroom/room1_img2_sp_2x.webp 2x" width="768" height="506" media="(max-width:768px)">
-                            <img src="assets/img/room_facility/guestroom/room1_img2_pc.jpg" srcset="assets/img/room_facility/guestroom/room1_img2_pc_2x.jpg 2x" width="1000" height="659" alt="窓側のシングルベッド。冬の時期は寒さに合わせて毛布もご用意いたします。エアコンもございますので、寒さ・暑さ対策はばっちりです。" decoding="async">
-                          </picture>
+                      <div class="swiper-slide c-swiper__thumbnail__slide -room1 -rooms">
+                        <figure class="c-swiper__thumbnail__image -room1 -rooms">
+                          <img src="assets/img/room_facility/guestroom/room1_img2_thumb.jpg" srcset="assets/img/room_facility/guestroom/room1_img2_thumb_2x.jpg 2x" width="300" height="200" alt="" decoding="async">
                         </figure>
                       </div>
                       <!-- /.swiper-slide p-room__facility__swiper__slide -->
-                      <div class="swiper-slide p-rooms__swiper__thumbnail__slide">
-                        <figure class="p-rooms__swiper__thumbnail__image">
-                          <picture>
-                            <source type="image/webp" srcset="assets/img/room_facility/guestroom/room1_img3_sp.webp 1x, assets/img/room_facility/guestroom/room1_img3_sp_2x.webp 2x" width="768" height="506" media="(max-width:768px)">
-                            <img src="assets/img/room_facility/guestroom/room1_img3_pc.jpg" srcset="assets/img/room_facility/guestroom/room1_img3_pc_2x.jpg 2x" width="1000" height="659" alt="お部屋入り口側のシングルベッド。ベッドの上にはお客様用のバスタオルを置かせていただいております。お風呂や洗面台をご利用の際にご利用ください。" decoding="async">
-                          </picture>
+                      <div class="swiper-slide c-swiper__thumbnail__slide -room1 -rooms">
+                        <figure class="c-swiper__thumbnail__image -room1 -rooms">
+                          <img src="assets/img/room_facility/guestroom/room1_img3_thumb.jpg" srcset="assets/img/room_facility/guestroom/room1_img3_thumb_2x.jpg 2x" width="300" height="200" alt="" decoding="async">
                         </figure>
                       </div>
                       <!-- /.swiper-slide p-room__facility__swiper__slide -->
@@ -228,31 +226,35 @@
             </div>
             <!-- /.l-rooms__room1 -->
             <div class="l-rooms -room2 js-toUp">
-              <h4 class="c-common__title__circle" lang="en">Room2</h4>
+              <h4 class="c-common__title__circle -rooms" lang="en">Room2</h4>
                 <div class="l-grid p-rooms__contents -contents__wrapper">
                   <div class="l-grid__items c-grid__items -rooms p-rooms__grid__items">
                     <div class="p-rooms__items c-grid__item -room2">
                       <p class="c-list__label">設備</p>
                       <ul class="l-grid -house__detail -room2">
                         <li class="p-rooms__item c-grid__item -airconditioner2">
-                          <p class="p-rooms__icon"><img src="assets/img/room_facility/guestroom/icon_airconditioner.png" width="40" height="40" alt="" decoding="async"></p>
+                          <p class="p-rooms__icon -airconditioner"><img src="assets/img/room_facility/guestroom/icon_airconditioner.svg" width="32" height="32" alt="" decoding="async"></p>
                           <p class="p-rooms__itemName">エアコン</p>
                         </li>
                         <li class="p-rooms__item c-grid__item -bed__dobble">
-                          <p class="p-rooms__icon"><img src="assets/img/room_facility/guestroom/icon_bed-dobble.png" width="50" height="50" alt="" decoding="async"></p>
+                          <p class="p-rooms__icon -bed__dobble"><img src="assets/img/room_facility/guestroom/icon_bed-dobble.svg" width="32" height="32" alt="" decoding="async"></p>
                           <p class="p-rooms__itemName">2段ベッド</p>
                         </li>
                         <li class="p-rooms__item c-grid__item -compo">
-                          <p class="p-rooms__icon"><img src="assets/img/room_facility/guestroom/icon_compo.png" width="50" height="50" alt="" decoding="async"></p>
+                          <p class="p-rooms__icon -compo"><img src="assets/img/room_facility/guestroom/icon_compo.svg" width="32" height="32" alt="" decoding="async"></p>
                           <p class="p-rooms__itemName">CDコンポ</p>
                         </li>
                         <li class="p-rooms__item c-grid__item -mirror2">
-                          <p class="p-rooms__icon"><img src="assets/img/room_facility/guestroom/icon_mirror.png" width="40" height="48" alt="" decoding="async"></p>
+                          <p class="p-rooms__icon -mirror_sm"><img src="assets/img/room_facility/guestroom/icon_mirror_small.svg" width="32" height="32" alt="" decoding="async"></p>
                           <p class="p-rooms__itemName">鏡</p>
                         </li>
                         <li class="p-rooms__item c-grid__item -bed__single -room2">
-                          <p class="p-rooms__icon"><img src="assets/img/room_facility/guestroom/icon_bed-single.png" width="40" height="40" alt="" decoding="async"></p>
+                          <p class="p-rooms__icon -bed__single"><img src="assets/img/room_facility/guestroom/icon_bed-single.svg" width="32" height="32" alt="" decoding="async"></p>
                           <p class="p-rooms__itemName">シングルベッド</p>
+                        </li>
+                        <li class="p-rooms__item c-grid__item -table">
+                          <p class="p-rooms__icon -table"><img src="assets/img/room_facility/guestroom/icon_table.svg" width="32" height="32" alt="" decoding="async"></p>
+                          <p class="p-rooms__itemName">テーブル</p>
                         </li>
                       </ul>
                     </div>
@@ -308,39 +310,30 @@
                       <!-- <div class="swiper-pagination p-rooms__pagination -room2"></div> -->
                     </div>
                     <!-- /.p-room__facility__buttons -->
-                    <div class="swiper -room2 p-rooms__swiper__thumbnail c-grid__item -thumbnailImg">
-                      <div class="swiper-wrapper p-rooms__swiper__thumbnail__wrapper">
-                        <div class="swiper-slide p-rooms__swiper__thumbnail__slide">
-                          <figure class="p-rooms__swiper__thumbnail__image">
-                            <picture>
-                              <source type="image/webp" srcset="assets/img/room_facility/guestroom/room2_img1_sp.webp 1x, assets/img/room_facility/guestroom/room2_img1_sp_2x.webp 2x" width="768" height="506" media="(max-width:768px)">
-                              <img src="assets/img/room_facility/guestroom/room2_img1_pc.jpg" srcset="assets/img/room_facility/guestroom/room2_img1_pc_2x.jpg 2x" width="1000" height="659" alt="二段ベットとシングルベッドがあるお部屋。窓際のCDコンポでお好きなCDを聴くこともできます" decoding="async">
-                            </picture>
+                    <div class="swiper -room2  c-swiper__thumbnail c-grid__item -thumbnailImg">
+                      <div class="swiper-wrapper c-swiper__thumbnail__wrapper -room2 -rooms">
+                        <div class="swiper-slide c-swiper__thumbnail__slide -room2 -rooms">
+                          <figure class=" c-swiper__thumbnail__image -room2 -rooms">
+                            <img src="assets/img/room_facility/guestroom/room2_img1_thumb.jpg" srcset="assets/img/room_facility/guestroom/room2_img1_thumb_2x.jpg 2x" width="300" height="200" alt="" decoding="async">
                           </figure>
                         </div>
                         <!-- /.swiper-slide p-room__facility__swiper__slide -->
-                        <div class="swiper-slide p-rooms__swiper__thumbnail__slide">
-                          <figure class="p-rooms__swiper__thumbnail__image">
-                            <picture>
-                              <source type="image/webp" srcset="assets/img/room_facility/guestroom/room2_img2_sp.webp 1x, assets/img/room_facility/guestroom/room2_img2_sp_2x.webp 2x" width="768" height="506" media="(max-width:768px)">
-                              <img src="assets/img/room_facility/guestroom/room2_img2_pc.jpg" srcset="assets/img/room_facility/guestroom/room2_img2_pc_2x.jpg 2x" width="1000" height="659" alt="各ベッドには掛布団や敷布団、冬は毛布をご用意しております。二段ベッドは子供の頃を思い出して懐かしい気持ちになります。" decoding="async">
-                            </picture>
+                        <div class="swiper-slide c-swiper__thumbnail__slide -room2 -rooms">
+                          <figure class="c-swiper__thumbnail__image -room2 -rooms">
+                            <img src="assets/img/room_facility/guestroom/room2_img2_thumb.jpg" srcset="assets/img/room_facility/guestroom/room2_img2_thumb_2x.jpg 2x" width="300" height="200" alt="" decoding="async">
                           </figure>
                         </div>
                         <!-- /.swiper-slide p-room__facility__swiper__slide -->
-                        <div class="swiper-slide p-rooms__swiper__thumbnail__slide">
-                          <figure class="p-rooms__swiper__thumbnail__image">
-                            <picture>
-                              <source type="image/webp" srcset="assets/img/room_facility/guestroom/room2_img3_sp.webp 1x, assets/img/room_facility/guestroom/room2_img3_sp_2x.webp 2x" width="768" height="506" media="(max-width:768px)">
-                              <img src="assets/img/room_facility/guestroom/room2_img3_pc.jpg" srcset="assets/img/room_facility/guestroom/room2_img3_pc_2x.jpg 2x" width="1000" height="659" alt="低めのシングルベッド。枕カバー、掛布団カバー、敷布団カバーは洗濯の関係で写真と異なる可能性があります。" decoding="async">
-                            </picture>
+                        <div class="swiper-slide c-swiper__thumbnail__slide -room2 -rooms">
+                          <figure class="c-swiper__thumbnail__image -room2 -rooms">
+                            <img src="assets/img/room_facility/guestroom/room2_img3_thumb.jpg" srcset="assets/img/room_facility/guestroom/room2_img3_thumb_2x.jpg 2x" width="300" height="200" alt="" decoding="async">
                           </figure>
                         </div>
                         <!-- /.swiper-slide p-room__facility__swiper__slide -->
                       </div>
-                      <!-- /.swiper-wrapper p-room__facility__swiper__wrapper -->
+                      <!-- /.swiper-wrapper c-swiper__thumbnail__wrapper -->
                     </div>
-                    <!-- /.swiper p-rooms__swiper__thumbnail -->
+                    <!-- /.swiper c-swiper__swiper__thumbnail -->
                   </div>
                   <!-- /.p-rooms__swipers__wrapper l-grid__swipers__wrapper -->
                 </div>
@@ -354,12 +347,12 @@
       </section>
       <section class="l-shareSpace">
         <div class="l-container">
-          <h3 class="c-common__title__sideLine js-common__title__sideLine -shareSpace">共有スペース</h3>
+          <h3 class="c-common__title__sideLine -shareSpace">共有スペース</h3>
           <div class="p-rooms__header">
             <div class="p-rooms__text">
               <p class="p-rooms__sentence">お風呂・トイレ・キッチンは<strong>管理人と共用</strong>になります。</p>
             </div>
-            <div class="p-rooms__caution">
+            <div class="p-rooms__caution -shareSpace">
               <p class="p-rooms__caution__title">使用上のお願い</p>
               <ul class="p-rooms__caution__list">
                 <li class="p-rooms__caution__marker"><span class="p-rooms__caution__text">使用したものは元の場所にお戻しください。</span></li>
@@ -369,37 +362,37 @@
             <!-- /.p-rooms__caution -->
           </div>
           <!-- /.p-shareSpace__header -->
-          <div class="l-grid__container">
+          <div class="l-grid__container -rooms">
             <div class="l-rooms -living js-toUp">
-              <h4 class="c-common__title__circle">リビング</h4>
+              <h4 class="c-common__title__circle -rooms">リビング</h4>
                 <div class="l-grid p-rooms__contents -contents__wrapper">
-                  <div class="l-grid__items c-grid__items -living p-rooms__grid__items">
+                  <div class="l-grid__items c-grid__items p-rooms__grid__items -living ">
                     <div class="p-rooms__items c-grid__item -living">
                       <p class="c-list__label">設備</p>
                       <ul class="l-grid -house__detail -living">
-                        <li class="p-shareSpace__item c-grid__item -sofa">
-                          <p class="p-shareSpace__icon"><img src="assets/img/room_facility/living/icon_sofa-living.png" width="46" height="50" alt="" decoding="async"></p>
-                          <p class="p-shareSpace__itemName">ソファ</p>
+                        <li class="p-rooms__item c-grid__item -sofa">
+                          <p class="p-rooms__icon"><img src="assets/img/room_facility/living/icon_sofa-living.svg" width="32" height="32" alt="" decoding="async"></p>
+                          <p class="p-rooms__itemName">ソファ</p>
                         </li>
-                        <li class="p-shareSpace__item c-grid__item -livingTable">
-                          <p class="p-shareSpace__icon"><img src="assets/img/room_facility/living/icon_table.png" width="46" height="50" alt="" decoding="async"></p>
-                          <p class="p-shareSpace__itemName">テーブル</p>
+                        <li class="p-rooms__item c-grid__item -livingTable">
+                          <p class="p-rooms__icon -livingTable"><img src="assets/img/room_facility/living/icon_table.svg" width="32" height="32" alt="" decoding="async"></p>
+                          <p class="p-rooms__itemName">テーブル</p>
                         </li>
-                        <li class="p-shareSpace__item c-grid__item -airconditioner3">
-                          <p class="p-shareSpace__icon"><img src="assets/img/room_facility/living/icon_airconditioner.png" width="50" height="50" alt="" decoding="async"></p>
-                          <p class="p-shareSpace__itemName">エアコン</p>
+                        <li class="p-rooms__item c-grid__item -airconditioner3">
+                          <p class="p-rooms__icon -airconditioner"><img src="assets/img/room_facility/living/icon_airconditioner.svg" width="32" height="32" alt="" decoding="async"></p>
+                          <p class="p-rooms__itemName">エアコン</p>
                         </li>
-                        <li class="p-shareSpace__item c-grid__item -wifi">
-                          <p class="p-shareSpace__icon"><img src="assets/img/room_facility/living/icon_wifi.png" width="50" height="50" alt="" decoding="async"></p>
-                          <p class="p-shareSpace__itemName">WIFI</p>
+                        <li class="p-rooms__item c-grid__item -wifi">
+                          <p class="p-rooms__icon"><img src="assets/img/room_facility/living/icon_wifi.svg" width="32" height="32" alt="" decoding="async"></p>
+                          <p class="p-rooms__itemName">WIFI</p>
                         </li>
-                        <li class="p-shareSpace__item c-grid__item -airCleaner">
-                          <p class="p-shareSpace__icon"><img src="assets/img/room_facility/living/icon_airCleaner.png" width="50" height="50" alt="" decoding="async"></p>
-                          <p class="p-shareSpace__itemName">空気清浄機</p>
+                        <li class="p-rooms__item c-grid__item -airCleaner">
+                          <p class="p-rooms__icon -airCleaner"><img src="assets/img/room_facility/living/icon_airCleaner.svg" width="32" height="32" alt="" decoding="async"></p>
+                          <p class="p-rooms__itemName">空気清浄機</p>
                         </li>
-                        <li class="p-shareSpace__item c-grid__item -mirror3">
-                          <p class="p-shareSpace__icon"><img src="assets/img/room_facility/living/icon_mirror.png" width="50" height="50" alt="" decoding="async"></p>
-                          <p class="p-shareSpace__itemName">姿見</p>
+                        <li class="p-rooms__item c-grid__item -mirror3">
+                          <p class="p-rooms__icon -mirror3"><img src="assets/img/room_facility/living/icon_mirror2.svg" width="32" height="32" alt="" decoding="async"></p>
+                          <p class="p-rooms__itemName">姿見</p>
                         </li>
                       </ul>
                     </div>
@@ -452,39 +445,30 @@
                       <!-- <div class="swiper-pagination p-rooms__pagination -living"></div> -->
                     </div>
                     <!-- /.p-room__facility__buttons -->
-                    <div class="swiper -living p-rooms__swiper__thumbnail c-grid__item -thumbnailImg">
-                      <div class="swiper-wrapper p-rooms__swiper__thumbnail__wrapper">
-                        <div class="swiper-slide p-rooms__swiper__thumbnail__slide">
-                          <figure class="p-rooms__swiper__thumbnail__image">
-                            <picture>
-                              <source type="image/webp" srcset="assets/img/room_facility/living/living_img1_sp.webp 1x, assets/img/room_facility/living/living_img1_sp_2x.webp 2x" width="768" height="506" media="(max-width:768px)">
-                              <img src="assets/img/room_facility/living/living_img1_pc.jpg" srcset="assets/img/room_facility/living/living_img1_pc_2x.jpg 2x" width="1000" height="659" alt="広いリビングには4人掛けソファ、1人用ソファ、大きなテーブル、姿見がございます。" decoding="async">
-                            </picture>
+                    <div class="swiper -living c-swiper__thumbnail c-grid__item -thumbnailImg">
+                      <div class="swiper-wrapper c-swiper__thumbnail__wrapper -living -rooms">
+                        <div class="swiper-slide c-swiper__thumbnail__slide -living -rooms">
+                          <figure class="c-swiper__thumbnail__image -living -rooms">
+                            <img src="assets/img/room_facility/living/living_img1_thumb.jpg" srcset="assets/img/room_facility/living/living_img1_thumb_2x.jpg 2x" width="300" height="200" alt="広いリビングには4人掛けソファ、1人用ソファ、大きなテーブル、姿見がございます。" decoding="async">
                           </figure>
                         </div>
                         <!-- /.swiper-slide p-room__facility__swiper__slide -->
-                        <div class="swiper-slide p-rooms__swiper__thumbnail__slide">
-                          <figure class="p-rooms__swiper__thumbnail__image">
-                            <picture>
-                              <source type="image/webp" srcset="assets/img/room_facility/living/living_img2_sp.webp 1x, assets/img/room_facility/living/living_img2_sp_2x.webp 2x" width="768" height="506" media="(max-width:768px)">
-                              <img src="assets/img/room_facility/living/living_img2_pc.jpg" srcset="assets/img/room_facility/living/living_img2_pc_2x.jpg 2x" width="1000" height="659" alt="管理人は着付け師の資格の持ち主。マネキンが着ている色打掛は実際に羽織ることも可能です。" decoding="async">
-                            </picture>
+                        <div class="swiper-slide c-swiper__thumbnail__slide -living -rooms">
+                          <figure class="c-swiper__thumbnail__image -living -rooms">
+                            <img src="assets/img/room_facility/living/living_img2_thumb.jpg" srcset="assets/img/room_facility/living/living_img2_thumb_2x.jpg 2x" width="300" height="200" alt="管理人は着付け師の資格の持ち主。マネキンが着ている色打掛は実際に羽織ることも可能です。" decoding="async">
                           </figure>
                         </div>
                         <!-- /.swiper-slide p-room__facility__swiper__slide -->
-                        <div class="swiper-slide p-rooms__swiper__thumbnail__slide">
-                          <figure class="p-rooms__swiper__thumbnail__image">
-                            <picture>
-                              <source type="image/webp" srcset="assets/img/room_facility/living/living_img3_sp.webp 1x, assets/img/room_facility/living/living_img3_sp_2x.webp 2x" width="768" height="506" media="(max-width:768px)">
-                              <img src="assets/img/room_facility/living/living_img3_pc.jpg" srcset="assets/img/room_facility/living/living_img3_pc_2x.jpg 2x" width="1000" height="659" alt="4人掛けソファはうたた寝してしまいそうになるくらい座り心地抜群。" decoding="async">
-                            </picture>
+                        <div class="swiper-slide c-swiper__thumbnail__slide -living -rooms">
+                          <figure class="c-swiper__thumbnail__image -living -rooms">
+                            <img src="assets/img/room_facility/living/living_img3_thumb.jpg" srcset="assets/img/room_facility/living/living_img3_thumb_2x.jpg 2x" width="300" height="200" alt="4人掛けソファはうたた寝してしまいそうになるくらい座り心地抜群。" decoding="async">
                           </figure>
                         </div>
                         <!-- /.swiper-slide p-room__facility__swiper__slide -->
                       </div>
                       <!-- /.swiper-wrapper p-room__facility__swiper__wrapper -->
                     </div>
-                    <!-- /.swiper p-rooms__swiper__thumbnail -->
+                    <!-- /.swiper c-swiper__thumbnail -->
                   </div>
                   <!-- /.p-rooms__swipers__wrapper l-grid__swipers__wrapper -->
                 </div>
@@ -492,59 +476,59 @@
             </div>
             <!-- /.l-rooms -living -->
             <div class="l-rooms -bathRoom js-toUp">
-              <h4 class="c-common__title__circle">お風呂・洗面所</h4>
+              <h4 class="c-common__title__circle -rooms">お風呂・洗面所</h4>
                 <div class="l-grid p-rooms__contents -contents__wrapper">
                   <div class="l-grid__items c-grid__items -bathGoods p-rooms__grid__items">
                     <div class="p-rooms__items c-grid__item -bathGoods">
                       <p class="c-list__label">設備</p>
                       <ul class="l-grid -house__detail -bathGoods">
-                        <li class="p-shareSpace__item c-grid__item -MakeupRemover">
-                          <p class="p-shareSpace__icon"><img src="assets/img/room_facility/bathroom/icon_MakeupRemover.png" width="50" height="50" alt="" decoding="async"></p>
-                          <p class="p-shareSpace__itemName">メイク落とし</p>
+                        <li class="p-rooms__item c-grid__item -MakeupRemover">
+                          <p class="p-rooms__icon -MakeupRemover"><img src="assets/img/room_facility/bathroom/icon_MakeupRemover.svg" width="32" height="50" alt="" decoding="async"></p>
+                          <p class="p-rooms__itemName">メイク落とし</p>
                         </li>
-                        <li class="p-shareSpace__item c-grid__item -shampoo">
-                          <p class="p-shareSpace__icon"><img src="assets/img/room_facility/bathroom/icon_shampoo.png" width="50" height="50" alt="" decoding="async"></p>
-                          <p class="p-shareSpace__itemName">シャンプー</p>
+                        <li class="p-rooms__item c-grid__item -shampoo">
+                          <p class="p-rooms__icon -shampoo"><img src="assets/img/room_facility/bathroom/icon_shampoo.svg" width="32" height="50" alt="" decoding="async"></p>
+                          <p class="p-rooms__itemName">シャンプー</p>
                         </li>
-                        <li class="p-shareSpace__item c-grid__item -rinse">
-                          <p class="p-shareSpace__icon"><img src="assets/img/room_facility/bathroom/icon_rinse.png" width="50" height="50" alt="" decoding="async"></p>
-                          <p class="p-shareSpace__itemName">リンス</p>
+                        <li class="p-rooms__item c-grid__item -rinse">
+                          <p class="p-rooms__icon -rinse"><img src="assets/img/room_facility/bathroom/icon_rinse.svg" width="32" height="32" alt="" decoding="async"></p>
+                          <p class="p-rooms__itemName">リンス</p>
                         </li>
-                        <li class="p-shareSpace__item c-grid__item -bodysoap">
-                          <p class="p-shareSpace__icon"><img src="assets/img/room_facility/bathroom/icon_bodysoap.png" width="50" height="50" alt="" decoding="async"></p>
-                          <p class="p-shareSpace__itemName">ボディソープ</p>
+                        <li class="p-rooms__item c-grid__item -bodysoap">
+                          <p class="p-rooms__icon -bodysoap"><img src="assets/img/room_facility/bathroom/icon_bodysoap.svg" width="32" height="32" alt="" decoding="async"></p>
+                          <p class="p-rooms__itemName">ボディソープ</p>
                         </li>
-                        <li class="p-shareSpace__item c-grid__item -facewash">
-                          <p class="p-shareSpace__icon"><img src="assets/img/room_facility/bathroom/icon_facewash.png" width="50" height="50" alt="" decoding="async"></p>
-                          <p class="p-shareSpace__itemName">洗顔</p>
+                        <li class="p-rooms__item c-grid__item -facewash">
+                          <p class="p-rooms__icon -facewash"><img src="assets/img/room_facility/bathroom/icon_facewash.svg" width="32" height="32" alt="" decoding="async"></p>
+                          <p class="p-rooms__itemName">洗顔</p>
                         </li>
-                        <li class="p-shareSpace__item c-grid__item -toothpaste">
-                          <p class="p-shareSpace__icon"><img src="assets/img/room_facility/bathroom/icon_toothpaste.png" width="50" height="50" alt="" decoding="async"></p>
-                          <p class="p-shareSpace__itemName">歯磨き粉</p>
+                        <li class="p-rooms__item c-grid__item -toothpaste">
+                          <p class="p-rooms__icon -toothpaste"><img src="assets/img/room_facility/bathroom/icon_toothpaste.svg" width="32" height="32" alt="" decoding="async"></p>
+                          <p class="p-rooms__itemName">歯磨き粉</p>
                         </li>
-                        <li class="p-shareSpace__item c-grid__item -hanger">
-                          <p class="p-shareSpace__icon"><img src="assets/img/room_facility/bathroom/icon_hanger.png" width="50" height="50" alt="" decoding="async"></p>
-                          <p class="p-shareSpace__itemName">ハンガー</p>
+                        <li class="p-rooms__item c-grid__item -hanger">
+                          <p class="p-rooms__icon"><img src="assets/img/room_facility/bathroom/icon_hanger.svg" width="32" height="32" alt="" decoding="async"></p>
+                          <p class="p-rooms__itemName">ハンガー</p>
                         </li>
-                        <li class="p-shareSpace__item c-grid__item -laundryDetergent">
-                          <p class="p-shareSpace__icon"><img src="assets/img/room_facility/bathroom/icon_laundryDetergent.png" width="50" height="50" alt="" decoding="async"></p>
-                          <p class="p-shareSpace__itemName">衣類用洗剤</p>
+                        <li class="p-rooms__item c-grid__item -laundryDetergent">
+                          <p class="p-rooms__icon -laundryDetergent"><img src="assets/img/room_facility/bathroom/icon_laundryDetergent.svg" width="32" height="32" alt="" decoding="async"></p>
+                          <p class="p-rooms__itemName">衣類用洗剤</p>
                         </li>
-                        <li class="p-shareSpace__item c-grid__item -softener">
-                          <p class="p-shareSpace__icon"><img src="assets/img/room_facility/bathroom/icon_softener.png" width="50" height="50" alt="" decoding="async"></p>
-                          <p class="p-shareSpace__itemName">柔軟剤</p>
+                        <li class="p-rooms__item c-grid__item -softener">
+                          <p class="p-rooms__icon -softener"><img src="assets/img/room_facility/bathroom/icon_softener.svg" width="32" height="32" alt="" decoding="async"></p>
+                          <p class="p-rooms__itemName">柔軟剤</p>
                         </li>
-                        <li class="p-shareSpace__item c-grid__item -raundry">
-                          <p class="p-shareSpace__icon"><img src="assets/img/room_facility/bathroom/icon_raundry.png" width="50" height="50" alt="" decoding="async"></p>
-                          <p class="p-shareSpace__itemName">洗濯機</p>
+                        <li class="p-rooms__item c-grid__item -raundry">
+                          <p class="p-rooms__icon -raundry"><img src="assets/img/room_facility/bathroom/icon_raundry.svg" width="32" height="32" alt="" decoding="async"></p>
+                          <p class="p-rooms__itemName">洗濯機</p>
                         </li>
-                        <li class="p-shareSpace__item c-grid__item -hairdryer">
-                          <p class="p-shareSpace__icon"><img src="assets/img/room_facility/bathroom/icon_hairdryer.png" width="46" height="50" alt="" decoding="async"></p>
-                          <p class="p-shareSpace__itemName">ドライヤー</p>
+                        <li class="p-rooms__item c-grid__item -hairdryer">
+                          <p class="p-rooms__icon -hairdryer"><img src="assets/img/room_facility/bathroom/icon_hairdryer.svg" width="32" height="32" alt="" decoding="async"></p>
+                          <p class="p-rooms__itemName">ドライヤー</p>
                         </li>
-                        <li class="p-shareSpace__item c-grid__item -towel">
-                          <p class="p-shareSpace__icon"><img src="assets/img/room_facility/bathroom/icon_towel.png" width="50" height="50" alt="" decoding="async"></p>
-                          <p class="p-shareSpace__itemName">タオル</p>
+                        <li class="p-rooms__item c-grid__item -towel">
+                          <p class="p-rooms__icon -towel"><img src="assets/img/room_facility/bathroom/icon_towel.svg" width="32" height="32" alt="" decoding="async"></p>
+                          <p class="p-rooms__itemName">タオル</p>
                         </li>
                       </ul>
                     </div>
@@ -582,217 +566,223 @@
                       <!-- <div class="swiper-pagination p-rooms__pagination -bathroom"></div> -->
                     </div>
                     <!-- /.p-room__facility__buttons -->
-                    <div class="swiper -bathroom p-rooms__swiper__thumbnail c-grid__item -thumbnailImg">
-                      <div class="swiper-wrapper p-rooms__swiper__thumbnail__wrapper">
-                        <div class="swiper-slide p-rooms__swiper__thumbnail__slide">
-                          <figure class="p-rooms__swiper__thumbnail__image">
-                            <picture>
-                              <source type="image/webp" srcset="assets/img/room_facility/bathroom/bathroom_img1_sp.webp 1x, assets/img/room_facility/bathroom/bathroom_img1_sp_2x.webp 2x" width="768" height="506" media="(max-width:768px)">
-                              <img src="assets/img/room_facility/bathroom/bathroom_img1_pc.jpg" srcset="assets/img/room_facility/bathroom/bathroom_img1_pc_2x.jpg 2x" width="1000" height="659" alt="薄い水色のタイルを使用した壁と薄い水色の湯船でレトロな雰囲気のお風呂。" decoding="async">
-                            </picture>
+                    <div class="swiper -bathroom c-swiper__thumbnail c-grid__item -thumbnailImg">
+                      <div class="swiper-wrapper c-swiper__thumbnail__wrapper -bathroom -rooms">
+                        <div class="swiper-slide c-swiper__thumbnail__slide -bathroom -rooms">
+                          <figure class="c-swiper__thumbnail__image -bathroom -rooms">
+                            <img src="assets/img/room_facility/bathroom/bathroom_img1_thumb.jpg" srcset="assets/img/room_facility/bathroom/bathroom_img1_thumb_2x.jpg 2x" width="300" height="200" alt="薄い水色のタイルを使用した壁と薄い水色の湯船でレトロな雰囲気のお風呂。" decoding="async">
                           </figure>
                         </div>
                         <!-- /.swiper-slide p-room__facility__swiper__slide -->
-                        <div class="swiper-slide p-rooms__swiper__thumbnail__slide">
-                          <figure class="p-rooms__swiper__thumbnail__image">
-                            <picture>
-                              <source type="image/webp" srcset="assets/img/room_facility/bathroom/bathroom_img2_sp.webp 1x, assets/img/room_facility/bathroom/bathroom_img2_sp_2x.webp 2x" width="768" height="506" media="(max-width:768px)">
-                              <img src="assets/img/room_facility/bathroom/bathroom_img2_pc.jpg" srcset="assets/img/room_facility/bathroom/bathroom_img2_pc_2x.jpg 2x" width="1000" height="659" alt="洗面台にはドライヤー、化粧水、歯ブラシなどのアメニティをご用意しております。" decoding="async">
-                            </picture>
+                        <div class="swiper-slide c-swiper__thumbnail__slide -bathroom -rooms">
+                          <figure class="c-swiper__thumbnail__image -bathroom -rooms">
+                            <img src="assets/img/room_facility/bathroom/bathroom_img2_thumb.jpg" srcset="assets/img/room_facility/bathroom/bathroom_img2_thumb_2x.jpg 2x" width="300" height="200" alt="洗面台にはドライヤー、化粧水、歯ブラシなどのアメニティをご用意しております。" decoding="async">
                           </figure>
                         </div>
                         <!-- /.swiper-slide p-room__facility__swiper__slide -->
                       </div>
                       <!-- /.swiper-wrapper p-room__facility__swiper__wrapper -->
                     </div>
-                    <!-- /.swiper p-rooms__swiper__thumbnail -->
+                    <!-- /.swiper c-swiper__thumbnail -->
                   </div>
                   <!-- /.p-rooms__swipers__wrapper l-grid__swipers__wrapper -->
                 </div>
                 <!-- /."l-grid p-rooms__contents -contents__wrapper -->
             </div>
             <div class="l-rooms -kitchen js-toUp">
-              <h4 class="c-common__title__circle">キッチン</h4>
+              <h4 class="c-common__title__circle -rooms">キッチン</h4>
                 <div class="l-grid p-rooms__contents -contents__wrapper">
                   <div class="l-grid__items c-grid__items -kitchen p-rooms__grid__items">
-                    <div class="p-shareSpace__items c-grid__item -kitchen__facility">
+                    <div class="p-rooms__items c-grid__item -kitchen -kitchen__facility">
                       <p class="c-list__label">設備</p>
                       <ul class="l-grid -house__detail -kitchen__facility">
-                        <li class="p-shareSpace__item c-grid__item -microwave">
-                          <p class="p-shareSpace__icon"><img src="assets/img/room_facility/kitchen/icon_microwave.png" width="50" height="50" alt="" decoding="async"></p>
-                          <p class="p-shareSpace__itemName">電子レンジ</p>
+                        <li class="p-rooms__item c-grid__item -microwave">
+                          <p class="p-rooms__icon"><img src="assets/img/room_facility/kitchen/icon_microwave.svg" width="32" height="32" alt="" decoding="async"></p>
+                          <p class="p-rooms__itemName">電子レンジ</p>
                         </li>
-                        <li class="p-shareSpace__item c-grid__item -refrigerator">
-                          <p class="p-shareSpace__icon"><img src="assets/img/room_facility/kitchen/icon_refrigerator.png" width="50" height="50" alt="" decoding="async"></p>
-                          <p class="p-shareSpace__itemName">冷蔵庫</p>
+                        <li class="p-rooms__item c-grid__item -refrigerator">
+                          <p class="p-rooms__icon -refrigerator"><img src="assets/img/room_facility/kitchen/icon_refrigerator.svg" width="32" height="32" alt="" decoding="async"></p>
+                          <p class="p-rooms__itemName">冷蔵庫</p>
                         </li>
-                        <li class="p-shareSpace__item c-grid__item -racemaker">
-                          <p class="p-shareSpace__icon"><img src="assets/img/room_facility/kitchen/icon_racemaker.png" width="50" height="50" alt="" decoding="async"></p>
-                          <p class="p-shareSpace__itemName">炊飯器</p>
+                        <li class="p-rooms__item c-grid__item -racemaker">
+                          <p class="p-rooms__icon -racemaker"><img src="assets/img/room_facility/kitchen/icon_racemaker.svg" width="32" height="32" alt="" decoding="async"></p>
+                          <p class="p-rooms__itemName">炊飯器</p>
                         </li>
-                        <li class="p-shareSpace__item c-grid__item -gus">
-                          <p class="p-shareSpace__icon"><img src="assets/img/room_facility/kitchen/icon_gus.png" width="50" height="50" alt="" decoding="async"></p>
-                          <p class="p-shareSpace__itemName">ガスコンロ</p>
+                        <li class="p-rooms__item c-grid__item -gus">
+                          <p class="p-rooms__icon -gus"><img src="assets/img/room_facility/kitchen/icon_gus.svg" width="32" height="32" alt="" decoding="async"></p>
+                          <p class="p-rooms__itemName">ガスコンロ</p>
                         </li>
-                        <li class="p-shareSpace__item c-grid__item -toaster">
-                          <p class="p-shareSpace__icon"><img src="assets/img/room_facility/kitchen/icon_toaster.png" width="50" height="50" alt="" decoding="async"></p>
-                          <p class="p-shareSpace__itemName">トースター</p>
+                        <li class="p-rooms__item c-grid__item -toaster">
+                          <p class="p-rooms__icon -toaster"><img src="assets/img/room_facility/kitchen/icon_toaster.svg" width="32" height="32" alt="" decoding="async"></p>
+                          <p class="p-rooms__itemName">トースター</p>
                         </li>
-                        <li class="p-shareSpace__item c-grid__item -kettle">
-                          <p class="p-shareSpace__icon"><img src="assets/img/room_facility/kitchen/icon_kettle.png" width="50" height="50" alt="" decoding="async"></p>
-                          <p class="p-shareSpace__itemName">電気ケトル</p>
+                        <li class="p-rooms__item c-grid__item -kettle">
+                          <p class="p-rooms__icon -kettle"><img src="assets/img/room_facility/kitchen/icon_kettle.svg" width="32" height="32" alt="" decoding="async"></p>
+                          <p class="p-rooms__itemName">電気ケトル</p>
                         </li>
                       </ul>
                     </div>
-                    <!-- /.p-shareSpace__items c-grid__item -kitchen__facility -->
-                    <div class="p-shareSpace__items c-grid__item -kitchenware">
+                    <!-- /.p-rooms__items c-grid__item -kitchen__facility -->
+                    <div class="p-rooms__items c-grid__item -kitchen -kitchenware">
                       <p class="c-list__label">調理器具</p>
                       <ul class="l-grid -house__detail -kitchenware">
-                        <li class="p-shareSpace__item c-grid__item -fryingPan">
-                          <p class="p-shareSpace__icon"><img src="assets/img/room_facility/kitchen/icon_fryingPan.png" width="50" height="50" alt="" decoding="async"></p>
-                          <p class="p-shareSpace__itemName">フライパン</p>
+                        <li class="p-rooms__item c-grid__item -fryingPan">
+                          <p class="p-rooms__icon"><img src="assets/img/room_facility/kitchen/icon_fryingPan.svg" width="32" height="32" alt="" decoding="async"></p>
+                          <p class="p-rooms__itemName">フライパン</p>
                         </li>
-                        <li class="p-shareSpace__item c-grid__item -pot">
-                          <p class="p-shareSpace__icon"><img src="assets/img/room_facility/kitchen/icon_pot.png" width="50" height="50" alt="" decoding="async"></p>
-                          <p class="p-shareSpace__itemName">鍋</p>
+                        <li class="p-rooms__item c-grid__item -pot">
+                          <p class="p-rooms__icon -pot"><img src="assets/img/room_facility/kitchen/icon_pot.svg" width="32" height="32" alt="" decoding="async"></p>
+                          <p class="p-rooms__itemName">鍋</p>
                         </li>
-                        <li class="p-shareSpace__item c-grid__item -ladle">
-                          <p class="p-shareSpace__icon"><img src="assets/img/room_facility/kitchen/icon_ladle.png" width="50" height="50" alt="" decoding="async"></p>
-                          <p class="p-shareSpace__itemName">おたま</p>
+                        <li class="p-rooms__item c-grid__item -ladle">
+                          <p class="p-rooms__icon"><img src="assets/img/room_facility/kitchen/icon_ladle.svg" width="32" height="32" alt="" decoding="async"></p>
+                          <p class="p-rooms__itemName">おたま</p>
                         </li>
-                        <li class="p-shareSpace__item c-grid__item -whisk">
-                          <p class="p-shareSpace__icon"><img src="assets/img/room_facility/kitchen/icon_whisk.png" width="50" height="50" alt="" decoding="async"></p>
-                          <p class="p-shareSpace__itemName">泡立て器</p>
+                        <li class="p-rooms__item c-grid__item -whisk">
+                          <p class="p-rooms__icon"><img src="assets/img/room_facility/kitchen/icon_whisk.svg" width="32" height="32" alt="" decoding="async"></p>
+                          <p class="p-rooms__itemName">泡立て器</p>
                         </li>
-                        <li class="p-shareSpace__item c-grid__item -turner">
-                          <p class="p-shareSpace__icon"><img src="assets/img/room_facility/kitchen/icon_turner.png" width="50" height="50" alt="" decoding="async"></p>
-                          <p class="p-shareSpace__itemName">フライ返し</p>
+                        <li class="p-rooms__item c-grid__item -turner">
+                          <p class="p-rooms__icon"><img src="assets/img/room_facility/kitchen/icon_turner.svg" width="32" height="32" alt="" decoding="async"></p>
+                          <p class="p-rooms__itemName">フライ返し</p>
                         </li>
-                        <li class="p-shareSpace__item c-grid__item -peeler">
-                          <p class="p-shareSpace__icon"><img src="assets/img/room_facility/kitchen/icon_peeler.png" width="50" height="50" alt="" decoding="async"></p>
-                          <p class="p-shareSpace__itemName">ピーラー</p>
+                        <li class="p-rooms__item c-grid__item -peeler">
+                          <p class="p-rooms__icon"><img src="assets/img/room_facility/kitchen/icon_peeler.svg" width="32" height="32" alt="" decoding="async"></p>
+                          <p class="p-rooms__itemName">ピーラー</p>
                         </li>
-                        <li class="p-shareSpace__item c-grid__item -kitchenKnife">
-                          <p class="p-shareSpace__icon"><img src="assets/img/room_facility/kitchen/icon_kitchenKnife.png" width="50" height="50" alt="" decoding="async"></p>
-                          <p class="p-shareSpace__itemName">包丁</p>
+                        <li class="p-rooms__item c-grid__item -kitchenKnife">
+                          <p class="p-rooms__icon"><img src="assets/img/room_facility/kitchen/icon_kitchenKnife.svg" width="32" height="32" alt="" decoding="async"></p>
+                          <p class="p-rooms__itemName">包丁</p>
                         </li>
-                        <li class="p-shareSpace__item c-grid__item -bowl">
-                          <p class="p-shareSpace__icon"><img src="assets/img/room_facility/kitchen/icon_bowl.png" width="50" height="50" alt="" decoding="async"></p>
-                          <p class="p-shareSpace__itemName">ボウル</p>
+                        <li class="p-rooms__item c-grid__item -bowl">
+                          <p class="p-rooms__icon"><img src="assets/img/room_facility/kitchen/icon_bowl.svg" width="32" height="32" alt="" decoding="async"></p>
+                          <p class="p-rooms__itemName">ボウル</p>
                         </li>
-                        <li class="p-shareSpace__item c-grid__item -colander">
-                          <p class="p-shareSpace__icon"><img src="assets/img/room_facility/kitchen/icon_colander.png" width="50" height="50" alt="" decoding="async"></p>
-                          <p class="p-shareSpace__itemName">ザル</p>
+                        <li class="p-rooms__item c-grid__item -colander">
+                          <p class="p-rooms__icon -colander"><img src="assets/img/room_facility/kitchen/icon_colander.svg" width="32" height="32" alt="" decoding="async"></p>
+                          <p class="p-rooms__itemName">ザル</p>
                         </li>
-                        <li class="p-shareSpace__item c-grid__item -cuttingBoard">
-                          <p class="p-shareSpace__icon"><img src="assets/img/room_facility/kitchen/icon_cuttingBoard.png" width="50" height="50" alt="" decoding="async"></p>
-                          <p class="p-shareSpace__itemName">まな板</p>
+                        <li class="p-rooms__item c-grid__item -cuttingBoard">
+                          <p class="p-rooms__icon -cuttingBoard"><img src="assets/img/room_facility/kitchen/icon_cuttingBoard.svg" width="32" height="32" alt="" decoding="async"></p>
+                          <p class="p-rooms__itemName">まな板</p>
                         </li>
-                      </ul>
-                    </div>
-                    <!-- /.p-shareSpace__items c-grid__item -kitchen -->
-                    <div class="p-shareSpace__items c-grid__item -seasoning">
-                      <p class="c-list__label">調味料</p>
-                      <ul class="l-grid -house__detail -seasoning">
-                        <li class="p-shareSpace__item c-grid__item -solt">
-                          <p class="p-shareSpace__icon"><img src="assets/img/room_facility/kitchen/icon_solt.png" width="50" height="50" alt="" decoding="async"></p>
-                          <p class="p-shareSpace__itemName">塩</p>
-                        </li>
-                        <li class="p-shareSpace__item c-grid__item -paper">
-                          <p class="p-shareSpace__icon"><img src="assets/img/room_facility/kitchen/icon_paper.png" width="50" height="50" alt="" decoding="async"></p>
-                          <p class="p-shareSpace__itemName">胡椒</p>
-                        </li>
-                        <li class="p-shareSpace__item c-grid__item -mayonnaise">
-                          <p class="p-shareSpace__icon"><img src="assets/img/room_facility/kitchen/icon_mayonnaise.png" width="50" height="50" alt="" decoding="async"></p>
-                          <p class="p-shareSpace__itemName">マヨネーズ</p>
-                        </li>
-                        <li class="p-shareSpace__item c-grid__item -ketchup">
-                          <p class="p-shareSpace__icon"><img src="assets/img/room_facility/kitchen/icon_ketchup.png" width="50" height="50" alt="" decoding="async"></p>
-                          <p class="p-shareSpace__itemName">ケチャップ</p>
-                        </li>
-                        <li class="p-shareSpace__item c-grid__item -dressing">
-                          <p class="p-shareSpace__icon"><img src="assets/img/room_facility/kitchen/icon_dressing.png" width="50" height="50" alt="" decoding="async"></p>
-                          <p class="p-shareSpace__itemName">ドレッシング</p>
-                        </li>
-                        <li class="p-shareSpace__item c-grid__item -soysauce">
-                          <p class="p-shareSpace__icon"><img src="assets/img/room_facility/kitchen/icon_soysauce.png" width="50" height="50" alt="" decoding="async"></p>
-                          <p class="p-shareSpace__itemName">醤油</p>
-                        </li>
-                        <li class="p-shareSpace__item c-grid__item -sake">
-                          <p class="p-shareSpace__icon"><img src="assets/img/room_facility/kitchen/icon_sake.png" width="50" height="50" alt="" decoding="async"></p>
-                          <p class="p-shareSpace__itemName">料理酒</p>
-                        </li>
-                        <li class="p-shareSpace__item c-grid__item -mirin">
-                          <p class="p-shareSpace__icon"><img src="assets/img/room_facility/kitchen/icon_mirin.png" width="50" height="50" alt="" decoding="async"></p>
-                          <p class="p-shareSpace__itemName">みりん</p>
-                        </li>
-                        <li class="p-shareSpace__item c-grid__item -oil">
-                          <p class="p-shareSpace__icon"><img src="assets/img/room_facility/kitchen/icon_oil.png" width="50" height="50" alt="" decoding="async"></p>
-                          <p class="p-shareSpace__itemName">サラダ油</p>
-                        </li>
-                        <li class="p-shareSpace__item c-grid__item -sugur">
-                          <p class="p-shareSpace__icon"><img src="assets/img/room_facility/kitchen/icon_sugur.png" width="50" height="50" alt="" decoding="async"></p>
-                          <p class="p-shareSpace__itemName">砂糖</p>
+                        <li class="p-rooms__item c-grid__item -mixer">
+                          <p class="p-rooms__icon -mixer"><img src="assets/img/room_facility/kitchen/icon_mixer.svg" width="32" height="32" alt="" decoding="async"></p>
+                          <p class="p-rooms__itemName">ミキサー</p>
                         </li>
                       </ul>
                     </div>
                     <!-- /.p-rooms__items c-grid__item -kitchen -->
-                    <div class="p-shareSpace__items c-grid__item -drink">
+                    <div class="p-rooms__items c-grid__item -kitchen -seasoning">
+                      <p class="c-list__label">調味料</p>
+                      <ul class="l-grid -house__detail -seasoning">
+                        <li class="p-rooms__item c-grid__item -solt">
+                          <p class="p-rooms__icon -solt"><img src="assets/img/room_facility/kitchen/icon_solt.svg" width="32" height="32" alt="" decoding="async"></p>
+                          <p class="p-rooms__itemName">塩</p>
+                        </li>
+                        <li class="p-rooms__item c-grid__item -paper">
+                          <p class="p-rooms__icon -paper"><img src="assets/img/room_facility/kitchen/icon_paper.svg" width="32" height="32" alt="" decoding="async"></p>
+                          <p class="p-rooms__itemName">胡椒</p>
+                        </li>
+                        <li class="p-rooms__item c-grid__item -mayonnaise">
+                          <p class="p-rooms__icon -mayonnaise"><img src="assets/img/room_facility/kitchen/icon_mayonnaise.svg" width="32" height="32" alt="" decoding="async"></p>
+                          <p class="p-rooms__itemName">マヨネーズ</p>
+                        </li>
+                        <li class="p-rooms__item c-grid__item -ketchup">
+                          <p class="p-rooms__icon -ketchup"><img src="assets/img/room_facility/kitchen/icon_ketchup.svg" width="32" height="32" alt="" decoding="async"></p>
+                          <p class="p-rooms__itemName">ケチャップ</p>
+                        </li>
+                        <li class="p-rooms__item c-grid__item -dressing">
+                          <p class="p-rooms__icon -dressing"><img src="assets/img/room_facility/kitchen/icon_dressing.svg" width="32" height="32" alt="" decoding="async"></p>
+                          <p class="p-rooms__itemName">ドレッシング</p>
+                        </li>
+                        <li class="p-rooms__item c-grid__item -soysauce">
+                          <p class="p-rooms__icon -soysauce"><img src="assets/img/room_facility/kitchen/icon_soysauce.svg" width="32" height="32" alt="" decoding="async"></p>
+                          <p class="p-rooms__itemName">醤油</p>
+                        </li>
+                        <li class="p-rooms__item c-grid__item -sake">
+                          <p class="p-rooms__icon -sake"><img src="assets/img/room_facility/kitchen/icon_sake.svg" width="32" height="32" alt="" decoding="async"></p>
+                          <p class="p-rooms__itemName">料理酒</p>
+                        </li>
+                        <li class="p-rooms__item c-grid__item -mirin">
+                          <p class="p-rooms__icon -mirin"><img src="assets/img/room_facility/kitchen/icon_mirin.svg" width="32" height="32" alt="" decoding="async"></p>
+                          <p class="p-rooms__itemName">みりん</p>
+                        </li>
+                        <li class="p-rooms__item c-grid__item -oil">
+                          <p class="p-rooms__icon -oil"><img src="assets/img/room_facility/kitchen/icon_oil.svg" width="32" height="32" alt="" decoding="async"></p>
+                          <p class="p-rooms__itemName">サラダ油</p>
+                        </li>
+                        <li class="p-rooms__item c-grid__item -sugar">
+                          <p class="p-rooms__icon -sugar"><img src="assets/img/room_facility/kitchen/icon_sugur.svg" width="32" height="32" alt="" decoding="async"></p>
+                          <p class="p-rooms__itemName">砂糖</p>
+                        </li>
+                      </ul>
+                    </div>
+                    <!-- /.p-rooms__items c-grid__item -kitchen -->
+                    <div class="p-rooms__items c-grid__item -kitchen -drink">
                       <p class="c-list__label">飲み物</p>
                       <ul class="l-grid -house__detail -drink">
-                        <li class="p-shareSpace__item c-grid__item -coffee">
-                          <p class="p-shareSpace__icon"><img src="assets/img/room_facility/kitchen/icon_coffee.png" width="50" height="50" alt="" decoding="async"></p>
-                          <p class="p-shareSpace__itemName">インスタントコーヒー</p>
+                        <li class="p-rooms__item c-grid__item -coffee">
+                          <p class="p-rooms__icon -coffee"><img src="assets/img/room_facility/kitchen/icon_coffee.svg" width="32" height="32" alt="" decoding="async"></p>
+                          <p class="p-rooms__itemName">インスタントコーヒー</p>
                         </li>
-                        <li class="p-shareSpace__item c-grid__item -tea">
-                          <p class="p-shareSpace__icon"><img src="assets/img/room_facility/kitchen/icon_tea.png" width="50" height="50" alt="" decoding="async"></p>
-                          <p class="p-shareSpace__itemName">お茶（ほうじ茶／紅茶／緑茶）</p>
+                        <li class="p-rooms__item c-grid__item -tea">
+                          <p class="p-rooms__icon -tea"><img src="assets/img/room_facility/kitchen/icon_tea.svg" width="32" height="32" alt="" decoding="async"></p>
+                          <p class="p-rooms__itemName">お茶（ほうじ茶／紅茶／緑茶）</p>
                         </li>
                       </ul>
                     </div>
                     <!-- /.p-rooms__items c-grid__item -drink -->
-                    <div class="p-shareSpace__items c-grid__item -other">
+                    <div class="p-rooms__items c-grid__item -kitchen -other">
                       <p class="c-list__label">その他</p>
                       <ul class="l-grid -house__detail -other">
-                        <li class="p-shareSpace__item c-grid__item -plate">
-                          <p class="p-shareSpace__icon"><img src="assets/img/room_facility/kitchen/icon_plate.png" width="50" height="50" alt="" decoding="async"></p>
-                          <p class="p-shareSpace__itemName">皿</p>
+                        <li class="p-rooms__item c-grid__item -plate">
+                          <p class="p-rooms__icon"><img src="assets/img/room_facility/kitchen/icon_plate.svg" width="32" height="32" alt="" decoding="async"></p>
+                          <p class="p-rooms__itemName">皿</p>
                         </li>
-                        <li class="p-shareSpace__item c-grid__item -bowl-small">
-                          <p class="p-shareSpace__icon"><img src="assets/img/room_facility/kitchen/icon_bowl-small.png" width="50" height="50" alt="" decoding="async"></p>
-                          <p class="p-shareSpace__itemName">茶碗</p>
+                        <li class="p-rooms__item c-grid__item -bowl-small">
+                          <p class="p-rooms__icon"><img src="assets/img/room_facility/kitchen/icon_bowl-small.svg" width="32" height="32" alt="" decoding="async"></p>
+                          <p class="p-rooms__itemName">茶碗</p>
                         </li>
-                        <li class="p-shareSpace__item c-grid__item -glass">
-                          <p class="p-shareSpace__icon"><img src="assets/img/room_facility/kitchen/icon_glass.png" width="50" height="50" alt="" decoding="async"></p>
-                          <p class="p-shareSpace__itemName">グラス</p>
+                        <li class="p-rooms__item c-grid__item -glass">
+                          <p class="p-rooms__icon -glass"><img src="assets/img/room_facility/kitchen/icon_glass.svg" width="32" height="32" alt="" decoding="async"></p>
+                          <p class="p-rooms__itemName">グラス</p>
                         </li>
-                        <li class="p-shareSpace__item c-grid__item -sponge">
-                          <p class="p-shareSpace__icon"><img src="assets/img/room_facility/kitchen/icon_sponge.png" width="50" height="50" alt="" decoding="async"></p>
-                          <p class="p-shareSpace__itemName">食器用スポンジ</p>
+                        <li class="p-rooms__item c-grid__item -sponge">
+                          <p class="p-rooms__icon -sponge"><img src="assets/img/room_facility/kitchen/icon_sponge.svg" width="32" height="32" alt="" decoding="async"></p>
+                          <p class="p-rooms__itemName">食器用スポンジ</p>
                         </li>
-                        <li class="p-shareSpace__item c-grid__item -kitchenSorp">
-                          <p class="p-shareSpace__icon"><img src="assets/img/room_facility/kitchen/icon_kitchenSorp.png" width="50" height="50" alt="" decoding="async"></p>
-                          <p class="p-shareSpace__itemName">食器用洗剤</p>
+                        <li class="p-rooms__item c-grid__item -kitchenSorp">
+                          <p class="p-rooms__icon -kitchenSorp"><img src="assets/img/room_facility/kitchen/icon_kitchenSorp.svg" width="32" height="32" alt="" decoding="async"></p>
+                          <p class="p-rooms__itemName">食器用洗剤</p>
                         </li>
-                        <li class="p-shareSpace__item c-grid__item -knife">
-                          <p class="p-shareSpace__icon"><img src="assets/img/room_facility/kitchen/icon_knife.png" width="50" height="50" alt="" decoding="async"></p>
-                          <p class="p-shareSpace__itemName">ナイフ</p>
+                        <li class="p-rooms__item c-grid__item -knife">
+                          <p class="p-rooms__icon -knife"><img src="assets/img/room_facility/kitchen/icon_knife.svg" width="32" height="32" alt="" decoding="async"></p>
+                          <p class="p-rooms__itemName">ナイフ</p>
                         </li>
-                        <li class="p-shareSpace__item c-grid__item -fork">
-                          <p class="p-shareSpace__icon"><img src="assets/img/room_facility/kitchen/icon_fork.png" width="50" height="50" alt="" decoding="async"></p>
-                          <p class="p-shareSpace__itemName">フォーク</p>
+                        <li class="p-rooms__item c-grid__item -fork">
+                          <p class="p-rooms__icon"><img src="assets/img/room_facility/kitchen/icon_fork.svg" width="32" height="32" alt="" decoding="async"></p>
+                          <p class="p-rooms__itemName">フォーク</p>
                         </li>
-                        <li class="p-shareSpace__item c-grid__item -spoon">
-                          <p class="p-shareSpace__icon"><img src="assets/img/room_facility/kitchen/icon_spoon.png" width="50" height="50" alt="" decoding="async"></p>
-                          <p class="p-shareSpace__itemName">スプーン</p>
+                        <li class="p-rooms__item c-grid__item -spoon">
+                          <p class="p-rooms__icon"><img src="assets/img/room_facility/kitchen/icon_spoon.svg" width="32" height="32" alt="" decoding="async"></p>
+                          <p class="p-rooms__itemName">スプーン</p>
                         </li>
-                        <li class="p-shareSpace__item c-grid__item -chopstick">
-                          <p class="p-shareSpace__icon"><img src="assets/img/room_facility/kitchen/icon_chopstick.png" width="50" height="50" alt="" decoding="async"></p>
-                          <p class="p-shareSpace__itemName">箸</p>
+                        <li class="p-rooms__item c-grid__item -chopstick">
+                          <p class="p-rooms__icon -chopstick"><img src="assets/img/room_facility/kitchen/icon_chopstick.svg" width="32" height="32" alt="" decoding="async"></p>
+                          <p class="p-rooms__itemName -chopstick">箸</p>
                         </li>
-                        <li class="p-shareSpace__item c-grid__item -papercup">
-                          <p class="p-shareSpace__icon"><img src="assets/img/room_facility/kitchen/icon_papercup.png" width="40" height="52" alt="" decoding="async"></p>
-                          <p class="p-shareSpace__itemName">紙コップ</p>
+                        <li class="p-rooms__item c-grid__item -papercup">
+                          <p class="p-rooms__icon -papercup"><img src="assets/img/room_facility/kitchen/icon_papercup.svg" width="32" height="32" alt="" decoding="async"></p>
+                          <p class="p-rooms__itemName">紙コップ</p>
+                        </li>
+                        <li class="p-rooms__item c-grid__item -aluminumFoil">
+                          <p class="p-rooms__icon -aluminumFoil"><img src="assets/img/room_facility/kitchen/icon_aluminumFoil.svg" width="32" height="32" alt="" decoding="async"></p>
+                          <p class="p-rooms__itemName">アルミホイル</p>
+                        </li>
+                        <li class="p-rooms__item c-grid__item -wrap">
+                          <p class="p-rooms__icon -wrap"><img src="assets/img/room_facility/kitchen/icon_wrap.svg" width="32" height="32" alt="" decoding="async"></p>
+                          <p class="p-rooms__itemName">ラップ</p>
                         </li>
                       </ul>
                     </div>
@@ -839,39 +829,30 @@
                       <!-- <div class="swiper-pagination p-rooms__pagination -kitchen"></div> -->
                     </div>
                     <!-- /.p-room__facility__buttons -->
-                    <div class="swiper -kitchen p-rooms__swiper__thumbnail c-grid__item -thumbnailImg">
-                      <div class="swiper-wrapper p-rooms__swiper__thumbnail__wrapper">
-                        <div class="swiper-slide p-rooms__swiper__thumbnail__slide">
-                          <figure class="p-rooms__swiper__thumbnail__image">
-                            <picture>
-                              <source type="image/webp" srcset="assets/img/room_facility/kitchen/kitchen_img1_sp.webp 1x, assets/img/room_facility/kitchen/kitchen_img1_sp_2x.webp 2x" width="768" height="506" media="(max-width:768px)">
-                              <img src="assets/img/room_facility/kitchen/kitchen_img1_pc.jpg" srcset="assets/img/room_facility/kitchen/kitchen_img1_pc_2x.jpg 2x" width="1000" height="659" alt="コンロは3口。調理スペースも十分にある広々としたキッチン。" decoding="async">
-                            </picture>
+                    <div class="swiper -kitchen c-swiper__thumbnail c-grid__item -thumbnailImg">
+                      <div class="swiper-wrapper c-swiper__thumbnail__wrapper -kitchen -rooms">
+                        <div class="swiper-slide c-swiper__thumbnail__slide -kitchen -rooms">
+                          <figure class="c-swiper__thumbnail__image -kitchen -rooms">
+                            <img src="assets/img/room_facility/kitchen/kitchen_img1_thumb.jpg" srcset="assets/img/room_facility/kitchen/kitchen_img1_thumb_2x.jpg 2x" width="300" height="200" alt="コンロは3口。調理スペースも十分にある広々としたキッチン。" decoding="async">
                           </figure>
                         </div>
                         <!-- /.swiper-slide p-room__facility__swiper__slide -->
-                        <div class="swiper-slide p-rooms__swiper__thumbnail__slide">
-                          <figure class="p-rooms__swiper__thumbnail__image">
-                            <picture>
-                              <source type="image/webp" srcset="assets/img/room_facility/kitchen/kitchen_img2_sp.webp 1x, assets/img/room_facility/kitchen/kitchen_img2_sp_2x.webp 2x" width="768" height="506" media="(max-width:768px)">
-                              <img src="assets/img/room_facility/kitchen/kitchen_img2_pc.jpg" srcset="assets/img/room_facility/kitchen/kitchen_img2_pc_2x.jpg 2x" width="1000" height="659" alt="キッチンにある各種調味料はご自由にご利用ください。" decoding="async">
-                            </picture>
+                        <div class="swiper-slide c-swiper__thumbnail__slide -kitchen -rooms">
+                          <figure class="c-swiper__thumbnail__image -kitchen -rooms">
+                            <img src="assets/img/room_facility/kitchen/kitchen_img2_thumb.jpg" srcset="assets/img/room_facility/kitchen/kitchen_img2_thumb_2x.jpg 2x" width="300" height="200" alt="キッチンにある各種調味料はご自由にご利用ください。" decoding="async">
                           </figure>
                         </div>
                         <!-- /.swiper-slide p-room__facility__swiper__slide -->
-                        <div class="swiper-slide p-rooms__swiper__thumbnail__slide">
-                          <figure class="p-rooms__swiper__thumbnail__image">
-                            <picture>
-                              <source type="image/webp" srcset="assets/img/room_facility/kitchen/kitchen_img3_sp.webp 1x, assets/img/room_facility/kitchen/kitchen_img3_sp_2x.webp 2x" width="768" height="506" media="(max-width:768px)">
-                              <img src="assets/img/room_facility/kitchen/kitchen_img3_pc.jpg" srcset="assets/img/room_facility/kitchen/kitchen_img3_pc_2x.jpg 2x" width="1000" height="659" alt="トースター、電子レンジ、冷蔵庫、電気ポッドなどを完備。" decoding="async">
-                            </picture>
+                        <div class="swiper-slide c-swiper__thumbnail__slide -kitchen -rooms">
+                          <figure class="c-swiper__thumbnail__image -kitchen -rooms">
+                            <img src="assets/img/room_facility/kitchen/kitchen_img3_thumb.jpg" srcset="assets/img/room_facility/kitchen/kitchen_img3_thumb_2x.jpg 2x" width="300" height="200" alt="トースター、電子レンジ、冷蔵庫、電気ポッドなどを完備。" decoding="async">
                           </figure>
                         </div>
                         <!-- /.swiper-slide p-room__facility__swiper__slide -->
                       </div>
                       <!-- /.swiper-wrapper p-room__facility__swiper__wrapper -->
                     </div>
-                    <!-- /.swiper p-rooms__swiper__thumbnail -->
+                    <!-- /.swiper c-swiper__thumbnail -->
                   </div>
                   <!-- /.p-rooms__swipers__wrapper l-grid__swipers__wrapper -->
                 </div>
@@ -879,7 +860,7 @@
             </div>
             <!-- /.l-rooms -kitchen -->
             <div class="l-rooms -restRoom js-toUp">
-              <h4 class="c-common__title__circle -restroom">トイレ</h4>
+              <h4 class="c-common__title__circle -restroom -rooms">トイレ</h4>
                 <div class="p-shareSpace__restRoom__bg">
                   <div class="p-shareSpace__grid__items -restroom">
                     <figure class="p-rooms__swiper__image -restroom">
@@ -954,7 +935,10 @@
               <div class="p-rooms__houseRule__wrapper -bottom">
                 <ul class="p-rooms__houseRule__lists -bottom">
                   <li class="p-rooms__houseRule__list__item"><p class="p-rooms__houseRule__list__text">この施設は通常の住居を使用しています。静かな住環境の維持にご協力お願いします。</p></li>
+                  <li class="p-rooms__houseRule__list__item"><p class="p-rooms__houseRule__list__text">住宅内は土足厳禁です。靴を脱いでお上がりください。</p></li>
                   <li class="p-rooms__houseRule__list__item"><p class="p-rooms__houseRule__list__text">水/お湯を出しっぱなしにしないでください。</p></li>
+                  <li class="p-rooms__houseRule__list__item"><p class="p-rooms__houseRule__list__text">トイレにトイレットペーパー以外のものを流さないでください。</p></li>
+                  <li class="p-rooms__houseRule__list__item"><p class="p-rooms__houseRule__list__text">使用方法が分からない場合、故障の際には管理人にご連絡ください。</p></li>
                   <li class="p-rooms__houseRule__list__item"><p class="p-rooms__houseRule__list__text">外出時には窓に鍵をかけてください。</p></li>
                   <li class="p-rooms__houseRule__list__item"><p class="p-rooms__houseRule__list__text">ドアは静かに閉め、大声での会話・歌・大音量で音楽を流すことはご遠慮ください。</p></li>
                   <li class="p-rooms__houseRule__list__item"><p class="p-rooms__houseRule__list__text">ケガ防止のため、各お部屋のベランダには出ないでください。</p></li>
@@ -1019,21 +1003,25 @@
           </address>
           <div class="p-footer__nav">
             <ul class="p-footer__nav__list">
-              <li class="p-footer__nav__item" lang="en"><a href="index.html" class="p-footer__nav__link"><span class="p-footer__nav__text">Top</span></a></li>
-              <li class="p-footer__nav__item" lang="en"><a href="index.html#about" class="p-footer__nav__link"><span class="p-footer__nav__text">About</span></a></li>
-              <li class="p-footer__nav__item" lang="en"><a href="index.html#feature" class="p-footer__nav__link"><span class="p-footer__nav__text">Feature</span></a></li>
+              <li class="p-footer__nav__item" lang="en"><a href="index.html" class="p-footer__nav__link"><span class="p-footer__nav__text">Home</span></a></li>
+              <li class="p-footer__nav__item" lang="en"><a href="#about" class="p-footer__nav__link"><span class="p-footer__nav__text">About</span></a></li>
+              <li class="p-footer__nav__item" lang="en"><a href="#feature" class="p-footer__nav__link"><span class="p-footer__nav__text">Feature</span></a></li>
               <li class="p-footer__nav__item" lang="en"><a href="room__facility.html" class="p-footer__nav__link"><span class="p-footer__nav__text">Room・Facility</span></a></li>
-              <li class="p-footer__nav__item" lang="en"><a href="index.html#plan" class="p-footer__nav__link"><span class="p-footer__nav__text">Plan</span></a></li>
-              <li class="p-footer__nav__item" lang="en"><a href="index.html#faq" class="p-footer__nav__link"><span class="p-footer__nav__text">Faq</span></a></li>
-              <li class="p-footer__nav__item" lang="en"><a href="access.html" class="p-footer__nav__link"><span class="p-footer__nav__text">Access</span></a></li>
-              <li class="p-footer__nav__item" lang="en"><a href="contact.html" class="p-footer__nav__link"><span class="p-footer__nav__text">Contact</span></a></li>
+              <li class="p-footer__nav__item" lang="en"><a href="#plan" class="p-footer__nav__link"><span class="p-footer__nav__text">Plan</span></a></li>
+              <li class="p-footer__nav__item" lang="en"><a href="#faq" class="p-footer__nav__link -sm"><span class="p-footer__nav__text">Faq</span></a></li>
+              <li class="p-footer__nav__item" lang="en"><a href="access.html" class="p-footer__nav__link -sm"><span class="p-footer__nav__text">Access</span></a></li>
+              <li class="p-footer__nav__item" lang="en"><a href="PrivacyPolicy.html" class="p-footer__nav__link -sm"><span class="p-footer__nav__text">Privacy Policy</span></a></li>
+              <li class="p-footer__nav__item" lang="en"><a href="contact.html" class="p-footer__nav__link -sm"><span class="p-footer__nav__text">Contact</span></a></li>
             </ul>
             <p class="p-footer__button"><a href="reservation.html" target="_self" class="c-button -common -book -footer">ご予約はこちら</a></p>
           </div>
+          <!-- /.p-footer__nav -->
         </div>
-        <p class="c-button -allow p-footer__button js-toTop">
-          <img src="assets/img/common/common_footer_button.png" width="23" height="23" alt="上矢印" decoding="async">
-        </p>
+        <a href="#top">
+          <p class="c-button -allow p-footer__button">
+            <img src="assets/img/common/common_footer_button.png" width="23" height="23" alt="上矢印" decoding="async">
+          </p>
+        </a>
         <small class="p-footer__copyright">&copy;minpaku gallery toki all rights reserved</small>
         </div>
     </footer>

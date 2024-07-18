@@ -276,6 +276,14 @@
       }
     }
 
+    &.-mixer {
+      grid-area: 6 / 1 / 7 / 2;
+
+      @include mq(md) {
+        grid-area: 2 / 4 / 3 / 5;
+      }
+    }
+
     &.-peeler {
       grid-area: 1 / 2 / 2 / 3;
 
@@ -381,7 +389,7 @@
       }
     }
 
-    &.-sugur {
+    &.-sugar {
       grid-area: 5 / 2 / 6 / 3;
 
       @include mq(md) {
@@ -415,6 +423,14 @@
 
       @include mq(md) {
         grid-area: 2 / 2 / 3 / 3;
+      }
+    }
+
+    &.-aluminumFoil {
+      grid-area: 6 / 1 / 7 / 2;
+
+      @include mq(md) {
+        grid-area: 3 / 4 / 4 / 5;
       }
     }
 
@@ -455,6 +471,14 @@
 
       @include mq(md) {
         grid-area: 1 / 4 / 2 / 5;
+      }
+    }
+
+    &.-wrap {
+      grid-area: 6 / 2 / 7 / 3;
+
+      @include mq(md) {
+        grid-area: 2 / 4 / 3 / 5;
       }
     }
 
@@ -579,11 +603,7 @@
 }
 
 .c-grid__item.-feature + .c-grid__item.-feature {
-  margin-top: pxToRem(62px);
-
-  @include mq(md) {
-    margin-top: pxToRem(109px);
-  }
+  margin-top: clamp(62 / 16 * 1rem, 2.538rem + 6.69vw, 109 / 16 * 1rem); //viw:320-1023px
 
   @include mq(lg) {
     margin-top: 0;
@@ -591,11 +611,11 @@
 }
 
 .c-grid__item.-plan + .c-grid__item.-plan {
-  margin-top: pxToRem(72px);
+  margin-top: clamp(72 / 16 * 1rem, 4.045rem + 2.28vw, 88 / 16 * 1rem); //viw:320-1023px
 
-  @include mq(md) {
-    margin-top: pxToRem(88px);
-  }
+  // @include mq(md) {
+  //   margin-top: pxToRem(88px);
+  // }
 
   @include mq(lg) {
     margin-top: 0;

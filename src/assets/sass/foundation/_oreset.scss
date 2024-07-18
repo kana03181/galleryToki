@@ -155,6 +155,10 @@ html {
   }
 }
 
+[tabindex="-1"]:focus-visible {
+  outline: none !important;
+}
+
 body {
   min-height: 100%;
   color: $primary-text-color;
@@ -361,6 +365,7 @@ button,
 [role="button"] {
   cursor: pointer;
   -webkit-appearance: button;
+  touch-action: manipulation;
 }
 
 button:-moz-focusring,
@@ -409,7 +414,12 @@ textarea {
   # Interactive & Misc
 ---------------------------------------------- */
 summary {
-  display: list-item;
+  // display: list-item;
+  display: block;
+
+  &::-webkit-details-marker {
+    display: none;
+  }
 }
 
 template,

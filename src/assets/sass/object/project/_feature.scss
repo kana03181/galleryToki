@@ -6,48 +6,34 @@
   feature
 */
 .p-feature__grid {
-  padding: pxToRem(62px) 0 pxToRem(72px);
-
-  @include mq(md) {
-    padding: pxToRem(72px) 0 pxToRem(100px);
-  }
+  padding: clamp(70 / 16 * 1rem, 3.806rem + 2.84vw, 90 / 16 * 1rem) 0
+    clamp(72 / 16 * 1rem, 4rem + 2.5vw, 96 / 16 * 1rem);
 
   @include mq(xl) {
-    padding: pxToRem(72px) pxToRem(15px) pxToRem(100px);
+    padding: clamp(70 / 16 * 1rem, 3.806rem + 2.84vw, 90 / 16 * 1rem) pxToRem(15px)
+      clamp(72 / 16 * 1rem, 4rem + 2.5vw, 96 / 16 * 1rem);
   }
 }
 
-// .p-feature__card__titles {
-//   flex: 1 1 auto;
-// }
-
 .p-feature__card__title {
   display: block;
-  // padding: pxToRem(16px) 0;
-  font-size: clamp(20 / 16 * 1rem, 1.167rem + 0.42vw, 24/ 16 * 1rem); //viw:320-1280px
+  font-size: pxToRem(20px);
   font-weight: 700;
   letter-spacing: 0.03em;
   text-align: left;
+  word-break: keep-all;
+  overflow-wrap: break-word;
 
-  &.-wordBreak {
-    word-break: keep-all;
-    overflow-wrap: break-word;
+  @include mq(xl) {
+    font-size: pxToRem(24px);
   }
-
-  // @include mq(md) {
-  //   padding: pxToRem(20px) 0;
-  // }
-
-  // @include mq(lg) {
-  //   padding: pxToRem(24px) 0;
-  // }
 }
 
 .p-feature__purpose__title {
   position: relative;
-  width: clamp(218 / 16 * 1rem, 9.205rem + 22.1vw, 317 / 16 * 1rem); //最小：218px 最大：317px viw:320-1280px
+  width: clamp(218 / 16 * 1rem, 9.205rem + 22.1vw, 317 / 16 * 1rem); //viw:320-1280px
   margin: 0 auto;
-  font-size: clamp(19 / 16 * 1rem, 0.786rem + 2.01vw, 28 / 16 * 1rem); //最小：19px 最大：28px viw:320-1280px
+  font-size: clamp(19 / 16 * 1rem, 0.786rem + 2.01vw, 28 / 16 * 1rem); //viw:320-1280px
   font-weight: 700;
   line-height: 1;
   text-align: center;
@@ -88,27 +74,24 @@
 
 .p-feature__swiper {
   margin-left: 11.785%;
-  padding-top: clamp(2rem, 1.318rem + 3.41vw, 3.5rem); //32px-56px min-:320-1024px
+  padding-top: clamp(54 / 16 * 1rem, 2.75rem + 3.13vw, 84 / 16 * 1rem); //min-:320-1024px
 
   @include mq(md) {
     margin-left: 21%;
   }
 
   @include mq(lg) {
-    margin-left: 0;
+    margin-left: pxToRem(18px);
   }
 }
 
 .p-feature__swiper-wrapper {
-  padding-bottom: pxToRem(40px);
-
-  @include mq(md) {
-    padding-bottom: pxToRem(64px);
-  }
+  padding-bottom: clamp(40 / 16 * 1rem, 1.362rem + 5.69vw, 80 / 16 * 1rem); //min-:320-1023px
 
   @include mq(lg) {
     justify-content: center;
-    gap: pxToRem(40px);
+    gap: pxToRem(60px);
+    padding-bottom: 0;
   }
 }
 
@@ -125,9 +108,10 @@
 
 .p-feature__purpose__label__wrap {
   position: absolute;
-  top: -14px;
-  left: -17px;
-  width: 40.63%;
+  top: -20px;
+  left: -20px;
+  width: 46.63%;
+  max-width: 121px;
   overflow: hidden;
   border-radius: 50%;
 }

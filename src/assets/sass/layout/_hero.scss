@@ -3,13 +3,5 @@
 @use "../global" as *;
 
 .l-hero {
-  margin-bottom: calc(142 / 320 * 100vw);
-
-  @include mq(md) {
-    margin-bottom: calc(254 / 768 * 100vw);
-  }
-
-  @include mq(lg) {
-    margin-bottom: calc(232 / 1024 * 100vw);
-  }
+  margin-bottom: clamp(100 / 16 * 1rem, 3.75rem + 12.5vw, 220 / 16 * 1rem); //viw:320-1280px
 }

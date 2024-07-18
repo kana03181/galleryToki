@@ -41,7 +41,8 @@
     margin: clamp(24 / 16 * 1rem, 1.045rem + 2.27vw, 40 / 16 * 1rem) auto 0; //viw:320-1024px
 
     @include mq(md) {
-      max-width: 691px;
+      // max-width: 691px;
+      max-width: 900px;
     }
 
     @include mq(lg) {
@@ -63,12 +64,13 @@
 
       @include mq(md) {
         top: 32px;
-        left: 20px;
+        // left: 20px;
+        left: calc(20 / 768 * 100vw);
         border-radius: 15px 65px;
       }
 
       @include mq(lg) {
-        left: 64px;
+        left: calc(64 / 1024 * 100vw);
         width: 89.979%;
       }
     }
@@ -93,14 +95,54 @@
 
   &__item {
     display: flex;
-    gap: pxToRem(5px);
+    gap: pxToRem(8px);
     align-items: center;
     line-height: 1.2;
   }
 
   &__icon {
     display: inline-block;
-    width: clamp(20 / 16 * 1rem, 1.108rem + 0.71vw, 25 / 16 * 1rem);
+    width: clamp(20 / 16 * 1rem, 1.108rem + 0.71vw, 25 / 16 * 1rem); //viw:320-1024px
+
+    &.-sake {
+      width: clamp(22 / 16 * 1rem, 1.205rem + 0.85vw, 28 / 16 * 1rem); //viw:320-1024px
+    }
+
+    &.-mirin {
+      width: clamp(22 / 16 * 1rem, 1.205rem + 0.85vw, 28 / 16 * 1rem); //viw:320-1024px
+    }
+
+    &.-ketchup {
+      width: clamp(22 / 16 * 1rem, 1.205rem + 0.85vw, 28 / 16 * 1rem); //viw:320-1024px
+    }
+
+    &.-dressing {
+      width: clamp(22 / 16 * 1rem, 1.205rem + 0.85vw, 28 / 16 * 1rem); //viw:320-1024px
+    }
+
+    &.-sugar {
+      width: clamp(23 / 16 * 1rem, 1.146rem + 0.52vw, 28 / 16 * 1rem); //viw:320-1024px
+    }
+
+    &.-sponge {
+      width: clamp(23 / 16 * 1rem, 1.146rem + 0.52vw, 28 / 16 * 1rem); //viw:320-1024px
+    }
+
+    &.-chopstick {
+      width: clamp(23 / 16 * 1rem, 1.146rem + 0.52vw, 28 / 16 * 1rem); //viw:320-1024px;
+    }
+
+    &.-knife {
+      width: clamp(23 / 16 * 1rem, 1.146rem + 0.52vw, 28 / 16 * 1rem); //viw:320-1024px;
+    }
+
+    &.-kitchenSorp {
+      width: clamp(23 / 16 * 1rem, 1.146rem + 0.52vw, 28 / 16 * 1rem); //viw:320-1024px;
+    }
+
+    &.-papercup {
+      width: clamp(17 / 16 * 1rem, 0.977rem + 0.43vw, 20 / 16 * 1rem); //viw:320-1024px
+    }
   }
 
   &__itemName {
@@ -109,47 +151,6 @@
     letter-spacing: 0.08em;
   }
 }
-
-// .p-shareSpace__caution {
-//   margin-top: pxToRem(32px);
-//   padding: clamp(24 / 16 * 1rem, 1.273rem + 1.14vw, 32 / 16 * 1rem)
-//     clamp(10 / 16 * 1rem, 0.341rem + 1.42vw, 20 / 16 * 1rem) clamp(24 / 16 * 1rem, 1.273rem + 1.14vw, 32 / 16 * 1rem)
-//     clamp(10 / 16 * 1rem, 0.341rem + 1.42vw, 20 / 16 * 1rem); //viw:320-1024px
-//   border-radius: 30px;
-//   background-color: $base-color;
-
-//   &__title {
-//     font-size: clamp(18 / 16 * 1rem, 1.068rem + 0.28vw, 20 / 16 * 1rem); //viw:320-1024px
-//     font-weight: 700;
-//     letter-spacing: 0.08em;
-//     text-align: center;
-//   }
-
-//   &__list {
-//     padding-left: pxToRem(15px);
-//     list-style: initial;
-//   }
-
-//   &__marker {
-//     padding-top: pxToRem(16px);
-//     font-size: pxToRem(15px);
-//     font-weight: 500;
-//     letter-spacing: 0.08em;
-//     line-height: 1.5;
-
-//     @include mq(md) {
-//       font-size: pxToRem(16px);
-//     }
-
-//     &::marker {
-//       font-size: calc(8 / 16 * 1em);
-//     }
-//   }
-
-//   &__text {
-//     vertical-align: middle;
-//   }
-// }
 
 .p-shareSpace__living {
   &__sentence {

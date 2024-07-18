@@ -11,7 +11,20 @@
 }
 
 .p-access__map {
-  aspect-ratio: 288 / 195;
   display: block;
-  border-radius: pxToRem(10px);
+  margin: clamp(32 / 16 * 1rem, 1.833rem + 0.83vw, 64 / 16 * 1rem) auto
+    clamp(32 / 16 * 1rem, 2rem + 2.5vw, 64 / 16 * 1rem);
+  aspect-ratio: 288 / 195;
+  overflow: hidden;
+
+  @include mq(lg) {
+    max-width: 800px;
+    aspect-ratio: 800 / 469;
+  }
+
+  & iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: pxToRem(10px);
+  }
 }

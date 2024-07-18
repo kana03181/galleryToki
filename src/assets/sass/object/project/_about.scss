@@ -73,12 +73,11 @@
 
   @include mq(lg) {
     width: 66.41vw;
-    aspect-ratio: initial;
+    aspect-ratio: 747 / 489;
   }
 
   @include mq(xl) {
     width: 58.36vw;
-    aspect-ratio: initial;
   }
 }
 

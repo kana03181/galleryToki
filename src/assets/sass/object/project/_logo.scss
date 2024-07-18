@@ -24,12 +24,12 @@
   margin: 0 auto;
 
   &.-header {
-    width: calc(80 / 320 * 100vw);
-    max-width: 80px;
+    width: calc(100 / 320 * 100vw);
+    max-width: 120px;
 
     @include mq(md) {
-      width: calc(120 / 768 * 100vw);
-      max-width: 120px;
+      width: calc(150 / 768 * 100vw);
+      max-width: 150px;
     }
 
     @include mq(lg) {

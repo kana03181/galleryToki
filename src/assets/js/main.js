@@ -20,18 +20,20 @@ closetPolyfill();
 import gsap from "./lib/gsap";
 import hamburger from "./lib/hamburger";
 import windowResize from "./lib/windowResize";
-import toTop from "./lib/toTop";
+import SmoothScroll from "./lib/SmoothScroll";
 import accordion from "./lib/accordion";
+import IntersectionObserver from "./lib/IntersectionObserver";
 // import validation from "./lib/validation";
 import { form_Tel, form_Email } from "./lib/validation";
 import Swiper from "swiper/bundle";
 import "swiper/swiper-bundle.css";
 
 new gsap();
-new toTop();
+new SmoothScroll();
 new hamburger();
 new windowResize();
 new accordion();
+new IntersectionObserver();
 // new validation();
 new form_Tel();
 new form_Email();
@@ -41,6 +43,11 @@ new form_Email();
 // new Toggle(".js-drawer");
 // new SmoothScroll('a[href*="#"]');
 
+//**********  ここから下はswiperのJS  **********/
+
+// /*
+//   全てのswiperのブレイクポイントを管理
+// */
 const breakpoints = {
   hero: {
     768: {
@@ -50,6 +57,13 @@ const breakpoints = {
       spaceBetween: 64,
     },
   },
+
+  feature: {
+    768: {
+      spaceBetween: 56,
+    },
+  },
+
   shareSpace: {
     768: {
       spaceBetween: 180,
@@ -58,7 +72,17 @@ const breakpoints = {
       spaceBetween: 64,
     },
   },
+
   roomFacility: {
+    768: {
+      spaceBetween: 120,
+    },
+    1024: {
+      spaceBetween: 40,
+    },
+  },
+
+  access_main: {
     768: {
       spaceBetween: 180,
     },
@@ -66,89 +90,102 @@ const breakpoints = {
       spaceBetween: 40,
     },
   },
-  access: {
+
+  rooms: {
     768: {
-      spaceBetween: 180,
+      spaceBetween: 16,
     },
     1024: {
-      spaceBetween: 40,
+      spaceBetween: 0,
+    },
+  },
+
+  access_thumb: {
+    768: {
+      spaceBetween: 16,
     },
   },
 };
+
+// /*TOPページのSwiperを作成する関数  // */
 
 const createSwiper = (selector, options) => {
   return new Swiper(selector, options);
 };
 
-const createThumbnailSwiper = (swiperSelector, thumbnailSelector, options) => {
-  const thumbnailSwiper = new Swiper(thumbnailSelector, {
-    watchSlidesProgress: true,
-    slidesPerView: 3,
-  });
+// /*
+//   swiper(feature)
+//   画面サイズ1024px以上の時はswiperを破棄。それ以下の時は再生成する。
+// */
+const targetSwiper = document.querySelector(".p-feature__swiper");
+const breakPoint = 1023; // Swiperを破棄するブレークポイント
+let featureSwiper = null; // Swiperインスタンスを保持する変数
 
-  return new Swiper(swiperSelector, {
-    ...options,
-    thumbs: {
-      swiper: thumbnailSwiper,
-    },
-  });
-};
-
-/** swiper(feature) **/
-const featureBreakPoint = 1023;
-let featureSwiper;
-
+// Swiperを生成/破棄する関数
 function manageSwiper() {
-  if (window.innerWidth > featureBreakPoint) {
-    if (featureSwiper) {
-      featureSwiper.destroy(false, true);
-      featureSwiper = null;
-    }
-  } else {
-    if (!featureSwiper) {
-      featureSwiper = new Swiper(".p-feature__swiper", {
-        loop: false,
-        spaceBetween: 36,
-        slidesPerView: "auto",
-        grabCursor: true,
-        pagination: {
-          el: ".swiper-pagination",
-          type: "bullets",
-          clickable: "clickable",
-        },
-        scrollbar: {
-          el: ".swiper-scrollbar",
-          hide: false,
-          draggable: true,
-        },
-      });
+  const windowWidth = window.innerWidth;
+
+  if (targetSwiper) {
+    if (windowWidth >= breakPoint) {
+      // 1024px以上の場合
+      if (featureSwiper) {
+        // Swiperインスタンスが存在するなら
+        featureSwiper.destroy(true, true); // Swiperを破棄
+        featureSwiper = null; // インスタンスをリセット
+      }
+    } else {
+      // 1024px未満の場合
+      if (!featureSwiper) {
+        // Swiperインスタンスが存在しないなら
+        featureSwiper = new Swiper(".p-feature__swiper", {
+          loop: false,
+          spaceBetween: 36,
+          slidesPerView: "auto",
+          grabCursor: true,
+          scrollbar: {
+            el: ".swiper-scrollbar",
+            hide: false,
+            draggable: true,
+          },
+        });
+      }
     }
   }
 }
+window.addEventListener("load", manageSwiper); // ページロード時に実行
+window.addEventListener("resize", manageSwiper); // ウィンドウリサイズ時に実行
 
-window.addEventListener("load", manageSwiper);
-window.addEventListener("resize", manageSwiper);
+manageSwiper(); // 初期状態でSwiperを管理
 
-manageSwiper();
+// /*
+//   swiper(hero)
+// */
+document.addEventListener("DOMContentLoaded", function () {
+  const swiperContainer = document.querySelector(".js-hero__swiper__wrapper");
+  if (swiperContainer) {
+    createSwiper(".p-hero__swiper", {
+      loop: true,
+      speed: 2000,
+      effect: "fade",
+      slidesPerView: "auto",
+      autoplay: {
+        delay: 2500,
+      },
+      breakpoints: breakpoints.hero,
+      pagination: {
+        el: ".p-hero__swiper__pagination",
+        type: "bullets",
+        clickable: "clickable",
+      },
+    });
 
-/** swiper(hero) **/
-createSwiper(".p-hero__swiper", {
-  loop: true,
-  speed: 2000,
-  effect: "fade",
-  slidesPerView: "auto",
-  autoplay: {
-    delay: 2500,
-  },
-  breakpoints: breakpoints.hero,
-  pagination: {
-    el: ".p-hero__swiper__pagination",
-    type: "bullets",
-    clickable: "clickable",
-  },
+    swiperContainer.style.visibility = "visible";
+  }
 });
 
-/** swiper(index:room&facility shareSpace) **/
+// /*
+//   swiper(TOP:room & facility)
+// */
 createSwiper(".p-room__facility__swiper.-shareSpace", {
   loop: false,
   spaceBetween: 32,
@@ -166,7 +203,9 @@ createSwiper(".p-room__facility__swiper.-shareSpace", {
   },
 });
 
-/** swiper(location) **/
+// /*
+//   swiper(location)
+// */
 createSwiper(".p-location__swiper", {
   loop: false,
   spaceBetween: 32,
@@ -178,272 +217,301 @@ createSwiper(".p-location__swiper", {
   },
 
   pagination: {
-    el: ".c-swiper-pagination.-location",
+    el: ".c-swiper_pagination.-location",
     type: "bullets",
     clickable: "clickable",
   },
 });
 
-/** swiper(room&facility room1) **/
-createThumbnailSwiper(".p-rooms__swiper.-room1", ".p-rooms__swiper__thumbnail.-room1", {
-  loop: false,
-  spaceBetween: 32,
-  slidesPerView: "auto",
-  grabCursor: true,
+// /*  サムネイル付きのSwiperを作成する関数  // */
+let thumbnailSwiperInstance;
+let mainSwiperInstance;
 
-  breakpoints: breakpoints.roomFacility,
+window.addEventListener("resize", () => {
+  if (thumbnailSwiperInstance) {
+    thumbnailSwiperInstance.update();
+  }
+  if (mainSwiperInstance) {
+    mainSwiperInstance.update();
+  }
+});
 
-  navigation: {
-    nextEl: ".c-swiper__button__next.-room1",
-    prevEl: ".c-swiper__button__prev.-room1",
-    disabledClass: "swiper-button-disabled",
+const createThumbnailSwiper = (mainSwiperSelector, thumbnailSelector, options) => {
+  const defaultThumbnailOptions = {
+    slidesPerView: "auto",
+    // spaceBetween: 0,
+    reInitOnResize: false,
+    watchSlidesProgress: false,
+  };
+
+  const combinedThumbnailOptions = {
+    ...defaultThumbnailOptions,
+    ...options?.thumbnailOptions, // オプションがあるかチェックしてから展開
+  };
+
+  const thumbnailSwiperInstance = new Swiper(thumbnailSelector, combinedThumbnailOptions);
+
+  const mainSwiperInstance = new Swiper(mainSwiperSelector, {
+    loop: false,
+    spaceBetween: 32,
+    slidesPerView: "auto",
+    ...options?.mainOptions,
+    thumbs: {
+      swiper: thumbnailSwiperInstance,
+    },
+  });
+
+  mainSwiperInstance.thumbs.swiper = thumbnailSwiperInstance;
+
+  return thumbnailSwiperInstance;
+};
+
+// /*
+//   room&facility (room1)
+// */
+createThumbnailSwiper(".p-rooms__swiper.-room1", ".c-swiper__thumbnail.-room1", {
+  mainOptions: {
+    breakpoints: breakpoints.roomFacility,
+    navigation: {
+      nextEl: ".c-swiper__button__next.-room1",
+      prevEl: ".c-swiper__button__prev.-room1",
+      disabledClass: "swiper-button-disabled",
+    },
   },
-
-  pagination: {
-    el: ".p-rooms__pagination.-room1",
-    type: "bullets",
-    clickable: "clickable",
+  thumbnailOptions: {
+    watchSlidesProgress: false,
+    allowTouchMove: false,
+    spaceBetween: 8,
+    breakpoints: breakpoints.rooms,
   },
 });
 
-/** swiper(room&facility room2) **/
-createThumbnailSwiper(".p-rooms__swiper.-room2", ".p-rooms__swiper__thumbnail.-room2", {
-  loop: false,
-  spaceBetween: 32,
-  slidesPerView: "auto",
-  grabCursor: true,
-
-  breakpoints: breakpoints.roomFacility,
-
-  navigation: {
-    nextEl: ".c-swiper__button__next.-room2",
-    prevEl: ".c-swiper__button__prev.-room2",
-    disabledClass: "swiper-button-disabled",
+// /*
+//   room&facility (room2)
+// */
+createThumbnailSwiper(".p-rooms__swiper.-room2", ".c-swiper__thumbnail.-room2", {
+  mainOptions: {
+    breakpoints: breakpoints.roomFacility,
+    navigation: {
+      nextEl: ".c-swiper__button__next.-room2",
+      prevEl: ".c-swiper__button__prev.-room2",
+      disabledClass: "swiper-button-disabled",
+    },
   },
-
-  pagination: {
-    el: ".p-rooms__pagination.-room2",
-    type: "bullets",
-    clickable: "clickable",
+  thumbnailOptions: {
+    watchSlidesProgress: false,
+    allowTouchMove: false,
+    spaceBetween: 8,
+    breakpoints: breakpoints.rooms,
   },
 });
 
-/** swiper(room&facility living) **/
-createThumbnailSwiper(".p-rooms__swiper.-living", ".p-rooms__swiper__thumbnail.-living", {
-  loop: false,
-  spaceBetween: 32,
-  slidesPerView: "auto",
-  grabCursor: true,
-
-  breakpoints: breakpoints.roomFacility,
-
-  navigation: {
-    nextEl: ".c-swiper__button__next.-living",
-    prevEl: ".c-swiper__button__prev.-living",
-    disabledClass: "swiper-button-disabled",
+// /*
+//   room&facility (living)
+// */
+createThumbnailSwiper(".p-rooms__swiper.-living", ".c-swiper__thumbnail.-living", {
+  mainOptions: {
+    breakpoints: breakpoints.roomFacility,
+    navigation: {
+      nextEl: ".c-swiper__button__next.-living",
+      prevEl: ".c-swiper__button__prev.-living",
+      disabledClass: "swiper-button-disabled",
+    },
   },
-
-  pagination: {
-    el: ".p-rooms__pagination.-living",
-    type: "bullets",
-    clickable: "clickable",
+  thumbnailOptions: {
+    watchSlidesProgress: false,
+    allowTouchMove: false,
+    spaceBetween: 8,
+    breakpoints: breakpoints.rooms,
   },
 });
 
-/** swiper(room&facility bathRoom) **/
-createThumbnailSwiper(".p-rooms__swiper.-bathroom", ".p-rooms__swiper__thumbnail.-bathroom", {
-  loop: false,
-  spaceBetween: 32,
-  slidesPerView: "auto",
-  grabCursor: true,
-
-  breakpoints: breakpoints.roomFacility,
-
-  navigation: {
-    nextEl: ".c-swiper__button__next.-bathroom",
-    prevEl: ".c-swiper__button__prev.-bathroom",
-    disabledClass: "swiper-button-disabled",
+// /*
+//   room&facility (bathRoom)
+// */
+createThumbnailSwiper(".p-rooms__swiper.-bathroom", ".c-swiper__thumbnail.-bathroom", {
+  mainOptions: {
+    breakpoints: breakpoints.roomFacility,
+    navigation: {
+      nextEl: ".c-swiper__button__next.-bathroom",
+      prevEl: ".c-swiper__button__prev.-bathroom",
+      disabledClass: "swiper-button-disabled",
+    },
   },
-
-  pagination: {
-    el: ".p-rooms__pagination.-bathroom",
-    type: "bullets",
-    clickable: "clickable",
+  thumbnailOptions: {
+    watchSlidesProgress: false,
+    allowTouchMove: false,
+    spaceBetween: 8,
+    breakpoints: breakpoints.rooms,
   },
 });
 
-/** swiper(room&facility kitchen) **/
-createThumbnailSwiper(".p-rooms__swiper.-kitchen", ".p-rooms__swiper__thumbnail.-kitchen", {
-  loop: false,
-  spaceBetween: 32,
-  slidesPerView: "auto",
-  grabCursor: true,
-
-  breakpoints: breakpoints.roomFacility,
-
-  navigation: {
-    nextEl: ".c-swiper__button__next.-kitchen",
-    prevEl: ".c-swiper__button__prev.-kitchen",
-    disabledClass: "swiper-button-disabled",
+// /*
+//   room&facility (kitchen)
+// */
+createThumbnailSwiper(".p-rooms__swiper.-kitchen", ".c-swiper__thumbnail.-kitchen", {
+  mainOptions: {
+    breakpoints: breakpoints.roomFacility,
+    navigation: {
+      nextEl: ".c-swiper__button__next.-kitchen",
+      prevEl: ".c-swiper__button__prev.-kitchen",
+      disabledClass: "swiper-button-disabled",
+    },
   },
-
-  pagination: {
-    el: ".p-rooms__pagination.-kitchen",
-    type: "bullets",
-    clickable: "clickable",
+  thumbnailOptions: {
+    watchSlidesProgress: false,
+    allowTouchMove: false,
+    spaceBetween: 8,
+    breakpoints: breakpoints.rooms,
   },
 });
 
-/** swiper(access airplane__bus) **/
-createSwiper(".p-access__swiper.-airplane__bus", {
-  loop: false,
-  spaceBetween: 32,
-  slidesPerView: "auto",
-  grabCursor: true,
-
-  breakpoints: breakpoints.access,
-
-  navigation: {
-    nextEl: ".c-swiper__button__next.-airplane__bus",
-    prevEl: ".c-swiper__button__prev.-airplane__bus",
-    disabledClass: "swiper-button-disabled",
+// /*
+//   access (飛行機 + バス)
+// */
+createThumbnailSwiper(".p-access__swiper.-airplane__bus", ".c-swiper__thumbnail.-airplane__bus", {
+  mainOptions: {
+    breakpoints: breakpoints.access_main,
+    navigation: {
+      nextEl: ".c-swiper__button__next.-airplane__bus",
+      prevEl: ".c-swiper__button__prev.-airplane__bus",
+      disabledClass: "swiper-button-disabled",
+    },
   },
 
-  pagination: {
-    el: ".p-access__swiper__pagination.-airplane__bus",
-    type: "bullets",
-    clickable: "clickable",
+  thumbnailOptions: {
+    spaceBetween: 8,
+    watchSlidesProgress: true,
+    breakpoints: breakpoints.access_thumb,
   },
 });
 
-/** swiper(access airplane__car) **/
-createSwiper(".p-access__swiper.-airplane__car", {
-  loop: false,
-  spaceBetween: 32,
-  slidesPerView: "auto",
-  grabCursor: true,
+// /*
+//   access (飛行機 + 車)
+// */
 
-  breakpoints: breakpoints.access,
-
-  navigation: {
-    nextEl: ".c-swiper__button__next.-airplane__car",
-    prevEl: ".c-swiper__button__prev.-airplane__car",
-    disabledClass: "swiper-button-disabled",
+createThumbnailSwiper(".p-access__swiper.-airplane__car", ".c-swiper__thumbnail.-airplane__car", {
+  mainOptions: {
+    breakpoints: breakpoints.access_main,
+    navigation: {
+      nextEl: ".c-swiper__button__next.-airplane__car",
+      prevEl: ".c-swiper__button__prev.-airplane__car",
+      disabledClass: "swiper-button-disabled",
+    },
   },
 
-  pagination: {
-    el: ".p-access__swiper__pagination.-airplane__car",
-    type: "bullets",
-    clickable: "clickable",
-  },
-});
-
-/** swiper(access shinkansen__bus__direct) **/
-createSwiper(".p-access__swiper.-shinkansen__bus__direct", {
-  loop: false,
-  spaceBetween: 32,
-  slidesPerView: "auto",
-  grabCursor: true,
-
-  breakpoints: breakpoints.access,
-
-  navigation: {
-    nextEl: ".c-swiper__button__next.-shinkansen__bus__direct",
-    prevEl: ".c-swiper__button__prev.-shinkansen__bus__direct",
-    disabledClass: "swiper-button-disabled",
-  },
-
-  pagination: {
-    el: ".p-access__swiper__pagination.-shinkansen__bus__direct",
-    type: "bullets",
-    clickable: "clickable",
+  thumbnailOptions: {
+    spaceBetween: 8,
+    watchSlidesProgress: true,
+    breakpoints: breakpoints.access_thumb,
   },
 });
 
-/** swiper(access shinkansen__bus__transfer) **/
-createSwiper(".p-access__swiper.-shinkansen__bus__transfer", {
-  loop: false,
-  spaceBetween: 32,
-  slidesPerView: "auto",
-  grabCursor: true,
+// /*
+//   access (新幹線 + バス（乗り換えなし）)
+// */
 
-  breakpoints: breakpoints.access,
-
-  navigation: {
-    nextEl: ".c-swiper__button__next.-shinkansen__bus__transfer",
-    prevEl: ".c-swiper__button__prev.-shinkansen__bus__transfer",
-    disabledClass: "swiper-button-disabled",
+createThumbnailSwiper(".p-access__swiper.-shinkansen__bus__direct", ".c-swiper__thumbnail.-shinkansen__bus__direct", {
+  mainOptions: {
+    breakpoints: breakpoints.access_main,
+    navigation: {
+      nextEl: ".c-swiper__button__next.-shinkansen__bus__direct",
+      prevEl: ".c-swiper__button__prev.-shinkansen__bus__direct",
+      disabledClass: "swiper-button-disabled",
+    },
   },
 
-  pagination: {
-    el: ".p-access__swiper__pagination.-shinkansen__bus__transfer",
-    type: "bullets",
-    clickable: "clickable",
-  },
-});
-
-/** swiper(access shinkansen__tram) **/
-createSwiper(".p-access__swiper.-shinkansen__tram", {
-  loop: false,
-  spaceBetween: 32,
-  slidesPerView: "auto",
-  grabCursor: true,
-
-  breakpoints: breakpoints.access,
-
-  navigation: {
-    nextEl: ".c-swiper__button__next.-shinkansen__tram",
-    prevEl: ".c-swiper__button__prev.-shinkansen__tram",
-    disabledClass: "swiper-button-disabled",
-  },
-
-  pagination: {
-    el: ".p-access__swiper__pagination.-shinkansen__tram",
-    type: "bullets",
-    clickable: "clickable",
+  thumbnailOptions: {
+    spaceBetween: 8,
+    watchSlidesProgress: true,
+    breakpoints: breakpoints.access_thumb,
   },
 });
 
-/** swiper(access shinkansen__train) **/
-createSwiper(".p-access__swiper.-shinkansen__train", {
-  loop: false,
-  spaceBetween: 32,
-  slidesPerView: "auto",
-  grabCursor: true,
+// /*
+//   access (新幹線 + バス（乗り換えあり）)
+// */
 
-  breakpoints: breakpoints.access,
+createThumbnailSwiper(
+  ".p-access__swiper.-shinkansen__bus__transfer",
+  ".c-swiper__thumbnail.-shinkansen__bus__transfer",
+  {
+    mainOptions: {
+      breakpoints: breakpoints.access_main,
+      navigation: {
+        nextEl: ".c-swiper__button__next.-shinkansen__bus__transfer",
+        prevEl: ".c-swiper__button__prev.-shinkansen__bus__transfer",
+        disabledClass: "swiper-button-disabled",
+      },
+    },
 
-  navigation: {
-    nextEl: ".c-swiper__button__next.-shinkansen__train",
-    prevEl: ".c-swiper__button__prev.-shinkansen__train",
-    disabledClass: "swiper-button-disabled",
+    thumbnailOptions: {
+      spaceBetween: 8,
+      watchSlidesProgress: true,
+      breakpoints: breakpoints.access_thumb,
+    },
+  }
+);
+
+// /*
+//   access (新幹線 + 市電)
+// */
+
+createThumbnailSwiper(".p-access__swiper.-shinkansen__tram", ".c-swiper__thumbnail.-shinkansen__tram", {
+  mainOptions: {
+    breakpoints: breakpoints.access_main,
+    navigation: {
+      nextEl: ".c-swiper__button__next.-shinkansen__tram",
+      prevEl: ".c-swiper__button__prev.-shinkansen__tram",
+      disabledClass: "swiper-button-disabled",
+    },
   },
 
-  pagination: {
-    el: ".p-access__swiper__pagination.-shinkansen__train",
-    type: "bullets",
-    clickable: "clickable",
+  thumbnailOptions: {
+    spaceBetween: 8,
+    watchSlidesProgress: true,
+    breakpoints: breakpoints.access_thumb,
   },
 });
 
-/** swiper(access expressBus) **/
-createSwiper(".p-access__swiper.-expressBus", {
-  loop: false,
-  spaceBetween: 32,
-  slidesPerView: "auto",
-  grabCursor: true,
+// /*
+//   access (新幹線 + 電車)
+// */
 
-  breakpoints: breakpoints.access,
-
-  navigation: {
-    nextEl: ".c-swiper__button__next.-expressBus",
-    prevEl: ".c-swiper__button__prev.-expressBus",
-    disabledClass: "swiper-button-disabled",
+createThumbnailSwiper(".p-access__swiper.-shinkansen__train", ".c-swiper__thumbnail.-shinkansen__train", {
+  mainOptions: {
+    breakpoints: breakpoints.access_main,
+    navigation: {
+      nextEl: ".c-swiper__button__next.-shinkansen__train",
+      prevEl: ".c-swiper__button__prev.-shinkansen__train",
+      disabledClass: "swiper-button-disabled",
+    },
   },
 
-  pagination: {
-    el: ".p-access__swiper__pagination.-expressBus",
-    type: "bullets",
-    clickable: "clickable",
+  thumbnailOptions: {
+    spaceBetween: 8,
+    watchSlidesProgress: true,
+    breakpoints: breakpoints.access_thumb,
+  },
+});
+
+// /*
+//   access (高速バス)
+// */
+
+createThumbnailSwiper(".p-access__swiper.-expressBus", ".c-swiper__thumbnail.-expressBus", {
+  mainOptions: {
+    breakpoints: breakpoints.access_main,
+    navigation: {
+      nextEl: ".c-swiper__button__next.-expressBus",
+      prevEl: ".c-swiper__button__prev.-expressBus",
+      disabledClass: "swiper-button-disabled",
+    },
+  },
+
+  thumbnailOptions: {
+    spaceBetween: 8,
+    watchSlidesProgress: true,
+    breakpoints: breakpoints.access_thumb,
   },
 });

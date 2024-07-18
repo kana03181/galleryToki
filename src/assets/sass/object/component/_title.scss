@@ -13,31 +13,32 @@
     display: inline-block;
     position: relative;
     width: fit-content;
-    // padding-bottom: pxToRem(8px);
+    overflow: hidden;
     font-size: clamp(32 / 16 * 1rem, 1.018rem + 4.91vw, 54 / 16 * 1rem);
-    line-height: 0.8;
+    line-height: 1.2;
+    vertical-align: top;
 
     &::before {
       content: "";
       position: absolute;
-      bottom: -13px;
+      bottom: 0;
       left: 0;
       width: var(--w_size);
       height: var(--h_size);
-      background-color: $main-color;
     }
 
-    &.-rooms {
+    &.-top {
+      padding-bottom: pxToRem(8px);
+
       &::before {
-        content: "";
-        background-color: initial;
+        background-color: $main-color;
       }
     }
   }
 
   &__ja {
     display: block;
-    padding-top: pxToRem(16px);
+    padding-top: clamp(16 / 16 * 1rem, 0.667rem + 1.67vw, 32 / 16 * 1rem);
     font-family: "Zen Kaku Gothic Antique", sans-serif;
     font-size: pxToRem(15px);
     line-height: 1;
@@ -77,20 +78,10 @@
 
   &__circle {
     position: relative;
-    padding-left: clamp(21 / 16 * 1rem, 1.199rem + 0.57vw, 25 / 16 * 1rem); //viw:320-1024px
-    color: $quaternary-text-color;
-    font-size: clamp(18 / 16 * 1rem, 0.841rem + 1.42vw, 28 / 16 * 1rem); //viw:320-1024px
+    color: $primary-text-color;
     font-weight: 500;
     letter-spacing: 0.08em;
     line-height: 1;
-
-    @include mq(md) {
-      margin-left: pxToRem(-20px);
-    }
-
-    @include mq(lg) {
-      margin-left: pxToRem(-33px);
-    }
 
     &::before {
       content: "";
@@ -98,11 +89,27 @@
       top: 0;
       bottom: 0;
       left: 0;
-      width: clamp(16 / 16 * 1rem, 0.886rem + 0.57vw, 20 / 16 * 1rem);
-      height: clamp(16 / 16 * 1rem, 0.886rem + 0.57vw, 20 / 16 * 1rem);
       margin: auto 0;
       border-radius: 50%;
       background-color: $main-color;
+    }
+
+    &.-rooms {
+      padding-left: clamp(21 / 16 * 1rem, 1.199rem + 0.57vw, 25 / 16 * 1rem); //viw:320-1024px
+      font-size: clamp(18 / 16 * 1rem, 0.841rem + 1.42vw, 28 / 16 * 1rem); //viw:320-1024px
+
+      @include mq(md) {
+        margin-left: pxToRem(-20px);
+      }
+
+      @include mq(lg) {
+        margin-left: pxToRem(-33px);
+      }
+
+      &::before {
+        width: clamp(16 / 16 * 1rem, 0.886rem + 0.57vw, 20 / 16 * 1rem);
+        height: clamp(16 / 16 * 1rem, 0.886rem + 0.57vw, 20 / 16 * 1rem);
+      }
     }
 
     &.-restroom {
@@ -110,13 +117,49 @@
         margin-left: 0;
       }
     }
+
+    &.-access {
+      padding-left: clamp(15 / 16 * 1rem, 0.833rem + 0.52vw, 20 / 16 * 1rem); //viw:320-1280px
+      font-size: clamp(16 / 16 * 1rem, 0.958rem + 0.21vw, 18 / 16 * 1rem); //viw:320-1280px
+      // line-height: 0.875;
+      word-break: keep-all;
+      overflow-wrap: break-word;
+
+      @include mq(xxs) {
+        line-height: 1.2;
+      }
+
+      @include mq(md) {
+        line-height: 1;
+      }
+
+      &::before {
+        width: clamp(10 / 16 * 1rem, 0.521rem + 0.52vw, 15 / 16 * 1rem); //viw:320-1280px
+        height: clamp(10 / 16 * 1rem, 0.521rem + 0.52vw, 15 / 16 * 1rem); //viw:320-1280px
+
+        @include mq(xxs) {
+          top: 5px;
+          bottom: initial;
+        }
+
+        @include mq(xs) {
+          top: clamp(1 / 16 * 1rem, 0.021rem + 0.21vw, 3 / 16 * 1rem);
+          bottom: 0;
+        }
+      }
+    }
   }
 
   &.-access {
     display: flex;
     align-items: center;
+    padding-left: clamp(5 / 16 * 1rem, 0.227rem + 0.43vw, 8 / 16 * 1rem);
     column-gap: clamp(5 / 16 * 1rem, 0.227rem + 0.43vw, 8 / 16 * 1rem);
     line-height: 0.5;
+
+    @include mq(lg) {
+      padding-left: 0;
+    }
   }
 
   &__underline {
@@ -125,8 +168,6 @@
     position: relative;
     width: fit-content;
     margin: 0 auto;
-    // padding-bottom: pxToRem(8px);
-    // border-bottom: 5px solid $main-color;
 
     &::before {
       content: "";
@@ -144,23 +185,18 @@
       letter-spacing: 0.08em;
       line-height: 1;
     }
+
+    &.-access {
+      @include mq(lg) {
+        margin: 0;
+      }
+    }
   }
 }
 
-// .c-common__title__underline {
-//   width: fit-content;
-//   margin: 0 auto;
-//   padding-bottom: pxToRem(8px);
-//   border-bottom: 5px solid $main-color;
-//   font-weight: 700;
-//   letter-spacing: 0.08em;
-//   line-height: 1;
-
-//   &.-rooms {
-//     font-size: clamp(20 / 16 * 1rem, 1.023rem + 1.14vw, 28 / 16 * 1rem); //viw:320-1024px
-//   }
-// }
-
-.js-title > span {
+.js-title-sm > span,
+.js-title-md > span,
+.js-title-md2 > span,
+.js-title-lg > span {
   display: inline-block;
 }

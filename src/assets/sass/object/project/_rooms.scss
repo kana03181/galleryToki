@@ -2,8 +2,110 @@
 @use "sass:math";
 @use "../../global" as *;
 
+//詳細度の関係でswiper関係を先に記述
+
 // /*
-//   room1
+//   swiper main
+// */
+
+.p-rooms__swipers__wrapper {
+  margin-top: pxToRem(-24px);
+
+  @include mq(md) {
+    margin-top: pxToRem(-32px);
+  }
+}
+
+.p-rooms__swiper {
+  margin-left: calc(50% - 50vw);
+  overflow-x: hidden;
+
+  @include mq(md) {
+    width: 100%;
+    max-width: 900px;
+    margin-left: calc(-40 / 768 * 100vw);
+  }
+
+  @include mq(lg) {
+    width: 100%;
+    max-width: initial;
+    margin-left: 0;
+  }
+
+  &__image {
+    overflow: hidden;
+    border-radius: 0 50px 15px 0;
+    aspect-ratio: 294 / 195;
+
+    @include mq(md) {
+      border-radius: 15px 65px;
+    }
+
+    @include mq(lg) {
+      aspect-ratio: 790 / 546;
+    }
+
+    &.-restroom {
+      width: 100%;
+
+      @include mq(lg) {
+        width: 89.979%;
+      }
+    }
+
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.p-rooms__swiper__thumbnail {
+  width: 17.177%;
+  margin-top: pxToRem(-32px);
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    gap: clamp(8 / 16 * 1rem, 0.045rem + 2.27vw, 24 / 16 * 1rem); //viw:320-1024px
+
+    @include mq(lg) {
+      flex-direction: column;
+      align-items: end;
+    }
+  }
+
+  &__slide {
+    width: 100% !important ;
+    height: auto;
+    transition: opacity 1s cubic-bezier(0.05, 0.31, 0.73, 1.02);
+    opacity: 0.5;
+
+    &:hover {
+      transition: opacity 1s cubic-bezier(0.05, 0.31, 0.73, 1.02);
+      opacity: 1;
+    }
+  }
+
+  &__image {
+    overflow: hidden;
+    border-radius: 10px;
+    aspect-ratio: 58 / 38;
+
+    @include mq(lg) {
+      border-radius: 15px;
+      aspect-ratio: 180 / 120;
+    }
+  }
+}
+
+.p-rooms__swiper__thumbnail .swiper-slide.swiper-slide-thumb-active {
+  opacity: 1;
+}
+
+// /*
+//   rooms
 // */
 
 .p-rooms {
@@ -17,7 +119,8 @@
     background-color: $base-color;
 
     @include mq(md) {
-      max-width: 691px;
+      // max-width: 691px;
+      max-width: 900px;
       margin-left: calc(20 / 768 * 100vw);
       padding: 0 calc(40 / 768 * 100vw) 0 0;
       border-radius: 15px 65px;
@@ -40,8 +143,8 @@
   &__header {
     width: 100%;
     max-width: 900px;
-    margin: clamp(24 / 16 * 1rem, 1.273rem + 1.14vw, 32 / 16 * 1rem) auto
-      clamp(32 / 16 * 1rem, 1.091rem + 4.55vw, 64 / 16 * 1rem); //viw:320-1024px
+    margin: clamp(24 / 16 * 1rem, 1.167rem + 1.67vw, 40 / 16 * 1rem) auto
+      clamp(2.5rem, 1.833rem + 3.33vw, 72 / 16 * 1rem); //viw:320-1280px
   }
 
   &__text {
@@ -56,16 +159,17 @@
     letter-spacing: 0.08em;
     line-height: 1.6875;
     text-align: left;
-    text-decoration: underline;
   }
 
   &__caution {
-    margin-top: pxToRem(32px);
-    padding: clamp(24 / 16 * 1rem, 1.273rem + 1.14vw, 32 / 16 * 1rem)
-      clamp(10 / 16 * 1rem, 0.341rem + 1.42vw, 20 / 16 * 1rem) clamp(24 / 16 * 1rem, 1.273rem + 1.14vw, 32 / 16 * 1rem)
-      clamp(10 / 16 * 1rem, 0.341rem + 1.42vw, 20 / 16 * 1rem); //viw:320-1024px
+    padding: clamp(24 / 16 * 1rem, 0.833rem + 3.33vw, 56 / 16 * 1rem) clamp(10 / 16 * 1rem, 3.13vw, 40 / 16 * 1rem)
+      clamp(24 / 16 * 1rem, 0.833rem + 3.33vw, 56 / 16 * 1rem) clamp(10 / 16 * 1rem, 3.13vw, 40 / 16 * 1rem); //viw:320-1280px
     border-radius: 30px;
     background-color: $base-color;
+
+    &.-shareSpace {
+      margin-top: pxToRem(32px);
+    }
 
     &__title {
       margin-bottom: clamp(16 / 16 * 1rem, 0.833rem + 0.83vw, 24 / 16 * 1rem); //viw:320-1280px
@@ -76,7 +180,9 @@
     }
 
     &__list {
-      padding-left: pxToRem(15px);
+      width: fit-content;
+      margin: 0 auto;
+      padding-left: clamp(15 / 16 * 1rem, 0.917rem + 0.1vw, 16 / 16 * 1rem); //viw:320-1280px
       list-style: initial;
     }
 
@@ -131,18 +237,544 @@
         width: calc(248 / 1280 * 100vw);
       }
     }
+
+    &.-kitchen {
+      @include mq(lg) {
+        width: fit-content;
+      }
+    }
+
+    &.-kitchenware {
+      @include mq(lg) {
+        width: initial;
+      }
+    }
+
+    &.-kitchen__facility {
+      @include mq(lg) {
+        margin-right: clamp(24 / 16 * 1rem, -8.5rem + 15.63vw, 64 / 16 * 1rem);
+      }
+    }
+
+    &.-drink {
+      @include mq(lg) {
+        margin-left: pxToRem(-24px);
+      }
+
+      @include mq(xl) {
+        margin-left: pxToRem(-48px);
+      }
+    }
   }
 
   &__item {
     display: flex;
-    gap: pxToRem(5px);
     align-items: center;
+    column-gap: pxToRem(8px);
     line-height: 1.2;
+
+    &.-airCleaner {
+      padding-left: pxToRem(2.6px);
+    }
+
+    &.-deskLamp {
+      column-gap: pxToRem(5px);
+
+      @include mq(lg) {
+        column-gap: pxToRem(8px);
+      }
+    }
+
+    &.-sofa__single {
+      @include mq(lg) {
+        column-gap: pxToRem(11px);
+      }
+
+      @include mq(xl) {
+        column-gap: pxToRem(10px);
+      }
+    }
+
+    &.-mirror1,
+    &.-mirror2 {
+      column-gap: pxToRem(11px);
+    }
+
+    &.-bed__dobble {
+      column-gap: pxToRem(11.5px);
+    }
+
+    &.-softener {
+      column-gap: pxToRem(5px);
+    }
+
+    &.-ketchup {
+      column-gap: pxToRem(7px);
+    }
+
+    &.-oil {
+      column-gap: pxToRem(7px);
+    }
+
+    &.-dressing {
+      column-gap: pxToRem(6px);
+    }
+
+    &.-sugar {
+      column-gap: pxToRem(6px);
+    }
+
+    &.-pot {
+      column-gap: pxToRem(9px);
+    }
+
+    &.-turner {
+      column-gap: pxToRem(6.5px);
+    }
+
+    &.-mixer {
+      column-gap: clamp(7 / 16 * 1rem, 0.324rem + 0.57vw, 11 / 16 * 1rem); //view:320-1024
+    }
+
+    &.-aluminumFoil {
+      column-gap: pxToRem(7px);
+    }
   }
 
   &__icon {
     display: inline-block;
     width: clamp(20 / 16 * 1rem, 1.108rem + 0.71vw, 25 / 16 * 1rem);
+    max-height: pxToRem(25px);
+
+    &.-hangerRack {
+      height: clamp(22 / 16 * 1rem, 1.313rem + 0.31vw, 25 / 16 * 1rem);
+      margin-left: pxToRem(-0.5px);
+
+      & img {
+        height: inherit;
+      }
+
+      @include mq(md) {
+        margin-left: pxToRem(-1px);
+      }
+    }
+
+    &.-sofa__single {
+      width: clamp(18 / 16 * 1rem, 1.042rem + 0.42vw, 22 / 16 * 1rem);
+      margin-left: pxToRem(1px);
+    }
+
+    &.-desk {
+      & img {
+        margin-bottom: pxToRem(3px);
+      }
+    }
+
+    &.-chair {
+      @include mq(md) {
+        & img {
+          margin-top: pxToRem(2px);
+        }
+      }
+
+      @include mq(lg) {
+        & img {
+          margin-top: 0;
+        }
+      }
+    }
+
+    &.-map {
+      width: clamp(18 / 16 * 1rem, 1.042rem + 0.42vw, 22 / 16 * 1rem);
+
+      & img {
+        margin-top: pxToRem(2.5px);
+      }
+    }
+
+    &.-compo {
+      width: clamp(22 / 16 * 1rem, 1.29rem + 0.43vw, 25 / 16 * 1rem);
+
+      & img {
+        margin-bottom: pxToRem(-0.2px);
+        vertical-align: baseline;
+
+        @include mq(lg) {
+          margin-bottom: pxToRem(-1px);
+        }
+      }
+    }
+
+    &.-airconditioner {
+      & img {
+        margin-bottom: pxToRem(2px);
+
+        @include mq(md) {
+          margin-bottom: pxToRem(1.5px);
+        }
+
+        @include mq(lg) {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    &.-bed__dobble {
+      width: clamp(19 / 16 * 1rem, 1.045rem + 0.71vw, 24 / 16 * 1rem);
+    }
+
+    &.-bed__single {
+      & img {
+        margin-bottom: pxToRem(1px);
+        vertical-align: baseline;
+
+        @include mq(md) {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    &.-mirror_sm {
+      width: clamp(15 / 16 * 1rem, 0.795rem + 0.71vw, 20 / 16 * 1rem);
+      margin-left: pxToRem(2px);
+
+      & img {
+        margin-top: clamp(0.063rem, -0.004rem + 0.33vw, 0.156rem); //320-768px
+
+        @include mq(lg) {
+          margin-top: pxToRem(1.5px);
+        }
+      }
+    }
+
+    &.-table {
+      & img {
+        margin-bottom: pxToRem(-0.5px);
+        vertical-align: baseline;
+
+        @include mq(lg) {
+          margin-bottom: pxToRem(-2px);
+        }
+      }
+    }
+
+    &.-livingTable {
+      width: clamp(19 / 16 * 1rem, 1.045rem + 0.71vw, 24 / 16 * 1rem); //viw:320-1024px
+    }
+
+    &.-mirror3 {
+      width: clamp(15 / 16 * 1rem, 0.795rem + 0.71vw, 20 / 16 * 1rem); //viw:320-1024px
+      height: clamp(1.25rem, 1.165rem + 0.43vw, 1.438rem); //viw:320-1024px
+
+      & img {
+        height: inherit;
+        margin-top: pxToRem(1px);
+        margin-left: pxToRem(2.5px);
+      }
+    }
+
+    &.-airCleaner {
+      width: clamp(15 / 16 * 1rem, 0.852rem + 0.43vw, 18 / 16 * 1rem); //viw:320-1024px
+      height: clamp(21 / 16 * 1rem, 1.199rem + 0.57vw, 25 / 16 * 1rem); //viw:320-1024px
+
+      & img {
+        height: inherit;
+        margin-top: pxToRem(-1px);
+      }
+    }
+
+    &.-MakeupRemover {
+      height: clamp(24 / 16 * 1rem, 1.472rem + 0.14vw, 25 / 16 * 1rem); //viw:320-1024px
+
+      & img {
+        height: inherit;
+      }
+    }
+
+    &.-shampoo {
+      height: clamp(23 / 16 * 1rem, 1.381rem + 0.28vw, 25 / 16 * 1rem); //viw:320-1024px
+
+      & img {
+        height: inherit;
+      }
+    }
+
+    &.-rinse {
+      height: clamp(24 / 16 * 1rem, 1.443rem + 0.28vw, 26 / 16 * 1rem); //viw:320-1024px
+
+      & img {
+        height: inherit;
+      }
+    }
+
+    &.-bodysoap {
+      height: clamp(23 / 16 * 1rem, 1.381rem + 0.28vw, 25 / 16 * 1rem); //viw:320-1024px
+
+      & img {
+        height: inherit;
+      }
+    }
+
+    &.-facewash {
+      height: clamp(21 / 16 * 1rem, 1.256rem + 0.28vw, 23 / 16 * 1rem); //viw:320-1024px
+
+      & img {
+        height: inherit;
+      }
+    }
+
+    &.-toothpaste {
+      width: clamp(20 / 16 * 1rem, 1.136rem + 0.57vw, 24 / 16 * 1rem); //viw:320-1024px
+    }
+
+    &.-laundryDetergent {
+      height: clamp(23 / 16 * 1rem, 1.381rem + 0.28vw, 25 / 16 * 1rem); //viw:320-1024px
+
+      & img {
+        height: inherit;
+      }
+    }
+
+    &.-raundry {
+      height: clamp(22 / 16 * 1rem, 1.318rem + 0.28vw, 24 / 16 * 1rem); //viw:320-1024px
+
+      & img {
+        height: inherit;
+      }
+    }
+
+    &.-hairdryer {
+      width: clamp(19 / 16 * 1rem, 1.074rem + 0.57vw, 23 / 16 * 1rem); //viw:320-1024px
+    }
+
+    &.-softener {
+      width: clamp(23 / 16 * 1rem, 1.146rem + 0.52vw, 28 / 16 * 1rem); //viw:320-1024px
+      height: clamp(24 / 16 * 1rem, 1.443rem + 0.28vw, 26 / 16 * 1rem); //viw:320-1024px
+
+      & img {
+        height: inherit;
+      }
+    }
+
+    &.-towel {
+      width: clamp(22 / 16 * 1rem, 1.205rem + 0.85vw, 28 / 16 * 1rem); //viw:320-1024px
+    }
+
+    &.-refrigerator {
+      height: clamp(20 / 16 * 1rem, 1.108rem + 0.71vw, 25 / 16 * 1rem); //viw:320-1024px
+
+      & img {
+        height: inherit;
+      }
+    }
+
+    &.-racemaker {
+      width: clamp(19 / 16 * 1rem, 1.074rem + 0.57vw, 23 / 16 * 1rem); //viw:320-1024px;
+    }
+
+    &.-kettle {
+      width: clamp(19 / 16 * 1rem, 1.074rem + 0.57vw, 23 / 16 * 1rem); //viw:320-1024px;
+    }
+
+    &.-gus {
+      width: clamp(19 / 16 * 1rem, 1.074rem + 0.57vw, 23 / 16 * 1rem); //viw:320-1024px;
+    }
+
+    &.-toaster {
+      width: clamp(19 / 16 * 1rem, 1.074rem + 0.57vw, 23 / 16 * 1rem); //viw:320-1024px;
+    }
+
+    &.-pot {
+      width: clamp(22 / 16 * 1rem, 1.233rem + 0.71vw, 27 / 16 * 1rem);
+      margin-left: pxToRem(-2px);
+    }
+
+    &.-cuttingBoard {
+      & img {
+        vertical-align: baseline;
+      }
+    }
+
+    &.-mixer {
+      width: pxToRem(18px);
+      height: clamp(23 / 16 * 1rem, 1.396rem + 0.21vw, 25 / 16 * 1rem);
+
+      @include mq(md) {
+        margin-left: pxToRem(3px);
+      }
+
+      & img {
+        height: inherit;
+      }
+    }
+
+    &.-colander {
+      & img {
+        margin-bottom: pxToRem(2.5px);
+
+        @include mq(lg) {
+          margin-bottom: pxToRem(1px);
+        }
+      }
+    }
+
+    &.-solt {
+      height: clamp(19 / 16 * 1rem, 1.045rem + 0.71vw, 24 / 16 * 1rem); //viw:320-1024px
+
+      & img {
+        height: inherit;
+      }
+    }
+
+    &.-paper {
+      height: clamp(19 / 16 * 1rem, 1.045rem + 0.71vw, 24 / 16 * 1rem); //viw:320-1024px
+
+      & img {
+        height: inherit;
+      }
+    }
+
+    &.-mayonnaise {
+      height: clamp(20 / 16 * 1rem, 1.108rem + 0.71vw, 25 / 16 * 1rem); //viw:320-1024px
+
+      & img {
+        height: inherit;
+      }
+    }
+
+    &.-ketchup {
+      height: clamp(21 / 16 * 1rem, 1.199rem + 0.57vw, 25 / 16 * 1rem); //viw:320-1024px
+
+      & img {
+        height: inherit;
+      }
+    }
+
+    &.-dressing {
+      height: clamp(21 / 16 * 1rem, 1.199rem + 0.57vw, 25 / 16 * 1rem); //viw:320-1024px
+
+      & img {
+        height: inherit;
+      }
+    }
+
+    &.-soysauce {
+      height: clamp(20 / 16 * 1rem, 1.108rem + 0.71vw, 25 / 16 * 1rem); //viw:320-1024px
+
+      & img {
+        height: inherit;
+      }
+    }
+
+    &.-oil {
+      height: clamp(20 / 16 * 1rem, 1.108rem + 0.71vw, 25 / 16 * 1rem); //viw:320-1024px
+
+      & img {
+        height: inherit;
+      }
+    }
+
+    &.-sugar {
+      width: clamp(22 / 16 * 1rem, 1.233rem + 0.71vw, 27 / 16 * 1rem);
+      margin-left: pxToRem(2px);
+    }
+
+    &.-coffee {
+      height: clamp(19 / 16 * 1rem, 1.074rem + 0.57vw, 23 / 16 * 1rem); //viw:320-1024px
+
+      & img {
+        height: inherit;
+      }
+    }
+
+    &.-tea {
+      width: clamp(21 / 16 * 1rem, 1.199rem + 0.57vw, 25 / 16 * 1rem); //viw:320-1024px
+      margin-left: pxToRem(2px);
+    }
+
+    &.-knife {
+      height: clamp(22 / 16 * 1rem, 1.29rem + 0.43vw, 25 / 16 * 1rem); //viw:320-1024px
+
+      & img {
+        height: inherit;
+      }
+    }
+
+    &.-glass {
+      width: clamp(17 / 16 * 1rem, 0.92rem + 0.71vw, 22 / 16 * 1rem); //viw:320-1024px;
+      margin-left: pxToRem(1px);
+    }
+
+    &.-sponge {
+      height: clamp(23 / 16 * 1rem, 1.381rem + 0.28vw, 25 / 16 * 1rem); //viw:320-1024px
+
+      & img {
+        height: inherit;
+      }
+    }
+
+    &.-kitchenSorp {
+      height: clamp(20 / 16 * 1rem, 1.108rem + 0.71vw, 25 / 16 * 1rem); //viw:320-1024px
+
+      & img {
+        height: inherit;
+      }
+    }
+
+    &.-sake {
+      height: clamp(25 / 16 * 1rem, 1.506rem + 0.28vw, 27 / 16 * 1rem);
+
+      & img {
+        height: inherit;
+      }
+    }
+
+    &.-mirin {
+      height: clamp(25 / 16 * 1rem, 1.506rem + 0.28vw, 27 / 16 * 1rem);
+
+      & img {
+        height: inherit;
+      }
+    }
+
+    &.-chopstick {
+      & img {
+        margin-bottom: pxToRem(2px);
+        vertical-align: baseline;
+
+        @include mq(md) {
+          margin-bottom: pxToRem(1px);
+        }
+      }
+    }
+
+    &.-papercup {
+      height: clamp(20 / 16 * 1rem, 1.108rem + 0.71vw, 25 / 16 * 1rem); //viw:320-1024px
+
+      & img {
+        height: inherit;
+      }
+    }
+
+    &.-aluminumFoil {
+      width: clamp(19 / 16 * 1rem, 1.045rem + 0.71vw, 24 / 16 * 1rem);
+      margin-bottom: pxToRem(1.5px);
+      margin-left: pxToRem(2px);
+
+      @include mq(md) {
+        margin-left: pxToRem(1px);
+      }
+
+      @include mq(lg) {
+        margin-bottom: pxToRem(-1px);
+      }
+    }
+
+    &.-wrap {
+      width: clamp(22 / 16 * 1rem, 1.261rem + 0.57vw, 26 / 16 * 1rem);
+      margin-top: pxToRem(2px);
+      margin-left: pxToRem(-2px);
+    }
   }
 
   &__itemName {
@@ -162,13 +794,13 @@
 
       &.-top {
         position: relative;
-        padding: 0 0 clamp(64 / 16 * 1rem, 3.333rem + 3.33vw, 96 / 16 * 1rem); //viw:320-1280px
+        padding: 0 0 clamp(64 / 16 * 1rem, 3rem + 5vw, 112 / 16 * 1rem); //viw:320-1280px
 
         &::before {
           content: "";
           position: absolute;
           right: 0;
-          bottom: clamp(32 / 16 * 1rem, 1.667rem + 1.67vw, 48 / 16 * 1rem);
+          bottom: clamp(32 / 16 * 1rem, 1.5rem + 2.5vw, 56 / 16 * 1rem); //viw:320-1280px
           left: 0;
           width: 145px;
           margin: 0 auto;
@@ -178,13 +810,12 @@
 
       &.-bottom {
         position: relative;
-        padding: clamp(64 / 16 * 1rem, 3.333rem + 3.33vw, 96 / 16 * 1rem) 0 0; //viw:320-1280px
+        padding: clamp(64 / 16 * 1rem, 3rem + 5vw, 112 / 16 * 1rem) 0 0; //viw:320-1280px
 
         &::before {
           content: "";
           position: absolute;
-          // bottom: calc(24 / 320 * 100vw);
-          top: clamp(32 / 16 * 1rem, 1.667rem + 1.67vw, 48 / 16 * 1rem);
+          top: clamp(32 / 16 * 1rem, 1.5rem + 2.5vw, 56 / 16 * 1rem); //viw:320-1280px
           right: 0;
           left: 0;
           width: 145px;
@@ -218,18 +849,16 @@
       text-align: center;
 
       &.-top {
+        width: fit-content;
         max-width: 400px;
         margin: auto;
         padding-bottom: pxToRem(16px);
         column-gap: pxToRem(16px);
         gap: pxToRem(5px);
-
-        @include mq(md) {
-          padding-left: pxToRem(32px);
-        }
       }
 
       &.-middle {
+        width: fit-content;
         max-width: 400px;
         margin: auto;
         padding-bottom: pxToRem(16px);
@@ -238,13 +867,12 @@
 
         @include mq(md) {
           max-width: 432px;
-          padding-left: pxToRem(32px);
         }
       }
 
       &.-bottom {
         padding-left: pxToRem(16px);
-        gap: pxToRem(8px);
+        gap: pxToRem(16px);
       }
     }
 
@@ -302,106 +930,106 @@
   padding-top: pxToRem(16px);
 }
 
-//** swiper main **//
+// /*
+//   swiper main
+// */
 
-.p-rooms__swipers__wrapper {
-  margin-top: pxToRem(-24px);
+// .p-rooms__swipers__wrapper {
+//   margin-top: pxToRem(-24px);
 
-  @include mq(md) {
-    margin-top: pxToRem(-32px);
-  }
+//   @include mq(md) {
+//     margin-top: pxToRem(-32px);
+//   }
+// }
 
-  @include mq(lg) {
-    margin-left: pxToRem(-64px);
-  }
-}
+// .p-rooms__swiper {
+//   margin-left: calc(50% - 50vw);
+//   overflow-x: hidden;
 
-.p-rooms__swiper {
-  margin-left: calc(50% - 50vw);
-  overflow-x: hidden;
+//   @include mq(md) {
+//     width: 100%;
+//     max-width: 900px;
+//     margin-left: calc(-40 / 768 * 100vw);
+//   }
 
-  @include mq(md) {
-    width: 100%;
-    max-width: 691px;
-    margin-left: pxToRem(-40px);
-  }
+//   @include mq(lg) {
+//     width: 100%;
+//     max-width: initial;
+//     margin-left: 0;
+//   }
 
-  @include mq(lg) {
-    width: 100%;
-    max-width: initial;
-    margin-left: 0;
-  }
+//   &__image {
+//     overflow: hidden;
+//     border-radius: 0 50px 15px 0;
+//     aspect-ratio: 294 / 195;
 
-  &__image {
-    overflow: hidden;
-    border-radius: 0 50px 15px 0;
-    aspect-ratio: 294 / 195;
+//     @include mq(md) {
+//       border-radius: 15px 65px;
+//     }
 
-    @include mq(md) {
-      border-radius: 15px 65px;
-    }
+//     @include mq(lg) {
+//       aspect-ratio: 790 / 546;
+//     }
 
-    @include mq(lg) {
-      aspect-ratio: 790 / 546;
-    }
+//     &.-restroom {
+//       width: 100%;
 
-    &.-restroom {
-      width: 100%;
+//       @include mq(lg) {
+//         width: 89.979%;
+//       }
+//     }
 
-      @include mq(lg) {
-        width: 89.979%;
-      }
-    }
+//     // & img {
+//     //   width: 100%;
+//     //   height: 100%;
+//     //   object-fit: cover;
+//     // }
+//   }
+// }
 
-    & img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-  }
-}
+// /*
+//   swiper thumbnail
+// */
 
-.p-room__swiper__image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+// .p-rooms__swiper__thumbnail {
+//   width: 17.177%;
+//   margin-top: pxToRem(-32px);
 
-//** swiper thumbnail **//
+//   &__wrapper {
+//     display: flex;
+//     align-items: center;
+//     gap: clamp(8 / 16 * 1rem, 0.045rem + 2.27vw, 24 / 16 * 1rem); //viw:320-1024px
 
-.p-rooms__swiper__thumbnail {
-  width: 17.177%;
-  margin-top: pxToRem(-32px);
+//     @include mq(lg) {
+//       flex-direction: column;
+//       align-items: end;
+//     }
+//   }
 
-  &__wrapper {
-    display: flex;
-    align-items: center;
-    gap: clamp(8 / 16 * 1rem, 0.045rem + 2.27vw, 24 / 16 * 1rem); //viw:320-1024px
+//   &__slide {
+//     width: 100% !important ;
+//     height: auto;
+//     transition: opacity 1s cubic-bezier(0.05, 0.31, 0.73, 1.02);
+//     opacity: 0.5;
 
-    @include mq(lg) {
-      flex-direction: column;
-      align-items: end;
-    }
-  }
+//     &:hover {
+//       transition: opacity 1s cubic-bezier(0.05, 0.31, 0.73, 1.02);
+//       opacity: 1;
+//     }
+//   }
 
-  &__slide {
-    width: 100% !important ;
-    height: auto;
-    transition: opacity 0.5s;
-    opacity: 0.5;
-  }
+//   &__image {
+//     overflow: hidden;
+//     border-radius: 10px;
+//     aspect-ratio: 58 / 38;
 
-  &__image {
-    overflow: hidden;
-    border-radius: 10px;
-    aspect-ratio: 180 / 120;
+//     @include mq(lg) {
+//       border-radius: 15px;
+//       aspect-ratio: 180 / 120;
+//     }
+//   }
+// }
 
-    @include mq(lg) {
-      border-radius: 15px;
-    }
-  }
-}
-
-.p-rooms__swiper__thumbnail .swiper-slide.swiper-slide-thumb-active {
-  opacity: 1;
-}
+// .p-rooms__swiper__thumbnail .swiper-slide.swiper-slide-thumb-active {
+//   opacity: 1;
+// }

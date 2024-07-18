@@ -6,57 +6,57 @@
   Hero
 */
 
-.p-hero__items {
-  position: relative;
+// .p-hero__items {
+//   position: relative;
 
-  &::before {
-    content: "";
-    display: block;
-    position: absolute;
-    z-index: 2;
-    right: 0;
-    bottom: -38px;
-    left: 0;
-    width: 1px;
-    height: 59px;
-    margin: auto;
-    animation: scroll_line-sp 3.5s infinite cubic-bezier(0.31, -0.01, 0.72, 1);
-    background-color: $primary-text-color;
+//   &::before {
+//     content: "";
+//     display: block;
+//     position: absolute;
+//     z-index: 2;
+//     right: 0;
+//     bottom: -38px;
+//     left: 0;
+//     width: 1px;
+//     height: 59px;
+//     margin: auto;
+//     animation: scroll_line-sp 3.5s infinite cubic-bezier(0.31, -0.01, 0.72, 1);
+//     background-color: $primary-text-color;
 
-    @include mq(md) {
-      bottom: -60px;
-      height: 100px;
-      animation: scroll_line-tab 3.5s infinite cubic-bezier(0.31, -0.01, 0.72, 1);
-    }
-  }
+//     @include mq(md) {
+//       bottom: -60px;
+//       height: 100px;
+//       animation: scroll_line-tab 3.5s infinite cubic-bezier(0.31, -0.01, 0.72, 1);
+//     }
+//   }
 
-  @keyframes scroll_line-sp {
-    0% {
-      height: 59px;
-    }
+//   @keyframes scroll_line-sp {
+//     0% {
+//       height: 59px;
+//     }
 
-    100% {
-      height: 0;
-    }
-  }
+//     100% {
+//       height: 0;
+//     }
+//   }
 
-  @keyframes scroll_line-tab {
-    0% {
-      height: 100px;
-    }
+//   @keyframes scroll_line-tab {
+//     0% {
+//       height: 100px;
+//     }
 
-    100% {
-      height: 0;
-    }
-  }
-}
+//     100% {
+//       height: 0;
+//     }
+//   }
+// }
 
 .p-hero__body {
   position: absolute;
   z-index: 2;
   right: 10vw;
-  bottom: 12vh;
-  width: 55%;
+  bottom: 4vh;
+  width: fit-content;
   animation: SlideFromRight 2.4s cubic-bezier(0.27, -0.12, 0.58, 1) 2.7s forwards;
   opacity: 0;
   color: $base-color;
@@ -64,12 +64,9 @@
 
   @include mq(md) {
     right: 13.0208vw;
-    bottom: 13.4766vh;
-    width: 35%;
   }
 
   @include mq(lg) {
-    // right: 5.62499vw;
     right: calc(64 / 1280 * 100vw);
     bottom: 7.2222vh;
   }
@@ -80,11 +77,13 @@
 }
 
 .p-hero__copy {
-  font-size: clamp(2rem, 1.333rem + 3.33vw, 4rem);
+  height: clamp(182 / 16 * 1rem, 7.479rem + 19.48vw, 369 / 16 * 1rem);
+  font-size: clamp(28 / 16 * 1rem, 1.167rem + 2.92vw, 56 / 16 * 1rem);
   font-weight: 700;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.08em;
   word-break: keep-all;
   overflow-wrap: break-word;
+  writing-mode: vertical-rl;
 }
 
 .p-hero__reservation {
@@ -96,17 +95,13 @@
   left: 2.5vw;
   width: 18.75%;
   max-width: 100px;
-  transform: translateX(-180%);
-  transition: background-color 0.6s cubic-bezier(0.27, 0.08, 0.14, 0.84),
-    color 0.6s cubic-bezier(0.27, 0.08, 0.14, 0.84);
-  animation: SlideFromLeft 2s cubic-bezier(0.02, 0.33, 0.58, 1) 0.5s forwards;
+  transition: background-color 1s cubic-bezier(0.12, 0.17, 0.68, 1.15), color 1s cubic-bezier(0.12, 0.17, 0.68, 1.15);
   border-radius: 50%;
   background-color: $primary-button-color;
   color: $base-color;
 
   &:hover {
-    transition: background-color 0.6s cubic-bezier(0.27, 0.08, 0.14, 0.84),
-      color 0.6s cubic-bezier(0.27, 0.08, 0.14, 0.84);
+    transition: background-color 1s cubic-bezier(0.12, 0.17, 0.68, 1.15), color 1s cubic-bezier(0.12, 0.17, 0.68, 1.15);
     background-color: $base-color;
     color: $primary-button-color;
   }
@@ -155,34 +150,15 @@
       font-size: clamp(15 / 16 * 1rem, 0.844rem + 0.2vw, 16 / 16 * 1rem); //viw:768-1280px
     }
   }
-
-  &__rotate {
-    position: relative;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 0;
-    padding-top: 100%;
-
-    & svg {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      transform: rotate(-90deg);
-    }
-  }
 }
 
-@keyframes SlideFromLeft {
-  from {
-    transform: translateX(-180%);
+@keyframes scale {
+  0% {
+    transform: scale(1);
   }
 
-  to {
-    transform: translateX(0);
+  100% {
+    transform: scale(1.2);
   }
 }
 
@@ -196,30 +172,30 @@
   }
 }
 
-circle {
-  animation: circle 5s cubic-bezier(0.43, -0.11, 0.19, 1) 6s infinite;
-  stroke-width: 1px;
-  stroke: $senary-accent-color;
-  opacity: 0;
-  fill: transparent;
-}
+// circle {
+//   animation: circle 5s cubic-bezier(0.43, -0.11, 0.19, 1) 6s infinite;
+//   stroke-width: 1px;
+//   stroke: $senary-accent-color;
+//   opacity: 0;
+//   fill: transparent;
+// }
 
-@keyframes circle {
-  0% {
-    stroke-dasharray: 0 194;
-    opacity: 1;
-  }
+// @keyframes circle {
+//   0% {
+//     stroke-dasharray: 0 194;
+//     opacity: 1;
+//   }
 
-  100% {
-    stroke-dasharray: 194 194;
-    opacity: 1;
-  }
-}
+//   100% {
+//     stroke-dasharray: 194 194;
+//     opacity: 1;
+//   }
+// }
 
 .p-hero__swiper {
   position: relative;
   width: 85%;
-  margin: auto;
+  margin: 0 auto;
 
   @include mq(md) {
     width: 80.6%;
@@ -227,18 +203,24 @@ circle {
 
   @include mq(lg) {
     width: 90%;
-    margin: calc(109 / 1024 * 100vw) auto 0;
-  }
-
-  @include mq(xl) {
-    margin: calc(109 / 1280 * 100vw) auto 0;
   }
 }
 
 .swiper-slide.p-hero__swiper__slide {
+  position: relative;
   height: 75vh;
   overflow: hidden;
   border-radius: pxToRem(20px);
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    opacity: 0.1;
+    background-color: #000;
+  }
 
   @include mq(md) {
     height: 84vh;
@@ -311,4 +293,8 @@ circle {
 
 .swiper-pagination.p-hero__swiper__pagination > .swiper-pagination-bullet + .swiper-pagination-bullet {
   margin: 0;
+}
+
+.js-hero__swiper__wrapper {
+  visibility: hidden;
 }

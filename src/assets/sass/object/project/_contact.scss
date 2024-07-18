@@ -10,8 +10,7 @@
   &__header {
     width: 100%;
     max-width: 900px;
-    margin: clamp(24 / 16 * 1rem, 1.333rem + 0.83vw, 32 / 16 * 1rem) auto
-      clamp(32 / 16 * 1rem, 1.333rem + 3.33vw, 64 / 16 * 1rem); //viw:320-1280px
+    margin: 0 auto clamp(32 / 16 * 1rem, 1.5rem + 2.5vw, 56 / 16 * 1rem); //viw:320-1280px
     border: 1px solid $main-color;
     border-radius: 30px;
   }
@@ -19,44 +18,39 @@
   &__text {
     width: fit-content;
     margin: auto;
-    padding: clamp(24 / 16 * 1rem, 1.273rem + 1.14vw, 32 / 16 * 1rem)
-      clamp(10 / 16 * 1rem, 0.341rem + 1.42vw, 20 / 16 * 1rem) clamp(24 / 16 * 1rem, 1.273rem + 1.14vw, 32 / 16 * 1rem)
-      clamp(10 / 16 * 1rem, 0.341rem + 1.42vw, 20 / 16 * 1rem); //viw:320-1024px
+    padding: clamp(24 / 16 * 1rem, 0.833rem + 3.33vw, 56 / 16 * 1rem)
+      clamp(10 / 16 * 1rem, 0.417rem + 1.04vw, 20 / 16 * 1rem) clamp(24 / 16 * 1rem, 0.833rem + 3.33vw, 56 / 16 * 1rem)
+      clamp(10 / 16 * 1rem, 0.417rem + 1.04vw, 20 / 16 * 1rem); //viw:320-1280px
   }
 
   &__sentence {
     font-size: clamp(15 / 16 * 1rem, 0.917rem + 0.1vw, 16 / 16 * 1rem); //viw:320-1280px
     font-weight: 500;
     letter-spacing: 0.08em;
-    line-height: 1.6;
+    line-height: 1.6875;
   }
 }
 
 .p-contact__form {
-  width: 100%;
-  margin: auto;
-  margin-bottom: clamp(88 / 16 * 1rem, 5.167rem + 1.67vw, 104 / 16 * 1rem);
+  &__wrapper {
+    width: 100%;
+    margin: auto;
+    margin-bottom: clamp(64 / 16 * 1rem, 2.417rem + 7.92vw, 140 / 16 * 1rem);
 
-  @include mq(md) {
-    width: fit-content;
+    @include mq(md) {
+      width: fit-content;
+    }
   }
 
   &__inner {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: clamp(5 / 16 * 1rem, 0.25rem + 0.31vw, 8 / 16 * 1rem);
+    gap: pxToRem(8px);
 
     &.-privacyPolicy {
       gap: 0;
       flex-direction: row;
-      align-items: center;
-    }
-  }
-
-  &__item {
-    &.-privacyPolicy {
-      display: flex;
       align-items: center;
       justify-content: center;
     }
@@ -70,7 +64,7 @@
 
   &__label {
     display: inline-block;
-    margin-left: clamp(5 / 16 * 1rem, 0.25rem + 0.31vw, 8 / 16 * 1rem); //viw:320-1280px
+    margin-left: pxToRem(8px); //viw:320-1280px
     color: $caution-text-color;
     font-size: pxToRem(12px);
     font-weight: 700;
@@ -121,19 +115,18 @@
     transform: rotate(50deg);
     border-right: 3px solid $primary-text-color;
     border-bottom: 3px solid $primary-text-color;
-
-    // @include mq(xl) {
-    //   width: 4px;
-    //   height: 8px;
-    //   border-right: 6px solid $primary-text-color;
-    //   border-bottom: 12px solid $primary-text-color;
-    // }
   }
 
   &__link {
+    transition: color 0.6s cubic-bezier(0.14, 0.21, 0.59, 1);
     color: $primary-text-color;
     font-weight: 700;
     text-decoration: underline;
+
+    &:hover {
+      transition: color 0.6s cubic-bezier(0.14, 0.21, 0.59, 1);
+      color: $quaternary-text-color;
+    }
   }
 
   &__button {
@@ -142,7 +135,11 @@
 }
 
 .p-contact__form__item + .p-contact__form__item {
-  padding-top: pxToRem(24px);
+  margin-top: clamp(24 / 16 * 1rem, 1.333rem + 0.83vw, 32 / 16 * 1rem); //viw:320-1280px
+}
+
+.p-contact__form .p-contact__form__item.-privacyPolicy {
+  margin-top: clamp(10 / 16 * 1rem, 3.13vw, 40 / 16 * 1rem); //viw:320-1280px
 }
 
 .is-error {

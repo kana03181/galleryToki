@@ -46,27 +46,34 @@
                 <span class="u-visuallyHidden">メニューを開閉する</span>
               </span>
             </button>
-              <div id="global-nav" class="p-global-nav">
-                <ul class="p-global-nav__list">
-                  <li class="p-global-nav__item"><a href="index.html" class="p-global-nav__link"><span class="p-global-nav__text -en" lang="en">Top</span><span class="p-global-nav__text -ja">トップページ</span></a></li>
-                  <li class="p-global-nav__item"><a href="index.html#about" class="p-global-nav__link"><span class="p-global-nav__text -en" lang="en">About</span><span class="p-global-nav__text -ja">民泊&nbsp;ギャラリー鴇について</span></a></li>
-                  <li class="p-global-nav__item"><a href="index.html#feature" class="p-global-nav__link"><span class="p-global-nav__text -en" lang="en">Feature</span><span class="p-global-nav__text -ja">民泊&nbsp;ギャラリー鴇の特徴</span></a></li>
+            <div id="global-nav" class="p-global-nav -index">
+              <div class="p-global-nav__inner">
+                <ul class="p-global-nav__list -lg">
+                  <li class="p-global-nav__item"><a href="index.html" class="p-global-nav__link"><span class="p-global-nav__text -en" lang="en">Home</span><span class="p-global-nav__text -ja">トップページ</span></a></li>
+                  <li class="p-global-nav__item"><a href="/#about" class="p-global-nav__link"><span class="p-global-nav__text -en" lang="en">About</span><span class="p-global-nav__text -ja">民泊&nbsp;ギャラリー鴇について</span></a></li>
+                  <li class="p-global-nav__item"><a href="/#feature" class="p-global-nav__link"><span class="p-global-nav__text -en" lang="en">Feature</span><span class="p-global-nav__text -ja">民泊&nbsp;ギャラリー鴇の特徴</span></a></li>
                   <li class="p-global-nav__item"><a href="room__facility.html" class="p-global-nav__link"><span class="p-global-nav__text -en" lang="en">Room・Facility</span><span class="p-global-nav__text -ja">お部屋・設備</span></a></li>
-                  <li class="p-global-nav__item"><a href="index.html#plan" class="p-global-nav__link"><span class="p-global-nav__text -en" lang="en">Plan</span><span class="p-global-nav__text -ja">料金</span></a></li>
-                  <li class="p-global-nav__item"><a href="access.html" class="p-global-nav__link"><span class="p-global-nav__text -en" lang="en">Access</span><span class="p-global-nav__text -ja">アクセス</span></a></li>
-                  <li class="p-global-nav__item"><a href="contact.html" class="p-global-nav__link"><span class="p-global-nav__text -en" lang="en">Contact</span><span class="p-global-nav__text -ja">お問い合わせ</span></a></li>
                 </ul>
-                <p class=" p-header__button"><a href="reservation.html" class="c-button -common -book">ご予約はこちら</a></p>
+                <ul class="p-global-nav__list -sm">
+                  <li class="p-global-nav__item"><a href="/#plan" class="p-global-nav__link"><span class="p-global-nav__text -en -sm" lang="en">Plan</span><span class="p-global-nav__text -ja">料金</span></a></li>
+                  <li class="p-global-nav__item"><a href="/#faq" class="p-global-nav__link"><span class="p-global-nav__text -en -sm" lang="en">Faq</span><span class="p-global-nav__text -ja">よくあるご質問</span></a></li>
+                  <li class="p-global-nav__item"><a href="access.html" class="p-global-nav__link"><span class="p-global-nav__text -en -sm" lang="en">Access</span><span class="p-global-nav__text -ja">アクセス</span></a></li>
+                  <li class="p-global-nav__item"><a href="contact.html" class="p-global-nav__link"><span class="p-global-nav__text -en -sm" lang="en">Contact</span><span class="p-global-nav__text -ja">お問い合わせ</span></a></li>
+                </ul>
               </div>
+              <!-- /.p-global-nav__inner -->
+              <p class="p-header__button"><a href="reservation.html" class="c-button -common -book -header">ご予約はこちら</a></p>
+            </div>
+            <!-- /.p-global-nav -->
           </nav>
         </div>
       </div>
     </header>
   <main>
-    <div class="c-pageHeader -reservation">
+    <div class="c-pageHeader">
       <div class="l-container">
         <h2 class="c-common__title -room1" lang="en">
-          <span class="c-common__title__en js-title -rooms">Privacy&nbsp;Policy</span>
+          <span class="c-common__title__en js-title-lg">Privacy&nbsp;Policy</span>
           <span class="c-common__title__ja">プライバシーポリシー</span>
         </h2>
       </div>
@@ -91,8 +98,8 @@
           <!-- /.p-privacyPolicy__content -->
           <div class="p-privacyPolicy__content">
             <h3 class="p-privacyPolicy__title">個人情報の第三者提供</h3>
-            <ol class="p-privacyPolicy__lists">
-              <li class="p-privacyPolicy__list__item"><span class="p-privacyPolicy__number">1.</span>当社は、次に掲げる場合を除いて、あらかじめユーザーの同意を得ることなく、第三者に個人情報を提供することはありません。
+            <ol class="p-privacyPolicy__lists__wrap">
+              <li class="p-privacyPolicy__list__item"><span class="p-privacyPolicy__number">1.</span>当社は、次に掲げる場合を除いて、あらかじめユーザーの同意を得ることなく、第三者に個人情報を提供することはありません。<br>
                 ただし、個人情報保護法その他の法令で認められる場合を除きます。
               </li>
               <li class="p-privacyPolicy__list__item">
@@ -118,7 +125,7 @@
               </li>
             </ol>
             <!-- /.p-privacyPolicy__text -->
-            <ol class="p-privacyPolicy__lists">
+            <ol class="p-privacyPolicy__lists__wrap">
               <li class="p-privacyPolicy__list__item"><span class="p-privacyPolicy__number">2.</span>前項の定めにかかわらず、次に掲げる場合には、当該情報の提供先は第三者に該当しないものとします。</li>
               <li class="p-privacyPolicy__list__item">
                 <div class="p-privacyPolicy__list__item__wrap">
@@ -171,21 +178,25 @@
         </address>
         <div class="p-footer__nav">
           <ul class="p-footer__nav__list">
-            <li class="p-footer__nav__item" lang="en"><a href="index.html" class="p-footer__nav__link"><span class="p-footer__nav__text">Top</span></a></li>
-            <li class="p-footer__nav__item" lang="en"><a href="index.html#about" class="p-footer__nav__link"><span class="p-footer__nav__text">About</span></a></li>
-            <li class="p-footer__nav__item" lang="en"><a href="index.html#feature" class="p-footer__nav__link"><span class="p-footer__nav__text">Feature</span></a></li>
+            <li class="p-footer__nav__item" lang="en"><a href="index.html" class="p-footer__nav__link"><span class="p-footer__nav__text">Home</span></a></li>
+            <li class="p-footer__nav__item" lang="en"><a href="#about" class="p-footer__nav__link"><span class="p-footer__nav__text">About</span></a></li>
+            <li class="p-footer__nav__item" lang="en"><a href="#feature" class="p-footer__nav__link"><span class="p-footer__nav__text">Feature</span></a></li>
             <li class="p-footer__nav__item" lang="en"><a href="room__facility.html" class="p-footer__nav__link"><span class="p-footer__nav__text">Room・Facility</span></a></li>
-            <li class="p-footer__nav__item" lang="en"><a href="index.html#plan" class="p-footer__nav__link"><span class="p-footer__nav__text">Plan</span></a></li>
-            <li class="p-footer__nav__item" lang="en"><a href="index.html#faq" class="p-footer__nav__link"><span class="p-footer__nav__text">Faq</span></a></li>
-            <li class="p-footer__nav__item" lang="en"><a href="access.html" class="p-footer__nav__link"><span class="p-footer__nav__text">Access</span></a></li>
-            <li class="p-footer__nav__item" lang="en"><a href="contact.html" class="p-footer__nav__link"><span class="p-footer__nav__text">Contact</span></a></li>
+            <li class="p-footer__nav__item" lang="en"><a href="#plan" class="p-footer__nav__link"><span class="p-footer__nav__text">Plan</span></a></li>
+            <li class="p-footer__nav__item" lang="en"><a href="#faq" class="p-footer__nav__link -sm"><span class="p-footer__nav__text">Faq</span></a></li>
+            <li class="p-footer__nav__item" lang="en"><a href="access.html" class="p-footer__nav__link -sm"><span class="p-footer__nav__text">Access</span></a></li>
+            <li class="p-footer__nav__item" lang="en"><a href="PrivacyPolicy.html" class="p-footer__nav__link -sm"><span class="p-footer__nav__text">Privacy Policy</span></a></li>
+            <li class="p-footer__nav__item" lang="en"><a href="contact.html" class="p-footer__nav__link -sm"><span class="p-footer__nav__text">Contact</span></a></li>
           </ul>
           <p class="p-footer__button"><a href="reservation.html" target="_self" class="c-button -common -book -footer">ご予約はこちら</a></p>
         </div>
+        <!-- /.p-footer__nav -->
       </div>
-      <p class="c-button -allow p-footer__button js-toTop">
-        <img src="assets/img/common/common_footer_button.png" width="23" height="23" alt="上矢印" decoding="async">
-      </p>
+      <a href="#top">
+        <p class="c-button -allow p-footer__button">
+          <img src="assets/img/common/common_footer_button.png" width="23" height="23" alt="上矢印" decoding="async">
+        </p>
+      </a>
       <small class="p-footer__copyright">&copy;minpaku gallery toki all rights reserved</small>
       </div>
   </footer>

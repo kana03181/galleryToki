@@ -12,7 +12,9 @@
 }
 
 .p-header__button {
-  @include mq(lg) {
-    display: none;
+  &.-index {
+    @include mq(xl) {
+      display: none;
+    }
   }
 }

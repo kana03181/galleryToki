@@ -7,21 +7,11 @@
 */
 
 .c-pageHeader {
-  margin: clamp(32 / 16 * 1rem, -0.143rem + 10.71vw, 80 / 16 * 1rem) 0
-    clamp(32 / 16 * 1rem, -0.143rem + 10.71vw, 80 / 16 * 1rem); //viw:320-768px
-
-  @include mq(lg) {
-    margin: clamp(160 / 16 * 1rem, 5rem + 7.81vw, 180 / 16 * 1rem) 0 pxToRem(140px); //viw:1024-1280px
-  }
-
-  &.-reservation {
-    @include mq(lg) {
-      margin: clamp(160 / 16 * 1rem, 5rem + 7.81vw, 180 / 16 * 1rem) 0 pxToRem(100px); //viw:1024-1280px
-    }
-  }
+  margin: clamp(16 / 16 * 1rem, -0.167rem + 5.83vw, 72 / 16 * 1rem) 0
+    clamp(40 / 16 * 1rem, 1.667rem + 4.17vw, 80 / 16 * 1rem); //viw:320-1280px
 
   &__text {
-    padding-top: clamp(32 / 16 * 1rem, 1.364rem + 5.68vw, 80 / 16 * 1rem); //viw:320-1024px
+    padding-top: clamp(32 / 16 * 1rem, 1.091rem + 4.55vw, 64 / 16 * 1rem); //viw:320-1024px
     text-align: center;
   }
 
@@ -32,5 +22,9 @@
     letter-spacing: 0.08em;
     line-height: 1.8;
     text-align: left;
+
+    @include mq(lg) {
+      padding-left: pxToRem(16px);
+    }
   }
 }

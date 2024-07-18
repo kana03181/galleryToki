@@ -3,18 +3,23 @@
 @use "../global" as *;
 
 /*
-  feature
+  plan
 -----------------------------------------------------*/
-.l-plan {
-  padding: pxToRem(56px) 0 pxToRem(88px);
+#plan {
+  scroll-margin-top: -30px;
 
   @include mq(md) {
-    padding: pxToRem(80px) 0 pxToRem(100px);
+    scroll-margin-top: -25px;
   }
 
   @include mq(lg) {
-    padding: pxToRem(100px) 0 pxToRem(140px);
+    scroll-margin-top: -90px;
   }
+}
+
+.l-plan {
+  padding: clamp(64 / 16 * 1rem, 3.042rem + 4.79vw, 110 / 16 * 1rem) 0
+    clamp(64 / 16 * 1rem, 3.042rem + 4.79vw, 110 / 16 * 1rem);
 }
 
 .p-plan__option {

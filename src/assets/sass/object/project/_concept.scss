@@ -11,20 +11,20 @@
   position: relative;
   grid-template-areas: "text1 text2 img";
   grid-template-columns: 38.123% 61.877%;
-  grid-template-rows: 1fr 50%;
+  grid-template-rows: calc(367 / 320 * 100vw) 1fr;
 
   @include mq(md) {
     grid-template-columns: 45% 55%;
-    grid-template-rows: minmax(auto, calc(447 / 768 * 100vw)) 1fr;
+    grid-template-rows: calc(380 / 768 * 100vw) 1fr; //220px(.p-concept__headingの高さ) + 80px + 80px(.p-concept__headingの上下padding)
   }
 
   @include mq(lg) {
-    grid-template-rows: minmax(auto, calc(474 / 1024 * 100vw)) 1fr;
+    grid-template-rows: calc(410 / 1024 * 100vw) 1fr; //250 + 80 + 80
     align-items: normal;
   }
 
   @include mq(xl) {
-    grid-template-rows: minmax(auto, calc(534 / 1280 * 100vw)) 1fr;
+    grid-template-rows: calc(441 / 1280 * 100vw) 1fr; //281 + 80 + 80
   }
 }
 
@@ -143,18 +143,24 @@
 
 .p-concept__heading {
   display: block;
-  font-size: clamp(18 / 16 * 1rem, 0.667rem + 2.29vw, 36 / 16 * 1rem); //min:18px, max48px viw:320-1280px
+  height: clamp(135 / 16 * 1rem, 4.634rem + 19.02vw, 220 / 16 * 1rem); //viw:320-767px
+  font-size: clamp(18 / 16 * 1rem, 0.667rem + 2.29vw, 36 / 16 * 1rem); //viw:320-1280px
   font-weight: 500;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.3em;
   line-height: 1;
   writing-mode: vertical-rl;
 
-  &.p-concept__heading:nth-of-type(2) {
-    padding: 0 clamp(10 / 16 * 1rem, 0.167rem + 2.29vw, 32 / 16 * 1rem); //min:10px, max32px viw:320-1280px
+  @include mq(md) {
+    height: clamp(220 / 16 * 1rem, 8.02rem + 11.94vw, 281 / 16 * 1rem);
   }
 
-  @include mq(lg) {
-    letter-spacing: 0.3em;
+  &__text {
+    display: inline-block;
+    white-space: nowrap;
+
+    &:nth-of-type(2) {
+      padding: 0 clamp(10 / 16 * 1rem, 0.167rem + 2.29vw, 32 / 16 * 1rem); //min:10px, max32px viw:320-1280px
+    }
   }
 }
 
@@ -164,7 +170,7 @@
   grid-row: 2 / 3;
   align-self: start;
   width: 71%;
-  min-width: 270px;
+  min-width: 279px;
   margin-top: calc(24 / 320 * 100vw);
 
   @include mq(md) {
@@ -181,16 +187,17 @@
 }
 
 .p-concept__text {
-  padding-left: 5vw;
-  font-size: clamp(15 / 16 * 1rem, 0.917rem + 0.1vw, 18 / 16 * 1rem); //最小：15px 最大：16px viw:320-1280px
+  max-width: 273px;
+  margin-left: 5vw;
+  font-size: clamp(15 / 16 * 1rem, 0.917rem + 0.1vw, 18 / 16 * 1rem); //viw:320-1280px
   font-weight: 500;
   letter-spacing: 0.08em;
   line-height: 1.86;
   word-break: keep-all;
   overflow-wrap: break-word;
 
-  &:first-of-type {
-    padding-bottom: pxToRem(40px);
+  &:last-of-type {
+    padding-top: pxToRem(32px);
   }
 
   @include mq(md) {
@@ -199,6 +206,19 @@
 
   @include mq(lg) {
     width: 80%;
+    max-width: 486px;
+
+    &:nth-of-type(2) {
+      width: 66%;
+    }
+
+    &:nth-of-type(3) {
+      width: 60%;
+    }
+
+    &:nth-of-type(4) {
+      width: 60%;
+    }
   }
 
   @include mq(xl) {

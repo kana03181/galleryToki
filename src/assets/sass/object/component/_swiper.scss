@@ -15,13 +15,7 @@
   position: relative;
   align-items: center;
   justify-content: space-between;
-  margin: pxToRem(24px) auto 0;
-  // padding-right: 5px;
-  // padding-left: 5px;
-
-  @include mq(md) {
-    margin: pxToRem(40px) auto 0;
-  }
+  margin: clamp(24 / 16 * 1rem, 1.167rem + 1.67vw, 40 / 16 * 1rem) auto 0;
 
   &.-shareSpace {
     width: 60.55%;
@@ -48,6 +42,7 @@
   &.-rooms {
     width: 27%;
     margin: 0 0 0 auto;
+    cursor: not-allowed;
 
     @include mq(lg) {
       width: 100%;
@@ -56,38 +51,53 @@
   }
 
   &.-access {
-    width: 90.28%;
-    margin: pxToRem(24px) auto pxToRem(3px);
+    position: absolute;
+    z-index: 1;
+    top: clamp(108 / 16 * 1rem, 1.288rem + 27.31vw, 300 / 16 * 1rem);
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    margin: auto 0;
+    padding: 0 clamp(10 / 16 * 1rem, 0.5rem + 0.63vw, 16 / 16 * 1rem);
+    transform: translate(-50%, -50%);
 
-    @include mq(md) {
-      width: 55%;
-      max-width: 600px;
-    }
+    // @include mq(lg) {
+    //   top: 50%;
+    //   left: 50%;
+    //   transform: translate(-50%, -50%);
+    // }
 
-    @include mq(lg) {
-      width: 90.28%;
-    }
+    // &.-airplane__bus {
+    //   top: calc(50% - clamp(2rem, 1.375rem + 3.13vw, 3.875rem));
+    //   transform: translateY(45%);
+
+    //   @include mq(lg) {
+    //     top: 50%;
+    //     left: 50%;
+    //     transform: translate(-50%, -50%);
+    //   }
+    // }
   }
 }
 
 .c-swiper__button__next,
 .c-swiper__button__prev {
-  transition: background-color 0.4s cubic-bezier(0.33, -0.01, 0.66, 0.97);
+  transition: background-color 0.6s cubic-bezier(0.33, -0.01, 0.66, 0.97);
   border: 1px solid $main-color;
   background-color: $main-color;
 
   &::after {
-    transition: background-color 0.4s cubic-bezier(0.33, -0.01, 0.66, 0.97);
+    transition: background-color 0.6s cubic-bezier(0.33, -0.01, 0.66, 0.97);
     background-color: $base-color;
   }
 
   &:hover {
-    transition: background-color 0.4s cubic-bezier(0.33, -0.01, 0.66, 0.97);
+    transition: background-color 0.6s cubic-bezier(0.33, -0.01, 0.66, 0.97);
     border: 1px solid $main-color;
     background-color: $base-color;
 
     &::after {
-      transition: background-color 0.4s cubic-bezier(0.33, -0.01, 0.66, 0.97);
+      transition: background-color 0.6s cubic-bezier(0.33, -0.01, 0.66, 0.97);
       background-color: $main-color;
     }
   }
@@ -110,7 +120,7 @@
   }
 }
 
-.c-swiper-pagination {
+.c-swiper_pagination {
   &.-location {
     width: 54%;
     max-width: 251px;
@@ -123,4 +133,66 @@
       text-align: center;
     }
   }
+}
+
+.c-swiper__thumbnail {
+  &.-access {
+    width: 100%;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+
+    &.-rooms {
+      @include mq(lg) {
+        flex-direction: column;
+        align-items: end;
+        row-gap: pxToRem(24px);
+      }
+    }
+  }
+
+  &__slide {
+    transition: opacity 1s cubic-bezier(0.05, 0.31, 0.73, 1.02);
+    opacity: 0.5;
+
+    &.-rooms {
+      width: 100% !important ;
+      height: auto;
+    }
+
+    &:hover {
+      transition: opacity 1s cubic-bezier(0.05, 0.31, 0.73, 1.02);
+      opacity: 1;
+    }
+  }
+
+  &__image {
+    overflow: hidden;
+    border-radius: 10px;
+    aspect-ratio: 58 / 38;
+
+    @include mq(lg) {
+      border-radius: 15px;
+      aspect-ratio: 130 / 85;
+    }
+
+    & img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.c-swiper__thumbnail .c-swiper__thumbnail__slide.-access {
+  width: 20.139%;
+
+  @include mq(lg) {
+    width: 19.346%;
+  }
+}
+
+.c-swiper__thumbnail .swiper-slide.swiper-slide-thumb-active {
+  opacity: 1;
 }

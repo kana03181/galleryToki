@@ -20,19 +20,7 @@
     background-color: $background-color;
 
     @include mq(lg) {
-      width: 91.719%;
+      width: 92.9688%;
     }
-  }
-}
-
-.p-faq__accordion {
-  padding: pxToRem(32px) 0;
-
-  @include mq(md) {
-    padding: pxToRem(48px) 0;
-  }
-
-  @include mq(lg) {
-    padding: pxToRem(48px) 0 pxToRem(80px);
   }
 }

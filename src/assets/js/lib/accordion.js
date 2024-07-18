@@ -1,64 +1,91 @@
 export default function () {
-  const slideDown = function (el) {
-    el.style.height = "auto";
-    let h = el.offsetHeight;
+  document.addEventListener("DOMContentLoaded", () => {
+    setUpAccordion();
+  });
 
-    el.style.height = h + "px";
-    el.style.visibility = "inherit";
-    el.style.overflow = "initial";
-    el.style.opacity = "1";
+  const setUpAccordion = () => {
+    const accordion = document.querySelectorAll(".js-accordion");
+    const RUNNING_VALUE = "running";
+    const IS_OPENED_CLASS = "is-opened";
 
-    el.animate(
-      {
-        height: [0, h + "px"],
-      },
-      {
-        duration: 300,
-      }
-    );
-    el.style.height = "auto";
-  };
+    accordion.forEach((el) => {
+      const accordionItems = el.querySelector(".js-accordion__items");
+      const accordionBox = el.querySelector(".js-accordion__box");
 
-  const slideUp = function (el) {
-    let h = el.offsetHeight;
+      accordionItems.addEventListener("click", (event) => {
+        // デフォルトの挙動を無効化
+        event.preventDefault();
 
-    el.style.height = h + "px";
-    el.style.visibility = "hidden";
-    el.style.overflow = "hidden";
-    el.style.opacity = "0";
+        // 連打防止用。アニメーション中だったらクリックイベントを受け付けないでリターンする
+        if (el.dataset.animStatus === RUNNING_VALUE) {
+          return;
+        }
 
-    el.animate(
-      {
-        height: [h + "px", 0],
-      },
-      {
-        duration: 300,
-      }
-    );
-    el.style.height = 0;
-  };
+        // accordionのopen属性を判定
+        if (el.open) {
+          // アコーディオンを閉じるときの処理。クラスの切り替え
+          el.classList.toggle(IS_OPENED_CLASS);
 
-  let activeIndex = null;
-  console.log(activeIndex);
+          // アニメーションを実行
+          const closingAnim = accordionBox.animate(closingAnimKeyframes(accordionBox), animTiming);
+          el.dataset.animStatus === RUNNING_VALUE;
 
-  const accordions = document.querySelectorAll(".js-include-accordion");
-  accordions.forEach((accordion) => {
-    const accordionBtns = accordion.querySelectorAll(".js-accordion__button");
-    accordionBtns.forEach(function (accordionBtn, index) {
-      accordionBtn.addEventListener("click", function (e) {
-        activeIndex = index;
-        // accordion.classList.toggle("active");
-        e.currentTarget.classList.toggle("active");
-        const content = accordionBtn.parentNode;
-        const box = content.nextElementSibling;
-        if (e.currentTarget.classList.contains("active") && e.currentTarget.getAttribute("aria-expanded") == "false") {
-          slideDown(box);
-          e.currentTarget.setAttribute("aria-expanded", "true");
+          // アニメーションの完了後に
+          closingAnim.onfinish = () => {
+            // open属性を取り除く
+            el.removeAttribute("open");
+
+            // アニメーション実行中用の値を取り除く
+            el.dataset.animStatus = "";
+          };
         } else {
-          slideUp(box);
-          e.currentTarget.setAttribute("aria-expanded", "false");
+          // アコーディオンを開くときにopen属性を付与
+          el.setAttribute("open", "true");
+
+          // アイコン操作用クラスを切り替える(クラスを付与)
+          el.classList.toggle(IS_OPENED_CLASS);
+
+          // アニメーションを実行
+          const openingAnim = accordionBox.animate(openingAnimKeyframes(accordionBox), animTiming);
+
+          // アニメーション実行中用の値を入れる
+          el.dataset.animStatus = RUNNING_VALUE;
+
+          openingAnim.onfinish = () => {
+            el.dataset.animStatus = "";
+          };
         }
       });
     });
-  });
+  };
+
+  //アニメーションの時間とイージング
+  const animTiming = {
+    duration: 600,
+    easing: "ease-out",
+  };
+
+  // アコーディオンを開くときのキーフレーム
+  const openingAnimKeyframes = (accordionBox) => [
+    {
+      height: 0,
+      opacity: 0,
+    },
+    {
+      height: accordionBox.offsetHeight + "px",
+      opacity: 1,
+    },
+  ];
+
+  // アコーディオンを閉じるときのキーフレーム
+  const closingAnimKeyframes = (accordionBox) => [
+    {
+      height: accordionBox.offsetHeight + "px",
+      opacity: 1,
+    },
+    {
+      height: 0,
+      opacity: 0,
+    },
+  ];
 }

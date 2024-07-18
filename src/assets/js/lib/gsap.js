@@ -6,29 +6,29 @@ gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 export default function () {
   const windowSize = gsap.matchMedia();
 
-  //タイトル アニメーション
-  const target = gsap.utils.toArray(".js-title");
+  //タイトル アニメーション(小)
+  const title_sm = gsap.utils.toArray(".js-title-sm");
 
-  target.forEach((spanToUp) => {
-    const textContent = spanToUp.textContent;
+  title_sm.forEach((spanToUp_sm) => {
+    const textContent = spanToUp_sm.textContent;
     const wrapSpanTitle = [...textContent].map((char) => `<span>${char}</span>`).join("");
-    spanToUp.innerHTML = wrapSpanTitle;
+    spanToUp_sm.innerHTML = wrapSpanTitle;
 
-    gsap.set(spanToUp.querySelectorAll("span"), {
+    const spans_sm = spanToUp_sm.querySelectorAll("span");
+
+    gsap.set(spans_sm, {
       y: 50,
       opacity: 0,
     });
 
-    // const title_tl = gsap.timeline({ repeat: -1 });
-
-    gsap.to(spanToUp.querySelectorAll("span"), {
+    gsap.to(spans_sm, {
       y: 0,
       opacity: 1,
-      duration: 0.4,
+      duration: 0.55,
       scrollTrigger: {
-        trigger: spanToUp,
+        trigger: spanToUp_sm,
         start: "top 80%",
-        ease: 0.2,
+        // ease: 0.3,
         // markers: true,
         // onEnter: () => {
         //   console.log("aaa");
@@ -37,24 +37,189 @@ export default function () {
 
       stagger: {
         from: "start",
-        each: 0.1,
+        each: 0.27,
       },
     });
 
     gsap.fromTo(
-      spanToUp,
+      spanToUp_sm,
       {
         "--w_size": 0,
       },
       {
         "--w_size": "100%",
         opacity: 1,
-        duration: 1.2,
-        delay: 0.3,
+        duration: 1,
+        delay: 0.2,
         scrollTrigger: {
-          trigger: spanToUp,
+          trigger: spanToUp_sm,
           start: "top 80%",
-          ease: 0.4,
+          // ease: 0.4,
+          // markers: true,
+        },
+      }
+    );
+  });
+
+  //タイトル アニメーション(中_1)
+  const title_md = gsap.utils.toArray(".js-title-md");
+
+  title_md.forEach((spanToUp_md) => {
+    const textContent = spanToUp_md.textContent;
+    const wrapSpanTitle = [...textContent].map((char) => `<span>${char}</span>`).join("");
+    spanToUp_md.innerHTML = wrapSpanTitle;
+
+    const spans_md = spanToUp_md.querySelectorAll("span");
+
+    gsap.set(spans_md, {
+      y: 50,
+      opacity: 0,
+    });
+
+    gsap.to(spans_md, {
+      y: 0,
+      opacity: 1,
+      duration: 0.65,
+      scrollTrigger: {
+        trigger: spanToUp_md,
+        start: "top 80%",
+        // ease: 0.3,
+        // markers: true,
+        // onEnter: () => {
+        //   console.log("aaa");
+        // },
+      },
+
+      stagger: {
+        from: "start",
+        each: 0.25,
+      },
+    });
+
+    gsap.fromTo(
+      spanToUp_md,
+      {
+        "--w_size": 0,
+      },
+      {
+        "--w_size": "100%",
+        opacity: 1,
+        duration: 1.7,
+        delay: 0.2,
+        scrollTrigger: {
+          trigger: spanToUp_md,
+          start: "top 80%",
+          // ease: 0.4,
+          // markers: true,
+        },
+      }
+    );
+  });
+
+  //タイトル アニメーション(中_2)
+  const title_md2 = gsap.utils.toArray(".js-title-md2");
+
+  title_md2.forEach((spanToUp_md2) => {
+    const textContent = spanToUp_md2.textContent;
+    const wrapSpanTitle = [...textContent].map((char) => `<span>${char}</span>`).join("");
+    spanToUp_md2.innerHTML = wrapSpanTitle;
+
+    const spans_md2 = spanToUp_md2.querySelectorAll("span");
+
+    gsap.set(spans_md2, {
+      y: 50,
+      opacity: 0,
+    });
+
+    gsap.to(spans_md2, {
+      y: 0,
+      opacity: 1,
+      duration: 0.55,
+      scrollTrigger: {
+        trigger: spanToUp_md2,
+        start: "top 80%",
+        // ease: 0.3,
+        // markers: true,
+        // onEnter: () => {
+        //   console.log("aaa");
+        // },
+      },
+
+      stagger: {
+        from: "start",
+        each: 0.25,
+      },
+    });
+
+    gsap.fromTo(
+      spanToUp_md2,
+      {
+        "--w_size": 0,
+      },
+      {
+        "--w_size": "100%",
+        opacity: 1,
+        duration: 1.9,
+        delay: 0.2,
+        scrollTrigger: {
+          trigger: spanToUp_md2,
+          start: "top 80%",
+          // ease: 0.4,
+          // markers: true,
+        },
+      }
+    );
+  });
+
+  //タイトル アニメーション(大)
+  const title_lg = gsap.utils.toArray(".js-title-lg");
+
+  title_lg.forEach((spanToUp_lg) => {
+    const textContent = spanToUp_lg.textContent;
+    const wrapSpanTitle = [...textContent].map((char) => `<span>${char}</span>`).join("");
+    spanToUp_lg.innerHTML = wrapSpanTitle;
+
+    const spans_lg = spanToUp_lg.querySelectorAll("span");
+
+    gsap.set(spans_lg, {
+      y: 50,
+      opacity: 0,
+    });
+
+    gsap.to(spans_lg, {
+      y: 0,
+      opacity: 1,
+      duration: 0.42,
+      scrollTrigger: {
+        trigger: spanToUp_lg,
+        start: "top 80%",
+        // ease: 0.3,
+        // markers: true,
+        // onEnter: () => {
+        //   console.log("aaa");
+        // },
+      },
+
+      stagger: {
+        from: "start",
+        each: 0.24,
+      },
+    });
+
+    gsap.fromTo(
+      spanToUp_lg,
+      {
+        "--w_size": 0,
+      },
+      {
+        "--w_size": "100%",
+        opacity: 1,
+        duration: 3.4,
+        delay: 0.2,
+        scrollTrigger: {
+          trigger: spanToUp_lg,
+          start: "top 80%",
+          // ease: 0.4,
           // markers: true,
         },
       }
@@ -62,9 +227,10 @@ export default function () {
   });
 
   //** concept **//
+  const concept__items = document.querySelectorAll(".js-concept__items");
 
   gsap.fromTo(
-    ".js-concept__items",
+    concept__items[2],
     {
       y: 100,
       autoAlpha: 0,
@@ -72,7 +238,45 @@ export default function () {
     {
       y: 0,
       autoAlpha: 1,
-      stagger: 0.2,
+      duration: 1,
+      scrollTrigger: {
+        trigger: ".js-concept__items",
+        start: "top 90%",
+        // markers: true,
+      },
+    }
+  );
+
+  gsap.fromTo(
+    concept__items[0],
+    {
+      y: 100,
+      autoAlpha: 0,
+    },
+    {
+      delay: 0.5,
+      y: 0,
+      autoAlpha: 1,
+      duration: 0.9,
+      scrollTrigger: {
+        trigger: ".js-concept__items",
+        start: "top 90%",
+        // markers: true,
+      },
+    }
+  );
+
+  gsap.fromTo(
+    concept__items[1],
+    {
+      y: 100,
+      autoAlpha: 0,
+    },
+    {
+      delay: 0.5,
+      y: 0,
+      autoAlpha: 1,
+      duration: 0.9,
       scrollTrigger: {
         trigger: ".js-concept__items",
         start: "top 90%",
@@ -90,9 +294,9 @@ export default function () {
     },
     {
       y: 0,
-      autoAlpha: 1,
-      stagger: 0.1,
-      duration: 0.6,
+      autoAlpha: 0.8,
+      stagger: 0.3,
+      duration: 0.8,
       scrollTrigger: {
         trigger: ".js-feature__purpose__title",
         start: "top 70%",
@@ -121,7 +325,7 @@ export default function () {
           scrollTrigger: {
             trigger: toScale,
             start: "top 70%",
-            ease: 0.5,
+            ease: 1.5,
             // markers: true,
           },
 
@@ -154,34 +358,10 @@ export default function () {
 
           stagger: {
             from: "start",
-            each: 0.7,
+            each: 0.9,
           },
         }
       );
-    });
-  });
-
-  //** room__facility **//
-
-  const room__facilityItems = gsap.utils.toArray(".js-room__facility__names");
-
-  room__facilityItems.forEach((fromLeft) => {
-    gsap.set(fromLeft, {
-      autoAlpha: 0,
-      x: -100,
-    });
-
-    gsap.to(fromLeft, {
-      autoAlpha: 1,
-      x: 0,
-      duration: 0.7,
-      delay: 0.5,
-
-      scrollTrigger: {
-        trigger: fromLeft,
-        start: "top 70%",
-        // markers: true,
-      },
     });
   });
 
@@ -194,8 +374,12 @@ export default function () {
     },
     {
       y: 0,
-      autoAlpha: 1,
-      stagger: 0.2,
+      autoAlpha: 0.9,
+      stagger: {
+        from: "start",
+        each: 0.85,
+      },
+
       scrollTrigger: {
         trigger: ".js-plan__item",
         start: "top 70%",
@@ -204,91 +388,27 @@ export default function () {
     }
   );
 
-  //** plan__option__title **//
-  gsap.fromTo(
-    ".js-plan__option__title",
-    {
-      x: -100,
-      autoAlpha: 0,
-    },
-    {
-      x: 0,
-      autoAlpha: 1,
-      stagger: 3,
-      duration: 0.8,
-      scrollTrigger: {
-        trigger: ".js-plan__option__title",
-        start: "top 60%",
-        // markers: true,
+  //** 各コンテンツ 下から上へ **//
+  const contents_toUp = gsap.utils.toArray(".js-toUp");
+
+  contents_toUp.forEach((toUp) => {
+    gsap.fromTo(
+      toUp,
+      {
+        y: 100,
+        autoAlpha: 0,
       },
-    }
-  );
+      {
+        y: 0,
+        autoAlpha: 1,
+        stagger: 0.3,
+        duration: 1,
+        scrollTrigger: {
+          trigger: toUp,
+          start: "top 90%",
+          // markers: true,
+        },
+      }
+    );
+  });
 }
-
-const roomsTitles = gsap.utils.toArray(".js-common__title__sideLine");
-
-roomsTitles.forEach((slideIn) => {
-  gsap.set(slideIn, {
-    autoAlpha: 0,
-    x: -100,
-  });
-
-  gsap.to(slideIn, {
-    autoAlpha: 1,
-    x: 0,
-    duration: 0.6,
-    delay: 0.3,
-
-    scrollTrigger: {
-      trigger: slideIn,
-      start: "top 70%",
-      // markers: true,
-    },
-  });
-});
-
-const contents_toUp = gsap.utils.toArray(".js-toUp");
-
-contents_toUp.forEach((toUp) => {
-  gsap.fromTo(
-    toUp,
-    {
-      y: 100,
-      autoAlpha: 0,
-    },
-    {
-      y: 0,
-      autoAlpha: 1,
-      stagger: 0.2,
-      scrollTrigger: {
-        trigger: toUp,
-        start: "top 90%",
-        // markers: true,
-      },
-    }
-  );
-});
-
-const toUp__underLine = gsap.utils.toArray(".js-title__underline");
-// console.log(toUp__underLine);
-
-toUp__underLine.forEach((Line) => {
-  gsap.fromTo(
-    Line,
-    {
-      "--w_size": 0,
-    },
-    {
-      "--w_size": "100%",
-      opacity: 1,
-      duration: 1.2,
-      delay: 0.3,
-      scrollTrigger: {
-        trigger: Line,
-        start: "top 80%",
-        ease: 0.4,
-        // markers: true,
-      },
-    }
-  );
-});

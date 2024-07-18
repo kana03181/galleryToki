@@ -7,17 +7,13 @@
 -----------------------------------------------------*/
 .l-about {
   position: relative;
-  padding: clamp(56 / 16 * 1rem, 2.583rem + 4.58vw, 100 / 16 * 1rem) 0
-    clamp(64 / 16 * 1rem, 2.833rem + 5.83vw, 120 / 16 * 1rem);
+  padding: clamp(40 / 16 * 1rem, 1.362rem + 5.69vw, 80 / 16 * 1rem) 0
+    clamp(64 / 16 * 1rem, 2.634rem + 6.83vw, 112 / 16 * 1rem); // viw:320-1023px
   overflow-x: hidden;
 
-  // @include mq(md) {
-  //   padding: pxToRem(64px) 0 pxToRem(80px);
-  // }
-
-  // @include mq(lg) {
-  //   padding: 0 0 clamp(6.25rem, 1.25rem + 7.81vw, 7.5rem); //最小：100px 最大：120px viw:1024-1280px
-  // }
+  @include mq(lg) {
+    padding: 0 0 pxToRem(100px);
+  }
 
   &::before {
     content: "";

@@ -16,7 +16,7 @@ $duration-slow: 2s;
   backface-visibility: hidden;
   transition-property: opacity, transform, letter-spacing;
   transition-duration: $duration-normal;
-  transition-timing-function: $easing;
+  // transition-timing-function: $easing;
   will-change: transform;
 
   // ==============================

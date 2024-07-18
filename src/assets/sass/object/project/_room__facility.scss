@@ -23,57 +23,44 @@
 }
 
 .p-room__facility__text__wrap {
-  width: 89.5%;
-  padding: pxToRem(32px) 0 pxToRem(24px) pxToRem(8px);
+  width: 100%;
+  padding: clamp(32 / 16 * 1rem, 1.833rem + 0.83vw, 40 / 16 * 1rem) 0
+    clamp(24 / 16 * 1rem, 0.667rem + 4.17vw, 64 / 16 * 1rem); //viw:320-1280px
   text-align: left;
 
   @include mq(md) {
     width: 100%;
-    padding: pxToRem(40px) 0 pxToRem(32px);
     text-align: center;
-  }
-
-  @include mq(lg) {
-    padding: pxToRem(40px) 0 pxToRem(80px);
   }
 }
 
 .p-room__facility__text {
-  font-size: pxToRem(15px);
+  font-size: clamp(15 / 16 * 1rem, 0.917rem + 0.1vw, 16 / 16 * 1rem);
   font-weight: 500;
   letter-spacing: 0.08em;
   line-height: 1.8;
-
-  @include mq(md) {
-    font-size: pxToRem(16px);
-  }
+  word-break: keep-all;
+  overflow-wrap: break-word;
 }
 
 .p-room__facility__name {
   position: relative;
-  padding: 0 0 pxToRem(24px) pxToRem(36px);
+  padding: 0 0 clamp(24 / 16 * 1rem, 1.333rem + 0.83vw, 32 / 16 * 1rem)
+    clamp(28 / 16 * 1rem, 0.5rem + 6.25vw, 56 / 16 * 1rem);
   color: $secondary-text-color;
-  font-size: clamp(20 / 16 * 1rem, 1.083rem + 0.83vw, 24 / 16 * 1rem); //最小：20px 最大：24px viw:320-1280px
+  font-size: clamp(20 / 16 * 1rem, 1.083rem + 0.83vw, 24 / 16 * 1rem); //viw:320-1280px
   font-weight: 700;
   letter-spacing: 0.04em;
   line-height: 1.35;
-
-  @include mq(md) {
-    padding: 0 0 pxToRem(28px) pxToRem(56px);
-  }
 
   &::before {
     content: "";
     position: absolute;
     top: clamp(14 / 16 * 1rem, 0.833rem + 0.21vw, 16 / 16 * 1rem); //viw:320-1280px
     left: 0;
-    width: 20px;
+    width: clamp(20 / 16 * 1rem, 0.357rem + 4.46vw, 40 / 16 * 1rem);
     height: 1px;
     background-color: $secondary-text-color;
-
-    @include mq(md) {
-      width: 40px;
-    }
   }
 }
 
@@ -88,7 +75,7 @@
   aspect-ratio: 288 / 191;
 
   @include mq(lg) {
-    aspect-ratio: 500 / 336;
+    aspect-ratio: 357 / 240;
   }
 }
 

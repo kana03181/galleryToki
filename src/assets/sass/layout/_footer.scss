@@ -5,15 +5,8 @@
   Footer
 -----------------------------------------------------*/
 .l-footer {
-  padding: pxToRem(64px) 0 pxToRem(5px);
+  padding: clamp(64 / 16 * 1rem, 3.667rem + 1.67vw, 80 / 16 * 1rem) 0
+    clamp(5 / 16 * 1rem, 0.104rem + 1.04vw, 15 / 16 * 1rem);
   clear: both;
   background-color: $secondary-accent-color;
-
-  @include mq(md) {
-    padding: pxToRem(80px) 0 pxToRem(5px);
-  }
-
-  @include mq(lg) {
-    padding: pxToRem(40px) 0 pxToRem(5px);
-  }
 }

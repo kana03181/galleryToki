@@ -33,17 +33,22 @@ $quinary-accent-color: #fdc4e6;
 //　アクセントカラー6
 $senary-accent-color: #fff3cc;
 
-// テキストの色
+// テキストの色1
 $primary-text-color: #212121;
 
-// セカンダリーカラー
-$secondary-text-color: #656262;
+// テキストの色2
+// $secondary-text-color: #656262;
+$secondary-text-color: #392810;
 
-// サードリーカラー
+// テキストの色3
 $tertiary-text-color: #999595;
 
-// クオータリーカラー
-$quaternary-text-color: #787878;
+// テキストの色4
+// $quaternary-text-color: #787878;
+$quaternary-text-color: #656262;
+
+// テキストの色5
+$fifth-text-color: #535757;
 
 // テキスト 注意書き
 $caution-text-color: #f82626;
@@ -58,7 +63,9 @@ $primary-button-color: #f4bf12;
 $primary-button-color-hover: #f8d76d;
 
 // テキストリンク ホバー
-$text-link-color-hover: #767676;
+$text-link-color-hover1: #767676;
+$text-link-color-hover2: #aa8454;
+$text-link-color-hover3: #cd7600;
 
 // コンテンツ 背景
 $background-color: #fff6c5;
@@ -69,7 +76,7 @@ $background-color-index: #ffec8d;
 // コンテンツ お問い合わせフォーム 背景
 $background-color-contact: #eaeaea;
 
-// swiper スクロールバー 背景
+// swiper スクロールバー
 $swiper-scrollbar-base: #d9d9d9;
 
 //  SNS Color

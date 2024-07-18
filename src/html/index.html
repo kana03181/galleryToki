@@ -30,7 +30,7 @@
     <script src="/assets/js/main.bundle.js" defer></script>
   </head>
   <body>
-    <header class="l-header">
+    <header class="l-header" data-fixed-header>
       <div class="l-container">
         <div class="l-header__inner">
           <h1 class="p-logo">
@@ -46,19 +46,25 @@
                 <span class="u-visuallyHidden">メニューを開閉する</span>
               </span>
             </button>
-              <div id="global-nav" class="p-global-nav">
-                <ul class="p-global-nav__list">
-                  <li class="p-global-nav__item"><a href="index.html" class="p-global-nav__link"><span class="p-global-nav__text -en" lang="en">Top</span><span class="p-global-nav__text -ja">トップページ</span></a></li>
-                  <li class="p-global-nav__item"><a href="#about" class="p-global-nav__link"><span class="p-global-nav__text -en" lang="en">About</span><span class="p-global-nav__text -ja">民泊&nbsp;ギャラリー鴇について</span></a></li>
-                  <li class="p-global-nav__item"><a href="#feature" class="p-global-nav__link"><span class="p-global-nav__text -en" lang="en">Feature</span><span class="p-global-nav__text -ja">民泊&nbsp;ギャラリー鴇の特徴</span></a></li>
-                  <li class="p-global-nav__item"><a href="room__facility.html" class="p-global-nav__link"><span class="p-global-nav__text -en" lang="en">Room・Facility</span><span class="p-global-nav__text -ja">お部屋・設備</span></a></li>
-                  <li class="p-global-nav__item"><a href="#plan" class="p-global-nav__link"><span class="p-global-nav__text -en" lang="en">Plan</span><span class="p-global-nav__text -ja">料金</span></a></li>
-                  <li class="p-global-nav__item"><a href="#faq" class="p-global-nav__link"><span class="p-global-nav__text -en" lang="en">Faq</span><span class="p-global-nav__text -ja">よくあるご質問</span></a></li>
-                  <li class="p-global-nav__item"><a href="access.html" class="p-global-nav__link"><span class="p-global-nav__text -en" lang="en">Access</span><span class="p-global-nav__text -ja">アクセス</span></a></li>
-                  <li class="p-global-nav__item"><a href="contact.html" class="p-global-nav__link"><span class="p-global-nav__text -en" lang="en">Contact</span><span class="p-global-nav__text -ja">お問い合わせ</span></a></li>
-                </ul>
-                <p class=" p-header__button"><a href="reservation.html" class="c-button -common -book">ご予約はこちら</a></p>
+              <div id="global-nav" class="p-global-nav -index">
+                <div class="p-global-nav__inner -index">
+                  <ul class="p-global-nav__list -lg">
+                    <li class="p-global-nav__item"><a href="index.html" class="p-global-nav__link"><span class="p-global-nav__text -en" lang="en">Home</span><span class="p-global-nav__text -ja">トップページ</span></a></li>
+                    <li class="p-global-nav__item"><a href="#about" class="p-global-nav__link"><span class="p-global-nav__text -en" lang="en">About</span><span class="p-global-nav__text -ja">民泊&nbsp;ギャラリー鴇について</span></a></li>
+                    <li class="p-global-nav__item"><a href="#feature" class="p-global-nav__link"><span class="p-global-nav__text -en" lang="en">Feature</span><span class="p-global-nav__text -ja">民泊&nbsp;ギャラリー鴇の特徴</span></a></li>
+                    <li class="p-global-nav__item"><a href="room__facility.html" class="p-global-nav__link"><span class="p-global-nav__text -en" lang="en">Room・Facility</span><span class="p-global-nav__text -ja">お部屋・設備</span></a></li>
+                  </ul>
+                  <ul class="p-global-nav__list -sm">
+                    <li class="p-global-nav__item"><a href="#plan" class="p-global-nav__link"><span class="p-global-nav__text -en -sm" lang="en">Plan</span><span class="p-global-nav__text -ja">料金</span></a></li>
+                    <li class="p-global-nav__item"><a href="#faq" class="p-global-nav__link"><span class="p-global-nav__text -en -sm" lang="en">Faq</span><span class="p-global-nav__text -ja">よくあるご質問</span></a></li>
+                    <li class="p-global-nav__item"><a href="access.html" class="p-global-nav__link"><span class="p-global-nav__text -en -sm" lang="en">Access</span><span class="p-global-nav__text -ja">アクセス</span></a></li>
+                    <li class="p-global-nav__item"><a href="contact.html" class="p-global-nav__link"><span class="p-global-nav__text -en -sm" lang="en">Contact</span><span class="p-global-nav__text -ja">お問い合わせ</span></a></li>
+                  </ul>
+                </div>
+                <!-- /.p-global-nav__inner -->
+                <p class="p-header__button -index"><a href="reservation.html" class="c-button -common -book">ご予約はこちら</a></p>
               </div>
+              <!-- /.p-global-nav -index -->
           </nav>
         </div>
       </div>
@@ -68,23 +74,17 @@
         <div class="l-wrapper -hero">
           <div class="p-hero__items">
             <div class="p-hero__body">
-              <!-- <p class="p-hero__copy">民泊で<br>安らぎの<wbr>ひとときを</p> -->
-              <p class="p-hero__copy">民泊で<br>田舎暮らしを<br>体験しよう</p>
+              <p class="p-hero__copy">また来たい<br>実家のような<wbr>民泊</p>
             </div>
             <!-- /.p-hero__body -->
             <a href="reservation.html" target="_self" class="p-hero__reservation">
               <div class="p-hero__reservation__link">
                 <p class="p-hero__reservation__text">ご予約は<wbr>こちら</p>
               </div>
-              <div class="p-hero__reservation__rotate">
-                <svg class="p-hero__reservation__line" viewBox="-0.5 -0.5 61 61">
-                  <circle cx="30" cy="30" r="30"/>
-                </svg>
-              </div>
             </a>
             <!-- /.p-hero__reservation -->
-            <div class="swiper p-hero__swiper">
-              <ul class="swiper-wrapper p-hero__swiper__wrapper" >
+            <div class="swiper p-hero__swiper ">
+              <ul class="swiper-wrapper p-hero__swiper__wrapper js-hero__swiper__wrapper" >
                 <li class="swiper-slide p-hero__swiper__slide -first">
                     <picture>
                       <source type="image/webp" srcset="assets/img/top/hero/hero_img1_sp.webp 1x, assets/img/top/hero/hero_img1_sp_2x.webp 2x" width="717" height="478" media="(max-width:767px)" sizes="(max-width:1280px) 100vw, 1280px">
@@ -112,7 +112,7 @@
               </ul>
             </div>
             <!-- /.swiper p-hero__swiper -->
-            <div class="swiper-pagination p-hero__swiper__pagination"></div>
+            <!-- <div class="swiper-pagination p-hero__swiper__pagination"></div> -->
           </div>
           <!-- /.p-hero__items -->
         </div>
@@ -124,14 +124,14 @@
           <div class="p-concept__items__wrap js-concept-trigger">
             <div class="p-concept__header__flex js-concept__items">
               <div class="p-concept__header">
-                <p class="p-concept__heading">実家のような</p>
-                <p class="p-concept__heading">友達の家のような</p>
-                <p class="p-concept__heading">宿泊施設</p>
+                <p class="p-concept__heading"><span class="p-concept__heading__text">実家のような</span><span class="p-concept__heading__text">雰囲気の宿で</span><span class="p-concept__heading__text">ひとやすみ</span></p>
               </div>
             </div>
             <div class="p-concept__body js-concept__items">
-              <p class="p-concept__text"><span class="p-concept__word">「ただいま」</span>と思わず口ずさみそうになる、<wbr>どこか懐かしい雰囲気。当施設には子供の頃を思い出す<wbr>ような空間が広がっています。</p>
-              <p class="p-concept__text">ご飯を作りながら友達や家族との<wbr>時間を楽しんだり、<wbr>虫の音を聞きながら<wbr>ゆっくりと眠りについたり、<wbr>田舎ならではのひとときを<wbr>過ごしてみませんか？</p>
+              <p class="p-concept__text"><span class="p-concept__word">「ただいま」</span>と思わず口ずさみそうになる、<wbr>どこか懐かしい雰囲気。</p>
+              <p class="p-concept__text">当宿は普通の民家なので、<wbr>ホテルのようなかしこまった感じは<wbr>ありません。</p>
+              <p class="p-concept__text">アットホームで、温かい。<wbr>まるで“第二の実家”のように<wbr>くつろげる。<wbr>そんな宿となっています。</p>
+              <p class="p-concept__text">日常の忙しさや悩みなどは<wbr>一旦忘れて、<br>ゆったりとした、<wbr>田舎ならではの時間を<wbr>過ごしてみませんか？</p>
             </div>
             <div class="p-concept__imgs js-concept__items">
               <div class="p-concept__imgs__wrap">
@@ -158,14 +158,14 @@
         <div class="l-container">
           <div class="l-wrapper -about">
             <h2 class="c-common__title -about" lang="en">
-              <span class="c-common__title__en js-title">About</span>
+              <span class="c-common__title__en -top js-title-md">About</span>
               <span class="c-common__title__ja -about">民宿ギャラリー鴇について</span>
             </h2>
             <div class="p-about__contents">
               <div class="p-about__texts">
-                <p class="p-about__sentence">熊本空港から車で約20分、グランメッセ熊本から車で約15分の場所に位置する民泊ギャラリー鴇。管理人が住む一軒家を自宅兼宿泊施設として運営しています。</p>
+                <p class="p-about__sentence">熊本空港から車で約20分、グランメッセ熊本から車で約15分の場所に位置する民泊 ギャラリー 鴇。管理人が住む一軒家を自宅兼宿泊施設として運営しています。2階に宿泊部屋、1階に共有のキッチン・リビング、浴室、トイレがございます。一棟貸切ではございませんのでご注意ください。</p>
                 <p class="p-about__sentence">周辺にはスーパーやコンビニ、コインランドリーが徒歩圏内にあり、管理人が経営しているお持ち帰り専門の焼き鳥屋もございます。宿泊されるお客様はお食事を済ましてお越しになったり、共有のキッチンを利用して料理をしたりとさまざま。</p>
-                <p class="p-about__sentence">閑静な住宅街の中に佇む一軒家で熊本での暮らしを体験することができます。</p>
+                <p class="p-about__sentence">国籍問わず、外国人のお客様も多数ご宿泊にいらっしゃいます。</p>
               </div>
               <figure class="p-about__img">
                 <picture>
@@ -184,7 +184,7 @@
         <div class="l-container">
           <div class="l-wrapper -feature">
             <h2 class="c-common__title -feature" lang="en">
-              <span class="c-common__title__en js-title">Feature</span>
+              <span class="c-common__title__en -top js-title-md">Feature</span>
               <span class="c-common__title__ja">民宿ギャラリー鴇の特徴</span>
             </h2>
             <ol class="l-grid -feature p-feature__grid">
@@ -201,7 +201,7 @@
               <li class="c-card c-grid__item -feature js-feature-trigger">
                 <h3 class="p-feature__card__titles">
                   <span class="c-label__number -feature js-feature__items">02</span>
-                  <span class="p-feature__card__title -wordBreak">プランは素泊まりのみ。<wbr>食事はご自身で用意</span>
+                  <span class="p-feature__card__title">プランは素泊まりのみ。<wbr>食事はご自身で用意</span>
                 </h3>
                 <p class="c-card__text -feature">素泊まりのみでご案内しており、食事の提供はしておりません。共有のキッチンで食事を作ったり、外食したり。お客様によってさまざまです。</p>
                 <figure class="c-card__thumbnail -feature">
@@ -211,7 +211,7 @@
               <li class="c-card c-grid__item -feature js-feature-trigger">
                 <h3 class="p-feature__card__titles">
                   <span class="c-label__number -feature js-feature__items">03</span>
-                  <span class="p-feature__card__title -wordBreak">共有スペースの物は<wbr>自由に利用可能</span>
+                  <span class="p-feature__card__title">共有スペースの物は<wbr>自由に利用可能</span>
                 </h3>
                 <p class="c-card__text -feature">お皿、電子レンジ、コンロなど、共有スペースにあるものはご自由にご利用いただけます。アメニティや設備も充実しており、宿泊する上で必要なものは一通り揃っています。</p>
                 <figure class="c-card__thumbnail -feature">
@@ -272,15 +272,15 @@
         <div class="l-container">
           <div class="l-wrapper -room__facility">
             <h2 class="c-common__title -room__facility" lang="en">
-              <span class="c-common__title__en js-title">Room・Facility</span>
+              <span class="c-common__title__en -top js-title-lg">Room・Facility</span>
               <span class="c-common__title__ja">お部屋・設備</span>
             </h2>
             <div class="p-room__facility__text__wrap">
-              <p class="p-room__facility__text">お部屋は全部で2タイプ。キッチン・お風呂・トイレは管理人と共用となります。</p>
+              <p class="p-room__facility__text">お部屋は全部で2タイプ。キッチン・<wbr>お風呂・トイレは管理人と共用に<wbr>なります。</p>
             </div>
             <div class="p-room__facility__slides l-grid -room__facility">
               <div class="p-room__facility__contents -room1">
-                <p class="p-room__facility__name js-room__facility__names" lang="en">Room1</p>
+                <p class="p-room__facility__name" lang="en">Room1</p>
                 <figure class="p-room__facility__image">
                   <picture>
                     <source type="image/webp" srcset="assets/img/top/room_facility/room_facility_room1_sp.webp 1x, assets/img/top/room_facility/room_facility_room1_sp_2x.webp 2x" width="768" height="545" media="(max-width:1023px)">
@@ -289,7 +289,7 @@
                 </figure>
               </div>
               <div class="p-room__facility__contents -room2">
-                <p class="p-room__facility__name js-room__facility__names" lang="en">Room2</p>
+                <p class="p-room__facility__name" lang="en">Room2</p>
                 <figure class="p-room__facility__image">
                   <picture>
                     <source type="image/webp" srcset="assets/img/top/room_facility/room_facility_room2_sp.webp 1x, assets/img/top/room_facility/room_facility_room2_sp_2x.webp 2x" width="768" height="512" media="(max-width:1023px)">
@@ -298,7 +298,7 @@
                 </figure>
               </div>
               <div class="p-room__facility__contents">
-                <p class="p-room__facility__name js-room__facility__names">共有スペース</p>
+                <p class="p-room__facility__name">共有スペース</p>
                 <div class="swiper p-room__facility__swiper -shareSpace">
                   <div class="swiper-wrapper p-room__facility__swiper__wrapper">
                     <div class="swiper-slide p-room__facility__swiper__slide">
@@ -355,7 +355,7 @@
         <div class="l-container">
           <div class="l-wrapper">
             <h2 class="c-common__title -plan" lang="en">
-              <span class="c-common__title__en js-title">Plan</span>
+              <span class="c-common__title__en -top js-title-sm">Plan</span>
               <span class="c-common__title__ja">料金</span>
             </h2>
             <div class="p-plan__price">
@@ -379,7 +379,7 @@
                     <p class="p-plan__detail__text">
                       <span class="p-plan__detail__word -room">1部屋</span>
                       <span class="p-plan__detail__word -maximum">最大</span>
-                      <span class="p-plan__detail__word p-plan__price__number -large -person">4</span>
+                      <span class="p-plan__detail__word p-plan__price__number -large -person">3</span>
                       <span class="p-plan__detail__word -unit">名</span>
                       <span class="p-plan__detail__word -limit">まで</span>
                     </p>
@@ -388,7 +388,7 @@
               </ul>
             </div>
             <div class="p-plan__option l-plan__option">
-              <h3 class="p-plan__option__title js-plan__option__title">オプション</h3>
+              <h3 class="p-plan__option__title">オプション</h3>
               <ul class="l-grid -plan p-plan__option__items">
                 <li class="c-card c-grid__item -plan">
                   <!-- <div class="c-card__body -plan"> -->
@@ -413,7 +413,7 @@
                       <span>1人</span>
                       <span><span class="p-plan__price__number -medium">800</span>円</span>
                     </p>
-                    <p class="c-card__text -plan">日本の伝統衣装である着物を実際に着る体験です。必要な道具はこちらで用意いたしますので手ぶらで参加することができます。着付け師の資格を持つ管理人が着方をレクチャーいたします。</p>
+                    <p class="c-card__text -plan">日本の伝統衣装である着物を実際に着る体験です。必要な道具はこちらでご用意しますので、手ぶらで参加することが<wbr>できます。着付け師の資格を持つ管理人が着方をレクチャーいたします。</p>
                   <!-- </div> -->
                   <figure class="c-card__thumbnail -plan p-plan__option__image -second">
                     <picture>
@@ -432,60 +432,54 @@
         <div class="l-container">
           <div class="l-wrapper">
             <h2 class="c-common__title -faq" lang="en">
-              <span class="c-common__title__en js-title">Faq</span>
+              <span class="c-common__title__en -top js-title-sm">Faq</span>
               <span class="c-common__title__ja">よくあるご質問</span>
             </h2>
-            <dl class="c-accordion p-faq__accordion l-faq__accordion ">
-              <div class="c-accordion__items js-include-accordion js-scroll-control">
-                <dt class="c-accordion__wrapper">
-                  <button type="button" class="c-accordion__button -faq js-accordion__button" aria-expanded="false" aria-controls="faq1">
-                    <span class="c-accordion__contents -faq">
-                      <abbr class="c-accordion__label -q" title="Question">Q</abbr>
-                      <span class="c-accordion__contents__text -faq">部屋が2つありますが、他のお客さんと一緒になることはありますか？</span>
-                    </span>
-                  </button>
-                </dt>
-                <dd id="faq1" class="c-accordion__box js-accordion__box">
+            <div class="c-accordion__wrapper -faq l-faq__accordion">
+              <details class="c-accordion js-accordion">
+                <summary class="c-accordion__items js-accordion__items">
+                  <span class="c-accordion__inner -faq">
+                    <!-- <span class="c-accordion__label -q">Q</span> -->
+                    <span class="c-accordion__box__text -q -faq">部屋が2つありますが、他のお客さんと一緒になることはありますか？</span>
+                  </span>
+                </summary>
+                <div class="c-accordion__box js-accordion__box">
                   <div class="c-accordion__box__inner -faq">
-                    <abbr class="c-accordion__label -a" title="Answer">A</abbr>
-                    <p class="c-accordion__box__text -faq">1日1組限定のため、他のお客様と一緒に過ごすことはございません。</p>
+                    <!-- <span class="c-accordion__label -a">A</span> -->
+                    <span class="c-accordion__box__text -a -faq">1日1組限定のため、他のお客様と一緒に過ごすことはございません。</span>
                   </div>
-                </dd>
-              </div>
-              <div class="c-accordion__items js-include-accordion js-scroll-control">
-                <dt class="c-accordion__wrapper">
-                  <button type="button" class="c-accordion__button -faq js-accordion__button" aria-expanded="false" aria-controls="faq2">
-                    <span class="c-accordion__contents -faq">
-                      <abbr class="c-accordion__label -q" title="Question">Q</abbr>
-                      <span class="c-accordion__contents__text -faq">チェックイン・チェックアウトの時間を教えてください。</span>
-                    </span>
-                  </button>
-                </dt>
-                <dd id="faq2" class="c-accordion__box js-accordion__box">
+                </div>
+              </details>
+              <details class="c-accordion js-accordion">
+                <summary class="c-accordion__items js-accordion__items">
+                  <span class="c-accordion__inner -faq">
+                    <!-- <span class="c-accordion__label -q" title="Question">Q</span> -->
+                    <span class="c-accordion__box__text -q -faq">チェックイン・チェックアウトの時間を教えてください。</span>
+                  </span>
+                </summary>
+                <div class="c-accordion__box js-accordion__box">
                   <div class="c-accordion__box__inner -faq">
-                    <abbr class="c-accordion__label -a" title="Answer">A</abbr>
-                    <p class="c-accordion__box__text -faq">チェックインは14:00〜15:00、チェックアウトは10:00〜11:00になります。</p>
+                    <!-- <span class="c-accordion__label -a">A</span> -->
+                    <span class="c-accordion__box__text -a -faq">チェックインは14:00〜15:00、チェックアウトは10:00〜11:00になります。</span>
                   </div>
-                </dd>
-              </div>
-              <div class="c-accordion__items js-include-accordion js-scroll-control">
-                <dt class="c-accordion__wrapper">
-                  <button type="button" class="c-accordion__button -faq js-accordion__button" aria-expanded="false" aria-controls="faq2">
-                    <span class="c-accordion__contents -faq">
-                      <abbr class="c-accordion__label -q" title="Question">Q</abbr>
-                      <span class="c-accordion__contents__text -faq">チェックインの方法を教えてください。</span>
-                    </span>
-                  </button>
-                </dt>
-                <dd id="faq3" class="c-accordion__box js-accordion__box">
+                </div>
+              </details>
+              <details class="c-accordion js-accordion">
+                <summary class="c-accordion__items js-accordion__items">
+                  <span class="c-accordion__inner -faq">
+                    <!-- <span class="c-accordion__label -q" title="Question">Q</span> -->
+                    <span class="c-accordion__box__text -q -faq">チェックインの方法を<wbr>教えてください。</span>
+                  </span>
+                </summary>
+                <div class="c-accordion__box js-accordion__box">
                   <div class="c-accordion__box__inner -faq">
-                    <abbr class="c-accordion__label -a" title="Answer">A</abbr>
-                    <p class="c-accordion__box__text -faq">基本的にお客様のチェックインの時間には管理人が滞在しております。玄関のチャイムを鳴らしてお上がりください。<br>
-                    不在の場合は鍵を開けておきますので、勝手に入っていただき、管理人に到着した旨をご連絡ください。<wbr>（玄関に管理人の連絡先を記載したメモを置いています。）</p>
+                    <!-- <span class="c-accordion__label -a">A</span> -->
+                    <span class="c-accordion__box__text -a -faq">基本的にお客様のチェックインの時間には管理人が滞在しております。玄関のチャイムを鳴らしてお上がりください。<br>
+                    不在の場合は鍵を開けておきますので、勝手に入っていただき、管理人に到着した旨をご連絡ください。<wbr>（玄関に管理人の連絡先を記載したメモを置いています。）</span>
                   </div>
-                </dd>
-              </div>
-            </dl>
+                </div>
+              </details>
+            </div>
               <p class="p-faq__button"><a href="contact.html" target="_self" class="c-button -common -toPage">お問い合わせはこちら</a></p>
           </div>
         </div>
@@ -494,411 +488,644 @@
         <div class="l-container">
           <div class="l-wrapper">
             <h2 class="c-common__title -location" lang="en">
-              <span class="c-common__title__en js-title">Location</span>
+              <span class="c-common__title__en -top js-title-md2">Location</span>
               <span class="c-common__title__ja">ロケーション</span>
             </h2>
-            <dl class="c-accordion p-location__accordion l-location__accordion">
-              <div class="c-accordion__items js-include-accordion js-scroll-control">
-                <dt class="c-accordion__wrapper">
-                  <button type="button" class="c-accordion__button -location js-accordion__button" aria-expanded="false" aria-controls="location1">
-                    <span class="c-accordion__contents -location">
-                      <span class="c-accordion__contents__text -location">徒歩10分圏内</span>
-                      <img src="assets/img/top/location/location_icon_walk.png" srcset="assets/img/top/location/location_icon_walk_2x.png 2x" width="23" height="23" alt="歩く人" decoding="async">
-                    </span>
-                  </button>
-                </dt>
-                <dd id="location1" class="c-accordion__box js-accordion__box">
+            <div class="c-accordion__wrapper p-location__accordion l-location__accordion">
+              <details class="c-accordion js-accordion">
+                <summary class="c-accordion__items js-accordion__items">
+                  <span class="c-accordion__inner -location">
+                    <span class="c-accordion__box__text -location">徒歩10分圏内</span>
+                    <span class="c-accordion__icon -location"><img src="assets/img/top/location/location_icon_walk.svg" alt=""></span>
+                  </span>
+                </summary>
+                <div class="c-accordion__box js-accordion__box">
                   <div class="c-accordion__box__inner -location">
-                    <div class="c-accordion__box__list">
-                      <p class="c-accordion__box__title -restaurant">飲食</p>
-                      <ul class="c-accordion__box__items">
-                        <li class="c-accordion__box__text -location">やきとり鳥ぼう<span class="-small">（徒歩1分／約110ｍ）</span></li>
-                        <li class="c-accordion__box__text -location">ココス 熊本小峯店<span class="-small">（徒歩4分／約300ｍ）</span></li>
-                        <li class="c-accordion__box__text -location">ドラゴンキッチン 益城本店<span class="-small">（徒歩7分／約650ｍ）</span></li>
-                        <li class="c-accordion__box__text -location">ラーメン 中華そば 獅子虎<span class="-small">（徒歩6分／約500ｍ）</span></li>
-                        <li class="c-accordion__box__text -location">旬彩房 悠<span class="-small">（徒歩5分／約450ｍ）</span></li>
-                        <li class="c-accordion__box__text -location">熊本からあげ とりまる。小峯店<span class="-small">（徒歩6分／約450ｍ）</span></li>
-                        <li class="c-accordion__box__text -location">居酒屋 馬酔木<span class="-small">（徒歩5分／約450ｍ）</span></li>
-                        <li class="c-accordion__box__text -location">居酒屋 桃太郎<span class="-small">（徒歩9分／約700ｍ）</span></li>
-                        <li class="c-accordion__box__text -location">博多 とよ唐亭<span class="-small">（徒歩8分／約650ｍ）</span></li>
+                    <div class="p-location__list">
+                      <p class="p-location__list__label -restaurant">飲食</p>
+                      <ul class="p-location__list__items -walk">
+                        <li class="p-location__list__shop">
+                          <p class="p-location__list__name">やきとり鳥ぼう</p>
+                          <p class="-small">（徒歩1分／約110ｍ）</p>
+                        </li>
+                        <li class="p-location__list__shop">
+                          <p class="p-location__list__name">ココス 熊本小峯店</p>
+                          <p class="-small">（徒歩4分／約300ｍ）</p>
+                        </li>
+                        <li class="p-location__list__shop">
+                          <p class="p-location__list__name">ドラゴンキッチン 益城本店</p>
+                          <p class="-small">（徒歩7分／約650ｍ）</p>
+                        </li>
+                        <li class="p-location__list__shop">
+                          <p class="p-location__list__name">ラーメン 中華そば 獅子虎</p>
+                          <p class="-small">（徒歩6分／約500ｍ）</p>
+                        </li>
+                        <li class="p-location__list__shop">
+                          <p class="p-location__list__name">旬彩房 悠</p>
+                          <p class="-small">（徒歩5分／約450ｍ）</p>
+                        </li>
+                        <li class="p-location__list__shop">
+                          <p class="p-location__list__name">熊本からあげ とりまる。小峯店</p>
+                          <p class="-small">（徒歩6分／約450ｍ）</p>
+                        </li>
+                        <li class="p-location__list__shop">
+                          <p class="p-location__list__name">居酒屋 馬酔木</p>
+                          <p class="-small">（徒歩5分／約450ｍ）</p>
+                        </li>
+                        <li class="p-location__list__shop">
+                          <p class="p-location__list__name">居酒屋 桃太郎</p>
+                          <p class="-small">（徒歩9分／約700ｍ）</p>
+                        </li>
+                        <li class="p-location__list__shop">
+                          <p class="p-location__list__name">博多 とよ唐亭</p>
+                          <p class="-small">（徒歩8分／約650ｍ）</p>
+                        </li>
                       </ul>
                     </div>
-                    <div class="c-accordion__box__list">
-                      <p class="c-accordion__box__title -shop">小売</p>
-                      <ul class="c-accordion__box__items">
-                        <li class="c-accordion__box__text -location">ファミリーマート 熊本小峯2丁目店<span class="-small">（徒歩5分／約400ｍ）</span></li>
-                        <li class="c-accordion__box__text -location">セブンイレブン 熊本小峯2丁目店<span class="-small">（徒歩6分／約450ｍ）</span></li>
-                        <li class="c-accordion__box__text -location">ローソン 熊本長嶺南6丁目店<span class="-small">（徒歩6分／約450ｍ）</span></li>
-                        <li class="c-accordion__box__text -location">スーパー・キッド 小峯店<span class="-small">（徒歩6分／約450ｍ）</span></li>
-                        <li class="c-accordion__box__text -location">乃が美 はなれ 熊本小峯店<span class="-small">（徒歩9分／約700ｍ）</span></li>
-                        <li class="c-accordion__box__text -location">パン オ ルヴァン 小峯本店<span class="-small">（徒歩4分／約330ｍ）</span></li>
-                        <li class="c-accordion__box__text -location">お菓子の扉〜私のガトーショコラ〜<span class="-small">（徒歩8分／約650ｍ）</span></li>
-                        <li class="c-accordion__box__text -location">チーズケーキのベルジェ<span class="-small">（徒歩8分／約650ｍ）</span></li>
-                        <li class="c-accordion__box__text -location">グルテンフリーの菓子店 パンダトネコ<span class="-small">（徒歩5分／約450ｍ）</span></li>
-                        <li class="c-accordion__box__text -location">食パンロボス<span class="-small">（徒歩7分／約550ｍ）</span></li>
-                        <li class="c-accordion__box__text -location">おウチdeお肉 熊本長嶺店<span class="-small">（徒歩6分／約500ｍ）</span></li>
+                    <div class="p-location__list">
+                      <p class="p-location__list__label -shop">小売</p>
+                      <ul class="p-location__list__items -walk">
+                        <li class="p-location__list__shop">
+                          <p class="p-location__list__name">ファミリーマート 熊本小峯2丁目店</p>
+                          <p class="-small">（徒歩5分／約400ｍ）</p>
+                        </li>
+                        <li class="p-location__list__shop">
+                          <p class="p-location__list__name">セブンイレブン 熊本小峯2丁目店</p>
+                          <p class="-small">（徒歩6分／約450ｍ）</p>
+                        </li>
+                        <li class="p-location__list__shop">
+                          <p class="p-location__list__name">ローソン 熊本長嶺南6丁目店</p>
+                          <p class="-small">（徒歩6分／約450ｍ）</p>
+                        </li>
+                        <li class="p-location__list__shop">
+                          <p class="p-location__list__name">スーパー・キッド 小峯店</p>
+                          <p class="-small">（徒歩6分／約450ｍ）</p>
+                        </li>
+                        <li class="p-location__list__shop">
+                          <p class="p-location__list__name">乃が美 はなれ 熊本小峯店</p>
+                          <p class="-small">（徒歩9分／約700ｍ）</p>
+                        </li>
+                        <li class="p-location__list__shop">
+                          <p class="p-location__list__name">パン オ ルヴァン 小峯本店</p>
+                          <p class="-small">（徒歩4分／約330ｍ）</p>
+                        </li>
+                        <li class="p-location__list__shop">
+                          <p class="p-location__list__name">お菓子の扉〜私のガトーショコラ〜</p>
+                          <p class="-small">（徒歩8分／約650ｍ）</p>
+                        </li>
+                        <li class="p-location__list__shop">
+                          <p class="p-location__list__name">チーズケーキのベルジェ</p>
+                          <p class="-small">（徒歩8分／約650ｍ）</p>
+                        </li>
+                        <li class="p-location__list__shop">
+                          <p class="p-location__list__name">グルテンフリーの菓子店 <wbr>パンダトネコ</p>
+                          <p class="-small">（徒歩5分／約450ｍ）</p>
+                        </li>
+                        <li class="p-location__list__shop">
+                          <p class="p-location__list__name">食パンロボス</p>
+                          <p class="-small">（徒歩7分／約550ｍ）</p>
+                        </li>
+                        <li class="p-location__list__shop">
+                          <p class="p-location__list__name">おウチdeお肉 熊本長嶺店</p>
+                          <p class="-small">（徒歩6分／約500ｍ）</p>
+                        </li>
                       </ul>
                     </div>
-                    <div class="c-accordion__box__list">
-                      <p class="c-accordion__box__title -life">生活</p>
-                      <ul class="c-accordion__box__items">
-                        <li class="c-accordion__box__text -location">コインランドリーにっこり小峯店<span class="-small">（徒歩7分／約550ｍ）</span></li>
+                    <div class="p-location__list">
+                      <p class="p-location__list__label -life">生活</p>
+                      <ul class="p-location__list__items -walk">
+                        <li class="p-location__list__shop">
+                          <p class="p-location__list__name">コインランドリーにっこり<wbr>小峯店</p>
+                          <p class="-small">（徒歩7分／約550ｍ）</p>
+                        </li>
                       </ul>
                     </div>
                   </div>
-                </dd>
-              </div>
-              <div class="c-accordion__items js-include-accordion js-scroll-control">
-                <dt class="c-accordion__wrapper">
-                  <button type="button" class="c-accordion__button -location js-accordion__button" aria-expanded="false" aria-controls="location2">
-                    <span class="c-accordion__contents -location">
-                      <span class="c-accordion__contents__text -location">車で10分圏内</span>
-                      <img src="assets/img/top/location/location_icon_car.png" srcset="assets/img/top/location/location_icon_car_2x.png 2x" width="23" height="23" alt="車" decoding="async">
-                    </span>
-                  </button>
-                </dt>
-                <dd id="location2" class="c-accordion__box js-accordion__box">
+                </div>
+              </details>
+              <details class="c-accordion js-accordion">
+                <summary class="c-accordion__items js-accordion__items">
+                  <span class="c-accordion__inner -location">
+                    <span class="c-accordion__box__text -location">車で10分圏内</span>
+                    <span class="c-accordion__icon -location"><img src="assets/img/top/location/location_icon_car.svg" alt=""></span>
+                  </span>
+                </summary>
+                <div class="c-accordion__box js-accordion__box">
                   <div class="c-accordion__box__inner -location">
                     <div class="c-accordion__text__wrap">
                       <p class="c-accordion__text -caution">＊道路状況によっては10分以内に到着できない場合がございます。予めご了承ください。</p>
                     </div>
-                    <div class="c-accordion__box__list">
-                      <p class="c-accordion__box__title -restaurant">飲食</p>
-                      <ul class="c-accordion__box__items">
-                        <li class="c-accordion__box__text -location">キャナリィ・ロウ熊本店<span class="-small">（車3分／約1.1kｍ）</span></li>
-                        <li class="c-accordion__box__text -location">はま寿司 熊本佐土原店<span class="-small">（車3分／約1.3kｍ）</span></li>
-                        <li class="c-accordion__box__text -location">ラーメン龍の家 益城インター店<span class="-small">（車4分／約1.7kｍ）</span></li>
-                        <li class="c-accordion__box__text -location">マクドナルド 益城熊本空港インター店<span class="-small">（車4分／約1.6kｍ）</span></li>
-                        <li class="c-accordion__box__text -location">コメダ珈琲店 熊本桜木店<span class="-small">（車4分／約1.6kｍ）</span></li>
-                        <li class="c-accordion__box__text -location">寿司虎 熊本益城インター店<span class="-small">（車4分／約1.7kｍ）</span></li>
-                        <li class="c-accordion__box__text -location">やよい軒 桜木店<span class="-small">（車4分／約1.7kｍ）</span></li>
-                        <li class="c-accordion__box__text -location">トタン屋 桜木店<span class="-small">（車5分／約2kｍ）</span></li>
-                        <li class="c-accordion__box__text -location">スターバックス コーヒー 熊本益城インターチェンジ店<span class="-small">（車5分／約2.3kｍ）</span></li>
-                        <li class="c-accordion__box__text -location">かつや 熊本益城インター店<span class="-small">（車5分／約2.3kｍ）</span></li>
-                        <li class="c-accordion__box__text -location">丸亀製麺熊本佐土原店<span class="-small">（車5分／約2.1kｍ）</span></li>
-                        <li class="c-accordion__box__text -location">龍門<span class="-small">（車4分／約1.9kｍ）</span></li>
-                        <li class="c-accordion__box__text -location">かわ専<span class="-small">（車4分／約1.9kｍ）</span></li>
-                        <li class="c-accordion__box__text -location">しゃぶしゃぶダイニングＭＫ桜木店<span class="-small">（車4分／約1.5kｍ）</span></li>
-                        <li class="c-accordion__box__text -location">焼肉なべしま 健軍店<span class="-small">（車4分／約1.5kｍ）</span></li>
-                        <li class="c-accordion__box__text -location">スシロー 熊本新外店<span class="-small">（車5分／約1.9kｍ）</span></li>
-                        <li class="c-accordion__box__text -location">焼肉ダイニングなんべんでん<span class="-small">（車4分／約1.5kｍ）</span></li>
-                        <li class="c-accordion__box__text -location">やま路<span class="-small">（車5分／約1.6kｍ）</span></li>
-                        <li class="c-accordion__box__text -location">九一屋<span class="-small">（車7分／約2.5kｍ）</span></li>
-                        <li class="c-accordion__box__text -location">モスバーガー 長嶺日赤通り店<span class="-small">（車6分／約2.3kｍ）</span></li>
-                        <li class="c-accordion__box__text -location">資さんうどん 戸島店<span class="-small">（車5分／約1.8kｍ）</span></li>
-                        <li class="c-accordion__box__text -location">海鮮家 shimajiro 丼丸 長嶺店<span class="-small">（車7分／約2.8kｍ）</span></li>
-                        <li class="c-accordion__box__text -location">支那そば 北熊 長嶺店<span class="-small">（車5分／約2.1kｍ）</span></li>
-                        <li class="c-accordion__box__text -location">COMMUNE6<span class="-small">（車5分／約2.0kｍ）</span></li>
-                        <li class="c-accordion__box__text -location">葉山亭<span class="-small">（車7分／約2.6kｍ）</span></li>
-                        <li class="c-accordion__box__text -location">ふじ屋<span class="-small">（車8分／約3.1kｍ）</span></li>
-                        <li class="c-accordion__box__text -location">火の国文龍 総本店<span class="-small">（車8分／約3.1kｍ）</span></li>
-                        <li class="c-accordion__box__text -location">海鮮特急レーン 寿司じじや 長嶺店<span class="-small">（車7分／約2.6kｍ）</span></li>
-                        <li class="c-accordion__box__text -location">comer<span class="-small">（車5分／約1.7kｍ）</span></li>
-                        <li class="c-accordion__box__text -location">cat's cafe ねこじゃらし<span class="-small">（車6分／約2.2kｍ）</span></li>
-                        <li class="c-accordion__box__text -location">J&amp;P cafe<span class="-small">（車3分／約1.1kｍ）</span></li>
-                        <li class="c-accordion__box__text -location">更紗茶屋<span class="-small">（車3分／約1.3kｍ）</span></li>
-                        <li class="c-accordion__box__text -location">博多金龍 第2空港通店<span class="-small">（車7分／約2.3kｍ）</span></li>
-                        <li class="c-accordion__box__text -location">ウエスト 熊本第2空港通り店<span class="-small">（車5分／約1.7kｍ）</span></li>
-                        <li class="c-accordion__box__text -location">山形らーめん八八 益城インター店<span class="-small">（車5分／約1.8kｍ）</span></li>
-                        <li class="c-accordion__box__text -location">彩炉<span class="-small">（車5分／約1.7kｍ）</span></li>
-                        <li class="c-accordion__box__text -location">ラーメン劉<span class="-small">（車5分／約1.7kｍ）</span></li>
-                        <li class="c-accordion__box__text -location">想夫恋 益城インター店<span class="-small">（車7分／約3.1kｍ）</span></li>
-                        <li class="c-accordion__box__text -location">焼肉なべしま 健軍店<span class="-small">（車6分／約2.6kｍ）</span></li>
-                        <li class="c-accordion__box__text -location">銀シャリ亭 新外店<span class="-small">（車7分／約2kｍ）</span></li>
+                    <div class="p-location__list">
+                      <p class="p-location__list__label -restaurant">飲食</p>
+                      <ul class="p-location__list__items -car">
+                        <li class="p-location__list__shop">
+                          <p class="p-location__list__name">キャナリィ・ロウ熊本店</p>
+                          <p class="-small">（車3分／約1.1kｍ）</p>
+                        </li>
+                        <li class="p-location__list__shop">
+                          <p class="p-location__list__name">はま寿司 熊本佐土原店</p>
+                          <p class="-small">（車3分／約1.3kｍ）</p>
+                        </li>
+                        <li class="p-location__list__shop">
+                          <p class="p-location__list__name">ラーメン龍の家 益城インター店</p>
+                          <p class="-small">（車4分／約1.7kｍ）</p>
+                        </li>
+                        <li class="p-location__list__shop">
+                          <p class="p-location__list__name">マクドナルド 益城熊本空港インター店</p>
+                          <p class="-small">（車4分／約1.6kｍ）</p>
+                        </li>
+                        <li class="p-location__list__shop">
+                          <p class="p-location__list__name">コメダ珈琲店 熊本桜木店</p>
+                          <p class="-small">（車4分／約1.6kｍ）</p>
+                        </li>
+                        <li class="p-location__list__shop">
+                          <p class="p-location__list__name">寿司虎 熊本益城インター店</p>
+                          <p class="-small">（車4分／約1.7kｍ）</p>
+                        </li>
+                        <li class="p-location__list__shop">
+                          <p class="p-location__list__name">やよい軒 桜木店</p>
+                          <p class="-small">（車4分／約1.7kｍ）</p>
+                        </li>
+                        <li class="p-location__list__shop">
+                          <p class="p-location__list__name">トタン屋 桜木店</p>
+                          <p class="-small">（車5分／約2kｍ）</p>
+                        </li>
+                        <li class="p-location__list__shop">
+                          <p class="p-location__list__name">スターバックスコーヒー 熊本益城インターチェンジ店</p>
+                          <p class="-small">（車5分／約2.3kｍ）</p>
+                        </li>
+                        <li class="p-location__list__shop">
+                          <p class="p-location__list__name">かつや 熊本益城インター店</p>
+                          <p class="-small">（車5分／約2.3kｍ）</p>
+                        </li>
+                        <li class="p-location__list__shop">
+                          <p class="p-location__list__name">丸亀製麺熊本佐土原店</p>
+                          <p class="-small">（車5分／約2.1kｍ）</p>
+                        </li>
+                        <li class="p-location__list__shop">
+                          <p class="p-location__list__name">龍門</p>
+                          <p class="-small">（車4分／約1.9kｍ）</p>
+                        </li>
+                        <li class="p-location__list__shop">
+                          <p class="p-location__list__name">かわ専</p>
+                          <p class="-small">（車4分／約1.9kｍ）</p>
+                        </li>
+                        <li class="p-location__list__shop">
+                          <p class="p-location__list__name">しゃぶしゃぶダイニングＭＫ<wbr>桜木店</p>
+                          <p class="-small">（車4分／約1.5kｍ）</p>
+                        </li>
+                        <li class="p-location__list__shop">
+                          <p class="p-location__list__name">焼肉なべしま 健軍店</p>
+                          <p class="-small">（車4分／約1.5kｍ）</p>
+                        </li>
+                        <li class="p-location__list__shop">
+                          <p class="p-location__list__name">スシロー 熊本新外店</p>
+                          <p class="-small">（車5分／約1.9kｍ）</p>
+                        </li>
+                        <li class="p-location__list__shop">
+                          <p class="p-location__list__name">焼肉ダイニングなんべんでん</p>
+                          <p class="-small">（車4分／約1.5kｍ）</p>
+                        </li>
+                        <li class="p-location__list__shop">
+                          <p class="p-location__list__name">やま路</p>
+                          <p class="-small">（車5分／約1.6kｍ）</p>
+                        </li>
+                        <li class="p-location__list__shop">
+                          <p class="p-location__list__name">九一屋</p>
+                          <p class="-small">（車7分／約2.5kｍ）</p>
+                        </li>
+                        <li class="p-location__list__shop">
+                          <p class="p-location__list__name">モスバーガー 長嶺日赤通り店</p>
+                          <p class="-small">（車6分／約2.3kｍ）</p>
+                        </li>
+                        <li class="p-location__list__shop">
+                          <p class="p-location__list__name">資さんうどん 戸島店</p>
+                          <p class="-small">（車5分／約1.8kｍ）</p>
+                        </li>
+                        <li class="p-location__list__shop">
+                          <p class="p-location__list__name">海鮮家 shimajiro 丼丸 長嶺店</p>
+                          <p class="-small">（車7分／約2.8kｍ）</p>
+                        </li>
+                        <li class="p-location__list__shop">
+                          <p class="p-location__list__name">支那そば 北熊 長嶺店</p>
+                          <p class="-small">（車5分／約2.1kｍ）</p>
+                        </li>
+                        <li class="p-location__list__shop">
+                          <p class="p-location__list__name">COMMUNE6</p>
+                          <p class="-small">（車5分／約2.0kｍ）</p>
+                        </li>
+                        <li class="p-location__list__shop">
+                          <p class="p-location__list__name">葉山亭</p>
+                          <p class="-small">（車7分／約2.6kｍ）</p>
+                        </li>
+                        <li class="p-location__list__shop">
+                          <p class="p-location__list__name">ふじ屋</p>
+                          <p class="-small">（車8分／約3.1kｍ）</p>
+                        </li>
+                        <li class="p-location__list__shop">
+                          <p class="p-location__list__name">火の国文龍 総本店</p>
+                          <p class="-small">（車8分／約3.1kｍ）</p>
+                        </li>
+                        <li class="p-location__list__shop">
+                          <p class="p-location__list__name">海鮮特急レーン 寿司じじや 長嶺店</p>
+                          <p class="-small">（車7分／約2.6kｍ）</p>
+                        </li>
+                        <li class="p-location__list__shop">
+                          <p class="p-location__list__name">comer</p>
+                          <p class="-small">（車5分／約1.7kｍ）</p>
+                        </li>
+                        <li class="p-location__list__shop">
+                          <p class="p-location__list__name">cat's cafe ねこじゃらし</p>
+                          <p class="-small">（車6分／約2.2kｍ）</p>
+                        </li>
+                        <li class="p-location__list__shop">
+                          <p class="p-location__list__name">J&amp;P cafe</p>
+                          <p class="-small">（車3分／約1.1kｍ）</p>
+                        </li>
+                        <li class="p-location__list__shop">
+                          <p class="p-location__list__name">更紗茶屋</p>
+                          <p class="-small">（車3分／約1.3kｍ）</p>
+                        </li>
+                        <li class="p-location__list__shop">
+                          <p class="p-location__list__name">博多金龍 第2空港通店</p>
+                          <p class="-small">（車7分／約2.3kｍ）</p>
+                        </li>
+                        <li class="p-location__list__shop">
+                          <p class="p-location__list__name">ウエスト 熊本第2空港通り店</p>
+                          <p class="-small">（車5分／約1.7kｍ）</p>
+                        </li>
+                        <li class="p-location__list__shop">
+                          <p class="p-location__list__name">山形らーめん八八 益城インター店</p>
+                          <p class="-small">（車5分／約1.8kｍ）</p>
+                        </li>
+                        <li class="p-location__list__shop">
+                          <p class="p-location__list__name">彩炉</p>
+                          <p class="-small">（車5分／約1.7kｍ）</p>
+                        </li>
+                        <li class="p-location__list__shop">
+                          <p class="p-location__list__name">ラーメン劉</p>
+                          <p class="-small">（車5分／約1.7kｍ）</p>
+                        </li>
+                        <li class="p-location__list__shop">
+                          <p class="p-location__list__name">想夫恋 益城インター店</p>
+                          <p class="-small">（車7分／約3.1kｍ）</p>
+                        </li>
+                        <li class="p-location__list__shop">
+                          <p class="p-location__list__name">焼肉なべしま 健軍店</p>
+                          <p class="-small">（車6分／約2.6kｍ）</p>
+                        </li>
+                        <li class="p-location__list__shop">
+                          <p class="p-location__list__name">銀シャリ亭 新外店</p>
+                          <p class="-small">（車7分／約2kｍ）</p>
+                        </li>
                       </ul>
                     </div>
-                    <div class="c-accordion__box__list">
-                      <p class="c-accordion__box__title -shop">小売</p>
-                      <ul class="c-accordion__box__items">
-                        <li class="c-accordion__box__text -location">ゆめマート 新外店<span class="-small">（車5分／約1.4kｍ）</span></li>
-                        <li class="c-accordion__box__text -location">セブンイレブン 熊本新外3丁目店<span class="-small">（車6分／約1.7kｍ）</span></li>
-                        <li class="c-accordion__box__text -location">スーパー・キッド 新外店<span class="-small">（車8分／約2.2kｍ）</span></li>
-                        <li class="c-accordion__box__text -location">マックスバリュ 新戸島店<span class="-small">（車7分／約2kｍ）</span></li>
-                        <li class="c-accordion__box__text -location">ダイレックス 熊本店<span class="-small">（車6分／約1.8kｍ）</span></li>
-                        <li class="c-accordion__box__text -location">ディスカウントドラッグコスモス 戸島西店<span class="-small">（車3分／約1kｍ）</span></li>
-                        <li class="c-accordion__box__text -location">業務スーパー 花立店<span class="-small">（車7分／約2.4kｍ）</span></li>
-                        <li class="c-accordion__box__text -location">ダイソー熊本花立店<span class="-small">（車8分／約2.9kｍ）</span></li>
-                        <li class="c-accordion__box__text -location">ザ・ビッグ 桜木店<span class="-small">（車8分／約3.1kｍ）</span></li>
-                        <li class="c-accordion__box__text -location">ショッピング モールさくらの森<span class="-small">（車5分／約1.7kｍ）</span></li>
-                        <li class="c-accordion__box__text -location">シャトレーゼ 熊本花立店<span class="-small">（車9分／約2.8kｍ）</span></li>
-                        <li class="c-accordion__box__text -location">ファミリーマート 熊本花立5丁目店<span class="-small">（車8分／約2.9kｍ）</span></li>
-                        <li class="c-accordion__box__text -location">サンロードシティ熊本<span class="-small">（車9分／約3.2kｍ）</span></li>
-                        <li class="c-accordion__box__text -location">DCM 東町店<span class="-small">（車7分／約2.8kｍ）</span></li>
-                        <li class="c-accordion__box__text -location">ドラッグストアモリ 戸島店<span class="-small">（車5分／約1.6kｍ）</span></li>
-                        <li class="c-accordion__box__text -location">ファッションセンターしまむら長嶺店<span class="-small">（車5分／約1.6kｍ）</span></li>
+                    <div class="p-location__list">
+                      <p class="p-location__list__label -shop">小売</p>
+                      <ul class="p-location__list__items -car">
+                        <li class="p-location__list__shop">
+                          <p class="p-location__list__name">ゆめマート 新外店</p>
+                          <p class="-small">（車5分／約1.4kｍ）</p>
+                        </li>
+                        <li class="p-location__list__shop">
+                          <p class="p-location__list__name">セブンイレブン 熊本新外3丁目店</p>
+                          <p class="-small">（車6分／約1.7kｍ）</p>
+                        </li>
+                        <li class="p-location__list__shop">
+                          <p class="p-location__list__name">スーパー・キッド 新外店</p>
+                          <p class="-small">（車8分／約2.2kｍ）</p>
+                        </li>
+                        <li class="p-location__list__shop">
+                          <p class="p-location__list__name">マックスバリュ 新戸島店</p>
+                          <p class="-small">（車7分／約2kｍ）</p>
+                        </li>
+                        <li class="p-location__list__shop">
+                          <p class="p-location__list__name">ダイレックス 熊本店</p>
+                          <p class="-small">（車6分／約1.8kｍ）</p>
+                        </li>
+                        <li class="p-location__list__shop">
+                          <p class="p-location__list__name">ディスカウントドラッグコスモス 戸島西店</p>
+                          <p class="-small">（車3分／約1kｍ）</p>
+                        </li>
+                        <li class="p-location__list__shop">
+                          <p class="p-location__list__name">業務スーパー 花立店</p>
+                          <p class="-small">（車7分／約2.4kｍ）</p>
+                        </li>
+                        <li class="p-location__list__shop">
+                          <p class="p-location__list__name">ダイソー熊本花立店</p>
+                          <p class="-small">（車8分／約2.9kｍ）</p>
+                        </li>
+                        <li class="p-location__list__shop">
+                          <p class="p-location__list__name">ザ・ビッグ 桜木店</p>
+                          <p class="-small">（車8分／約3.1kｍ）</p>
+                        </li>
+                        <li class="p-location__list__shop">
+                          <p class="p-location__list__name">ショッピング モールさくらの森</p>
+                          <p class="-small">（車5分／約1.7kｍ）</p>
+                        </li>
+                        <li class="p-location__list__shop">
+                          <p class="p-location__list__name">シャトレーゼ 熊本花立店</p>
+                          <p class="-small">（車9分／約2.8kｍ）</p>
+                        </li>
+                        <li class="p-location__list__shop">
+                          <p class="p-location__list__name">ファミリーマート 熊本花立5丁目店</p>
+                          <p class="-small">（車8分／約2.9kｍ）</p>
+                        </li>
+                        <li class="p-location__list__shop">
+                          <p class="p-location__list__name">サンロードシティ熊本</p>
+                          <p class="-small">（車9分／約3.2kｍ）</p>
+                        </li>
+                        <li class="p-location__list__shop">
+                          <p class="p-location__list__name">DCM 東町店</p>
+                          <p class="-small">（車7分／約2.8kｍ）</p>
+                        </li>
+                        <li class="p-location__list__shop">
+                          <p class="p-location__list__name">ドラッグストアモリ 戸島店</p>
+                          <p class="-small">（車5分／約1.6kｍ）</p>
+                        </li>
+                        <li class="p-location__list__shop">
+                          <p class="p-location__list__name">ファッションセンターしまむら<wbr>長嶺店</p>
+                          <p class="-small">（車5分／約1.6kｍ）</p>
+                        </li>
                       </ul>
                     </div>
-                    <div class="c-accordion__box__list">
-                      <p class="c-accordion__box__title -life">生活</p>
-                      <ul class="c-accordion__box__items">
-                        <li class="c-accordion__box__text -location">天然温泉ぶぶたん<span class="-small">（車7分／約2.4kｍ）</span></li>
-                        <li class="c-accordion__box__text -location">三山荘（銭湯）<span class="-small">（車6分／約2.3kｍ）</span></li>
+                    <div class="p-location__list">
+                      <p class="p-location__list__label -life">生活</p>
+                      <ul class="p-location__list__items -car">
+                        <li class="p-location__list__shop">
+                          <p class="p-location__list__name">天然温泉ぶぶたん</p>
+                          <p class="-small">（車7分／約2.4kｍ）</p>
+                        </li>
+                        <li class="p-location__list__shop">
+                          <p class="p-location__list__name">三山荘（銭湯）</p>
+                          <p class="-small">（車6分／約2.3kｍ）</p>
+                        </li>
                       </ul>
                     </div>
                   </div>
-                </dd>
-              </div>
-              <div class="c-accordion__items js-include-accordion js-scroll-control">
-                <dt class="c-accordion__wrapper">
-                  <button type="button" class="c-accordion__button -location js-accordion__button" aria-expanded="false" aria-controls="location3">
-                    <span class="c-accordion__contents -location">
-                      <span class="c-accordion__contents__text -location">観光地への所要時間</span>
-                      <img src="assets/img/top/location/location_icon_time.png" srcset="assets/img/top/location/location_icon_time_2x.png 2x" width="23" height="23" alt="時計" decoding="async">
-                    </span>
-                  </button>
-                </dt>
-                <dd id="location3" class="c-accordion__box js-accordion__box">
+                </div>
+              </details>
+              <details class="c-accordion js-accordion">
+                <summary class="c-accordion__items js-accordion__items">
+                  <span class="c-accordion__inner -location">
+                    <span class="c-accordion__box__text -location">観光地への所要時間</span>
+                    <span class="c-accordion__icon -location"><img src="assets/img/top/location/location_icon_time.svg" alt=""></span>
+                  </span>
+                </summary>
+                <div class="c-accordion__box js-accordion__box">
                   <div class="c-accordion__box__inner -location">
                     <div class="c-accordion__text__wrap">
                       <p class="c-accordion__text -caution">＊道路状況によっては所要時間が前後する場合がございます。予めご了承ください。</p>
                     </div>
-                    <div class="c-accordion__box__list">
-                      <div class="c-accordion__box__list__items">
-                        <p class="c-accordion__box__title -time">熊本城</p>
-                        <div class="c-accordion__box__item -time">
-                          <div class="c-accordion__box__time -car">
-                            <p class="c-accordion__box__time__text -car">約35分</p>
-                            <img class="c-accordion__box__img p-accordion__box__img -car" src="assets/img/top/location/location_icon_car.png" srcset="assets/img/top/location/location_icon_car_2x.png 2x" width="23" height="23" alt="車" decoding="async">
+                    <div class="p-location__list">
+                      <div class="p-location__list__items -time">
+                        <p class="p-location__list__label -time">熊本城</p>
+                        <div class="p-location__time -time">
+                          <div class="p-location__time__items -car">
+                            <p class="p-location__time__text -car">約35分</p>
+                            <p class="p-location__icon -car"><img src="assets/img/top/location/location_icon_car.svg" alt=""></p>
                           </div>
-                          <div class="c-accordion__box__time -other">
-                            <p class="c-accordion__box__time__text -other">約40分</p>
+                          <div class="p-location__time__items -other">
+                            <p class="p-location__time__text -other">約40分</p>
                             <div class="p-accordion__box__imgs">
-                              <img class="c-accordion__box__img p-accordion__box__img -bus" src="assets/img/top/location/location_icon_bus.png" srcset="assets/img/top/location/location_icon_bus_2x.png 2x" width="23" height="23" alt="バス" decoding="async">
-                              <img class="c-accordion__box__img p-accordion__box__img -walk" src="assets/img/top/location/location_icon_walk.png" srcset="assets/img/top/location/location_icon_walk_2x.png 2x" width="23" height="23" alt="人" decoding="async">
+                              <p class="p-location__icon -bus"><img src="assets/img/top/location/location_icon_bus.svg" alt=""></p>
+                              <p class="p-location__icon -walk"><img src="assets/img/top/location/location_icon_walk.svg" alt=""></p>
                             </div>
                             <!-- /.p-accordion__box__imgs -->
                           </div>
                         </div>
-                        <!-- /.c-accordion__box__item -time -->
+                        <!-- /.p-location__time -time -->
                       </div>
-                      <div class="c-accordion__box__list__items">
-                        <p class="c-accordion__box__title -time">水前寺成趣園</p>
-                        <div class="c-accordion__box__item -time">
-                          <div class="c-accordion__box__time -car">
-                            <p class="c-accordion__box__time__text -car">約20分</p>
-                            <img class="c-accordion__box__img p-accordion__box__img -car" src="assets/img/top/location/location_icon_car.png" srcset="assets/img/top/location/location_icon_car_2x.png 2x" width="23" height="23" alt="車" decoding="async">
+                      <div class="p-location__list__items -time">
+                        <p class="p-location__list__label -time">水前寺成趣園</p>
+                        <div class="p-location__time -time">
+                          <div class="p-location__time__items -car">
+                            <p class="p-location__time__text -car">約20分</p>
+                            <p class="p-location__icon -car"><img src="assets/img/top/location/location_icon_car.svg" alt=""></p>
                           </div>
-                          <div class="c-accordion__box__time -other">
-                            <p class="c-accordion__box__time__text -other">約35分</p>
+                          <div class="p-location__time__items -other">
+                            <p class="p-location__time__text -other">約35分</p>
                             <div class="p-accordion__box__imgs">
-                              <img class="c-accordion__box__img p-accordion__box__img -bus" src="assets/img/top/location/location_icon_bus.png" srcset="assets/img/top/location/location_icon_bus_2x.png 2x" width="23" height="23" alt="バス" decoding="async">
-                              <img class="c-accordion__box__img p-accordion__box__img -walk" src="assets/img/top/location/location_icon_walk.png" srcset="assets/img/top/location/location_icon_walk_2x.png 2x" width="23" height="23" alt="人" decoding="async">
+                              <p class="p-location__icon -bus"><img src="assets/img/top/location/location_icon_bus.svg" alt=""></p>
+                              <p class="p-location__icon -walk"><img src="assets/img/top/location/location_icon_walk.svg" alt=""></p>
                             </div>
                             <!-- /.p-accordion__box__imgs -->
                           </div>
-                          <!-- /.c-accordion__box__time -other -->
+                          <!-- /.p-location__time -other -->
                         </div>
                       </div>
-                      <div class="c-accordion__box__list__items">
-                        <p class="c-accordion__box__title -time">黒川温泉</p>
-                        <div class="c-accordion__box__item -time">
-                          <div class="c-accordion__box__time -long">
-                            <p class="c-accordion__box__time__text -car">約1時間<wbr>25分</p>
-                            <img class="c-accordion__box__img p-accordion__box__img -car" src="assets/img/top/location/location_icon_car.png" srcset="assets/img/top/location/location_icon_car_2x.png 2x" width="23" height="23" alt="車" decoding="async">
+                      <div class="p-location__list__items -time">
+                        <p class="p-location__list__label -time">黒川温泉</p>
+                        <div class="p-location__time -time">
+                          <div class="p-location__time__items -long">
+                            <p class="p-location__time__text -car">約1時間<wbr>25分</p>
+                            <p class="p-location__icon -car"><img src="assets/img/top/location/location_icon_car.svg" ></p>
                           </div>
-                          <div class="c-accordion__box__time -other">
-                            <p class="c-accordion__box__time__text -other">約2時間<wbr>35分</p>
+                          <div class="p-location__time__items -other">
+                            <p class="p-location__time__text -other">約2時間<wbr>35分</p>
                             <div class="p-accordion__box__imgs">
-                              <img class="c-accordion__box__img p-accordion__box__img -bus" src="assets/img/top/location/location_icon_bus.png" srcset="assets/img/top/location/location_icon_bus_2x.png 2x" width="23" height="23" alt="バス" decoding="async">
-                              <img class="c-accordion__box__img p-accordion__box__img -walk" src="assets/img/top/location/location_icon_walk.png" srcset="assets/img/top/location/location_icon_walk_2x.png 2x" width="23" height="23" alt="人" decoding="async">
+                              <p class="p-location__icon -bus"><img src="assets/img/top/location/location_icon_bus.svg" alt="" ></p>
+                              <p class="p-location__icon -walk"><img src="assets/img/top/location/location_icon_walk.svg"  alt=""></p>
+                            </div>
+                            <!-- /.p-location__icon -->
+                          </div>
+                          <!-- /.p-location__time -other -->
+                        </div>
+                      </div>
+                      <div class="p-location__list__items -time">
+                        <p class="p-location__list__label -time">阿蘇中岳火口</p>
+                        <div class="p-location__time -time">
+                          <div class="p-location__time__items -car">
+                            <p class="p-location__time__text -car">約1時間</p>
+                            <p  class="p-location__icon -car"><img src="assets/img/top/location/location_icon_car.svg" alt="" ></p>
+                          </div>
+                          <div class="p-location__time__items -other">
+                            <p class="p-location__time__text -other">約2時間30分<wbr>～3時間</p>
+                            <div class="p-accordion__box__imgs">
+                              <p class="p-location__icon -bus"><img src="assets/img/top/location/location_icon_bus.svg" alt="" ></p>
+                              <p class="p-location__icon -walk"><img src="assets/img/top/location/location_icon_walk.svg"  alt=""></p>
                             </div>
                             <!-- /.p-accordion__box__imgs -->
                           </div>
-                          <!-- /.c-accordion__box__time -other -->
+                          <!-- /.p-location__time -other -->
                         </div>
                       </div>
-                      <div class="c-accordion__box__list__items">
-                        <p class="c-accordion__box__title -time">阿蘇中岳火口</p>
-                        <div class="c-accordion__box__item -time">
-                          <div class="c-accordion__box__time -car">
-                            <p class="c-accordion__box__time__text -car">約1時間</p>
-                            <img class="c-accordion__box__img p-accordion__box__img -car" src="assets/img/top/location/location_icon_car.png" srcset="assets/img/top/location/location_icon_car_2x.png 2x" width="23" height="23" alt="車" decoding="async">
+                      <div class="p-location__list__items -time">
+                        <p class="p-location__list__label -time">阿蘇ファームランド</p>
+                        <div class="p-location__time -time">
+                          <div class="p-location__time__items -car">
+                            <p class="p-location__time__text -car">約47分</p>
+                            <p class="p-location__icon -car"><img src="assets/img/top/location/location_icon_car.svg"  alt=""></p>
                           </div>
-                          <div class="c-accordion__box__time -other">
-                            <p class="c-accordion__box__time__text -other">約2時間<wbr>30分～3時間</p>
+                          <div class="p-location__time__items -other">
+                            <p class="p-location__time__text -other">約1時間<wbr>47分</p>
                             <div class="p-accordion__box__imgs">
-                              <img class="c-accordion__box__img p-accordion__box__img -bus" src="assets/img/top/location/location_icon_bus.png" srcset="assets/img/top/location/location_icon_bus_2x.png 2x" width="23" height="23" alt="バス" decoding="async">
-                              <img class="c-accordion__box__img p-accordion__box__img -walk" src="assets/img/top/location/location_icon_walk.png" srcset="assets/img/top/location/location_icon_walk_2x.png 2x" width="23" height="23" alt="人" decoding="async">
+                              <p class="p-location__icon -bus"><img src="assets/img/top/location/location_icon_bus.svg" alt="" ></p>
+                              <p class="p-location__icon -walk"><img src="assets/img/top/location/location_icon_walk.svg" alt="" ></p>
                             </div>
                             <!-- /.p-accordion__box__imgs -->
                           </div>
-                          <!-- /.c-accordion__box__time -other -->
+                          <!-- /.p-location__time -other -->
                         </div>
                       </div>
-                      <div class="c-accordion__box__list__items">
-                        <p class="c-accordion__box__title -time">阿蘇ファームランド</p>
-                        <div class="c-accordion__box__item -time">
-                          <div class="c-accordion__box__time -car">
-                            <p class="c-accordion__box__time__text -car">約47分</p>
-                            <img class="c-accordion__box__img p-accordion__box__img -car" src="assets/img/top/location/location_icon_car.png" srcset="assets/img/top/location/location_icon_car_2x.png 2x" width="23" height="23" alt="車" decoding="async">
+                      <div class="p-location__list__items -time">
+                        <p class="p-location__list__label -time">阿蘇カドリードミニオン</p>
+                        <div class="p-location__time -time">
+                          <div class="p-location__time__items -car">
+                            <p class="p-location__time__text -car">約50分</p>
+                            <p class="p-location__icon -car"><img src="assets/img/top/location/location_icon_car.svg" alt=""></p>
                           </div>
-                          <div class="c-accordion__box__time -other">
-                            <p class="c-accordion__box__time__text -other">約1時間<wbr>47分</p>
+                          <div class="p-location__time__items -other">
+                            <p class="p-location__time__text -other">約1時間<wbr>25分</p>
                             <div class="p-accordion__box__imgs">
-                              <img class="c-accordion__box__img p-accordion__box__img -bus" src="assets/img/top/location/location_icon_bus.png" srcset="assets/img/top/location/location_icon_bus_2x.png 2x" width="23" height="23" alt="バス" decoding="async">
-                              <img class="c-accordion__box__img p-accordion__box__img -walk" src="assets/img/top/location/location_icon_walk.png" srcset="assets/img/top/location/location_icon_walk_2x.png 2x" width="23" height="23" alt="人" decoding="async">
+                              <p class="p-location__icon -bus"><img src="assets/img/top/location/location_icon_bus.svg" alt="" ></p>
+                              <p class="p-location__icon -walk"><img src="assets/img/top/location/location_icon_walk.svg" alt=""></p>
                             </div>
                             <!-- /.p-accordion__box__imgs -->
                           </div>
-                          <!-- /.c-accordion__box__time -other -->
+                          <!-- /.p-location__time -other -->
                         </div>
                       </div>
-                      <div class="c-accordion__box__list__items">
-                        <p class="c-accordion__box__title -time">阿蘇カドリードミニオン</p>
-                        <div class="c-accordion__box__item -time">
-                          <div class="c-accordion__box__time -car">
-                            <p class="c-accordion__box__time__text -car">約50分</p>
-                            <img class="c-accordion__box__img p-accordion__box__img -car" src="assets/img/top/location/location_icon_car.png" srcset="assets/img/top/location/location_icon_car_2x.png 2x" width="23" height="23" alt="車" decoding="async">
+                      <div class="p-location__list__items -time">
+                        <p class="p-location__list__label -time">くまもんスクエア</p>
+                        <div class="p-location__time -time">
+                          <div class="p-location__time__items -car">
+                            <p class="p-location__time__text -car">約25分</p>
+                            <p class="p-location__icon -car"><img src="assets/img/top/location/location_icon_car.svg" alt="" ></p>
                           </div>
-                          <div class="c-accordion__box__time -other">
-                            <p class="c-accordion__box__time__text -other">約1時間<wbr>25分</p>
+                          <div class="p-location__time__items -other">
+                            <p class="p-location__time__text -other">約35分</p>
                             <div class="p-accordion__box__imgs">
-                              <img class="c-accordion__box__img p-accordion__box__img -bus" src="assets/img/top/location/location_icon_bus.png" srcset="assets/img/top/location/location_icon_bus_2x.png 2x" width="23" height="23" alt="バス" decoding="async">
-                              <img class="c-accordion__box__img p-accordion__box__img -walk" src="assets/img/top/location/location_icon_walk.png" srcset="assets/img/top/location/location_icon_walk_2x.png 2x" width="23" height="23" alt="人" decoding="async">
+                              <p class="p-location__icon -bus"><img src="assets/img/top/location/location_icon_bus.svg" alt="" ></p>
+                              <p class="p-location__icon -walk"><img src="assets/img/top/location/location_icon_walk.svg" alt=""></p>
                             </div>
                             <!-- /.p-accordion__box__imgs -->
                           </div>
-                          <!-- /.c-accordion__box__time -other -->
+                          <!-- /.p-location__time -other -->
                         </div>
                       </div>
-                      <div class="c-accordion__box__list__items">
-                        <p class="c-accordion__box__title -time">くまもんスクエア</p>
-                        <div class="c-accordion__box__item -time">
-                          <div class="c-accordion__box__time -car">
-                            <p class="c-accordion__box__time__text -car">約25分</p>
-                            <img class="c-accordion__box__img p-accordion__box__img -car" src="assets/img/top/location/location_icon_car.png" srcset="assets/img/top/location/location_icon_car_2x.png 2x" width="23" height="23" alt="車" decoding="async">
+                      <div class="p-location__list__items -time">
+                        <p class="p-location__list__label -time">グリーンランド</p>
+                        <div class="p-location__time -time">
+                          <div class="p-location__time__items -car">
+                            <p class="p-location__time__text -car">約1時間</p>
+                            <p class="p-location__icon -car"><img src="assets/img/top/location/location_icon_car.svg" alt=""></p>
                           </div>
-                          <div class="c-accordion__box__time -other">
-                            <p class="c-accordion__box__time__text -other">約35分</p>
+                          <div class="p-location__time__items -other">
+                            <p class="p-location__time__text -other">約2時間<wbr>30分</p>
                             <div class="p-accordion__box__imgs">
-                              <img class="c-accordion__box__img p-accordion__box__img -bus" src="assets/img/top/location/location_icon_bus.png" srcset="assets/img/top/location/location_icon_bus_2x.png 2x" width="23" height="23" alt="バス" decoding="async">
-                              <img class="c-accordion__box__img p-accordion__box__img -walk" src="assets/img/top/location/location_icon_walk.png" srcset="assets/img/top/location/location_icon_walk_2x.png 2x" width="23" height="23" alt="人" decoding="async">
+                              <p class="p-location__icon -bus"><img src="assets/img/top/location/location_icon_bus.svg" alt="" ></p>
+                              <p class="p-location__icon -train"><img src="assets/img/top/location/location_icon_train.svg" alt="" ></p>
+                              <p class="p-location__icon -walk"><img src="assets/img/top/location/location_icon_walk.svg" alt=""></p>
                             </div>
                             <!-- /.p-accordion__box__imgs -->
                           </div>
-                          <!-- /.c-accordion__box__time -other -->
+                          <!-- /.p-location__time -other -->
                         </div>
                       </div>
-                      <div class="c-accordion__box__list__items">
-                        <p class="c-accordion__box__title -time">グリーンランド</p>
-                        <div class="c-accordion__box__item -time">
-                          <div class="c-accordion__box__time -car">
-                            <p class="c-accordion__box__time__text -car">約1時間</p>
-                            <img class="c-accordion__box__img p-accordion__box__img -car" src="assets/img/top/location/location_icon_car.png" srcset="assets/img/top/location/location_icon_car_2x.png 2x" width="23" height="23" alt="車" decoding="async">
+                      <div class="p-location__list__items -time">
+                        <p class="p-location__list__label -time">大観峰</p>
+                        <div class="p-location__time -time">
+                          <div class="p-location__time__items -car">
+                            <p class="p-location__time__text -car">約1時間</p>
+                            <p class="p-location__icon -car"><img src="assets/img/top/location/location_icon_car.svg" alt=""></p>
                           </div>
-                          <div class="c-accordion__box__time -other">
-                            <p class="c-accordion__box__time__text -other">約2時間<wbr>30分</p>
+                          <div class="p-location__time__items -other">
+                            <p class="p-location__time__text -other">約2時間<wbr>40分</p>
                             <div class="p-accordion__box__imgs">
-                              <img class="c-accordion__box__img p-accordion__box__img -bus" src="assets/img/top/location/location_icon_bus.png" srcset="assets/img/top/location/location_icon_bus_2x.png 2x" width="23" height="23" alt="バス" decoding="async">
-                              <img class="c-accordion__box__img p-accordion__box__img -walk" src="assets/img/top/location/location_icon_walk.png" srcset="assets/img/top/location/location_icon_walk_2x.png 2x" width="23" height="23" alt="人" decoding="async">
+                              <p class="p-location__icon -bus"><img src="assets/img/top/location/location_icon_bus.svg" alt=""></p>
+                              <p class="p-location__icon -walk"><img src="assets/img/top/location/location_icon_walk.svg" alt=""></p>
                             </div>
                             <!-- /.p-accordion__box__imgs -->
                           </div>
-                          <!-- /.c-accordion__box__time -other -->
+                          <!-- /.p-location__time -other -->
                         </div>
                       </div>
-                      <div class="c-accordion__box__list__items">
-                        <p class="c-accordion__box__title -time">大観峰</p>
-                        <div class="c-accordion__box__item -time">
-                          <div class="c-accordion__box__time -car">
-                            <p class="c-accordion__box__time__text -car">約1時間</p>
-                            <img class="c-accordion__box__img p-accordion__box__img -car" src="assets/img/top/location/location_icon_car.png" srcset="assets/img/top/location/location_icon_car_2x.png 2x" width="23" height="23" alt="車" decoding="async">
+                      <div class="p-location__list__items -time">
+                        <p class="p-location__list__label -time">熊本市動植物園</p>
+                        <div class="p-location__time -time">
+                          <div class="p-location__time__items -car">
+                            <p class="p-location__time__text -car">約20分</p>
+                            <p class="p-location__icon -car"><img src="assets/img/top/location/location_icon_car.svg" alt=""></p>
                           </div>
-                          <div class="c-accordion__box__time -other">
-                            <p class="c-accordion__box__time__text -other">約2時間<wbr>40分</p>
+                          <div class="p-location__time__items -other">
+                            <p class="p-location__time__text -other">約55分</p>
                             <div class="p-accordion__box__imgs">
-                              <img class="c-accordion__box__img p-accordion__box__img -bus" src="assets/img/top/location/location_icon_bus.png" srcset="assets/img/top/location/location_icon_bus_2x.png 2x" width="23" height="23" alt="バス" decoding="async">
-                              <img class="c-accordion__box__img p-accordion__box__img -walk" src="assets/img/top/location/location_icon_walk.png" srcset="assets/img/top/location/location_icon_walk_2x.png 2x" width="23" height="23" alt="人" decoding="async">
+                              <p class="p-location__icon -bus"><img src="assets/img/top/location/location_icon_bus.svg" alt=""></p>
+                              <p class="p-location__icon -walk"><img src="assets/img/top/location/location_icon_walk.svg" alt=""></p>
+                              <p class="p-location__icon -tram"><img src="assets/img/top/location/location_icon_tram.svg" alt=""></p>
                             </div>
                             <!-- /.p-accordion__box__imgs -->
                           </div>
-                          <!-- /.c-accordion__box__time -other -->
+                          <!-- /.p-location__time -other -->
                         </div>
                       </div>
-                      <div class="c-accordion__box__list__items">
-                        <p class="c-accordion__box__title -time">熊本市動植物園</p>
-                        <div class="c-accordion__box__item -time">
-                          <div class="c-accordion__box__time -car">
-                            <p class="c-accordion__box__time__text -car">約20分</p>
-                            <img class="c-accordion__box__img p-accordion__box__img -car" src="assets/img/top/location/location_icon_car.png" srcset="assets/img/top/location/location_icon_car_2x.png 2x" width="23" height="23" alt="車" decoding="async">
+                      <div class="p-location__list__items -time">
+                        <p class="p-location__list__label -time">鍋ヶ滝公園</p>
+                        <div class="p-location__time -time">
+                          <div class="p-location__time__items -car">
+                            <p class="p-location__time__text -car">約1時間30分</p>
+                            <p class="p-location__icon -car"><img src="assets/img/top/location/location_icon_car.svg" alt=""></p>
                           </div>
-                          <div class="c-accordion__box__time -other">
-                            <p class="c-accordion__box__time__text -other">約55分</p>
+                        </div>
+                      </div>
+                      <div class="p-location__list__items -time">
+                        <p class="p-location__list__label -time">阿蘇神社</p>
+                        <div class="p-location__time -time">
+                          <div class="p-location__time__items -car">
+                            <p class="p-location__time__text -car">約1時間</p>
+                            <p class="p-location__icon -car"><img src="assets/img/top/location/location_icon_car.svg" alt=""></p>
+                          </div>
+                          <div class="p-location__time__items -other">
+                            <p class="p-location__time__text -other">約1時間<wbr>45分</p>
                             <div class="p-accordion__box__imgs">
-                              <img class="c-accordion__box__img p-accordion__box__img -bus" src="assets/img/top/location/location_icon_bus.png" srcset="assets/img/top/location/location_icon_bus_2x.png 2x" width="23" height="23" alt="バス" decoding="async">
-                              <img class="c-accordion__box__img p-accordion__box__img -walk" src="assets/img/top/location/location_icon_walk.png" srcset="assets/img/top/location/location_icon_walk_2x.png 2x" width="23" height="23" alt="人" decoding="async">
+                              <p class="p-location__icon -bus"><img src="assets/img/top/location/location_icon_bus.svg" alt="" ></p>
+                              <p class="p-location__icon -walk"><img src="assets/img/top/location/location_icon_walk.svg" alt=""></p>
                             </div>
                             <!-- /.p-accordion__box__imgs -->
                           </div>
-                          <!-- /.c-accordion__box__time -other -->
+                          <!-- /.p-location__time -other -->
                         </div>
                       </div>
-                      <div class="c-accordion__box__list__items">
-                        <p class="c-accordion__box__title -time">鍋ヶ滝公園</p>
-                        <div class="c-accordion__box__item -time">
-                          <div class="c-accordion__box__time -car">
-                            <p class="c-accordion__box__time__text -car">約1時間30分</p>
-                            <img class="c-accordion__box__img p-accordion__box__img -car" src="assets/img/top/location/location_icon_car.png" srcset="assets/img/top/location/location_icon_car_2x.png 2x" width="23" height="23" alt="車" decoding="async">
+                      <div class="p-location__list__items -time">
+                        <p class="p-location__list__label -time">通潤橋</p>
+                        <div class="p-location__time -time">
+                          <div class="p-location__time__items -car">
+                            <p class="p-location__time__text -car">約40分</p>
+                            <p class="p-location__icon -car"><img src="assets/img/top/location/location_icon_car.svg" alt=""></p>
                           </div>
-                        </div>
-                      </div>
-                      <div class="c-accordion__box__list__items">
-                        <p class="c-accordion__box__title -time">阿蘇神社</p>
-                        <div class="c-accordion__box__item -time">
-                          <div class="c-accordion__box__time -car">
-                            <p class="c-accordion__box__time__text -car">約1時間</p>
-                            <img class="c-accordion__box__img p-accordion__box__img -car" src="assets/img/top/location/location_icon_car.png" srcset="assets/img/top/location/location_icon_car_2x.png 2x" width="23" height="23" alt="車" decoding="async">
-                          </div>
-                          <div class="c-accordion__box__time -other">
-                            <p class="c-accordion__box__time__text -other">約1時間<wbr>45分</p>
+                          <div class="p-location__time__items -other">
+                            <p class="p-location__time__text -other" >約2時間<wbr>30分</p>
                             <div class="p-accordion__box__imgs">
-                              <img class="c-accordion__box__img p-accordion__box__img -bus" src="assets/img/top/location/location_icon_bus.png" srcset="assets/img/top/location/location_icon_bus_2x.png 2x" width="23" height="23" alt="バス" decoding="async">
-                              <img class="c-accordion__box__img p-accordion__box__img -walk" src="assets/img/top/location/location_icon_walk.png" srcset="assets/img/top/location/location_icon_walk_2x.png 2x" width="23" height="23" alt="人" decoding="async">
+                              <p class="p-location__icon -bus"><img src="assets/img/top/location/location_icon_bus.svg" alt=""></p>
+                              <p class="p-location__icon -walk"><img src="assets/img/top/location/location_icon_walk.svg" alt=""></p>
                             </div>
                             <!-- /.p-accordion__box__imgs -->
                           </div>
-                          <!-- /.c-accordion__box__time -other -->
+                          <!-- /.p-location__time -other -->
                         </div>
                       </div>
-                      <div class="c-accordion__box__list__items">
-                        <p class="c-accordion__box__title -time">通潤橋</p>
-                        <div class="c-accordion__box__item -time">
-                          <div class="c-accordion__box__time -car">
-                            <p class="c-accordion__box__time__text -car">約40分</p>
-                            <img class="c-accordion__box__img p-accordion__box__img -car" src="assets/img/top/location/location_icon_car.png" srcset="assets/img/top/location/location_icon_car_2x.png 2x" width="23" height="23" alt="車" decoding="async">
-                          </div>
-                          <div class="c-accordion__box__time -other">
-                            <p class="c-accordion__box__time__text -other" >約2時間<wbr>30分</p>
-                            <div class="p-accordion__box__imgs">
-                              <img class="c-accordion__box__img p-accordion__box__img -bus" src="assets/img/top/location/location_icon_bus.png" srcset="assets/img/top/location/location_icon_bus_2x.png 2x" width="23" height="23" alt="バス" decoding="async">
-                              <img class="c-accordion__box__img p-accordion__box__img -walk" src="assets/img/top/location/location_icon_walk.png" srcset="assets/img/top/location/location_icon_walk_2x.png 2x" width="23" height="23" alt="人" decoding="async">
-                            </div>
-                            <!-- /.p-accordion__box__imgs -->
-                          </div>
-                          <!-- /.c-accordion__box__time -other -->
-                        </div>
-                      </div>
-                      <div class="c-accordion__box__list__items">
-                        <p class="c-accordion__box__title -time">らくのうマザーズ<wbr>阿蘇ミルク牧場</p>
-                        <div class="c-accordion__box__item -time">
-                          <div class="c-accordion__box__time -car">
-                            <p class="c-accordion__box__time__text -car">約25分</p>
-                            <img class="c-accordion__box__img p-accordion__box__img -car" src="assets/img/top/location/location_icon_car.png" srcset="assets/img/top/location/location_icon_car_2x.png 2x" width="23" height="23" alt="車" decoding="async">
+                      <div class="p-location__list__items -time">
+                        <p class="p-location__list__label -time">らくのうマザーズ<wbr>阿蘇ミルク牧場</p>
+                        <div class="p-location__time -time">
+                          <div class="p-location__time__items -car">
+                            <p class="p-location__time__text -car">約25分</p>
+                            <p class="p-location__icon -car"><img src="assets/img/top/location/location_icon_car.svg" alt=""></p>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </dd>
-              </div>
-            </dl>
+                </div>
+              </details>
+            </div>
             <div class="swiper p-location__swiper">
               <div class="swiper-wrapper p-location__swiper__wrapper">
                 <div class="swiper-slide p-location__swiper__slide">
                   <figure class="p-location__shop__thumnail">
                     <picture>
                       <source type="image/webp" srcset="assets/img/top/location/location_yakitoritoribou_sp.webp 1x, assets/img/top/location/location_yakitoritoribou_sp_2x.webp 2x" width="768" height="539" media="(max-width:767px)">
-                      <img src="assets/img/top/location/location_yakitoritoribou_pc.jpg" srcset="assets/img/top/location/location_yakitoritoribou_pc_2x.jpg 2x" width="1000" height="682" alt="焼き鳥鳥ぼう" decoding="async">
+                      <img class="-toribou" src="assets/img/top/location/location_yakitoritoribou_pc.jpg" srcset="assets/img/top/location/location_yakitoritoribou_pc_2x.jpg 2x" width="1000" height="682" alt="焼き鳥鳥ぼう" decoding="async">
                     </picture>
                   </figure>
                   <p class="p-location__shop__text">やきとり鳥ぼう</p>
@@ -916,7 +1143,7 @@
                   <figure class="p-location__shop__thumnail">
                     <picture>
                       <source type="image/webp" srcset="assets/img/top/location/location_syunsaibouyu_sp.webp 1x, assets/img/top/location/location_syunsaibouyu_sp_2x.webp 2x" width="768" height="510" media="(max-width:767px)">
-                      <img src="assets/img/top/location/location_syunsaibouyu_pc.jpg" srcset="assets/img/top/location/location_syunsaibouyu_pc_2x.jpg 2x" width="1000" height="664" alt="旬彩房 悠" decoding="async">
+                      <img class="-yuu" src="assets/img/top/location/location_syunsaibouyu_pc.jpg" srcset="assets/img/top/location/location_syunsaibouyu_pc_2x.jpg 2x" width="1000" height="664" alt="旬彩房 悠" decoding="async">
                     </picture>
                   </figure>
                   <p class="p-location__shop__text">旬彩房 悠</p>
@@ -925,7 +1152,7 @@
                   <figure class="p-location__shop__thumnail">
                     <picture>
                       <source type="image/webp" srcset="assets/img/top/location/location_panoruvan_sp.webp 1x, assets/img/top/location/location_panoruvan_sp_2x.webp 2x" width="768" height="510" media="(max-width:767px)">
-                      <img src="assets/img/top/location/location_panoruvan_pc.jpg" srcset="assets/img/top/location/location_panoruvan_pc_2x.jpg 2x" width="1000" height="664" alt="パン オ ルヴァン 小峯本店" decoding="async">
+                      <img class="-ruvan" src="assets/img/top/location/location_panoruvan_pc.jpg" srcset="assets/img/top/location/location_panoruvan_pc_2x.jpg 2x" width="1000" height="664" alt="パン オ ルヴァン 小峯本店" decoding="async">
                     </picture>
                   </figure>
                   <p class="p-location__shop__text">パン オ ルヴァン 小峯本店</p>
@@ -952,7 +1179,7 @@
                   <figure class="p-location__shop__thumnail">
                     <picture>
                       <source type="image/webp" srcset="assets/img/top/location/location_coinlaundry_sp.webp 1x, assets/img/top/location/location_coinlaundry_sp_2x.webp 2x" width="768" height="512" media="(max-width:767px)">
-                      <img class="-superKid" src="assets/img/top/location/location_coinlaundry_pc.jpg" srcset="assets/img/top/location/location_coinlaundry_pc_2x.jpg 2x" width="1000" height="667" alt="コインランドリーにっこり小峯店" decoding="async">
+                      <img class="-nikkori" src="assets/img/top/location/location_coinlaundry_pc.jpg" srcset="assets/img/top/location/location_coinlaundry_pc_2x.jpg 2x" width="1000" height="667" alt="コインランドリーにっこり小峯店" decoding="async">
                     </picture>
                   </figure>
                   <p class="p-location__shop__text">コインランドリーにっこり小峯店</p>
@@ -960,8 +1187,8 @@
                 <div class="swiper-slide p-location__swiper__slide">
                   <figure class="p-location__shop__thumnail">
                     <picture>
-                      <source type="image/webp" srcset="assets/img/top/location/location_hakatatorokaratei_sp.webp 1x, assets/img/top/location/location_hakatatorokaratei_sp_2x.webp 2x" width="768" height="512" media="(max-width:767px)">
-                      <img src="assets/img/top/location/location_hakatatorokaratei_pc.jpg" srcset="assets/img/top/location/location_hakatatorokaratei_pc_2x.jpg 2x" width="1000" height="667" alt="熊本からあげ とりまる。小峯店" decoding="async">
+                      <source type="image/webp" srcset="assets/img/top/location/location_karaagetorimaru_sp.webp 1x, assets/img/top/location/location_karaagetorimaru_sp_2x.webp 2x" width="768" height="512" media="(max-width:767px)">
+                      <img class="-torimaru" src="assets/img/top/location/location_karaagetorimaru_pc.jpg" srcset="assets/img/top/location/location_karaagetorimaru_pc_2x.jpg 2x" width="1000" height="667" alt="熊本からあげ とりまる。小峯店" decoding="async">
                     </picture>
                   </figure>
                   <p class="p-location__shop__text">熊本からあげ とりまる。小峯店</p>
@@ -988,7 +1215,7 @@
                   <figure class="p-location__shop__thumnail">
                     <picture>
                       <source type="image/webp" srcset="assets/img/top/location/location_nogami_sp.webp 1x, assets/img/top/location/location_nogami_sp_2x.webp 2x" width="768" height="513" media="(max-width:767px)">
-                      <img src="assets/img/top/location/location_nogami_pc.jpg" srcset="assets/img/top/location/location_nogami_pc_2x.jpg 2x" width="1000" height="668" alt="乃が美 はなれ 熊本小峯店" decoding="async">
+                      <img class="-nogami" src="assets/img/top/location/location_nogami_pc.jpg" srcset="assets/img/top/location/location_nogami_pc_2x.jpg 2x" width="1000" height="668" alt="乃が美 はなれ 熊本小峯店" decoding="async">
                     </picture>
                   </figure>
                   <p class="p-location__shop__text">乃が美 はなれ 熊本小峯店</p>
@@ -1003,7 +1230,7 @@
                   <p class="p-location__shop__text">チーズケーキのベルジェ</p>
                 </div>
                 <div class="swiper-slide p-location__swiper__slide">
-                  <figure class="p-location__shop__thumnail">
+                  <figure class="p-location__shop__thumnail -hakatatorokaratei">
                     <picture>
                       <source type="image/webp" srcset="assets/img/top/location/location_hakatatorokaratei_sp.webp 1x, assets/img/top/location/location_hakatatorokaratei_sp_2x.webp 2x" width="768" height="512" media="(max-width:767px)">
                       <img class="-hakatatorokaratei" src="assets/img/top/location/location_hakatatorokaratei_pc.jpg" srcset="assets/img/top/location/location_hakatatorokaratei_pc_2x.jpg 2x" width="1000" height="667" alt="博多 とよ唐亭" decoding="async">
@@ -1031,9 +1258,9 @@
                 </div>
               </div>
               <div class="c-swiper__buttons -location">
-                <div class="swiper-button-prev c-swiper__button__prev"></div>
-                <div class="swiper-button-next c-swiper__button__next"></div>
-                <div class="swiper-pagination c-swiper-pagination -location"></div>
+                <div class="swiper-button-prev c-swiper__button__prev -location"></div>
+                <div class="swiper-button-next c-swiper__button__next -location"></div>
+                <div class="swiper-pagination c-swiper_pagination -location"></div>
               </div>
             </div>
             <p class="p-location__text"><a href="https://www.pref.kumamoto.jp/site/police/52150.html" class="p-location__link" target="_blank">代行業者一覧はこちら</a></p>
@@ -1044,10 +1271,12 @@
         <div class="l-container">
           <div class="l-wrapper">
             <h2 class="c-common__title" lang="en">
-              <span class="c-common__title__en js-title">Access</span>
+              <span class="c-common__title__en -top js-title-md">Access</span>
               <span class="c-common__title__ja">アクセス</span>
             </h2>
-            <iframe class="p-access__map l-access__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3353.597515918027!2d130.7772743745857!3d32.80292968266324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3540f1ec4df47b0b%3A0x3d00c09b7fed3df7!2z44CSODYxLTIyMzQg54aK5pys55yM5LiK55uK5Z-O6YOh55uK5Z-O55S65Y-k6ZaR77yR77yX4oiS77yV!5e0!3m2!1sja!2sjp!4v1693348122773!5m2!1sja!2sjp" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="p-access__map">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3353.597515918027!2d130.7772743745857!3d32.80292968266324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3540f1ec4df47b0b%3A0x3d00c09b7fed3df7!2z44CSODYxLTIyMzQg54aK5pys55yM5LiK55uK5Z-O6YOh55uK5Z-O55S65Y-k6ZaR77yR77yX4oiS77yV!5e0!3m2!1sja!2sjp!4v1693348122773!5m2!1sja!2sjp" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
             <p class="p-access__button"><a href="access.html" class="c-button -common -toPage">施設までの道順をチェック</a></p>
           </div>
         </div>
@@ -1070,21 +1299,26 @@
           </address>
           <div class="p-footer__nav">
             <ul class="p-footer__nav__list">
-              <li class="p-footer__nav__item" lang="en"><a href="index.html" class="p-footer__nav__link"><span class="p-footer__nav__text">Top</span></a></li>
+              <li class="p-footer__nav__item" lang="en"><a href="index.html" class="p-footer__nav__link"><span class="p-footer__nav__text">Home</span></a></li>
               <li class="p-footer__nav__item" lang="en"><a href="#about" class="p-footer__nav__link"><span class="p-footer__nav__text">About</span></a></li>
               <li class="p-footer__nav__item" lang="en"><a href="#feature" class="p-footer__nav__link"><span class="p-footer__nav__text">Feature</span></a></li>
               <li class="p-footer__nav__item" lang="en"><a href="room__facility.html" class="p-footer__nav__link"><span class="p-footer__nav__text">Room・Facility</span></a></li>
               <li class="p-footer__nav__item" lang="en"><a href="#plan" class="p-footer__nav__link"><span class="p-footer__nav__text">Plan</span></a></li>
-              <li class="p-footer__nav__item" lang="en"><a href="#faq" class="p-footer__nav__link"><span class="p-footer__nav__text">Faq</span></a></li>
-              <li class="p-footer__nav__item" lang="en"><a href="access.html" class="p-footer__nav__link"><span class="p-footer__nav__text">Access</span></a></li>
-              <li class="p-footer__nav__item" lang="en"><a href="contact.html" class="p-footer__nav__link"><span class="p-footer__nav__text">Contact</span></a></li>
+              <li class="p-footer__nav__item" lang="en"><a href="#faq" class="p-footer__nav__link -sm"><span class="p-footer__nav__text">Faq</span></a></li>
+              <li class="p-footer__nav__item" lang="en"><a href="access.html" class="p-footer__nav__link -sm"><span class="p-footer__nav__text">Access</span></a></li>
+              <li class="p-footer__nav__item" lang="en"><a href="PrivacyPolicy.html" class="p-footer__nav__link -sm"><span class="p-footer__nav__text">Privacy Policy</span></a></li>
+              <li class="p-footer__nav__item" lang="en"><a href="contact.html" class="p-footer__nav__link -sm"><span class="p-footer__nav__text">Contact</span></a></li>
             </ul>
             <p class="p-footer__button"><a href="reservation.html" target="_self" class="c-button -common -book -footer">ご予約はこちら</a></p>
           </div>
+          <!-- /.p-footer__nav -->
         </div>
-        <p class="c-button -allow p-footer__button js-toTop">
-          <img src="assets/img/common/common_footer_button.svg" width="23" height="23" alt="上矢印" decoding="async">
-        </p>
+        <!-- /.p-footer__item__wrap -->
+        <a href="#top">
+          <p class="c-button -allow p-footer__button">
+            <img src="assets/img/common/common_footer_button.svg" width="23" height="23" alt="上矢印" decoding="async">
+          </p>
+        </a>
         <small class="p-footer__copyright">&copy;minpaku gallery toki all rights reserved</small>
         </div>
     </footer>

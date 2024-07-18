@@ -105,7 +105,7 @@
 }
 
 .c-card__text.-feature {
-  color: $secondary-text-color;
+  color: $quaternary-text-color;
   font-size: clamp(14 / 16 * 1rem, 0.833rem + 0.21vw, 16 / 16 * 1rem); //最小：14px 最大：16px viw:320-1280px
   line-height: 1.7;
 

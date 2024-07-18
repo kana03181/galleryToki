@@ -9,21 +9,11 @@
   display: grid;
 
   &.-feature {
-    //   row-gap: pxToRem(62px);
-
-    //   @include mq(md) {
-    //     row-gap: pxToRem(109px);
-    //   }
-
     @include mq(lg) {
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       justify-content: center;
-      column-gap: pxToRem(24px);
+      column-gap: clamp(24 / 16 * 1rem, 1.167rem + 1.67vw, 40 / 16 * 1rem);
       row-gap: 0;
-    }
-
-    @include mq(xl) {
-      column-gap: pxToRem(40px);
     }
   }
 
@@ -34,24 +24,16 @@
       grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
       column-gap: pxToRem(88px);
     }
-
-    @include mq(xl) {
-      column-gap: pxToRem(132px);
-    }
   }
 
   &.-room__facility {
-    gap: pxToRem(40px);
-
-    @include mq(md) {
-      gap: pxToRem(88px);
-    }
+    gap: pxToRem(72px);
 
     @include mq(lg) {
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       justify-content: center;
       padding-bottom: pxToRem(64px);
-      gap: pxToRem(24px);
+      gap: pxToRem(40px);
     }
   }
 
@@ -59,7 +41,7 @@
   &__swipers__wrapper {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1fr 0.23fr;
+    grid-template-rows: 1fr 0.2fr;
     row-gap: clamp(16 / 16 * 1rem, -3rem + 6.25vw, 32 / 16 * 1rem); //viw:320-1280px
 
     @include mq(lg) {
@@ -74,15 +56,18 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
     margin: auto;
-    row-gap: clamp(64 / 16 * 1rem, 2.833rem + 5.83vw, 120 / 16 * 1rem); //viw:320-1280px
 
-    @include mq(md) {
-      width: 94%;
-    }
-    @include mq(lg) {
-      width: initial;
+    &.-rooms {
+      row-gap: clamp(56 / 16 * 1rem, 2.833rem + 3.33vw, 88 / 16 * 1rem); //viw:320-1280px
+      width: 100%;
+
+      @include mq(md) {
+        width: 94%;
+      }
+      @include mq(lg) {
+        width: initial;
+      }
     }
   }
 
@@ -90,11 +75,6 @@
     gap: clamp(16 / 16 * 1rem, 0.5rem + 2.5vw, 40 / 16 * 1rem); //viw:320-1280px
     display: flex;
     flex-direction: column-reverse;
-
-    // @include mq(md) {
-    //   grid-template-columns: 1fr;
-    //   grid-template-rows: 1fr;
-    // }
   }
 
   &.-house__detail {
@@ -114,11 +94,11 @@
       }
 
       @include mq(lg) {
-        grid-template-columns: calc(186 / 1024 * 100vw) calc(134 / 1024 * 100vw) 15%;
+        grid-template-columns: calc(188 / 1024 * 100vw) calc(137 / 1024 * 100vw) 15%;
         grid-template-rows: repeat(3, 1fr);
       }
       @include mq(xl) {
-        grid-template-columns: calc(186 / 1280 * 100vw) calc(134 / 1280 * 100vw) 15%;
+        grid-template-columns: calc(190 / 1280 * 100vw) calc(138 / 1280 * 100vw) 15%;
       }
     }
 
@@ -131,7 +111,7 @@
       }
 
       @include mq(lg) {
-        grid-template-columns: calc(109 / 1024 * 100vw) calc(151 / 1024 * 100vw);
+        grid-template-columns: calc(113 / 1024 * 100vw) calc(154 / 1024 * 100vw);
       }
     }
 
@@ -144,11 +124,11 @@
       }
 
       @include mq(lg) {
-        grid-template-columns: calc(100 / 1024 * 100vw) calc(117 / 1024 * 100vw);
+        grid-template-columns: calc(104 / 1024 * 100vw) calc(121 / 1024 * 100vw);
       }
 
       @include mq(xl) {
-        grid-template-columns: calc(100 / 1280 * 100vw) calc(117 / 1280 * 100vw);
+        grid-template-columns: calc(104 / 1280 * 100vw) calc(121 / 1280 * 100vw);
       }
     }
 
@@ -162,18 +142,18 @@
       }
 
       @include mq(lg) {
-        grid-template-columns: calc(118 / 1024 * 100vw) calc(117 / 1024 * 100vw);
+        grid-template-columns: calc(120 / 1024 * 100vw) calc(120 / 1024 * 100vw);
         grid-template-rows: repeat(3, 1fr);
       }
 
       @include mq(xl) {
-        grid-template-columns: calc(118 / 1280 * 100vw) calc(117 / 1280 * 100vw);
+        grid-template-columns: calc(120 / 1280 * 100vw) calc(120 / 1280 * 100vw);
       }
     }
 
     &.-kitchenware {
       grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(5, 1fr);
+      grid-template-rows: repeat(6, 1fr);
 
       @include mq(md) {
         grid-template-columns: repeat(4, 1fr);
@@ -186,8 +166,8 @@
       }
 
       @include mq(xl) {
-        grid-template-columns: calc(119 / 1280 * 100vw) calc(117 / 1280 * 100vw) calc(82 / 1280 * 100vw) calc(
-            82 / 1280 * 100vw
+        grid-template-columns: calc(120 / 1280 * 100vw) calc(120 / 1280 * 100vw) calc(85 / 1280 * 100vw) calc(
+            103 / 1280 * 100vw
           );
       }
     }
@@ -202,21 +182,21 @@
       }
 
       @include mq(lg) {
-        grid-template-columns: calc(117 / 1024 * 100vw) calc(137 / 1024 * 100vw) calc(99 / 1024 * 100vw) calc(
-            65 / 1024 * 100vw
+        grid-template-columns: calc(120 / 1024 * 100vw) calc(139 / 1024 * 100vw) calc(102 / 1024 * 100vw) calc(
+            70 / 1024 * 100vw
           );
       }
 
       @include mq(xl) {
-        grid-template-columns: calc(117 / 1280 * 100vw) calc(139 / 1280 * 100vw) calc(100 / 1280 * 100vw) calc(
-            65 / 1280 * 100vw
+        grid-template-columns: calc(120 / 1280 * 100vw) calc(141 / 1280 * 100vw) calc(102 / 1280 * 100vw) calc(
+            70 / 1280 * 100vw
           );
       }
     }
 
     &.-other {
       grid-template-columns: 1.2fr 0.8fr;
-      grid-template-rows: repeat(5, 1fr);
+      grid-template-rows: repeat(6, 1fr);
 
       @include mq(md) {
         grid-template-columns: 0.4fr 0.65fr 0.5fr 0.5fr;
@@ -224,14 +204,14 @@
       }
 
       @include mq(lg) {
-        grid-template-columns: calc(84 / 1024 * 100vw) calc(151 / 1024 * 100vw) calc(113 / 1024 * 100vw) calc(
-            100 / 1024 * 100vw
+        grid-template-columns: calc(86 / 1024 * 100vw) calc(154 / 1024 * 100vw) calc(113 / 1024 * 100vw) calc(
+            137 / 1024 * 100vw
           );
       }
 
       @include mq(xl) {
-        grid-template-columns: calc(84 / 1280 * 100vw) calc(151 / 1280 * 100vw) calc(113 / 1280 * 100vw) calc(
-            100 / 1280 * 100vw
+        grid-template-columns: calc(85 / 1280 * 100vw) calc(154 / 1280 * 100vw) calc(113 / 1280 * 100vw) calc(
+            137 / 1280 * 100vw
           );
       }
     }
@@ -247,32 +227,22 @@
       @include mq(lg) {
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(3, 1fr);
-        // column-gap: pxToRem(32px);
       }
     }
   }
 
   &.-houseRule__top {
-    // grid-template-columns: 1.3fr 0.5fr;
-    grid-template-columns: minmax(160px, 2.65fr) 1.5fr;
+    grid-template-columns: min(calc(160 / 320 * 100vw), 187px) 1.5fr;
     grid-template-rows: 1fr;
-    column-gap: clamp(16 / 16 * 1rem, -1.143rem + 10.71vw, 64 / 16 * 1rem);
+    column-gap: clamp(16 / 16 * 1rem, 0.284rem + 3.58vw, 32 / 16 * 1rem); //view:320-767px
     text-align: left;
-
-    // @include mq(md) {
-    //   grid-template-columns: 0.5fr 0.5fr;
-    // }
   }
 
   &.-houseRule__bottom {
-    grid-template-columns: 1.3fr 1.05fr;
+    grid-template-columns: min(calc(130 / 320 * 100vw), 143px) 1.05fr;
     grid-template-rows: 1fr;
-    column-gap: clamp(16 / 16 * 1rem, -1.143rem + 10.71vw, 64 / 16 * 1rem);
+    column-gap: clamp(16 / 16 * 1rem, 0.284rem + 3.58vw, 32 / 16 * 1rem); //view:320-767px
     text-align: left;
-
-    // @include mq(md) {
-    //   grid-template-columns: 0.5fr 0.5fr;
-    // }
   }
 
   &.-cancelPolicy__top {
@@ -280,10 +250,6 @@
     grid-template-rows: 1fr;
     column-gap: clamp(16 / 16 * 1rem, -1.143rem + 10.71vw, 64 / 16 * 1rem);
     text-align: left;
-
-    // @include mq(md) {
-    //   grid-template-columns: 0.5fr 0.5fr;
-    // }
   }
 
   &.-cancelPolicy__bottom {
@@ -291,16 +257,11 @@
     grid-template-rows: 1fr;
     column-gap: clamp(16 / 16 * 1rem, -1.143rem + 10.71vw, 64 / 16 * 1rem);
     text-align: left;
-
-    // @include mq(md) {
-    //   grid-template-columns: 0.5fr 0.5fr;
-    // }
   }
 
   &__items {
     display: flex;
     flex-direction: column;
-    // column-gap: pxToRem(24px);
     row-gap: clamp(24 / 16 * 1rem, 1.333rem + 0.83vw, 32 / 16 * 1rem); //viw:320-1280px
 
     @include mq(lg) {
@@ -315,7 +276,6 @@
 
     &.-living {
       @include mq(lg) {
-        // justify-content: space-between;
         column-gap: clamp(24 / 16 * 1rem, -6.5rem + 12.5vw, 56 / 16 * 1rem); //viw:1024-1280px
       }
     }
@@ -323,10 +283,9 @@
     &.-kitchen {
       @include mq(lg) {
         display: grid;
-        // grid-template-columns: 0.5fr 0.3fr calc(220 / 1280 * 100vw);
-        grid-template-columns: calc(100% / 3);
+        grid-template-columns: repeat(3, 1fr);
         grid-template-rows: 0.5fr 0.5fr auto;
-        column-gap: clamp(24 / 16 * 1rem, -8.5rem + 15.63vw, 64 / 16 * 1rem);
+        width: fit-content;
       }
     }
   }
