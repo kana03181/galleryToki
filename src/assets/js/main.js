@@ -82,21 +82,21 @@ const breakpoints = {
     },
   },
 
-  access_main: {
-    768: {
-      spaceBetween: 180,
-    },
-    1024: {
-      spaceBetween: 40,
-    },
-  },
-
   rooms: {
     768: {
       spaceBetween: 16,
     },
     1024: {
       spaceBetween: 0,
+    },
+  },
+
+  access_main: {
+    768: {
+      spaceBetween: 180,
+    },
+    1024: {
+      spaceBetween: 40,
     },
   },
 
@@ -239,8 +239,6 @@ window.addEventListener("resize", () => {
 const createThumbnailSwiper = (mainSwiperSelector, thumbnailSelector, options) => {
   const defaultThumbnailOptions = {
     slidesPerView: "auto",
-    // spaceBetween: 0,
-    reInitOnResize: false,
     watchSlidesProgress: false,
   };
 
@@ -279,10 +277,7 @@ createThumbnailSwiper(".p-rooms__swiper.-room1", ".c-swiper__thumbnail.-room1", 
     },
   },
   thumbnailOptions: {
-    watchSlidesProgress: false,
     allowTouchMove: false,
-    spaceBetween: 8,
-    breakpoints: breakpoints.rooms,
   },
 });
 
@@ -299,10 +294,7 @@ createThumbnailSwiper(".p-rooms__swiper.-room2", ".c-swiper__thumbnail.-room2", 
     },
   },
   thumbnailOptions: {
-    watchSlidesProgress: false,
     allowTouchMove: false,
-    spaceBetween: 8,
-    breakpoints: breakpoints.rooms,
   },
 });
 
@@ -319,10 +311,7 @@ createThumbnailSwiper(".p-rooms__swiper.-living", ".c-swiper__thumbnail.-living"
     },
   },
   thumbnailOptions: {
-    watchSlidesProgress: false,
     allowTouchMove: false,
-    spaceBetween: 8,
-    breakpoints: breakpoints.rooms,
   },
 });
 
@@ -339,10 +328,7 @@ createThumbnailSwiper(".p-rooms__swiper.-bathroom", ".c-swiper__thumbnail.-bathr
     },
   },
   thumbnailOptions: {
-    watchSlidesProgress: false,
     allowTouchMove: false,
-    spaceBetween: 8,
-    breakpoints: breakpoints.rooms,
   },
 });
 
@@ -359,10 +345,7 @@ createThumbnailSwiper(".p-rooms__swiper.-kitchen", ".c-swiper__thumbnail.-kitche
     },
   },
   thumbnailOptions: {
-    watchSlidesProgress: false,
     allowTouchMove: false,
-    spaceBetween: 8,
-    breakpoints: breakpoints.rooms,
   },
 });
 
@@ -380,8 +363,9 @@ createThumbnailSwiper(".p-access__swiper.-airplane__bus", ".c-swiper__thumbnail.
   },
 
   thumbnailOptions: {
-    spaceBetween: 8,
     watchSlidesProgress: true,
+    allowTouchMove: true,
+    spaceBetween: 8,
     breakpoints: breakpoints.access_thumb,
   },
 });
@@ -389,7 +373,6 @@ createThumbnailSwiper(".p-access__swiper.-airplane__bus", ".c-swiper__thumbnail.
 // /*
 //   access (飛行機 + 車)
 // */
-
 createThumbnailSwiper(".p-access__swiper.-airplane__car", ".c-swiper__thumbnail.-airplane__car", {
   mainOptions: {
     breakpoints: breakpoints.access_main,
@@ -401,8 +384,9 @@ createThumbnailSwiper(".p-access__swiper.-airplane__car", ".c-swiper__thumbnail.
   },
 
   thumbnailOptions: {
-    spaceBetween: 8,
     watchSlidesProgress: true,
+    allowTouchMove: true,
+    spaceBetween: 8,
     breakpoints: breakpoints.access_thumb,
   },
 });
@@ -410,7 +394,6 @@ createThumbnailSwiper(".p-access__swiper.-airplane__car", ".c-swiper__thumbnail.
 // /*
 //   access (新幹線 + バス（乗り換えなし）)
 // */
-
 createThumbnailSwiper(".p-access__swiper.-shinkansen__bus__direct", ".c-swiper__thumbnail.-shinkansen__bus__direct", {
   mainOptions: {
     breakpoints: breakpoints.access_main,
@@ -422,8 +405,9 @@ createThumbnailSwiper(".p-access__swiper.-shinkansen__bus__direct", ".c-swiper__
   },
 
   thumbnailOptions: {
-    spaceBetween: 8,
     watchSlidesProgress: true,
+    allowTouchMove: true,
+    spaceBetween: 8,
     breakpoints: breakpoints.access_thumb,
   },
 });
@@ -431,7 +415,6 @@ createThumbnailSwiper(".p-access__swiper.-shinkansen__bus__direct", ".c-swiper__
 // /*
 //   access (新幹線 + バス（乗り換えあり）)
 // */
-
 createThumbnailSwiper(
   ".p-access__swiper.-shinkansen__bus__transfer",
   ".c-swiper__thumbnail.-shinkansen__bus__transfer",
@@ -446,8 +429,9 @@ createThumbnailSwiper(
     },
 
     thumbnailOptions: {
-      spaceBetween: 8,
       watchSlidesProgress: true,
+      allowTouchMove: true,
+      spaceBetween: 8,
       breakpoints: breakpoints.access_thumb,
     },
   }
@@ -456,7 +440,6 @@ createThumbnailSwiper(
 // /*
 //   access (新幹線 + 市電)
 // */
-
 createThumbnailSwiper(".p-access__swiper.-shinkansen__tram", ".c-swiper__thumbnail.-shinkansen__tram", {
   mainOptions: {
     breakpoints: breakpoints.access_main,
@@ -468,8 +451,9 @@ createThumbnailSwiper(".p-access__swiper.-shinkansen__tram", ".c-swiper__thumbna
   },
 
   thumbnailOptions: {
-    spaceBetween: 8,
     watchSlidesProgress: true,
+    allowTouchMove: true,
+    spaceBetween: 8,
     breakpoints: breakpoints.access_thumb,
   },
 });
@@ -489,8 +473,9 @@ createThumbnailSwiper(".p-access__swiper.-shinkansen__train", ".c-swiper__thumbn
   },
 
   thumbnailOptions: {
-    spaceBetween: 8,
     watchSlidesProgress: true,
+    allowTouchMove: true,
+    spaceBetween: 8,
     breakpoints: breakpoints.access_thumb,
   },
 });
@@ -510,8 +495,9 @@ createThumbnailSwiper(".p-access__swiper.-expressBus", ".c-swiper__thumbnail.-ex
   },
 
   thumbnailOptions: {
-    spaceBetween: 8,
     watchSlidesProgress: true,
+    allowTouchMove: true,
+    spaceBetween: 8,
     breakpoints: breakpoints.access_thumb,
   },
 });

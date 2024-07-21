@@ -83,11 +83,6 @@
         border-radius: 0;
         background-color: transparent;
       }
-
-      // @include mq(xl) {
-      //   padding: clamp(32 / 16 * 1rem, 1.5rem + 2.5vw, 56 / 16 * 1rem) pxToRem(32px) calc(100 / 1280 * 100vw)
-      //     clamp(50 / 16 * 1rem, -0.375rem + 5.47vw, 64 / 16 * 1rem); //viw:1024-1280px
-      // }
     }
 
     &__link {
@@ -99,47 +94,37 @@
       font-size: clamp(14 / 16 * 1rem, 0.792rem + 0.42vw, 18 / 16 * 1rem); //viw:320-1280px
       font-weight: 500;
       letter-spacing: 0.08em;
+      line-height: 1.2;
 
       &::after {
         content: "";
+        display: block;
         position: absolute;
-        top: 53%;
+        top: 50%;
         right: -18px;
-        // width: clamp(13 / 16 * 1rem, 0.727rem + 0.43vw, 16 / 16 * 1rem);
-        // height: clamp(13 / 16 * 1rem, 0.727rem + 0.43vw, 16 / 16 * 1rem);
-        width: min(calc(13 / 320 * 100vw), 14px);
-        height: min(calc(13 / 320 * 100vw), 14px);
+        width: clamp(14 / 16 * 1rem, 0.833rem + 0.21vw, 16 / 16 * 1rem);
+        height: clamp(14 / 16 * 1rem, 0.833rem + 0.21vw, 16 / 16 * 1rem);
         margin: auto;
         transition: var(--duration2) var(--ease6);
         transition-property: rotate;
-        border: 1px solid $secondary-text-color;
-        border-radius: 50%;
-        background-image: url("data:image/svg+xml;base64,PCEtLT94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPy0tPgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTguMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+Cgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9Il94MzFfMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBzdHlsZT0id2lkdGg6IDI1NnB4OyBoZWlnaHQ6IDI1NnB4OyBvcGFjaXR5OiAxOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+Cgkuc3Qwe2ZpbGw6IzM3NDE0OTt9Cjwvc3R5bGU+CjxnPgoJPHBhdGggY2xhc3M9InN0MCIgZD0iTTQ2Ni43NjcsMjMwLjIxOUw3NS4wMDEsNC4wMzNDNTUuMTU3LTcuNDI2LDMwLjM0OSw2Ljg5OSwzMC4zNDksMjkuODE3djQ1Mi4zNwoJCWMwLDIyLjkxOCwyNC44MDgsMzcuMjM5LDQ0LjY1MywyNS43ODFsMzkxLjc2Ni0yMjYuMTgzQzQ4Ni42MTMsMjcwLjMyNSw0ODYuNjEzLDI0MS42NzgsNDY2Ljc2NywyMzAuMjE5eiIgc3R5bGU9ImZpbGw6IHJnYig0NywgNDAsIDE2KTsiPjwvcGF0aD4KPC9nPgo8L3N2Zz4K");
+        background-image: url(../../../../assets/img/access/access_icon_allow.svg);
         background-repeat: no-repeat;
-        // background-position: clamp(3.2 / 16 * 1rem, 0.163rem + 0.18vw, 4.5 / 16 * 1rem)
-        //   clamp(2.9 / 16 * 1rem, 0.15rem + 0.16vw, 4 / 16 * 1rem);
-        background-position: right 50% center;
-        background-size: clamp(5 / 16 * 1rem, 0.284rem + 0.14vw, 6 / 16 * 1rem)
-          clamp(5 / 16 * 1rem, 0.284rem + 0.14vw, 6 / 16 * 1rem);
+        background-position: center;
+        background-size: 100% 100%;
         rotate: 90deg;
-        translate: 0 -53%;
+        translate: 0 -50%;
 
         @include mq(md) {
-          top: 54%;
-          translate: 0 -54%;
+          top: 56%;
           right: -21px;
-          width: min(calc(15 / 768 * 100vw), 16px);
-          height: min(calc(15 / 768 * 100vw), 16px);
+          translate: 0 -56%;
         }
 
         @include mq(lg) {
-          top: 55%;
-          translate: 0 -55%;
-        }
-
-        @include mq(xxl) {
-          top: 60%;
-          translate: 0 -60%;
+          // top: 60%;
+          // translate: 0 -60%;
+          background-size: 100%;
+          line-height: 1;
         }
       }
 
@@ -157,23 +142,26 @@
         }
       }
 
-      &.-tram {
-        &::before {
-          right: -14.5px;
-        }
-      }
+      // &.-tram {
+      //   &::before {
+      //     right: -14.5px;
+      //   }
+      // }
 
-      &.-train {
-        &::before {
-          right: -14.5px;
-        }
-      }
+      // &.-train {
+      //   &::before {
+      //     right: -14.5px;
+      //   }
+      // }
 
-      &.-expressBus {
-        &::before {
-          right: -14.5px;
-        }
-      }
+      // &.-expressBus {
+      //   &::after {
+      //     @include mq(md) {
+      //       top: 55%;
+      //       translate: 0 -55%;
+      //     }
+      //   }
+      // }
     }
   }
 
@@ -181,7 +169,6 @@
     display: flex;
     flex-direction: column;
     row-gap: clamp(128 / 16 * 1rem, 4.331rem + 18.34vw, 210 / 16 * 1rem); //viw:320-767px
-    // margin-bottom: clamp(152 / 16 * 1rem, 6.547rem + 14.77vw, 218 / 16 * 1rem); //viw:320-767px
 
     @include mq(md) {
       row-gap: pxToRem(210px);
@@ -189,12 +176,10 @@
 
     @include mq(lg) {
       width: calc(639 / 1024 * 100%);
-      // row-gap: calc(210 / 1024 * 100vw);
     }
 
     @include mq(xl) {
       width: calc(836 / 1280 * 100%);
-      // row-gap: calc(210 / 1280 * 100vw);
     }
   }
 
@@ -306,7 +291,6 @@
 .p-access__index__listItem {
   align-self: center;
   padding-right: pxToRem(5px);
-  margin-block: calc((1em - 1lh) / 2);
 
   @include mq(lg) {
     align-self: flex-start;
@@ -558,8 +542,6 @@
 
     &.-airplane {
       & img {
-        // padding-top: clamp(2 / 16 * 1rem, 0.063rem + 0.31vw, 5 / 16 * 1rem); //viw:320-768px
-
         @include mq(lg) {
           padding-top: pxToRem(5px);
         }
@@ -581,15 +563,15 @@
 }
 
 .p-access__detail {
-  margin-top: clamp(24 / 16 * 1rem, 1.167rem + 1.67vw, 40 / 16 * 1rem);
+  margin-top: clamp(24 / 16 * 1rem, 1.167rem + 1.67vw, 40 / 16 * 1rem); //viw:320-1280px
 }
 
 .p-access__detail + .p-access__detail {
-  margin-top: clamp(32 / 16 * 1rem, 1.667rem + 1.67vw, 48 / 16 * 1rem);
+  margin-top: clamp(32 / 16 * 1rem, 1.667rem + 1.67vw, 48 / 16 * 1rem); //viw:320-1280px
 }
 
 .p-access__detail__wrapper {
-  margin-top: clamp(56 / 16 * 1rem, 3rem + 2.5vw, 80 / 16 * 1rem);
+  margin-top: clamp(56 / 16 * 1rem, 2.833rem + 3.33vw, 88 / 16 * 1rem); //viw:320-1280px
 }
 
 .p-access__detail__list {
@@ -681,7 +663,7 @@
 }
 
 .p-access__parking {
-  margin-top: clamp(56 / 16 * 1rem, 3rem + 2.5vw, 80 / 16 * 1rem); //viw:320-1280px
+  margin-top: clamp(56 / 16 * 1rem, 2.833rem + 3.33vw, 88 / 16 * 1rem); //viw:320-1280px
 }
 
 .p-access__parking__text {
@@ -749,9 +731,11 @@
 }
 
 .js-index.active .p-access__index__link {
-  transition: var(--duration3) var(--ease6);
-  transition-property: color;
-  color: $text-link-color-hover3;
+  @include mq(lg) {
+    transition: var(--duration3) var(--ease6);
+    transition-property: color;
+    color: $text-link-color-hover3;
+  }
 
   &::after {
     @include mq(lg) {

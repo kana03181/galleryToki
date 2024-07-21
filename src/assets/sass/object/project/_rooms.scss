@@ -27,7 +27,6 @@
   }
 
   @include mq(lg) {
-    width: 100%;
     max-width: initial;
     margin-left: 0;
   }
@@ -122,7 +121,7 @@
       // max-width: 691px;
       max-width: 900px;
       margin-left: calc(20 / 768 * 100vw);
-      padding: 0 calc(40 / 768 * 100vw) 0 0;
+      padding: 0;
       border-radius: 15px 65px;
     }
 

@@ -30,7 +30,7 @@
     <script src="/assets/js/main.bundle.js" defer></script>
   </head>
   <body>
-    <header class="l-header">
+    <header class="l-header" data-fixed-header>
       <div class="l-container">
         <div class="l-header__inner">
           <h1 class="p-logo">
@@ -95,7 +95,7 @@
                 <!-- /.p-access__index__title -->
                 <ul class="p-access__index__list">
                   <li class="p-access__index__listItem js-index">
-                    <a href="#index1" class="p-access__index__link">
+                    <a href="#index1" class="p-access__index__link -airplane">
                       バスをご利用の場合
                     </a>
                   </li>
@@ -108,7 +108,7 @@
                 <!-- /.p-access__index__title -->
                 <ul class="p-access__index__list">
                   <li class="p-access__index__listItem js-index">
-                    <a href="#index2" class="p-access__index__link" >
+                    <a href="#index2" class="p-access__index__link -car" >
                       益城熊本空港ICより
                     </a>
                   </li>
@@ -165,7 +165,7 @@
                   <span class="p-access__title__text -lg">飛行機でお越しの方</span>
                   <span class="p-access__title__icon -lg -airplane"><img src="assets/img/access/access_icon_airplane.svg" alt=""></span>
                 </h3>
-                <div class="l-access__contents -bus js-toUp">
+                <div class="l-access__contents -bus">
                   <h4 class="p-access__title -md -bus">
                     <span class="p-access__title__text -md -bus js-title__bg">バスをご利用の場合</span>
                   </h4>
@@ -442,7 +442,7 @@
                   <span class="p-access__title__text -lg">車でお越しの方</span>
                   <span class="p-access__title__icon -lg -airplane"><img src="assets/img/access/access_icon_car-black.svg" alt=""></span>
                 </h3>
-                <div class="l-access__contents -car js-toUp">
+                <div class="l-access__contents -car">
                   <h4 id="airplane-car" class="p-access__title -md -car">
                     <span class="p-access__title__text -md -car">益城熊本空港ICより</span>
                   </h4>
@@ -631,8 +631,8 @@
                       <p class="p-access__parking__place">＜お持ち帰り焼き鳥専門店&nbsp;鳥ぼう＞</p>
                       <figure class="p-access__parking__img">
                         <picture>
-                          <source type="image/webp" srcset="assets/img/access/access_parking_sp.webp 1x, assets/img/access/access_parking_sp_2x.webp 2x" width="768" height="496" media="(max-width:767px)">
-                          <img src="assets/img/access/access_parking_pc.jpg" srcset="assets/img/access/access_parking _pc_2x.jpg 2x" width="1000" height="646" alt="民泊ギャラリー鴇より徒歩1分の場所に位置する、お持ち帰り焼き鳥専門店鳥ぼう。最大3台まで駐車可能です。" decoding="async">
+                          <source type="image/webp" srcset="assets/img/access/car/access_parking_sp.webp 1x, assets/img/access/car/access_parking_sp_2x.webp 2x" width="768" height="496" media="(max-width:767px)">
+                          <img src="assets/img/access/car/access_parking_pc.jpg" srcset="assets/img/access/car/access_parking _pc_2x.jpg 2x" width="1000" height="646" alt="民泊ギャラリー鴇より徒歩1分の場所に位置する、お持ち帰り焼き鳥専門店鳥ぼう。最大3台まで駐車可能です。" decoding="async">
                         </picture>
                       </figure>
                       <p class="p-access__parking__caption">民泊ギャラリー鴇より徒歩1分。最大3台駐車可能です。</p>
@@ -640,7 +640,7 @@
                     <!-- /.p-access__parking -->
                   </div>
                 </div>
-                <!-- /.l-access__contents -car js-toUp -->
+                <!-- /.l-access__contents -car -->
               </div>
               <!-- /.l-container -access__main -->
             </div>
@@ -653,7 +653,7 @@
                   <span class="p-access__title__text -lg">新幹線でお越しの方</span>
                   <span class="p-access__title__icon -lg -shinkansen"><img src="assets/img/access/access_icon_shinkansen.svg" alt=""></span>
                 </h3>
-                <div id="index3" class="l-access__contents -bus_direct js-toUp js-content">
+                <div id="index3" class="l-access__contents -bus_direct js-content">
                   <h4 class="p-access__title -md -bus">
                     <span class="p-access__title__text -md -bus">バスをご利用の場合</span>
                   </h4>
@@ -1155,7 +1155,7 @@
                   <!-- /.p-access__shinkansen__bus -direct-->
                 </div>
                 <!-- /.l-access__contents -bus_direct -->
-                <div id="index4" class="l-access__contents -tram js-toUp js-content">
+                <div id="index4" class="l-access__contents -tram js-content">
                   <h4 class="p-access__title -md -tram">
                     <span class="p-access__title__text -md -tram">路面電車＋バスをご利用の場合</span>
                   </h4>
@@ -1504,7 +1504,7 @@
                   <!-- /.p-access__swiper__items -->
                 </div>
                 <!-- /.l-access__airplane__bus -->
-                <div id="index5" class="l-access__contents -train js-toUp js-content">
+                <div id="index5" class="l-access__contents -train js-content">
                   <h4 class="p-access__title -md -train">
                     <span class="p-access__title__text -md -train">電車＋バスをご利用の場合</span>
                   </h4>
@@ -1833,7 +1833,7 @@
                   <span class="p-access__title__text -lg">高速バスでお越しの方</span>
                   <span class="p-access__title__icon -lg -expressBus"><img src="assets/img/access/access_icon_bus-black.svg" alt=""></span>
                 </h3>
-                <div class="l-access__contents -expressBus js-toUp">
+                <div class="l-access__contents -expressBus">
                   <h4 class="p-access__title -md -walk">
                     <span class="p-access__title__text -md -walk">バス停から徒歩の場合</span>
                     <!-- <span class="p-access__title__icon -md "><img src="assets/img/access/access_icon_walk-white.svg" alt=""></span> -->

@@ -5,13 +5,13 @@
 /*
   faq
 -----------------------------------------------------*/
-#faq {
-  scroll-margin-top: -20px;
+// #faq {
+//   scroll-margin-top: -20px;
 
-  @include mq(lg) {
-    scroll-margin-top: -90px;
-  }
-}
+//   @include mq(lg) {
+//     scroll-margin-top: -90px;
+//   }
+// }
 
 .l-faq {
   padding: pxToRem(56px) 0 pxToRem(88px);

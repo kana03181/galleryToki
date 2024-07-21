@@ -5,71 +5,6 @@
 /*
   access_top
 -----------------------------------------------------*/
-
-#index1 {
-  scroll-margin-top: 30px;
-
-  @include mq(md) {
-    scroll-margin-top: 60px;
-  }
-
-  @include mq(lg) {
-    scroll-margin-top: 50px;
-  }
-}
-
-#index2 {
-  scroll-margin-top: 60px;
-
-  @include mq(lg) {
-    scroll-margin-top: 45px;
-  }
-}
-
-#index3 {
-  scroll-margin-top: 150px;
-
-  @include mq(md) {
-    scroll-margin-top: 180px;
-  }
-}
-
-#index4 {
-  scroll-margin-top: 55px;
-
-  @include mq(md) {
-    scroll-margin-top: 65px;
-  }
-
-  @include mq(lg) {
-    scroll-margin-top: 35px;
-  }
-}
-
-#index5 {
-  scroll-margin-top: 55px;
-
-  @include mq(md) {
-    scroll-margin-top: 65px;
-  }
-
-  @include mq(lg) {
-    scroll-margin-top: 35px;
-  }
-}
-
-#index6 {
-  scroll-margin-top: 60px;
-
-  @include mq(md) {
-    scroll-margin-top: 55px;
-  }
-
-  @include mq(lg) {
-    scroll-margin-top: 45px;
-  }
-}
-
 .l-access {
   &__index {
     margin: 0 0 clamp(88 / 16 * 1rem, 4.605rem + 4.47vw, 108 / 16 * 1rem); //viw:320-767px
@@ -80,26 +15,26 @@
   }
 
   &__contents {
-    padding-top: clamp(88 / 16 * 1rem, 3.491rem + 10.04vw, 133 / 16 * 1rem); //viw:320-768px
+    margin-top: clamp(88 / 16 * 1rem, 3.491rem + 10.04vw, 133 / 16 * 1rem); //viw:320-768px
 
     @include mq(md) {
-      padding-top: calc(133 / 768 * 100vw);
+      margin-top: calc(133 / 768 * 100vw);
     }
 
     @include mq(lg) {
-      padding-top: calc(133 / 1024 * 100vw);
+      margin-top: calc(133 / 1024 * 100vw);
     }
 
     @include mq(xl) {
-      padding-top: calc(133 / 1280 * 100vw);
+      margin-top: calc(133 / 1280 * 100vw);
     }
 
     @include mq(xxl) {
-      padding-top: calc(133 / 1440 * 100vw);
+      margin-top: calc(133 / 1440 * 100vw);
     }
 
     & + .l-access__contents {
-      padding-top: clamp(64 / 16 * 1rem, 3.042rem + 4.79vw, 110 / 16 * 1rem); //viw:320-1280px
+      margin-top: clamp(64 / 16 * 1rem, 2.833rem + 5.83vw, 120 / 16 * 1rem); //viw:320-1280px
     }
   }
 }

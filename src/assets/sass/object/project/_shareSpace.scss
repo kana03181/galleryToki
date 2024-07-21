@@ -41,7 +41,6 @@
     margin: clamp(24 / 16 * 1rem, 1.045rem + 2.27vw, 40 / 16 * 1rem) auto 0; //viw:320-1024px
 
     @include mq(md) {
-      // max-width: 691px;
       max-width: 900px;
     }
 
@@ -64,7 +63,6 @@
 
       @include mq(md) {
         top: 32px;
-        // left: 20px;
         left: calc(20 / 768 * 100vw);
         border-radius: 15px 65px;
       }
@@ -83,7 +81,7 @@
 
       @include mq(md) {
         margin-left: calc(-20 / 768 * 100vw);
-        padding: 0 calc(60 / 768 * 100vw) calc(8 / 768 * 100vw) 0;
+        padding: 0 calc(20 / 768 * 100vw) calc(8 / 768 * 100vw) 0;
       }
 
       @include mq(lg) {

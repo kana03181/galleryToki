@@ -25,6 +25,7 @@ export default function () {
         document.documentElement.classList.contains("is-active-drawer")
       ) {
         document.documentElement.classList.remove("is-active-drawer");
+        html.style.overflow = "";
         // console.log(aTags[i]);
       }
     });

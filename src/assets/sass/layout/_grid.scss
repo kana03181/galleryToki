@@ -40,15 +40,24 @@
   //** rooms ** //
   &__swipers__wrapper {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1fr 0.2fr;
-    row-gap: clamp(16 / 16 * 1rem, -3rem + 6.25vw, 32 / 16 * 1rem); //viw:320-1280px
+    // grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: calc(190 / 320 * 100vw) 1fr;
+    grid-template-rows: 1fr calc(38 / 320 * 100vw);
+    row-gap: clamp(16 / 16 * 1rem, 0.286rem + 3.57vw, 32 / 16 * 1rem); //viw:320-768px
+
+    @include mq(md) {
+      grid-template-rows: 1fr calc(75.3 / 768 * 100vw);
+    }
 
     @include mq(lg) {
-      grid-template-columns: calc(790 / 1280 * 100vw) calc(180 / 1280 * 100vw);
+      grid-template-columns: calc(632 / 1024 * 100vw) calc(180 / 1024 * 100vw);
       grid-template-rows: 1fr auto;
       margin-left: -4rem;
       column-gap: pxToRem(40px);
+    }
+
+    @include mq(xl) {
+      grid-template-columns: calc(790 / 1280 * 100vw) calc(180 / 1280 * 100vw);
     }
   }
 

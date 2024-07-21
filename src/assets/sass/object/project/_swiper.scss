@@ -51,34 +51,46 @@
   margin-top: initial;
   border-radius: 50%;
 
+  @include mq(xxl) {
+    width: pxToRem(55px);
+    height: pxToRem(55px);
+  }
+
   &::after {
     content: "";
     position: absolute;
-    right: 0;
-    left: 0;
-    margin: 0 auto;
+    inset: 0;
+    margin: auto;
   }
 }
 
 .swiper-button-prev {
   &::after {
-    right: -1px;
-    width: clamp(17 / 16 * 1rem, 0.884rem + 0.89vw, 21 / 16 * 1rem); //viw:320-768px
-    height: calc(tan(60deg) * clamp(14 / 16 * 1rem, 0.741rem + 0.67vw, 17 / 16 * 1rem) / 2); //viw:320-768px
+    width: clamp(14 / 16 * 1rem, 0.696rem + 0.89vw, 18 / 16 * 1rem); //viw:320-768px
+    height: clamp(11 / 16 * 1rem, 0.554rem + 0.67vw, 14 / 16 * 1rem); //viw:320-768px
     margin-right: clamp(9 / 16 * 1rem, 0.25rem + 1.56vw, 16 / 16 * 1rem); //viw:320-768px
     transform: rotate(-90deg);
     clip-path: polygon(50% 0, 100% 100%, 0 100%);
+
+    @include mq(xxl) {
+      width: 26px;
+      height: 22px;
+    }
   }
 }
 
 .swiper-button-next {
   &::after {
-    left: -1px;
-    width: clamp(17 / 16 * 1rem, 0.884rem + 0.89vw, 21 / 16 * 1rem); //viw:320-768px
-    height: calc(tan(60deg) * clamp(14 / 16 * 1rem, 0.741rem + 0.67vw, 17 / 16 * 1rem) / 2); //viw:320-768px
+    width: clamp(14 / 16 * 1rem, 0.696rem + 0.89vw, 18 / 16 * 1rem); //viw:320-768px
+    height: clamp(11 / 16 * 1rem, 0.554rem + 0.67vw, 14 / 16 * 1rem); //viw:320-768px
     margin-left: clamp(9 / 16 * 1rem, 0.205rem + 1.79vw, 17 / 16 * 1rem);
     transform: rotate(90deg);
     clip-path: polygon(50% 0, 100% 100%, 0 100%);
+
+    @include mq(xxl) {
+      width: 26px;
+      height: 22px;
+    }
   }
 }
 

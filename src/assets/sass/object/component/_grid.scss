@@ -45,30 +45,42 @@
 
     &.-thumbnailImg {
       grid-area: 2 / 1 / 3 / 2;
-      align-self: end;
-      width: 43.29%;
+      align-self: center;
+      width: calc(190 / 320 * 100vw);
 
       @include mq(md) {
-        width: 39.366%;
+        width: calc(377 / 768 * 100vw);
         margin-left: calc(40 / 768 * 100vw);
       }
 
       @include mq(lg) {
         grid-area: 1 / 2 / 2 / 3;
-        width: 100%;
+        align-self: flex-end;
+        width: calc(180 / 1024 * 100vw);
+        // width: 100%;
         margin-left: 0;
         justify-self: center;
+      }
+
+      @include mq(xl) {
+        width: calc(180 / 1280 * 100vw);
       }
     }
 
     &.-button {
       grid-area: 2 / 2 / 3 / 3;
-      width: 50%;
+      // width: 50%;
+      width: 88.466%;
       max-width: 140px;
+
+      @include mq(md) {
+        margin-right: calc(40 / 768 * 100vw);
+      }
 
       @include mq(lg) {
         grid-area: 2 / 2 / 3 / 3;
         justify-self: center;
+        margin-right: 0;
       }
     }
 
