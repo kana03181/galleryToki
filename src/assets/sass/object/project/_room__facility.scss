@@ -24,7 +24,7 @@
 
 .p-room__facility__text__wrap {
   width: 100%;
-  padding: clamp(32 / 16 * 1rem, 1.833rem + 0.83vw, 40 / 16 * 1rem) 0
+  padding: clamp(32 / 16 * 1rem, 1.667rem + 1.67vw, 48 / 16 * 1rem) 0
     clamp(24 / 16 * 1rem, 0.667rem + 4.17vw, 64 / 16 * 1rem); //viw:320-1280px
   text-align: left;
 
@@ -50,8 +50,12 @@
   color: $secondary-text-color;
   font-size: clamp(20 / 16 * 1rem, 1.083rem + 0.83vw, 24 / 16 * 1rem); //viw:320-1280px
   font-weight: 700;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.08em;
   line-height: 1.35;
+
+  &[lang="en"] {
+    letter-spacing: 0.13em;
+  }
 
   &::before {
     content: "";

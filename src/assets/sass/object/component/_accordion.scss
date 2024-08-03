@@ -17,7 +17,7 @@
     row-gap: clamp(24 / 16 * 1rem, 1.167rem + 1.67vw, 40 / 16 * 1rem); //viw:320-1280px
 
     &.-faq {
-      padding: clamp(32 / 16 * 1rem, 1.833rem + 0.83vw, 40 / 16 * 1rem) 0
+      padding: clamp(32 / 16 * 1rem, 1.667rem + 1.67vw, 48 / 16 * 1rem) 0
         clamp(32 / 16 * 1rem, 1.333rem + 3.33vw, 64 / 16 * 1rem); //viw:320-1280px
     }
   }
@@ -29,7 +29,6 @@
     width: inherit;
     font-weight: 500;
     letter-spacing: 0.08em;
-    // line-height: 1.4;
     cursor: pointer;
 
     &.-faq {
@@ -43,10 +42,10 @@
     &.-location {
       align-items: center;
       justify-content: center;
-      padding: clamp(16 / 16 * 1rem, 0.958rem + 0.21vw, 18 / 16 * 1rem)
+      padding: clamp(16 / 16 * 1rem, 0.958rem + 0.21vw, 18 / 16 * 1rem) //viw:320-1280px
         clamp(16 / 16 * 1rem, 0.958rem + 0.21vw, 18 / 16 * 1rem)
         clamp(16 / 16 * 1rem, 0.958rem + 0.21vw, 18 / 16 * 1rem)
-        clamp(16 / 16 * 1rem, 0.958rem + 0.21vw, 18 / 16 * 1rem); //viw:320-1280px
+        clamp(47 / 16 * 1rem, 2.896rem + 0.21vw, 49 / 16 * 1rem); // 16px + アイコンのwidth(23px) + アイコン右の余白(8px)
       column-gap: pxToRem(5px);
     }
 
@@ -72,36 +71,6 @@
       transition: transform 0.3s;
     }
   }
-
-  &__icon {
-    display: inline-block;
-    width: fit-content;
-    max-width: pxToRem(23px);
-    height: pxToRem(23px);
-
-    &.-location {
-      @include mq(xl) {
-        padding-top: pxToRem(2px);
-      }
-    }
-
-    & img {
-      height: 100%;
-    }
-  }
-
-  // &__label {
-  //   font-size: pxToRem(18px);
-  //   line-height: 1.25;
-
-  //   &.-q {
-  //     color: $tertiary-text-color;
-  //   }
-
-  //   &.-a {
-  //     color: $main-color;
-  //   }
-  // }
 }
 
 .is-opened .c-accordion__inner::after {
@@ -161,6 +130,7 @@
 }
 
 .c-accordion__box__text {
+  position: relative;
   line-height: 1.6;
 
   &.-faq {
@@ -196,5 +166,46 @@
   &::before {
     content: "A";
     color: $main-color;
+  }
+}
+
+.c-accordion .c-accordion__box__text.-location {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 1px;
+    width: 23px;
+    height: 23px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+
+    @include mq(xl) {
+      top: pxToRem(2px);
+    }
+  }
+}
+
+.c-accordion:first-of-type .c-accordion__box__text.-location {
+  &::before {
+    content: "";
+    left: -28px;
+    background-image: url(../../assets/img/top/location/location_icon_walk.svg);
+  }
+}
+
+.c-accordion:nth-child(2) .c-accordion__box__text.-location {
+  &::before {
+    content: "";
+    left: -31px;
+    background-image: url(../../assets/img/top/location/location_icon_car.svg);
+  }
+}
+
+.c-accordion:nth-child(3) .c-accordion__box__text.-location {
+  &::before {
+    content: "";
+    left: -31px;
+    background-image: url(../../assets/img/top/location/location_icon_time.svg);
   }
 }

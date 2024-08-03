@@ -7,8 +7,8 @@
 */
 
 .p-location__accordion {
-  padding: clamp(32 / 16 * 1rem, 1.833rem + 0.83vw, 40 / 16 * 1rem) 0
-    clamp(32 / 16 * 1rem, 0.833rem + 5.83vw, 88 / 16 * 1rem);
+  padding: clamp(32 / 16 * 1rem, 1.667rem + 1.67vw, 48 / 16 * 1rem) 0
+    clamp(32 / 16 * 1rem, 0.833rem + 5.83vw, 88 / 16 * 1rem); //view:320-1280px
 }
 
 .p-location__shop__text,
@@ -20,11 +20,11 @@
 
 .p-location__shop__text {
   padding-top: clamp(24 / 16 * 1rem, 1.167rem + 1.67vw, 40 / 16 * 1rem);
-  font-size: clamp(15 / 16 * 1rem, 0.917rem + 0.1vw, 16 / 16 * 1rem); //viw:320-1280px
+  font-size: clamp(15 / 16 * 1rem, 0.917rem + 0.1vw, 16 / 16 * 1rem); //view:320-1280px
 }
 
 .p-location__text {
-  font-size: clamp(18 / 16 * 1rem, 0.917rem + 0.1vw, 20 / 16 * 1rem); //viw:320-1280px
+  font-size: clamp(18 / 16 * 1rem, 0.917rem + 0.1vw, 20 / 16 * 1rem); //view:320-1280px
 }
 
 .p-location__icon {
@@ -160,13 +160,37 @@
 }
 
 .p-location__link {
-  transition: color 0.6s cubic-bezier(0.14, 0.21, 0.59, 1);
+  transition: color var(--duration2) var(--ease6);
   color: $primary-text-color;
   text-decoration: underline;
 
   &:hover {
-    transition: color 0.6s cubic-bezier(0.14, 0.21, 0.59, 1);
+    transition: color var(--duration2) var(--ease6);
     color: $text-link-color-hover1;
+  }
+}
+
+.p-location__shop__link {
+  display: block;
+  position: relative;
+
+  &::before {
+    content: "WEBサイトへ";
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    transition: opacity var(--duration2) var(--ease6);
+    border-radius: 10px;
+    opacity: 0;
+    background-color: $primary-text-color;
+    color: #fff;
+    inset: 0;
+  }
+
+  &:hover::before {
+    transition: opacity var(--duration2) var(--ease6);
+    opacity: 0.25;
   }
 }
 
@@ -309,7 +333,7 @@
 
     &.-walk,
     &.-car {
-      row-gap: pxToRem(16px); //viw:320-1280px
+      row-gap: pxToRem(16px);
     }
 
     &.-time {
@@ -354,7 +378,7 @@
   }
 
   @include mq(xs) {
-    grid-template-columns: clamp(135 / 16 * 1rem, 8.162rem + 1.23vw, 140 / 16 * 1rem); //320-767px
+    grid-template-columns: clamp(135 / 16 * 1rem, 8.162rem + 1.23vw, 140 / 16 * 1rem); //view:320-767px
   }
 
   &.-time {
@@ -403,7 +427,7 @@
 
 .p-location__time__text {
   order: 1;
-  font-size: clamp(0.938rem, 0.917rem + 0.1vw, 1rem); //最小：15px 最大：16px viw:320-1280px
+  font-size: clamp(15 / 16 * 1rem, 0.917rem + 0.1vw, 16 / 16 * 1rem); //view：viw:320-1280px
   word-break: keep-all;
   overflow-wrap: break-word;
 }
@@ -417,28 +441,17 @@
 }
 
 .p-location__list__shop {
-  font-size: clamp(15 / 16 * 1rem, 0.917rem + 0.1vw, 16 / 16 * 1rem); //viw:320-1280px
+  font-size: clamp(15 / 16 * 1rem, 0.917rem + 0.1vw, 16 / 16 * 1rem); //view:320-1280px
   letter-spacing: 0.08em;
   word-break: keep-all;
   overflow-wrap: break-word;
 
   & .-small {
     display: inline-block;
-    font-size: clamp(12 / 16 * 1rem, 0.708rem + 0.21vw, 14 / 16 * 1rem); //viw:320-1280px
+    font-size: clamp(12 / 16 * 1rem, 0.708rem + 0.21vw, 14 / 16 * 1rem); //view:320-1280px
   }
 }
 
 .p-location__list__name {
   display: inline-block;
 }
-
-// .p-location__list__name {
-//   font-size: clamp(15 / 16 * 1rem, 0.917rem + 0.1vw, 16 / 16 * 1rem); //viw:320-1280px
-//   letter-spacing: 0.08em;
-//   word-break: keep-all;
-//   overflow-wrap: break-word;
-
-//   & .-small {
-//     font-size: clamp(12 / 16 * 1rem, 0.708rem + 0.21vw, 14 / 16 * 1rem); //viw:320-1280px
-//   }
-// }

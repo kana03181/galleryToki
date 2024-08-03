@@ -24,7 +24,7 @@ export default function () {
     gsap.to(spans_sm, {
       y: 0,
       opacity: 1,
-      duration: 0.55,
+      duration: 0.45,
       scrollTrigger: {
         trigger: spanToUp_sm,
         start: "top 80%",
@@ -37,7 +37,7 @@ export default function () {
 
       stagger: {
         from: "start",
-        each: 0.27,
+        each: 0.3,
       },
     });
 
@@ -79,7 +79,7 @@ export default function () {
     gsap.to(spans_md, {
       y: 0,
       opacity: 1,
-      duration: 0.65,
+      duration: 0.45,
       scrollTrigger: {
         trigger: spanToUp_md,
         start: "top 80%",
@@ -104,7 +104,7 @@ export default function () {
       {
         "--w_size": "100%",
         opacity: 1,
-        duration: 1.7,
+        duration: 1.5,
         delay: 0.2,
         scrollTrigger: {
           trigger: spanToUp_md,
@@ -134,7 +134,7 @@ export default function () {
     gsap.to(spans_md2, {
       y: 0,
       opacity: 1,
-      duration: 0.55,
+      duration: 0.45,
       scrollTrigger: {
         trigger: spanToUp_md2,
         start: "top 80%",
@@ -159,8 +159,8 @@ export default function () {
       {
         "--w_size": "100%",
         opacity: 1,
-        duration: 1.9,
-        delay: 0.2,
+        duration: 2,
+        delay: 0.25,
         scrollTrigger: {
           trigger: spanToUp_md2,
           start: "top 80%",
@@ -189,7 +189,7 @@ export default function () {
     gsap.to(spans_lg, {
       y: 0,
       opacity: 1,
-      duration: 0.42,
+      duration: 0.45,
       scrollTrigger: {
         trigger: spanToUp_lg,
         start: "top 80%",
@@ -202,7 +202,7 @@ export default function () {
 
       stagger: {
         from: "start",
-        each: 0.24,
+        each: 0.2,
       },
     });
 
@@ -214,7 +214,7 @@ export default function () {
       {
         "--w_size": "100%",
         opacity: 1,
-        duration: 3.4,
+        duration: 2.8,
         delay: 0.2,
         scrollTrigger: {
           trigger: spanToUp_lg,
@@ -229,6 +229,7 @@ export default function () {
   //** concept **//
   const concept__items = document.querySelectorAll(".js-concept__items");
 
+  //コンセプト 画像
   gsap.fromTo(
     concept__items[2],
     {
@@ -238,7 +239,7 @@ export default function () {
     {
       y: 0,
       autoAlpha: 1,
-      duration: 1,
+      duration: 0.9, //3つとも同じスピード
       scrollTrigger: {
         trigger: ".js-concept__items",
         start: "top 90%",
@@ -247,6 +248,7 @@ export default function () {
     }
   );
 
+  //コンセプト テキスト上
   gsap.fromTo(
     concept__items[0],
     {
@@ -254,10 +256,10 @@ export default function () {
       autoAlpha: 0,
     },
     {
-      delay: 0.5,
+      delay: 0.2,
       y: 0,
       autoAlpha: 1,
-      duration: 0.9,
+      duration: 0.9, //3つとも同じスピード
       scrollTrigger: {
         trigger: ".js-concept__items",
         start: "top 90%",
@@ -266,6 +268,7 @@ export default function () {
     }
   );
 
+  //コンセプト テキスト下
   gsap.fromTo(
     concept__items[1],
     {
@@ -273,10 +276,10 @@ export default function () {
       autoAlpha: 0,
     },
     {
-      delay: 0.5,
+      delay: 0.2,
       y: 0,
       autoAlpha: 1,
-      duration: 0.9,
+      duration: 0.9, //3つとも同じスピード
       scrollTrigger: {
         trigger: ".js-concept__items",
         start: "top 90%",
@@ -296,7 +299,7 @@ export default function () {
       y: 0,
       autoAlpha: 0.8,
       stagger: 0.3,
-      duration: 0.8,
+      duration: 0.65,
       scrollTrigger: {
         trigger: ".js-feature__purpose__title",
         start: "top 70%",
@@ -377,7 +380,7 @@ export default function () {
       autoAlpha: 0.9,
       stagger: {
         from: "start",
-        each: 0.85,
+        each: 0.55,
       },
 
       scrollTrigger: {
@@ -395,7 +398,7 @@ export default function () {
     gsap.fromTo(
       toUp,
       {
-        y: 100,
+        y: 50,
         autoAlpha: 0,
       },
       {

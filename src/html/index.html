@@ -46,23 +46,22 @@
                 <span class="u-visuallyHidden">メニューを開閉する</span>
               </span>
             </button>
-              <div id="global-nav" class="p-global-nav -index">
-                <div class="p-global-nav__inner -index">
+              <div id="global-nav" class="p-global-nav">
+                <div class="p-global-nav__inner">
                   <ul class="p-global-nav__list -lg">
-                    <li class="p-global-nav__item"><a href="index.html" class="p-global-nav__link"><span class="p-global-nav__text -en" lang="en">Home</span><span class="p-global-nav__text -ja">トップページ</span></a></li>
                     <li class="p-global-nav__item"><a href="#about" class="p-global-nav__link"><span class="p-global-nav__text -en" lang="en">About</span><span class="p-global-nav__text -ja">民泊&nbsp;ギャラリー鴇について</span></a></li>
                     <li class="p-global-nav__item"><a href="#feature" class="p-global-nav__link"><span class="p-global-nav__text -en" lang="en">Feature</span><span class="p-global-nav__text -ja">民泊&nbsp;ギャラリー鴇の特徴</span></a></li>
                     <li class="p-global-nav__item"><a href="room__facility.html" class="p-global-nav__link"><span class="p-global-nav__text -en" lang="en">Room・Facility</span><span class="p-global-nav__text -ja">お部屋・設備</span></a></li>
                   </ul>
                   <ul class="p-global-nav__list -sm">
                     <li class="p-global-nav__item"><a href="#plan" class="p-global-nav__link"><span class="p-global-nav__text -en -sm" lang="en">Plan</span><span class="p-global-nav__text -ja">料金</span></a></li>
-                    <li class="p-global-nav__item"><a href="#faq" class="p-global-nav__link"><span class="p-global-nav__text -en -sm" lang="en">Faq</span><span class="p-global-nav__text -ja">よくあるご質問</span></a></li>
+                    <li class="p-global-nav__item"><a href="#faq" class="p-global-nav__link -faq"><span class="p-global-nav__text -en -sm" lang="en">Faq</span><span class="p-global-nav__text -ja">よくあるご質問</span></a></li>
                     <li class="p-global-nav__item"><a href="access.html" class="p-global-nav__link"><span class="p-global-nav__text -en -sm" lang="en">Access</span><span class="p-global-nav__text -ja">アクセス</span></a></li>
                     <li class="p-global-nav__item"><a href="contact.html" class="p-global-nav__link"><span class="p-global-nav__text -en -sm" lang="en">Contact</span><span class="p-global-nav__text -ja">お問い合わせ</span></a></li>
                   </ul>
                 </div>
                 <!-- /.p-global-nav__inner -->
-                <p class="p-header__button -index"><a href="reservation.html" class="c-button -common -book">ご予約はこちら</a></p>
+                <p class="p-header__button"><a href="reservation.html" class="c-button -common -book -header">ご予約はこちら</a></p>
               </div>
               <!-- /.p-global-nav -index -->
           </nav>
@@ -74,14 +73,14 @@
         <div class="l-wrapper -hero">
           <div class="p-hero__items">
             <div class="p-hero__body">
-              <p class="p-hero__copy">また来たい<br>実家のような<wbr>民泊</p>
+              <p class="p-hero__copy">また来たい<br>熊本の民泊</p>
             </div>
             <!-- /.p-hero__body -->
-            <a href="reservation.html" target="_self" class="p-hero__reservation">
+            <!-- <a href="reservation.html" target="_self" class="p-hero__reservation">
               <div class="p-hero__reservation__link">
                 <p class="p-hero__reservation__text">ご予約は<wbr>こちら</p>
               </div>
-            </a>
+            </a> -->
             <!-- /.p-hero__reservation -->
             <div class="swiper p-hero__swiper ">
               <ul class="swiper-wrapper p-hero__swiper__wrapper js-hero__swiper__wrapper" >
@@ -128,10 +127,13 @@
               </div>
             </div>
             <div class="p-concept__body js-concept__items">
-              <p class="p-concept__text"><span class="p-concept__word">「ただいま」</span>と思わず口ずさみそうになる、<wbr>どこか懐かしい雰囲気。</p>
-              <p class="p-concept__text">当宿は普通の民家なので、<wbr>ホテルのようなかしこまった感じは<wbr>ありません。</p>
-              <p class="p-concept__text">アットホームで、温かい。<wbr>まるで“第二の実家”のように<wbr>くつろげる。<wbr>そんな宿となっています。</p>
-              <p class="p-concept__text">日常の忙しさや悩みなどは<wbr>一旦忘れて、<br>ゆったりとした、<wbr>田舎ならではの時間を<wbr>過ごしてみませんか？</p>
+              <div class="p-concept__text__wrap">
+                <p class="p-concept__text"><span class="p-concept__word">「ただいま」</span>と思わず口ずさみそうになる、<wbr>どこか懐かしい雰囲気。</p>
+                <p class="p-concept__text">当宿は普通の民家なので、<wbr>ホテルのようなかしこまった感じは<wbr>ありません。</p>
+                <p class="p-concept__text">アットホームで、温かい。<wbr>まるで“第二の実家”のように<wbr>くつろげる。<wbr>そんな宿となっています。</p>
+                <p class="p-concept__text">日常の忙しさや悩みなどは<wbr>一旦忘れて、<br>ゆったりとした、<wbr>田舎ならではの時間を<wbr>過ごしてみませんか？</p>
+              </div>
+              <!-- /.p-concept__text__wrap -->
             </div>
             <div class="p-concept__imgs js-concept__items">
               <div class="p-concept__imgs__wrap">
@@ -157,24 +159,27 @@
       <section class="l-about">
         <div class="l-container">
           <div class="l-wrapper -about">
-            <h2 id="about" class="c-common__title -about" lang="en">
-              <span class="c-common__title__en -top js-title-md">About</span>
-              <span class="c-common__title__ja -about">民宿ギャラリー鴇について</span>
-            </h2>
-            <div class="p-about__contents">
+            <div class="p-about__items l-grid -about">
+              <h2 id="about" class="c-common__title -about" lang="en">
+                <span class="c-common__title__en -top js-title-md">About</span>
+                <span class="c-common__title__ja -about">民宿ギャラリー鴇について</span>
+              </h2>
               <div class="p-about__texts">
                 <p class="p-about__sentence">熊本空港から車で約20分、グランメッセ熊本から車で約15分の場所に位置する民泊 ギャラリー 鴇。管理人が住む一軒家を自宅兼宿泊施設として運営しています。2階に宿泊部屋、1階に共有のキッチン・リビング、浴室、トイレがございます。一棟貸切ではございませんのでご注意ください。</p>
                 <p class="p-about__sentence">周辺にはスーパーやコンビニ、コインランドリーが徒歩圏内にあり、管理人が経営しているお持ち帰り専門の焼き鳥屋もございます。宿泊されるお客様はお食事を済ましてお越しになったり、共有のキッチンを利用して料理をしたりとさまざま。</p>
                 <p class="p-about__sentence">国籍問わず、外国人のお客様も多数ご宿泊にいらっしゃいます。</p>
               </div>
-              <figure class="p-about__img">
-                <picture>
-                  <source type="image/webp" srcset="assets/img/top/about/about_house_sp.webp 1x, assets/img/top/about/about_house_sp_2x.webp 2x" width="768" height="515" media="(max-width:767px)">
-                  <img src="assets/img/top/about/about_house_pc.jpg" srcset="assets/img/top/about/about_house_pc_2x.jpg 2x" width="879" height="576" alt="民泊ギャラリー鴇の外装" decoding="async" loading="lazy">
-                </picture>
-              </figure>
+              <div class="p-about__img__wrapper">
+                <figure class="p-about__img">
+                  <picture>
+                    <source type="image/webp" srcset="assets/img/top/about/about_house_sp.webp 1x, assets/img/top/about/about_house_sp_2x.webp 2x" width="768" height="493" media="(max-width:767px)">
+                    <img src="assets/img/top/about/about_house_pc.jpg" srcset="assets/img/top/about/about_house_pc_2x.jpg 2x" width="879" height="564" alt="民泊ギャラリー鴇の外装" decoding="async" loading="lazy">
+                  </picture>
+                </figure>
+              </div>
+              <!-- /.p-about__img__wrapper -->
             </div>
-            <!-- /.p-about__contents -->
+            <!-- /.p-about__items -->
           </div>
           <!-- /.l-wrapper -about -->
         </div>
@@ -391,14 +396,12 @@
               <h3 class="p-plan__option__title">オプション</h3>
               <ul class="l-grid -plan p-plan__option__items">
                 <li class="c-card c-grid__item -plan">
-                  <!-- <div class="c-card__body -plan"> -->
-                    <h3 class="p-plan__option__name">焼き鳥体験</h3>
-                    <p class="p-plan__option__detail">
-                      <span>1人</span>
-                      <span><span class="p-plan__price__number -medium">1500</span>円（10本）</span>
-                    </p>
-                    <p class="c-card__text -plan">管理人が経営している焼き鳥屋「やきとり鳥ぼう」で実際に焼き鳥を焼く体験ができます。ご自身で焼いたものを施設に持ち帰り、その日のお食事としてお召し上がりいただけます。</p>
-                  <!-- </div> -->
+                  <h3 class="p-plan__option__name">焼き鳥体験</h3>
+                  <p class="p-plan__option__detail">
+                    <span>1人</span>
+                    <span><span class="p-plan__price__number -medium">1500</span>円（10本）</span>
+                  </p>
+                  <p class="c-card__text -plan">管理人が経営している焼き鳥屋「やきとり鳥ぼう」で実際に焼き鳥を焼く体験ができます。ご自身で焼いたものを施設に持ち帰り、その日のお食事としてお召し上がりいただけます。</p>
                   <figure class="c-card__thumbnail -plan p-plan__option__image -first">
                     <picture>
                       <source type="image/webp" srcset="assets/img/top/plan/plan_option1_sp.webp 1x, assets/img/top/plan/plan_option1_sp_2x.webp 2x" width="768" height="1025" media="(max-width:1023px)">
@@ -407,14 +410,12 @@
                   </figure>
                 </li>
                 <li class="c-card c-grid__item -plan">
-                  <!-- <div class="c-card__body -plan"> -->
                     <h3 class="p-plan__option__name">着物の着付け体験</h3>
                     <p class="p-plan__option__detail">
                       <span>1人</span>
                       <span><span class="p-plan__price__number -medium">800</span>円</span>
                     </p>
                     <p class="c-card__text -plan">日本の伝統衣装である着物を実際に着る体験です。必要な道具はこちらでご用意しますので、手ぶらで参加することが<wbr>できます。着付け師の資格を持つ管理人が着方をレクチャーいたします。</p>
-                  <!-- </div> -->
                   <figure class="c-card__thumbnail -plan p-plan__option__image -second">
                     <picture>
                       <source type="image/webp" srcset="assets/img/top/plan/plan_option2_sp.webp 1x, assets/img/top/plan/plan_option2_sp_2x.webp 2x" width="768" height="1025" media="(max-width:1023px)">
@@ -432,20 +433,18 @@
         <div class="l-container">
           <div class="l-wrapper">
             <h2 id="faq" class="c-common__title -faq" lang="en">
-              <span class="c-common__title__en -top js-title-sm">Faq</span>
+              <span class="c-common__title__en -faq -top js-title-sm">Faq</span>
               <span class="c-common__title__ja">よくあるご質問</span>
             </h2>
             <div class="c-accordion__wrapper -faq l-faq__accordion">
               <details class="c-accordion js-accordion">
                 <summary class="c-accordion__items js-accordion__items">
                   <span class="c-accordion__inner -faq">
-                    <!-- <span class="c-accordion__label -q">Q</span> -->
                     <span class="c-accordion__box__text -q -faq">部屋が2つありますが、他のお客さんと一緒になることはありますか？</span>
                   </span>
                 </summary>
                 <div class="c-accordion__box js-accordion__box">
                   <div class="c-accordion__box__inner -faq">
-                    <!-- <span class="c-accordion__label -a">A</span> -->
                     <span class="c-accordion__box__text -a -faq">1日1組限定のため、他のお客様と一緒に過ごすことはございません。</span>
                   </div>
                 </div>
@@ -453,13 +452,11 @@
               <details class="c-accordion js-accordion">
                 <summary class="c-accordion__items js-accordion__items">
                   <span class="c-accordion__inner -faq">
-                    <!-- <span class="c-accordion__label -q" title="Question">Q</span> -->
                     <span class="c-accordion__box__text -q -faq">チェックイン・チェックアウトの時間を教えてください。</span>
                   </span>
                 </summary>
                 <div class="c-accordion__box js-accordion__box">
                   <div class="c-accordion__box__inner -faq">
-                    <!-- <span class="c-accordion__label -a">A</span> -->
                     <span class="c-accordion__box__text -a -faq">チェックインは14:00〜15:00、チェックアウトは10:00〜11:00になります。</span>
                   </div>
                 </div>
@@ -467,13 +464,11 @@
               <details class="c-accordion js-accordion">
                 <summary class="c-accordion__items js-accordion__items">
                   <span class="c-accordion__inner -faq">
-                    <!-- <span class="c-accordion__label -q" title="Question">Q</span> -->
                     <span class="c-accordion__box__text -q -faq">チェックインの方法を<wbr>教えてください。</span>
                   </span>
                 </summary>
                 <div class="c-accordion__box js-accordion__box">
                   <div class="c-accordion__box__inner -faq">
-                    <!-- <span class="c-accordion__label -a">A</span> -->
                     <span class="c-accordion__box__text -a -faq">基本的にお客様のチェックインの時間には管理人が滞在しております。玄関のチャイムを鳴らしてお上がりください。<br>
                     不在の場合は鍵を開けておきますので、勝手に入っていただき、管理人に到着した旨をご連絡ください。<wbr>（玄関に管理人の連絡先を記載したメモを置いています。）</span>
                   </div>
@@ -496,7 +491,6 @@
                 <summary class="c-accordion__items js-accordion__items">
                   <span class="c-accordion__inner -location">
                     <span class="c-accordion__box__text -location">徒歩10分圏内</span>
-                    <span class="c-accordion__icon -location"><img src="assets/img/top/location/location_icon_walk.svg" alt=""></span>
                   </span>
                 </summary>
                 <div class="c-accordion__box js-accordion__box">
@@ -607,7 +601,6 @@
                 <summary class="c-accordion__items js-accordion__items">
                   <span class="c-accordion__inner -location">
                     <span class="c-accordion__box__text -location">車で10分圏内</span>
-                    <span class="c-accordion__icon -location"><img src="assets/img/top/location/location_icon_car.svg" alt=""></span>
                   </span>
                 </summary>
                 <div class="c-accordion__box js-accordion__box">
@@ -869,7 +862,6 @@
                 <summary class="c-accordion__items js-accordion__items">
                   <span class="c-accordion__inner -location">
                     <span class="c-accordion__box__text -location">観光地への所要時間</span>
-                    <span class="c-accordion__icon -location"><img src="assets/img/top/location/location_icon_time.svg" alt=""></span>
                   </span>
                 </summary>
                 <div class="c-accordion__box js-accordion__box">
@@ -1149,30 +1141,36 @@
                   <p class="p-location__shop__text">旬彩房 悠</p>
                 </div>
                 <div class="swiper-slide p-location__swiper__slide">
-                  <figure class="p-location__shop__thumnail">
-                    <picture>
-                      <source type="image/webp" srcset="assets/img/top/location/location_panoruvan_sp.webp 1x, assets/img/top/location/location_panoruvan_sp_2x.webp 2x" width="768" height="510" media="(max-width:767px)">
-                      <img class="-ruvan" src="assets/img/top/location/location_panoruvan_pc.jpg" srcset="assets/img/top/location/location_panoruvan_pc_2x.jpg 2x" width="1000" height="664" alt="パン オ ルヴァン 小峯本店" decoding="async">
-                    </picture>
-                  </figure>
+                  <a class="p-location__shop__link" href="https://pain-au-levain.com/" target="_blank">
+                    <figure class="p-location__shop__thumnail">
+                      <picture>
+                        <source type="image/webp" srcset="assets/img/top/location/location_panoruvan_sp.webp 1x, assets/img/top/location/location_panoruvan_sp_2x.webp 2x" width="768" height="510" media="(max-width:767px)">
+                        <img class="-ruvan" src="assets/img/top/location/location_panoruvan_pc.jpg" srcset="assets/img/top/location/location_panoruvan_pc_2x.jpg 2x" width="1000" height="664" alt="パン オ ルヴァン 小峯本店" decoding="async">
+                      </picture>
+                    </figure>
+                  </a>
                   <p class="p-location__shop__text">パン オ ルヴァン 小峯本店</p>
                 </div>
                 <div class="swiper-slide p-location__swiper__slide">
-                  <figure class="p-location__shop__thumnail">
-                    <picture>
-                      <source type="image/webp" srcset="assets/img/top/location/location_shishitora_sp.webp 1x, assets/img/top/location/location_shishitora_sp_2x.webp 2x" width="768" height="511" media="(max-width:767px)">
-                      <img class="-shishitora" src="assets/img/top/location/location_shishitora_pc.jpg" srcset="assets/img/top/location/location_shishitora_pc_2x.jpg 2x" width="1000" height="666" alt="ラーメン 中華そば 獅子虎" decoding="async">
-                    </picture>
-                  </figure>
+                  <a class="p-location__shop__link" href="https://sisitora.net/" target="_blank">
+                    <figure class="p-location__shop__thumnail">
+                      <picture>
+                        <source type="image/webp" srcset="assets/img/top/location/location_shishitora_sp.webp 1x, assets/img/top/location/location_shishitora_sp_2x.webp 2x" width="768" height="511" media="(max-width:767px)">
+                        <img class="-shishitora" src="assets/img/top/location/location_shishitora_pc.jpg" srcset="assets/img/top/location/location_shishitora_pc_2x.jpg 2x" width="1000" height="666" alt="ラーメン 中華そば 獅子虎" decoding="async">
+                      </picture>
+                    </figure>
+                  </a>
                   <p class="p-location__shop__text">ラーメン 中華そば 獅子虎</p>
                 </div>
                 <div class="swiper-slide p-location__swiper__slide">
-                  <figure class="p-location__shop__thumnail">
-                    <picture>
-                      <source type="image/webp" srcset="assets/img/top/location/location_superkid_sp.webp 1x, assets/img/top/location/location_superkid_sp_2x.webp 2x" width="768" height="512" media="(max-width:767px)">
-                      <img class="-superkid" src="assets/img/top/location/location_superkid_pc.jpg" srcset="assets/img/top/location/location_superkid_pc_2x.jpg 2x" width="1000" height="667" alt="スーパー・キッド 小峯店" decoding="async">
-                    </picture>
-                  </figure>
+                  <a href="https://www.superkid.co.jp/" target="_blank">
+                    <figure class="p-location__shop__thumnail">
+                      <picture>
+                        <source type="image/webp" srcset="assets/img/top/location/location_superkid_sp.webp 1x, assets/img/top/location/location_superkid_sp_2x.webp 2x" width="768" height="512" media="(max-width:767px)">
+                        <img class="-superkid" src="assets/img/top/location/location_superkid_pc.jpg" srcset="assets/img/top/location/location_superkid_pc_2x.jpg 2x" width="1000" height="667" alt="スーパー・キッド 小峯店" decoding="async">
+                      </picture>
+                    </figure>
+                  </a>
                   <p class="p-location__shop__text">スーパー・キッド 小峯店</p>
                 </div>
                 <div class="swiper-slide p-location__swiper__slide">
@@ -1185,12 +1183,14 @@
                   <p class="p-location__shop__text">コインランドリーにっこり小峯店</p>
                 </div>
                 <div class="swiper-slide p-location__swiper__slide">
-                  <figure class="p-location__shop__thumnail">
-                    <picture>
-                      <source type="image/webp" srcset="assets/img/top/location/location_karaagetorimaru_sp.webp 1x, assets/img/top/location/location_karaagetorimaru_sp_2x.webp 2x" width="768" height="512" media="(max-width:767px)">
-                      <img class="-torimaru" src="assets/img/top/location/location_karaagetorimaru_pc.jpg" srcset="assets/img/top/location/location_karaagetorimaru_pc_2x.jpg 2x" width="1000" height="667" alt="熊本からあげ とりまる。小峯店" decoding="async">
-                    </picture>
-                  </figure>
+                  <a class="p-location__shop__link" href="http://xn--l8jrw2tr11w78m.com/" target="_blank">
+                    <figure class="p-location__shop__thumnail">
+                      <picture>
+                        <source type="image/webp" srcset="assets/img/top/location/location_karaagetorimaru_sp.webp 1x, assets/img/top/location/location_karaagetorimaru_sp_2x.webp 2x" width="768" height="512" media="(max-width:767px)">
+                        <img class="-torimaru" src="assets/img/top/location/location_karaagetorimaru_pc.jpg" srcset="assets/img/top/location/location_karaagetorimaru_pc_2x.jpg 2x" width="1000" height="667" alt="熊本からあげ とりまる。小峯店" decoding="async">
+                      </picture>
+                    </figure>
+                  </a>
                   <p class="p-location__shop__text">熊本からあげ とりまる。小峯店</p>
                 </div>
                 <div class="swiper-slide p-location__swiper__slide">
@@ -1212,48 +1212,36 @@
                   <p class="p-location__shop__text">居酒屋 桃太郎</p>
                 </div>
                 <div class="swiper-slide p-location__swiper__slide">
-                  <figure class="p-location__shop__thumnail">
-                    <picture>
-                      <source type="image/webp" srcset="assets/img/top/location/location_nogami_sp.webp 1x, assets/img/top/location/location_nogami_sp_2x.webp 2x" width="768" height="513" media="(max-width:767px)">
-                      <img class="-nogami" src="assets/img/top/location/location_nogami_pc.jpg" srcset="assets/img/top/location/location_nogami_pc_2x.jpg 2x" width="1000" height="668" alt="乃が美 はなれ 熊本小峯店" decoding="async">
-                    </picture>
-                  </figure>
-                  <p class="p-location__shop__text">乃が美 はなれ 熊本小峯店</p>
-                </div>
-                <div class="swiper-slide p-location__swiper__slide">
-                  <figure class="p-location__shop__thumnail">
-                    <picture>
-                      <source type="image/webp" srcset="assets/img/top/location/location_berushe_sp.webp 1x, assets/img/top/location/location_berushe_sp_2x.webp 2x" width="768" height="509" media="(max-width:767px)">
-                      <img class="-berushe" src="assets/img/top/location/location_berushe_pc.jpg" srcset="assets/img/top/location/location_berushe_pc_2x.jpg 2x" width="1000" height="664" alt="チーズケーキのベルジェ" decoding="async">
-                    </picture>
-                  </figure>
+                  <a class="p-location__shop__link" href="https://www.minamiaso-berge.com/" target="_blank">
+                    <figure class="p-location__shop__thumnail">
+                      <picture>
+                        <source type="image/webp" srcset="assets/img/top/location/location_berushe_sp.webp 1x, assets/img/top/location/location_berushe_sp_2x.webp 2x" width="768" height="509" media="(max-width:767px)">
+                        <img class="-berushe" src="assets/img/top/location/location_berushe_pc.jpg" srcset="assets/img/top/location/location_berushe_pc_2x.jpg 2x" width="1000" height="664" alt="チーズケーキのベルジェ" decoding="async">
+                      </picture>
+                    </figure>
+                  </a>
                   <p class="p-location__shop__text">チーズケーキのベルジェ</p>
                 </div>
                 <div class="swiper-slide p-location__swiper__slide">
-                  <figure class="p-location__shop__thumnail -hakatatorokaratei">
-                    <picture>
-                      <source type="image/webp" srcset="assets/img/top/location/location_hakatatorokaratei_sp.webp 1x, assets/img/top/location/location_hakatatorokaratei_sp_2x.webp 2x" width="768" height="512" media="(max-width:767px)">
-                      <img class="-hakatatorokaratei" src="assets/img/top/location/location_hakatatorokaratei_pc.jpg" srcset="assets/img/top/location/location_hakatatorokaratei_pc_2x.jpg 2x" width="1000" height="667" alt="博多 とよ唐亭" decoding="async">
-                    </picture>
-                  </figure>
+                  <a class="p-location__shop__link" href="https://toyokara.com/" target="_blank">
+                    <figure class="p-location__shop__thumnail -hakatatorokaratei">
+                      <picture>
+                        <source type="image/webp" srcset="assets/img/top/location/location_hakatatorokaratei_sp.webp 1x, assets/img/top/location/location_hakatatorokaratei_sp_2x.webp 2x" width="768" height="512" media="(max-width:767px)">
+                        <img class="-hakatatorokaratei" src="assets/img/top/location/location_hakatatorokaratei_pc.jpg" srcset="assets/img/top/location/location_hakatatorokaratei_pc_2x.jpg 2x" width="1000" height="667" alt="博多 とよ唐亭" decoding="async">
+                      </picture>
+                    </figure>
+                  </a>
                   <p class="p-location__shop__text">博多 とよ唐亭</p>
                 </div>
                 <div class="swiper-slide p-location__swiper__slide">
-                  <figure class="p-location__shop__thumnail">
-                    <picture>
-                      <source type="image/webp" srcset="assets/img/top/location/location_okashinotobira_sp.webp 1x, assets/img/top/location/location_okashinotobira_sp_2x.webp 2x" width="768" height="513" media="(max-width:767px)">
-                      <img class="-okashinotobira" src="assets/img/top/location/location_okashinotobira_pc.jpg" srcset="assets/img/top/location/location_okashinotobira_pc_2x.jpg 2x" width="1000" height="668" alt="お菓子の扉～私のガトーショコラ～" decoding="async">
-                    </picture>
-                  </figure>
-                  <p class="p-location__shop__text">お菓子の扉～私のガトーショコラ～</p>
-                </div>
-                <div class="swiper-slide p-location__swiper__slide">
-                  <figure class="p-location__shop__thumnail">
-                    <picture>
-                      <source type="image/webp" srcset="assets/img/top/location/location_doragonkitchen_sp.webp 1x, assets/img/top/location/location_doragonkitchen_sp_2x.webp 2x" width="768" height="513" media="(max-width:767px)">
-                      <img src="assets/img/top/location/location_doragonkitchen_pc.jpg" srcset="assets/img/top/location/location_doragonkitchen_pc_2x.jpg 2x" width="1000" height="668" alt="ドラゴンキッチン 益城本店" decoding="async">
-                    </picture>
-                  </figure>
+                  <a class="p-location__shop__link" href="https://www.dragon-t2.com/" target="_blank">
+                    <figure class="p-location__shop__thumnail">
+                      <picture>
+                        <source type="image/webp" srcset="assets/img/top/location/location_doragonkitchen_sp.webp 1x, assets/img/top/location/location_doragonkitchen_sp_2x.webp 2x" width="768" height="513" media="(max-width:767px)">
+                        <img src="assets/img/top/location/location_doragonkitchen_pc.jpg" srcset="assets/img/top/location/location_doragonkitchen_pc_2x.jpg 2x" width="1000" height="668" alt="ドラゴンキッチン 益城本店" decoding="async">
+                      </picture>
+                    </figure>
+                  </a>
                   <p class="p-location__shop__text">ドラゴンキッチン 益城本店</p>
                 </div>
               </div>
@@ -1299,15 +1287,14 @@
           </address>
           <div class="p-footer__nav">
             <ul class="p-footer__nav__list">
-              <li class="p-footer__nav__item" lang="en"><a href="index.html" class="p-footer__nav__link"><span class="p-footer__nav__text">Home</span></a></li>
               <li class="p-footer__nav__item" lang="en"><a href="#about" class="p-footer__nav__link"><span class="p-footer__nav__text">About</span></a></li>
               <li class="p-footer__nav__item" lang="en"><a href="#feature" class="p-footer__nav__link"><span class="p-footer__nav__text">Feature</span></a></li>
               <li class="p-footer__nav__item" lang="en"><a href="room__facility.html" class="p-footer__nav__link"><span class="p-footer__nav__text">Room・Facility</span></a></li>
               <li class="p-footer__nav__item" lang="en"><a href="#plan" class="p-footer__nav__link"><span class="p-footer__nav__text">Plan</span></a></li>
-              <li class="p-footer__nav__item" lang="en"><a href="#faq" class="p-footer__nav__link -sm"><span class="p-footer__nav__text">Faq</span></a></li>
-              <li class="p-footer__nav__item" lang="en"><a href="access.html" class="p-footer__nav__link -sm"><span class="p-footer__nav__text">Access</span></a></li>
-              <li class="p-footer__nav__item" lang="en"><a href="PrivacyPolicy.html" class="p-footer__nav__link -sm"><span class="p-footer__nav__text">Privacy Policy</span></a></li>
-              <li class="p-footer__nav__item" lang="en"><a href="contact.html" class="p-footer__nav__link -sm"><span class="p-footer__nav__text">Contact</span></a></li>
+              <li class="p-footer__nav__item" lang="en"><a href="#faq" class="p-footer__nav__link"><span class="p-footer__nav__text -faq">Faq</span></a></li>
+              <li class="p-footer__nav__item" lang="en"><a href="access.html" class="p-footer__nav__link"><span class="p-footer__nav__text">Access</span></a></li>
+              <li class="p-footer__nav__item" lang="en"><a href="PrivacyPolicy.html" class="p-footer__nav__link"><span class="p-footer__nav__text">Privacy Policy</span></a></li>
+              <li class="p-footer__nav__item" lang="en"><a href="contact.html" class="p-footer__nav__link"><span class="p-footer__nav__text">Contact</span></a></li>
             </ul>
             <p class="p-footer__button"><a href="reservation.html" target="_self" class="c-button -common -book -footer">ご予約はこちら</a></p>
           </div>

@@ -18,24 +18,33 @@
   margin: clamp(24 / 16 * 1rem, 1.167rem + 1.67vw, 40 / 16 * 1rem) auto 0;
 
   &.-shareSpace {
-    width: 60.55%;
+    width: 55%;
+    max-width: 300px;
 
     @include mq(lg) {
-      width: 70%;
+      width: 65%;
+    }
+
+    @include mq(xl) {
+      width: 58%;
     }
   }
 
   &.-location {
-    width: 85%;
+    width: 80%;
     max-width: 463px;
 
     @include mq(md) {
-      width: 78.872%;
+      width: 58%;
       max-width: initial;
     }
 
     @include mq(lg) {
-      width: 72%;
+      width: 52%;
+    }
+
+    @include mq(xl) {
+      width: 54%;
     }
   }
 
@@ -55,22 +64,36 @@
   }
 
   &.-access {
-    position: absolute;
-    z-index: 1;
-    top: clamp(2rem, 1.375rem + 3.13vw, 3.875rem);
-    right: 0;
-    left: 0;
-    width: 100%;
-    height: calc(186 / 320 * 100vw); // 画像の高さ / ブラウザ幅 * 100vw
-    margin: auto 0;
-    padding: 0 clamp(10 / 16 * 1rem, 0.333rem + 1.46vw, 24 / 16 * 1rem);
+    // position: absolute;
+    // z-index: 1;
+    // top: clamp(2rem, 1.375rem + 3.13vw, 3.875rem);
+    // right: 0;
+    // left: 0;
+    // width: 100%;
+    // height: calc(186 / 320 * 100vw); // 画像の高さ / ブラウザ幅 * 100vw
+    // margin: auto 0;
+    // padding: 0 clamp(10 / 16 * 1rem, 0.333rem + 1.46vw, 24 / 16 * 1rem);
+    display: none;
 
     @include mq(lg) {
-      height: calc(345 / 1024 * 100vw); // 画像の高さ / ブラウザ幅 * 100vw
+      display: flex;
+      position: absolute;
+      z-index: 1;
+      top: clamp(54 / 16 * 1rem, 1.375rem + 3.13vw, 62 / 16 * 1rem); //view:1024px-1280px
+      right: 0;
+      left: 0;
+      width: 100%;
+      height: calc(314.77 / 1024 * 100vw); // 画像の高さ / ブラウザ幅 * 100vw
+      margin: auto 0;
+      padding: 0 clamp(10 / 16 * 1rem, 0.333rem + 1.46vw, 24 / 16 * 1rem);
     }
 
     @include mq(xl) {
       height: calc(432 / 1280 * 100vw); // 画像の高さ / ブラウザ幅 * 100vw
+    }
+
+    @include mq(xxl) {
+      height: calc(495.22 / 1440 * 100vw); // 画像の高さ / ブラウザ幅 * 100vw
     }
   }
 }
@@ -133,6 +156,7 @@
 .c-swiper__thumbnail {
   &.-access {
     width: 100%;
+    overflow-x: hidden;
   }
 
   &__wrapper {

@@ -46,7 +46,7 @@
                 <span class="u-visuallyHidden">メニューを開閉する</span>
               </span>
             </button>
-            <div id="global-nav" class="p-global-nav -index">
+            <div id="global-nav" class="p-global-nav">
               <div class="p-global-nav__inner">
                 <ul class="p-global-nav__list -lg">
                   <li class="p-global-nav__item"><a href="index.html" class="p-global-nav__link"><span class="p-global-nav__text -en" lang="en">Home</span><span class="p-global-nav__text -ja">トップページ</span></a></li>
@@ -96,7 +96,7 @@
                 <ul class="p-access__index__list">
                   <li class="p-access__index__listItem js-index">
                     <a href="#index1" class="p-access__index__link -airplane">
-                      バスをご利用の場合
+                      バスでのアクセス
                     </a>
                   </li>
                 </ul>
@@ -146,7 +146,7 @@
                 <ul class="p-access__index__list">
                   <li class="p-access__index__listItem js-index">
                     <a href="#index6" class="p-access__index__link -expressBus">
-                      バス停から徒歩の場合
+                      バス停からの道順
                     </a>
                   </li>
                 </ul>
@@ -158,16 +158,16 @@
           <!-- /.l-container -access__index -->
         </aside>
         <div class="l-access__mainContents p-access__mainContents">
-          <section id="index1" class="l-access__airplane p-access__airplane js-content">
-            <div class="p-access__contents__bg">
-              <div class="l-container -access__main">
+          <section id="index1" class="p-access__airplane js-content">
+            <div class="l-container -access__main">
+              <div class="p-access__contents__bg">
                 <h3 class="c-common__title c-common__title__underline js-title__underline -access">
                   <span class="p-access__title__text -lg">飛行機でお越しの方</span>
                   <span class="p-access__title__icon -lg -airplane"><img src="assets/img/access/access_icon_airplane.svg" alt=""></span>
                 </h3>
                 <div class="l-access__contents -bus">
                   <h4 class="p-access__title -md -bus">
-                    <span class="p-access__title__text -md -bus js-title__bg">バスをご利用の場合</span>
+                    <span class="p-access__title__text -md -bus js-title__bg">バスでのアクセス</span>
                   </h4>
                   <div class="p-access__detail">
                     <p class="c-common__title__circle -access">阿蘇くまもと空港&nbsp;4番のりばより</p>
@@ -431,13 +431,13 @@
                 </div>
                 <!-- /.l-access__airplane__bus -->
               </div>
-              <!-- /.l-container -->
+              <!-- /.p-access__contents__bg -->
             </div>
-            <!-- /.p-access__contents__bg -->
+            <!-- /.l-container -->
           </section>
-          <section id="index2" class="l-access__airplane p-access__car js-content" >
-            <div class="p-access__contents__bg">
-              <div class="l-container -access__main">
+          <section id="index2" class="p-access__car js-content" >
+            <div class="l-container -access__main">
+              <div class="p-access__contents__bg">
                 <h3 class="c-common__title c-common__title__underline js-title__underline -access">
                   <span class="p-access__title__text -lg">車でお越しの方</span>
                   <span class="p-access__title__icon -lg -airplane"><img src="assets/img/access/access_icon_car-black.svg" alt=""></span>
@@ -632,7 +632,7 @@
                       <figure class="p-access__parking__img">
                         <picture>
                           <source type="image/webp" srcset="assets/img/access/car/access_parking_sp.webp 1x, assets/img/access/car/access_parking_sp_2x.webp 2x" width="768" height="496" media="(max-width:767px)">
-                          <img src="assets/img/access/car/access_parking_pc.jpg" srcset="assets/img/access/car/access_parking _pc_2x.jpg 2x" width="1000" height="646" alt="民泊ギャラリー鴇より徒歩1分の場所に位置する、お持ち帰り焼き鳥専門店鳥ぼう。最大3台まで駐車可能です。" decoding="async">
+                          <img src="assets/img/access/car/access_parking_pc.jpg" srcset="assets/img/access/car/access_parking_pc_2x.jpg 2x" width="1100" height="711" alt="民泊ギャラリー鴇より徒歩1分の場所に位置する、お持ち帰り焼き鳥専門店鳥ぼう。最大3台まで駐車可能です。" decoding="async">
                         </picture>
                       </figure>
                       <p class="p-access__parking__caption">民泊ギャラリー鴇より徒歩1分。最大3台駐車可能です。</p>
@@ -642,18 +642,18 @@
                 </div>
                 <!-- /.l-access__contents -car -->
               </div>
-              <!-- /.l-container -access__main -->
+              <!-- /.p-access__contents__bg -->
             </div>
-            <!-- /.p-access__contents__bg -->
+            <!-- /.l-container -access__main -->
           </section>
           <section class="l-access__shinkansen p-access__shinkansen">
-            <div class="p-access__contents__bg">
-              <div class="l-container -access__main">
+            <div class="l-container -access__main">
+              <div class="p-access__contents__bg">
                 <h3 class="c-common__title c-common__title__underline js-title__underline -access">
                   <span class="p-access__title__text -lg">新幹線でお越しの方</span>
                   <span class="p-access__title__icon -lg -shinkansen"><img src="assets/img/access/access_icon_shinkansen.svg" alt=""></span>
                 </h3>
-                <div id="index3" class="l-access__contents -bus_direct js-content">
+                <div id="index3" class="l-access__contents p-access__contents -bus_direct js-content">
                   <h4 class="p-access__title -md -bus">
                     <span class="p-access__title__text -md -bus">バスをご利用の場合</span>
                   </h4>
@@ -1155,9 +1155,9 @@
                   <!-- /.p-access__shinkansen__bus -direct-->
                 </div>
                 <!-- /.l-access__contents -bus_direct -->
-                <div id="index4" class="l-access__contents -tram js-content">
+                <div id="index4" class="l-access__contents p-access__contents -tram js-content">
                   <h4 class="p-access__title -md -tram">
-                    <span class="p-access__title__text -md -tram">路面電車＋バスをご利用の場合</span>
+                    <span class="p-access__title__text -md -tram">路面電車＋バスをご利用の<wbr>場合</span>
                   </h4>
                   <div class="p-access__detail">
                     <p class="c-common__title__circle -access">熊本駅前 市電のりば「熊本駅前」<wbr>より</p>
@@ -1822,20 +1822,20 @@
                 </div>
                 <!-- /.l-access__airplane__bus -->
               </div>
-              <!-- /.l-container -->
+              <!-- /.p-access__contents__bg -->
             </div>
-            <!-- /.p-access__contents__bg -->
+             <!-- /.l-container -->
           </section>
           <section id="index6" class="l-access__expressBus p-access__expressBus js-content">
-            <div class="p-access__contents__bg">
-              <div class="l-container -access__main">
+            <div class="l-container -access__main">
+              <div class="p-access__contents__bg">
                 <h3 class="c-common__title c-common__title__underline js-title__underline -access">
                   <span class="p-access__title__text -lg">高速バスでお越しの方</span>
                   <span class="p-access__title__icon -lg -expressBus"><img src="assets/img/access/access_icon_bus-black.svg" alt=""></span>
                 </h3>
                 <div class="l-access__contents -expressBus">
                   <h4 class="p-access__title -md -walk">
-                    <span class="p-access__title__text -md -walk">バス停から徒歩の場合</span>
+                    <span class="p-access__title__text -md -walk">バス停からの道順</span>
                     <!-- <span class="p-access__title__icon -md "><img src="assets/img/access/access_icon_walk-white.svg" alt=""></span> -->
                   </h4>
                   <div class="p-access__detail">
@@ -2082,9 +2082,9 @@
                 </div>
                 <!-- /.l-access__contents -expressBus -->
               </div>
-              <!-- /.l-container -->
+              <!-- /.p-access__contents__bg -->
             </div>
-            <!-- /.p-access__contents__bg -->
+            <!-- /.l-container -->
           </section>
         </div>
         <!-- /.l-access__mainContents -->
@@ -2108,15 +2108,15 @@
           </address>
           <div class="p-footer__nav">
             <ul class="p-footer__nav__list">
-              <li class="p-footer__nav__item" lang="en"><a href="index.html" class="p-footer__nav__link"><span class="p-footer__nav__text">Home</span></a></li>
+              <!-- <li class="p-footer__nav__item" lang="en"><a href="index.html" class="p-footer__nav__link"><span class="p-footer__nav__text">Home</span></a></li> -->
               <li class="p-footer__nav__item" lang="en"><a href="#about" class="p-footer__nav__link"><span class="p-footer__nav__text">About</span></a></li>
               <li class="p-footer__nav__item" lang="en"><a href="#feature" class="p-footer__nav__link"><span class="p-footer__nav__text">Feature</span></a></li>
               <li class="p-footer__nav__item" lang="en"><a href="room__facility.html" class="p-footer__nav__link"><span class="p-footer__nav__text">Room・Facility</span></a></li>
               <li class="p-footer__nav__item" lang="en"><a href="#plan" class="p-footer__nav__link"><span class="p-footer__nav__text">Plan</span></a></li>
-              <li class="p-footer__nav__item" lang="en"><a href="#faq" class="p-footer__nav__link -sm"><span class="p-footer__nav__text">Faq</span></a></li>
-              <li class="p-footer__nav__item" lang="en"><a href="access.html" class="p-footer__nav__link -sm"><span class="p-footer__nav__text">Access</span></a></li>
-              <li class="p-footer__nav__item" lang="en"><a href="PrivacyPolicy.html" class="p-footer__nav__link -sm"><span class="p-footer__nav__text">Privacy Policy</span></a></li>
-              <li class="p-footer__nav__item" lang="en"><a href="contact.html" class="p-footer__nav__link -sm"><span class="p-footer__nav__text">Contact</span></a></li>
+              <li class="p-footer__nav__item" lang="en"><a href="#faq" class="p-footer__nav__link"><span class="p-footer__nav__text">Faq</span></a></li>
+              <li class="p-footer__nav__item" lang="en"><a href="access.html" class="p-footer__nav__link"><span class="p-footer__nav__text">Access</span></a></li>
+              <li class="p-footer__nav__item" lang="en"><a href="PrivacyPolicy.html" class="p-footer__nav__link"><span class="p-footer__nav__text">Privacy Policy</span></a></li>
+              <li class="p-footer__nav__item" lang="en"><a href="contact.html" class="p-footer__nav__link"><span class="p-footer__nav__text">Contact</span></a></li>
             </ul>
             <p class="p-footer__button"><a href="reservation.html" target="_self" class="c-button -common -book -footer">ご予約はこちら</a></p>
           </div>

@@ -46,10 +46,9 @@
                 <span class="u-visuallyHidden">メニューを開閉する</span>
               </span>
             </button>
-              <div id="global-nav" class="p-global-nav -index">
+              <div id="global-nav" class="p-global-nav">
                 <div class="p-global-nav__inner">
                   <ul class="p-global-nav__list -lg">
-                    <li class="p-global-nav__item"><a href="index.html" class="p-global-nav__link"><span class="p-global-nav__text -en" lang="en">Home</span><span class="p-global-nav__text -ja">トップページ</span></a></li>
                     <li class="p-global-nav__item"><a href="/#about" class="p-global-nav__link"><span class="p-global-nav__text -en" lang="en">About</span><span class="p-global-nav__text -ja">民泊&nbsp;ギャラリー鴇について</span></a></li>
                     <li class="p-global-nav__item"><a href="/#feature" class="p-global-nav__link"><span class="p-global-nav__text -en" lang="en">Feature</span><span class="p-global-nav__text -ja">民泊&nbsp;ギャラリー鴇の特徴</span></a></li>
                     <li class="p-global-nav__item"><a href="room__facility.html" class="p-global-nav__link"><span class="p-global-nav__text -en" lang="en">Room・Facility</span><span class="p-global-nav__text -ja">お部屋・設備</span></a></li>
@@ -76,10 +75,6 @@
             <span class="c-common__title__en js-title-lg">Room・Facility</span>
             <span class="c-common__title__ja">お部屋・設備</span>
           </h2>
-          <div class="c-pageHeader__text">
-            <p class="c-pageHeader__sentence">お泊りになる人数の兼ね合いにより、お部屋は当日お越しになってからお選びいただくこともございます。</p>
-          </div>
-          <!-- /.c-pageHeader__text -->
         </div>
         <!-- /.l-container -->
       </div>
@@ -87,16 +82,6 @@
       <section class="l-guestRoom">
         <div class="l-container">
           <h3 class="c-common__title__sideLine" lang="en">Rooms</h3>
-            <div class="p-rooms__header">
-              <div class="p-rooms__caution js-toUp">
-                <ul class="p-rooms__caution__list">
-                  <li class="p-rooms__caution__marker"><span class="p-rooms__caution__text">各寝具のカバーは洗濯の状況で写真と異なる場合がございます。</span></li>
-                  <li class="p-rooms__caution__marker"><span class="p-rooms__caution__text">お部屋には人数分のバスタオルをご用意いたします。お風呂や洗面台をご利用の際にご活用ください。</span></li>
-                </ul>
-              </div>
-              <!-- /.p-rooms__caution -->
-            </div>
-            <!-- /.p-rooms__header -->
           <div class="l-grid__container -rooms">
             <div class="l-rooms -room1 js-toUp">
               <h4 class="c-common__title__circle -rooms" lang="en">Room1</h4>
@@ -259,14 +244,14 @@
                       </ul>
                     </div>
                     <!-- /.p-room1__facility -->
-                  <div class="p-rooms__items c-grid__item -people">
-                    <p class="c-list__label">定員</p>
-                    <ul class="l-grid -house__detail -people">
-                      <li class="p-rooms__item -people">
-                        <p class="p-rooms__itemName">最大3名</p>
-                      </li>
-                    </ul>
-                  </div>
+                    <div class="p-rooms__items c-grid__item -people">
+                      <p class="c-list__label">定員</p>
+                      <ul class="l-grid -house__detail -people">
+                        <li class="p-rooms__item -people">
+                          <p class="p-rooms__itemName">最大3名</p>
+                        </li>
+                      </ul>
+                    </div>
                     <!-- /.p-room1__people -->
                   </div>
                   <!-- /.l-grid__items c-grid__items -rooms p-rooms__grid__items -->
@@ -342,26 +327,25 @@
             <!-- /.l-rooms__room1 -->
           </div>
           <!-- /.p-rooms__wrapper -->
+          <div class="p-rooms__caution -rooms">
+            <div class="p-rooms__request js-toUp">
+              <p class="p-rooms__caution__title">注意事項</p>
+              <ul class="p-rooms__caution__list">
+                <li class="p-rooms__caution__marker"><span class="p-rooms__caution__text">お泊りになる人数の兼ね合いにより、お部屋は当日お越しになってからお選びいただくこともございます。</span></li>
+                <li class="p-rooms__caution__marker"><span class="p-rooms__caution__text">各寝具のカバーは洗濯の状況で写真と異なります。</span></li>
+                <li class="p-rooms__caution__marker"><span class="p-rooms__caution__text">シーズンによって模様替えをするため、ベッドなどの位置が写真と異なる場合がございます。</span></li>
+                <li class="p-rooms__caution__marker"><span class="p-rooms__caution__text">人数分のバスタオルをお部屋にご用意いたします。お風呂や洗面台をご利用の際にご活用ください。</span></li>
+              </ul>
+            </div>
+            <!-- /.p-rooms__caution -->
+          </div>
+          <!-- /.p-rooms__caution -->
         </div>
         <!-- /.l-container -->
       </section>
       <section class="l-shareSpace">
         <div class="l-container">
           <h3 class="c-common__title__sideLine -shareSpace">共有スペース</h3>
-          <div class="p-rooms__header">
-            <div class="p-rooms__text">
-              <p class="p-rooms__sentence">お風呂・トイレ・キッチンは<strong>管理人と共用</strong>になります。</p>
-            </div>
-            <div class="p-rooms__caution -shareSpace">
-              <p class="p-rooms__caution__title">使用上のお願い</p>
-              <ul class="p-rooms__caution__list">
-                <li class="p-rooms__caution__marker"><span class="p-rooms__caution__text">使用したものは元の場所にお戻しください。</span></li>
-                <li class="p-rooms__caution__marker"><span class="p-rooms__caution__text">調理器具 / 食器 / グラス / カトラリーの使用後はご自身で洗い、後片づけをお願いします。</span></li>
-              </ul>
-            </div>
-            <!-- /.p-rooms__caution -->
-          </div>
-          <!-- /.p-shareSpace__header -->
           <div class="l-grid__container -rooms">
             <div class="l-rooms -living js-toUp">
               <h4 class="c-common__title__circle -rooms">リビング</h4>
@@ -400,7 +384,7 @@
                     <div class="p-shareSpace__items c-grid__item -living__Text p-shareSpace__living__texts">
                       <p class="p-shareSpace__living__sentence">＊リビングではパーティーなどのイベントも可能です。<wbr>ご希望の方は管理人にお問い合わせください。</p>
                       <p class="p-shareSpace__living__sentence">＊リビングの使用は<strong>22時まで</strong>とさせていただいております。ご協力お願いいたします。</p>
-                      <p class="p-shareSpace__living__sentence">＊シーズンによって模様替えをするため、家具のレイアウトなどが写真と異なる場合がございます。<wbr>予めご了承ください。</p>
+                      <p class="p-shareSpace__living__sentence">＊シーズンによって模様替えをするため、家具のレイアウトなどが写真と異なる場合がございます。</p>
                     </div>
                     <!-- /.p-shareSpace__items c-grid__item -living__Text  p-shareSpace__living__texts -->
                   </div>
@@ -876,7 +860,21 @@
             </div>
             <!-- /.l-rooms -restRoom -->
           </div>
-        <!-- /.l-grid__container-->
+          <!-- /.l-grid__container-->
+          <div class="p-rooms__caution -shareSpace">
+            <div class="p-rooms__text">
+              <p class="p-rooms__sentence">※お風呂・トイレ・キッチンは<strong>管理人と共用</strong>になります。</p>
+            </div>
+            <div class="p-rooms__request -shareSpace">
+              <p class="p-rooms__caution__title">使用上のお願い</p>
+              <ul class="p-rooms__caution__list">
+                <li class="p-rooms__caution__marker"><span class="p-rooms__caution__text">使用したものは元の場所にお戻しください。</span></li>
+                <li class="p-rooms__caution__marker"><span class="p-rooms__caution__text">調理器具 / 食器 / グラス / カトラリーの使用後はご自身で洗い、後片づけをお願いします。</span></li>
+              </ul>
+            </div>
+            <!-- /.p-rooms__caution -->
+          </div>
+          <!-- /.p-rooms__caution -->
         </div>
         <!-- /.l-container -->
       </section>
@@ -1003,15 +1001,14 @@
           </address>
           <div class="p-footer__nav">
             <ul class="p-footer__nav__list">
-              <li class="p-footer__nav__item" lang="en"><a href="index.html" class="p-footer__nav__link"><span class="p-footer__nav__text">Home</span></a></li>
               <li class="p-footer__nav__item" lang="en"><a href="#about" class="p-footer__nav__link"><span class="p-footer__nav__text">About</span></a></li>
               <li class="p-footer__nav__item" lang="en"><a href="#feature" class="p-footer__nav__link"><span class="p-footer__nav__text">Feature</span></a></li>
               <li class="p-footer__nav__item" lang="en"><a href="room__facility.html" class="p-footer__nav__link"><span class="p-footer__nav__text">Room・Facility</span></a></li>
               <li class="p-footer__nav__item" lang="en"><a href="#plan" class="p-footer__nav__link"><span class="p-footer__nav__text">Plan</span></a></li>
-              <li class="p-footer__nav__item" lang="en"><a href="#faq" class="p-footer__nav__link -sm"><span class="p-footer__nav__text">Faq</span></a></li>
-              <li class="p-footer__nav__item" lang="en"><a href="access.html" class="p-footer__nav__link -sm"><span class="p-footer__nav__text">Access</span></a></li>
-              <li class="p-footer__nav__item" lang="en"><a href="PrivacyPolicy.html" class="p-footer__nav__link -sm"><span class="p-footer__nav__text">Privacy Policy</span></a></li>
-              <li class="p-footer__nav__item" lang="en"><a href="contact.html" class="p-footer__nav__link -sm"><span class="p-footer__nav__text">Contact</span></a></li>
+              <li class="p-footer__nav__item" lang="en"><a href="#faq" class="p-footer__nav__link"><span class="p-footer__nav__text">Faq</span></a></li>
+              <li class="p-footer__nav__item" lang="en"><a href="access.html" class="p-footer__nav__link"><span class="p-footer__nav__text">Access</span></a></li>
+              <li class="p-footer__nav__item" lang="en"><a href="PrivacyPolicy.html" class="p-footer__nav__link"><span class="p-footer__nav__text">Privacy Policy</span></a></li>
+              <li class="p-footer__nav__item" lang="en"><a href="contact.html" class="p-footer__nav__link"><span class="p-footer__nav__text">Contact</span></a></li>
             </ul>
             <p class="p-footer__button"><a href="reservation.html" target="_self" class="c-button -common -book -footer">ご予約はこちら</a></p>
           </div>

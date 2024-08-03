@@ -9,11 +9,7 @@
 /* --price */
 
 .p-plan__price {
-  padding-top: pxToRem(32px);
-
-  @include mq(md) {
-    padding-top: pxToRem(40px);
-  }
+  padding-top: clamp(32 / 16 * 1rem, 1.667rem + 1.67vw, 48 / 16 * 1rem); //view:320-1280px
 
   &__wrap {
     display: flex;
@@ -24,7 +20,7 @@
 
   &__text {
     padding-right: pxToRem(24px);
-    font-size: clamp(14 / 16 * 1rem, 0.792rem + 0.42vw, 18 / 16 * 1rem); //最小：14px 最大：18px viw:320-1280px
+    font-size: clamp(14 / 16 * 1rem, 0.792rem + 0.42vw, 18 / 16 * 1rem); //view:320-1280px
   }
 
   &__person {

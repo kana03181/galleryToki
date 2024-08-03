@@ -17,6 +17,29 @@
     }
   }
 
+  &.-about {
+    @include mq(lg) {
+      display: grid;
+      // grid-template-columns: calc(549 / 1024 * 100vw) calc(400 / 1024 * 100vw);
+      grid-template-columns: calc(549 / 1024 * 100vw) 1fr;
+      grid-template-rows: min-content minmax(min-content, 400px);
+      column-gap: pxToRem(40px);
+      row-gap: pxToRem(32px);
+    }
+
+    @include mq(xl) {
+      grid-template-columns: calc(588 / 1280 * 100vw) calc(500 / 1280 * 100vw);
+      grid-template-rows: min-content minmax(min-content, 367px);
+      column-gap: calc(128 / 1280 * 100vw);
+      row-gap: pxToRem(48px);
+    }
+
+    @include mq(xxl) {
+      grid-template-columns: calc(660 / 1440 * 100vw) calc(552 / 1440 * 100vw);
+      grid-template-rows: min-content minmax(min-content, 367px);
+    }
+  }
+
   &.-plan {
     grid-template-columns: 1fr;
 
@@ -70,6 +93,7 @@
     &.-rooms {
       row-gap: clamp(56 / 16 * 1rem, 2.833rem + 3.33vw, 88 / 16 * 1rem); //viw:320-1280px
       width: 100%;
+      margin-top: clamp(24 / 16 * 1rem, 1rem + 2.5vw, 48 / 16 * 1rem); //viw:320-1280px
 
       @include mq(md) {
         width: 94%;

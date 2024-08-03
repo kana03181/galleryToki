@@ -118,7 +118,6 @@
     background-color: $base-color;
 
     @include mq(md) {
-      // max-width: 691px;
       max-width: 900px;
       margin-left: calc(20 / 768 * 100vw);
       padding: 0;
@@ -139,35 +138,32 @@
     }
   }
 
-  &__header {
+  &__caution {
+    position: relative;
     width: 100%;
     max-width: 900px;
-    margin: clamp(24 / 16 * 1rem, 1.167rem + 1.67vw, 40 / 16 * 1rem) auto
-      clamp(2.5rem, 1.833rem + 3.33vw, 72 / 16 * 1rem); //viw:320-1280px
-  }
+    margin: auto;
 
-  &__text {
-    text-align: center;
-  }
-
-  &__sentence {
-    display: inline-block;
-    color: $caution-text-color;
-    font-size: clamp(16 / 16 * 1rem, 0.943rem + 0.28vw, 18 / 16 * 1rem); //viw:320-1024px
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    line-height: 1.6875;
-    text-align: left;
-  }
-
-  &__caution {
-    padding: clamp(24 / 16 * 1rem, 0.833rem + 3.33vw, 56 / 16 * 1rem) clamp(10 / 16 * 1rem, 3.13vw, 40 / 16 * 1rem)
-      clamp(24 / 16 * 1rem, 0.833rem + 3.33vw, 56 / 16 * 1rem) clamp(10 / 16 * 1rem, 3.13vw, 40 / 16 * 1rem); //viw:320-1280px
-    border-radius: 30px;
-    background-color: $base-color;
+    &.-rooms {
+      padding: clamp(56 / 16 * 1rem, 2.833rem + 3.33vw, 88 / 16 * 1rem) 0
+        clamp(72 / 16 * 1rem, 3.5rem + 5vw, 120 / 16 * 1rem); //viw:320-1280px
+    }
 
     &.-shareSpace {
-      margin-top: pxToRem(32px);
+      padding: clamp(64 / 16 * 1rem, 2.833rem + 5.83vw, 120 / 16 * 1rem) 0
+        clamp(72 / 16 * 1rem, 3.5rem + 5vw, 120 / 16 * 1rem); //viw:320-1280px
+
+      &::before {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: clamp(200 / 16 * 1rem, 8.333rem + 20.83vw, 400 / 16 * 1rem); //viw:320-1280px
+        height: 1px;
+        margin: auto;
+        background-color: $secondary-text-color;
+      }
     }
 
     &__title {
@@ -198,6 +194,31 @@
 
     &__text {
       vertical-align: middle;
+    }
+  }
+
+  &__text {
+    text-align: center;
+  }
+
+  &__sentence {
+    display: inline-block;
+    color: $caution-text-color;
+    font-size: clamp(16 / 16 * 1rem, 0.943rem + 0.28vw, 18 / 16 * 1rem); //viw:320-1024px
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    line-height: 1.6875;
+    text-align: left;
+  }
+
+  &__request {
+    padding: clamp(24 / 16 * 1rem, 0.833rem + 3.33vw, 56 / 16 * 1rem) clamp(10 / 16 * 1rem, 3.13vw, 40 / 16 * 1rem)
+      clamp(24 / 16 * 1rem, 0.833rem + 3.33vw, 56 / 16 * 1rem) clamp(10 / 16 * 1rem, 3.13vw, 40 / 16 * 1rem); //viw:320-1280px
+    border-radius: 30px;
+    background-color: $base-color;
+
+    &.-shareSpace {
+      margin-top: clamp(56 / 16 * 1rem, 2.833rem + 3.33vw, 88 / 16 * 1rem); //viw:320-1280px
     }
   }
 

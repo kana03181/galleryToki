@@ -7,14 +7,25 @@
   letter-spacing: 0.03em;
   text-align: center;
 
+  &.-about {
+    @include mq(lg) {
+      grid-area: 1 / 2 / 2 / 3;
+      align-self: end;
+      margin-top: pxToRem(40px);
+      text-align: left;
+    }
+  }
+
   &__en {
     --h_size: 5px;
     --w_size: 100%;
     display: inline-block;
     position: relative;
     width: fit-content;
+    padding-left: 2px;
     overflow: hidden;
     font-size: clamp(32 / 16 * 1rem, 1.018rem + 4.91vw, 54 / 16 * 1rem);
+    letter-spacing: 0.13em;
     line-height: 1.2;
     vertical-align: top;
 
@@ -34,13 +45,19 @@
         background-color: $main-color;
       }
     }
+
+    &.-faq {
+      text-transform: uppercase;
+    }
   }
 
   &__ja {
     display: block;
     padding-top: clamp(16 / 16 * 1rem, 0.667rem + 1.67vw, 32 / 16 * 1rem);
+    padding-left: 0.08em;
     font-family: "Zen Kaku Gothic Antique", sans-serif;
-    font-size: pxToRem(15px);
+    font-size: clamp(15 / 16 * 1rem, 0.833rem + 0.52vw, 20 / 16 * 1rem);
+    letter-spacing: 0.08em;
     line-height: 1;
   }
 
@@ -121,7 +138,6 @@
     &.-access {
       padding-left: clamp(15 / 16 * 1rem, 0.833rem + 0.52vw, 20 / 16 * 1rem); //viw:320-1280px
       font-size: clamp(16 / 16 * 1rem, 0.958rem + 0.21vw, 18 / 16 * 1rem); //viw:320-1280px
-      // line-height: 0.875;
       word-break: keep-all;
       overflow-wrap: break-word;
 
@@ -152,6 +168,7 @@
 
   &.-access {
     display: flex;
+    flex-direction: row-reverse;
     align-items: center;
     padding-left: clamp(5 / 16 * 1rem, 0.227rem + 0.43vw, 8 / 16 * 1rem);
     column-gap: clamp(5 / 16 * 1rem, 0.227rem + 0.43vw, 8 / 16 * 1rem);

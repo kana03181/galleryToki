@@ -57,7 +57,6 @@
         grid-area: 1 / 2 / 2 / 3;
         align-self: flex-end;
         width: calc(180 / 1024 * 100vw);
-        // width: 100%;
         margin-left: 0;
         justify-self: center;
       }
@@ -69,7 +68,6 @@
 
     &.-button {
       grid-area: 2 / 2 / 3 / 3;
-      // width: 50%;
       width: 88.466%;
       max-width: 140px;
 
@@ -602,15 +600,6 @@
     &.-mirror3 {
       grid-area: 3 / 2 / 4 / 3;
     }
-
-    //access
-    // &.-access__index {
-    //   grid-area: 1 / 1 / 4 / 2;
-    // }
-
-    // &.-access__mainContents {
-    //   grid-area: 1 / 2 / 4 / 4;
-    // }
   }
 }
 
@@ -624,10 +613,6 @@
 
 .c-grid__item.-plan + .c-grid__item.-plan {
   margin-top: clamp(72 / 16 * 1rem, 4.045rem + 2.28vw, 88 / 16 * 1rem); //viw:320-1023px
-
-  // @include mq(md) {
-  //   margin-top: pxToRem(88px);
-  // }
 
   @include mq(lg) {
     margin-top: 0;

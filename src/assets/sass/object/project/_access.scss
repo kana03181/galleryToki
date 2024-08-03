@@ -13,12 +13,15 @@
 
 .p-access__swiper {
   width: 100%;
-  overflow: hidden;
+
+  @include mq(lg) {
+    overflow-x: hidden;
+  }
 }
 
 .p-access__swiper__wrapper {
   position: relative;
-  padding-top: clamp(32 / 16 * 1rem, 1.375rem + 3.13vw, 62 / 16 * 1rem); //viw:320-1280px
+  padding-top: clamp(32 / 16 * 1rem, 1.375rem + 3.13vw, 62 / 16 * 1rem); //view:320-1280px
 }
 
 .p-access__swiper__slideImg {
@@ -27,16 +30,23 @@
   aspect-ratio: 288 / 186;
 
   @include mq(lg) {
-    aspect-ratio: 673 / 432;
+    aspect-ratio: 656 / 432;
   }
 }
 
 .p-access__swiper__slideImg__text {
-  padding-top: clamp(16 / 16 * 1rem, 0.833rem + 0.83vw, 24 / 16 * 1rem); //viw:320-1280px
+  padding: clamp(16 / 16 * 1rem, 0.833rem + 0.83vw, 24 / 16 * 1rem) pxToRem(10px) 0; //viw:320-1280px
+  transition: opacity 0.3s var(--ease6);
+  opacity: 0;
   font-size: clamp(15 / 16 * 1rem, 0.917rem + 0.1vw, 16 / 16 * 1rem); //viw:320-1280px
   font-weight: 500;
   letter-spacing: 0.08em;
   line-height: 1.6875;
+}
+
+.swiper-slide-active > .p-access__swiper__slideImg__text {
+  transition: opacity 0.3s var(--ease6);
+  opacity: 1;
 }
 
 .p-access__swiper img {
@@ -49,27 +59,31 @@
   &__wrapper {
     @include mq(lg) {
       display: flex;
-      // margin-bottom: pxToRem(140px);
+      justify-content: space-between;
     }
   }
 
   &__index {
     @include mq(lg) {
       position: sticky;
-      top: 0;
-      width: calc(386 / 1024 * 100%);
+      bottom: 0;
+      align-self: flex-end;
+      width: calc(calc(100% - 57%) - 5%);
       height: 100%;
+      min-height: 163px;
+      margin-left: calc(50% - 50vw);
       border-radius: 0 pxToRem(10px) 0 0;
-      background-color: $background-color-index;
     }
 
     @include mq(xl) {
-      width: calc(444 / 1280 * 100%);
+      width: 34.202%;
+      max-width: 400px;
     }
 
     &__wrapper {
       display: flex;
       flex-direction: column;
+      width: 100%;
       max-width: 900px;
       margin: auto;
       padding: clamp(40 / 16 * 1rem, 2.167rem + 1.67vw, 56 / 16 * 1rem) 0; //viw:320-1280px
@@ -78,10 +92,11 @@
       row-gap: clamp(24 / 16 * 1rem, 1.167rem + 1.67vw, 40 / 16 * 1rem); //viw:320-1280px
 
       @include mq(lg) {
-        padding: clamp(40 / 16 * 1rem, 2.167rem + 1.67vw, 56 / 16 * 1rem) pxToRem(32px) calc(100 / 1024 * 100vw)
+        margin: 0;
+        padding: clamp(40 / 16 * 1rem, 2.167rem + 1.67vw, 56 / 16 * 1rem) pxToRem(66px)
+          clamp(40 / 16 * 1rem, 2.167rem + 1.67vw, 56 / 16 * 1rem)
           clamp(50 / 16 * 1rem, -0.375rem + 5.47vw, 64 / 16 * 1rem); //viw:1024-1280px
-        border-radius: 0;
-        background-color: transparent;
+        border-radius: 0 pxToRem(30px) pxToRem(15px) 0;
       }
     }
 
@@ -91,7 +106,7 @@
       transition: var(--duration3) var(--ease6);
       transition-property: color;
       color: $fifth-text-color;
-      font-size: clamp(14 / 16 * 1rem, 0.792rem + 0.42vw, 18 / 16 * 1rem); //viw:320-1280px
+      font-size: clamp(14 / 16 * 1rem, 0.833rem + 0.21vw, 16 / 16 * 1rem); //viw:320-1280px
       font-weight: 500;
       letter-spacing: 0.08em;
       line-height: 1.2;
@@ -100,31 +115,90 @@
         content: "";
         display: block;
         position: absolute;
-        top: 50%;
-        right: -18px;
-        width: clamp(14 / 16 * 1rem, 0.833rem + 0.21vw, 16 / 16 * 1rem);
-        height: clamp(14 / 16 * 1rem, 0.833rem + 0.21vw, 16 / 16 * 1rem);
+        top: 9px;
+        width: 14.1px;
+        height: 14.1px;
         margin: auto;
         transition: var(--duration2) var(--ease6);
         transition-property: rotate;
         background-image: url(../../../../assets/img/access/access_icon_allow.svg);
         background-repeat: no-repeat;
         background-position: center;
-        background-size: 100% 100%;
+        background-size: pxToRem(12px);
         rotate: 90deg;
         translate: 0 -50%;
 
         @include mq(md) {
-          top: 56%;
-          right: -21px;
-          translate: 0 -56%;
+          top: 10px;
         }
 
         @include mq(lg) {
-          // top: 60%;
-          // translate: 0 -60%;
-          background-size: 100%;
+          background-size: pxToRem(14px);
           line-height: 1;
+        }
+      }
+
+      &.-airplane {
+        &::after {
+          right: -18px;
+
+          @include mq(md) {
+            right: -20px;
+          }
+        }
+      }
+
+      &.-car {
+        &::after {
+          right: -16px;
+
+          @include mq(md) {
+            right: -19px;
+          }
+        }
+      }
+
+      &.-bus_direct {
+        &::after {
+          right: -18px;
+
+          @include mq(md) {
+            right: -21px;
+          }
+        }
+      }
+
+      &.-tram {
+        &::after {
+          right: -18px;
+
+          @include mq(md) {
+            right: -21px;
+          }
+        }
+      }
+
+      &.-train {
+        &::after {
+          right: -19px;
+
+          @include mq(md) {
+            right: -21px;
+          }
+
+          @include mq(lg) {
+            right: -20px;
+          }
+        }
+      }
+
+      &.-expressBus {
+        &::after {
+          right: -18px;
+
+          @include mq(md) {
+            right: -21px;
+          }
         }
       }
 
@@ -141,57 +215,42 @@
           }
         }
       }
-
-      // &.-tram {
-      //   &::before {
-      //     right: -14.5px;
-      //   }
-      // }
-
-      // &.-train {
-      //   &::before {
-      //     right: -14.5px;
-      //   }
-      // }
-
-      // &.-expressBus {
-      //   &::after {
-      //     @include mq(md) {
-      //       top: 55%;
-      //       translate: 0 -55%;
-      //     }
-      //   }
-      // }
     }
   }
 
   &__mainContents {
     display: flex;
     flex-direction: column;
-    row-gap: clamp(128 / 16 * 1rem, 4.331rem + 18.34vw, 210 / 16 * 1rem); //viw:320-767px
-
-    @include mq(md) {
-      row-gap: pxToRem(210px);
-    }
+    row-gap: clamp(64 / 16 * 1rem, 1.946rem + 10.27vw, 110 / 16 * 1rem); //viw:320-767px
 
     @include mq(lg) {
-      width: calc(639 / 1024 * 100%);
+      width: calc(calc(100% - 43%) + 7%);
     }
 
     @include mq(xl) {
-      width: calc(836 / 1280 * 100%);
+      width: 66.666666%;
+      margin-bottom: pxToRem(140px);
     }
   }
 
   &__swipers__wrapper {
     display: flex;
     flex-direction: column;
-    overflow-x: hidden;
     row-gap: clamp(16 / 16 * 1rem, 0.286rem + 3.57vw, 32 / 16 * 1rem);
   }
 
   &__mainSlide {
     position: relative;
+    width: 100vw;
+    margin-right: calc(50% - 50vw);
+    margin-left: calc(50% - 50vw);
+    overflow: hidden;
+
+    @include mq(lg) {
+      width: 100%;
+      margin-right: initial;
+      margin-left: initial;
+    }
   }
 }
 
@@ -210,68 +269,68 @@
 
 .p-access__index__title__text {
   position: relative;
-  font-size: clamp(18 / 16 * 1rem, 1rem + 0.63vw, 24 / 16 * 1rem); //viw:320-1280px
+  font-size: clamp(18 / 16 * 1rem, 1.042rem + 0.42vw, 22 / 16 * 1rem); //viw:320-1280px
   font-weight: 500;
   letter-spacing: 0.08em;
 
-  &::after {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 50%;
-    right: 0;
-    width: clamp(23 / 16 * 1rem, 1.409rem + 0.14vw, 24 / 16 * 1rem); //viw:320-1024px
-    transform: translateY(-50%);
-    transform: translateY(-50%);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100%;
-  }
+  // &::after {
+  //   content: "";
+  //   display: block;
+  //   position: absolute;
+  //   top: 50%;
+  //   left: 0;
+  //   width: clamp(23 / 16 * 1rem, 1.409rem + 0.14vw, 24 / 16 * 1rem); //viw:320-1024px
+  //   transform: translateY(-50%);
+  //   transform: translateY(-50%);
+  //   background-repeat: no-repeat;
+  //   background-position: center;
+  //   background-size: 100%;
+  // }
 
-  &.-airplane {
-    padding-right: clamp(23 / 16 * 1rem, 1.313rem + 0.63vw, 29 / 16 * 1rem);
+  // &.-airplane {
+  //   padding-left: clamp(23 / 16 * 1rem, 1.313rem + 0.63vw, 29 / 16 * 1rem);
 
-    &::after {
-      width: clamp(18 / 16 * 1rem, 1rem + 0.63vw, 24 / 16 * 1rem); //viw:320-1280px
-      height: clamp(14 / 16 * 1rem, 0.813rem + 0.31vw, 17 / 16 * 1rem); //viw:320-1280px
-      background-image: url(../../../../assets/img/access/access_icon_airplane.svg);
-    }
-  }
+  //   &::after {
+  //     width: clamp(18 / 16 * 1rem, 1rem + 0.63vw, 24 / 16 * 1rem); //viw:320-1280px
+  //     height: clamp(14 / 16 * 1rem, 0.813rem + 0.31vw, 17 / 16 * 1rem); //viw:320-1280px
+  //     background-image: url(../../../../assets/img/access/access_icon_airplane.svg);
+  //   }
+  // }
 
-  &.-car {
-    padding-right: clamp(23 / 16 * 1rem, 1.25rem + 0.94vw, 32 / 16 * 1rem);
-    &::after {
-      top: 56%;
-      width: clamp(20 / 16 * 1rem, 1.125rem + 0.63vw, 26 / 16 * 1rem); //viw:320-1280px
-      height: clamp(12 / 16 * 1rem, 0.571rem + 0.89vw, 16 / 16 * 1rem); //viw:320-1280px
-      background-image: url(../../../../assets/img/access/access_icon_car-black.svg);
+  // &.-car {
+  //   padding-left: clamp(23 / 16 * 1rem, 1.25rem + 0.94vw, 32 / 16 * 1rem);
+  //   &::after {
+  //     top: 56%;
+  //     width: clamp(20 / 16 * 1rem, 1.125rem + 0.63vw, 26 / 16 * 1rem); //viw:320-1280px
+  //     height: clamp(12 / 16 * 1rem, 0.571rem + 0.89vw, 16 / 16 * 1rem); //viw:320-1280px
+  //     background-image: url(../../../../assets/img/access/access_icon_car-black.svg);
 
-      @include mq(md) {
-        top: 54%;
-      }
-    }
-  }
+  //     @include mq(md) {
+  //       top: 54%;
+  //     }
+  //   }
+  // }
 
-  &.-shinkansen {
-    padding-right: clamp(20 / 16 * 1rem, 1.063rem + 0.94vw, 29 / 16 * 1rem); //viw:320-1280px
+  // &.-shinkansen {
+  //   padding-left: clamp(20 / 16 * 1rem, 1.063rem + 0.94vw, 29 / 16 * 1rem); //viw:320-1280px
 
-    &::after {
-      top: 57%;
-      width: clamp(18 / 16 * 1rem, 1rem + 0.63vw, 24 / 16 * 1rem); //viw:320-1280px
-      height: clamp(13 / 16 * 1rem, 0.708rem + 0.52vw, 18 / 16 * 1rem);
-      background-image: url(../../../../assets/img/access/access_icon_shinkansen.svg);
-    }
-  }
+  //   &::after {
+  //     top: 57%;
+  //     width: clamp(18 / 16 * 1rem, 1rem + 0.63vw, 24 / 16 * 1rem); //viw:320-1280px
+  //     height: clamp(13 / 16 * 1rem, 0.708rem + 0.52vw, 18 / 16 * 1rem);
+  //     background-image: url(../../../../assets/img/access/access_icon_shinkansen.svg);
+  //   }
+  // }
 
-  &.-expressBus {
-    padding-right: clamp(23 / 16 * 1rem, 1.313rem + 0.63vw, 29 / 16 * 1rem);
-    &::after {
-      top: 57%;
-      width: clamp(18 / 16 * 1rem, 1rem + 0.63vw, 24 / 16 * 1rem); //viw:320-1024px
-      height: clamp(10 / 16 * 1rem, 0.542rem + 0.42vw, 14 / 16 * 1rem);
-      background-image: url(../../../../assets/img/access/access_icon_bus-black.svg);
-    }
-  }
+  //   &.-expressBus {
+  //     padding-left: clamp(23 / 16 * 1rem, 1.313rem + 0.63vw, 29 / 16 * 1rem);
+  //     &::after {
+  //       top: 57%;
+  //       width: clamp(18 / 16 * 1rem, 1rem + 0.63vw, 24 / 16 * 1rem); //viw:320-1024px
+  //       height: clamp(10 / 16 * 1rem, 0.542rem + 0.42vw, 14 / 16 * 1rem);
+  //       background-image: url(../../../../assets/img/access/access_icon_bus-black.svg);
+  //     }
+  //   }
 }
 
 .p-access__index__list {
@@ -302,56 +361,53 @@
 
 .p-access__contents__bg {
   position: relative;
+  width: 100%;
+  padding: clamp(40 / 16 * 1rem, 1.071rem + 7.14vw, 72 / 16 * 1rem) 0
+    clamp(56 / 16 * 1rem, 2.071rem + 7.14vw, 88 / 16 * 1rem);
 
-  &::before {
+  @include mq(lg) {
+    padding: 72px 56px 88px;
+  }
+
+  &::after {
     content: "";
     position: absolute;
     z-index: -1;
-    top: clamp(68 / 16 * 1rem, 2.42rem + 9.15vw, 109 / 16 * 1rem); //viw:320-768px
+    top: 0;
     left: 0;
     width: 100vw;
-    height: 99.9033%;
-    margin: 0 calc(50% - 50vw);
+    height: 100%;
+    margin-right: calc(50% - 50vw);
+    margin-left: calc(50% - 50vw);
     background-color: $background-color;
 
-    @include mq(md) {
-      top: calc(109 / 768 * 100vw);
-    }
-
     @include mq(lg) {
-      top: calc(109 / 1024 * 100vw);
       width: 100%;
-      margin: 0;
-    }
-
-    @include mq(xl) {
-      top: calc(109 / 1280 * 100vw);
-      height: 100.0184%;
-    }
-
-    @include mq(xxl) {
-      top: calc(109 / 1440 * 100vw);
+      margin-right: 0;
+      margin-left: 0;
+      border-radius: 30px;
     }
   }
 }
 
-.p-access__expressBus .p-access__contents__bg {
-  padding-bottom: clamp(110 / 16 * 1rem, 5.533rem + 6.71vw, 140 / 16 * 1rem); //viw:320-767px
+// .p-access__mainContents section:nth-of-type(odd) .p-access__contents__bg {
+//   background-color: $background-color;
+// }
 
-  @include mq(md) {
-    padding-bottom: calc(140 / 768 * 100vw);
-  }
+.p-access__contents {
+  position: relative;
+  padding-bottom: clamp(64 / 16 * 1rem, 3.5rem + 2.5vw, 88 / 16 * 1rem); //viw:320-1280px
 
-  @include mq(lg) {
-    padding-bottom: calc(140 / 1024 * 100vw);
-  }
-
-  @include mq(xl) {
-    padding-bottom: calc(140 / 1280 * 100vw);
-  }
-
-  @include mq(xxl) {
-    padding-bottom: calc(140 / 1440 * 100vw);
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: clamp(200 / 16 * 1rem, 10.417rem + 10.42vw, 300 / 16 * 1rem); //viw:320-1280px
+    height: 1px;
+    margin: auto;
+    background-color: $quaternary-text-color;
   }
 }
 
@@ -360,6 +416,9 @@
     display: flex;
     width: fit-content;
     margin-left: calc(50% - 50vw);
+    padding: clamp(10 / 16 * 1rem, 0.5rem + 0.63vw, 16 / 16 * 1rem)
+      clamp(16 / 16 * 1rem, 0.917rem + 0.42vw, 20 / 16 * 1rem) clamp(10 / 16 * 1rem, 0.5rem + 0.63vw, 16 / 16 * 1rem)
+      clamp(16 / 16 * 1rem, 0.917rem + 0.42vw, 20 / 16 * 1rem); //viw:320-1280px
     border-radius: 0 pxToRem(20px) pxToRem(20px) 0;
     background-color: $main-color;
     color: $base-color;
@@ -368,43 +427,19 @@
       margin-left: 0;
     }
 
-    &.-bus {
-      padding: clamp(10 / 16 * 1rem, 0.5rem + 0.63vw, 16 / 16 * 1rem)
-        clamp(46 / 16 * 1rem, 2.625rem + 1.25vw, 58 / 16 * 1rem) clamp(10 / 16 * 1rem, 0.5rem + 0.63vw, 16 / 16 * 1rem)
-        clamp(16 / 16 * 1rem, 0.917rem + 0.42vw, 20 / 16 * 1rem); //viw:320-1280px
-    }
-
-    &.-car {
-      padding: clamp(10 / 16 * 1rem, 0.5rem + 0.63vw, 16 / 16 * 1rem)
-        clamp(45 / 16 * 1rem, 2.583rem + 1.15vw, 56 / 16 * 1rem) clamp(10 / 16 * 1rem, 0.5rem + 0.63vw, 16 / 16 * 1rem)
-        clamp(16 / 16 * 1rem, 0.917rem + 0.42vw, 20 / 16 * 1rem); //viw:320-1280px
-    }
-
     &.-tram {
       @include mq(xxs) {
-        padding: clamp(10 / 16 * 1rem, 0.5rem + 0.63vw, 16 / 16 * 1rem)
-          clamp(16 / 16 * 1rem, 0.917rem + 0.42vw, 20 / 16 * 1rem) pxToRem(35px)
+        padding: clamp(10 / 16 * 1rem, 0.5rem + 0.63vw, 16 / 16 * 1rem) 0
+          clamp(10 / 16 * 1rem, 0.5rem + 0.63vw, 16 / 16 * 1rem)
           clamp(16 / 16 * 1rem, 0.917rem + 0.42vw, 20 / 16 * 1rem); //viw:320-1280px
       }
 
       @include mq(xs) {
         padding: clamp(10 / 16 * 1rem, 0.5rem + 0.63vw, 16 / 16 * 1rem)
-          clamp(45 / 16 * 1rem, 2.397rem + 1.85vw, 62 / 16 * 1rem) //右のみviw:360-1280px
+          clamp(16 / 16 * 1rem, 0.917rem + 0.42vw, 20 / 16 * 1rem)
           clamp(10 / 16 * 1rem, 0.5rem + 0.63vw, 16 / 16 * 1rem)
           clamp(16 / 16 * 1rem, 0.917rem + 0.42vw, 20 / 16 * 1rem); //viw:320-1280px
       }
-    }
-
-    &.-train {
-      padding: clamp(10 / 16 * 1rem, 0.5rem + 0.63vw, 16 / 16 * 1rem)
-        clamp(43 / 16 * 1rem, 2.292rem + 1.98vw, 62 / 16 * 1rem) clamp(10 / 16 * 1rem, 0.5rem + 0.63vw, 16 / 16 * 1rem)
-        clamp(16 / 16 * 1rem, 0.917rem + 0.42vw, 20 / 16 * 1rem); //viw:320-1280px
-    }
-
-    &.-walk {
-      padding: clamp(10 / 16 * 1rem, 0.5rem + 0.63vw, 16 / 16 * 1rem)
-        clamp(34 / 16 * 1rem, 1.792rem + 1.67vw, 50 / 16 * 1rem) clamp(10 / 16 * 1rem, 0.5rem + 0.63vw, 16 / 16 * 1rem)
-        clamp(16 / 16 * 1rem, 0.917rem + 0.42vw, 20 / 16 * 1rem); //viw:320-1280px
     }
   }
 }
@@ -414,30 +449,50 @@
   position: relative;
   font-weight: 500;
   letter-spacing: 0.08em;
-  line-height: 1;
+  line-height: 1.2;
 
   &.-md {
-    font-size: clamp(18 / 16 * 1rem, 0.841rem + 1.42vw, 28 / 16 * 1rem); //viw:320-1024px
+    font-size: clamp(18 / 16 * 1rem, 0.917rem + 1.04vw, 28 / 16 * 1rem); //viw:320-1280px
 
     &::after {
       content: "";
       display: block;
       position: absolute;
-      top: 45%;
-      right: -30px;
+      left: 0;
       width: clamp(23 / 16 * 1rem, 1.292rem + 0.73vw, 30 / 16 * 1rem); //viw:320-1280px
+      height: 100%;
       transform: translateY(-50%);
       background-repeat: no-repeat;
       background-position: center;
       background-size: 100%;
+    }
 
-      @include mq(md) {
-        right: -34px;
+    &.-bus {
+      padding-left: clamp(28 / 16 * 1rem, 1.542rem + 1.04vw, 38 / 16 * 1rem); //viw:320-1280px
+    }
+
+    &.-car {
+      padding-left: clamp(29 / 16 * 1rem, 1.625rem + 0.94vw, 38 / 16 * 1rem); //viw:320-1280px
+    }
+
+    &.-tram {
+      padding-left: clamp(26 / 16 * 1rem, 1.396rem + 1.15vw, 37 / 16 * 1rem); //viw:320-1280px
+
+      @include mq(xxs) {
+        width: 274px;
       }
-      @include mq(lg) {
-        top: 51%;
-        right: -38px;
+
+      @include mq(xs) {
+        width: initial;
       }
+    }
+
+    &.-train {
+      padding-left: clamp(26 / 16 * 1rem, 1.396rem + 1.15vw, 37 / 16 * 1rem); //viw:320-1280px
+    }
+
+    &.-walk {
+      padding-left: clamp(18 / 16 * 1rem, 0.958rem + 0.83vw, 26 / 16 * 1rem); //viw:320-1280px
     }
   }
 
@@ -447,26 +502,18 @@
 
   &.-bus {
     &::after {
-      top: 58%;
-      height: clamp(14 / 16 * 1rem, 0.813rem + 0.31vw, 17 / 16 * 1rem);
+      top: 55%;
+
       background-image: url(../../../../assets/img/access/access_icon_bus-white.svg);
-
-      @include mq(md) {
-        top: 58.5%;
-      }
-
-      @include mq(lg) {
-        top: 60%;
-      }
     }
   }
 
   &.-car {
     &::after {
-      top: 56.5%;
+      top: 57%;
       right: -27px;
       width: clamp(24 / 16 * 1rem, 1.375rem + 0.63vw, 30 / 16 * 1rem);
-      height: clamp(12 / 16 * 1rem, 0.688rem + 0.31vw, 24 / 16 * 1rem);
+      height: 100%;
       background-image: url(../../../../assets/img/access/access_icon_car-white.svg);
 
       @include mq(lg) {
@@ -477,8 +524,9 @@
 
   &.-tram {
     @include mq(xxs) {
-      flex-shrink: 0;
       line-height: 1.4;
+      word-break: keep-all;
+      overflow-wrap: break-word;
     }
 
     @include mq(xs) {
@@ -487,48 +535,43 @@
 
     &::after {
       width: clamp(21 / 16 * 1rem, 1.146rem + 0.83vw, 29 / 16 * 1rem); //viw:320-1280px
-      height: clamp(21 / 16 * 1rem, 1.146rem + 0.83vw, 29 / 16 * 1rem); //viw:320-1280px
       background-image: url(../../../../assets/img/access/access_icon_tram-white.svg);
 
       @include mq(xxs) {
-        top: initial;
-        right: initial;
-        bottom: -35px;
+        top: 27%;
       }
 
       @include mq(xs) {
-        top: 53%;
-        right: -27px;
-        bottom: initial;
+        top: 50%;
+      }
+
+      @include mq(xl) {
+        top: 48%;
       }
     }
   }
 
   &.-train {
     &::after {
-      top: 53%;
+      top: 50%;
       right: -27px;
       width: clamp(21 / 16 * 1rem, 1.146rem + 0.83vw, 29 / 16 * 1rem); //viw:320-1280px
-      height: clamp(20 / 16 * 1rem, 1.042rem + 1.04vw, 30 / 16 * 1rem);
       background-image: url(../../../../assets/img/access/access_icon_train-white.svg);
+    }
+
+    @include mq(xl) {
+      top: 48%;
     }
   }
 
   &.-walk {
     &::after {
-      top: 53%;
-      right: -18px;
+      top: 48%;
       width: clamp(13 / 16 * 1rem, 0.708rem + 0.52vw, 18 / 16 * 1rem); //viw:320-1280px
-      height: clamp(19 / 16 * 1rem, 1rem + 0.94vw, 28 / 16 * 1rem);
       background-image: url(../../../../assets/img/access/access_icon_walk-white.svg);
 
       @include mq(md) {
-        right: -22px;
-      }
-
-      @include mq(lg) {
-        top: 58%;
-        right: -26px;
+        top: 52%;
       }
     }
   }
@@ -541,15 +584,13 @@
     width: clamp(26 / 16 * 1rem, 1.455rem + 0.85vw, 32 / 16 * 1rem); //viw:320-1024px
 
     &.-airplane {
-      & img {
-        @include mq(lg) {
-          padding-top: pxToRem(5px);
-        }
+      @include mq(lg) {
+        padding-top: pxToRem(5px);
       }
     }
 
     &.-shinkansen {
-      padding-top: clamp(5 / 16 * 1rem, 0.25rem + 0.31vw, 8 / 16 * 1rem);
+      padding-top: clamp(2 / 16 * 1rem, 0.04rem + 0.43vw, 5 / 16 * 1rem); //viw:320-1024px
     }
 
     &.-expressBus {

@@ -18,8 +18,8 @@
 
   @include mq(lg) {
     &.-access__main {
-      width: calc(673 / 1280 * 100vw);
-      max-width: 1000px;
+      width: 100%;
+      // max-width: 1000px;
       margin: auto;
     }
   }

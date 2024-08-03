@@ -35,10 +35,6 @@
     transition: none;
     opacity: 1;
     background-color: transparent;
-
-    &.-index {
-      column-gap: 0;
-    }
   }
 }
 
@@ -72,6 +68,7 @@
   &.-lg {
     @include mq(lg) {
       row-gap: pxToRem(8px);
+      justify-content: flex-start;
     }
     @include mq(xl) {
       row-gap: 0;
@@ -94,7 +91,7 @@
 
   @include mq(lg) {
     display: grid;
-    grid-template-columns: repeat(2, calc(274 / 1024 * 100vw));
+    grid-template-columns: repeat(2, calc(292 / 1024 * 100vw));
     grid-template-rows: 1fr;
     justify-content: space-between;
     width: calc(744 / 1024 * 100vw);
@@ -106,12 +103,7 @@
     display: flex;
     align-items: center;
     width: initial;
-    margin-right: pxToRem(32px);
     padding: 0;
-
-    &.-index {
-      margin-right: 0;
-    }
   }
 }
 
@@ -124,6 +116,7 @@
   transition: color var(--duration2) var(--ease2);
   font-size: clamp(28 / 16 * 1rem, 1.667rem + 0.42vw, 32 / 16 * 1rem); //320-1279px
   font-weight: 700;
+  letter-spacing: 0.12em;
 
   @include mq(xl) {
     display: inline-block;
@@ -199,4 +192,8 @@
       opacity: 1;
     }
   }
+}
+
+.p-global-nav__link.-faq > .p-global-nav__text {
+  text-transform: uppercase;
 }

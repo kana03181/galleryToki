@@ -93,10 +93,11 @@ const breakpoints = {
 
   access_main: {
     768: {
-      spaceBetween: 180,
+      spaceBetween: 24,
     },
     1024: {
       spaceBetween: 40,
+      slidesPerView: 1,
     },
   },
 
@@ -354,6 +355,9 @@ createThumbnailSwiper(".p-rooms__swiper.-kitchen", ".c-swiper__thumbnail.-kitche
 // */
 createThumbnailSwiper(".p-access__swiper.-airplane__bus", ".c-swiper__thumbnail.-airplane__bus", {
   mainOptions: {
+    slidesPerView: 1.15,
+    spaceBetween: 16,
+    centeredSlides: true,
     breakpoints: breakpoints.access_main,
     navigation: {
       nextEl: ".c-swiper__button__next.-airplane__bus",
@@ -375,6 +379,9 @@ createThumbnailSwiper(".p-access__swiper.-airplane__bus", ".c-swiper__thumbnail.
 // */
 createThumbnailSwiper(".p-access__swiper.-airplane__car", ".c-swiper__thumbnail.-airplane__car", {
   mainOptions: {
+    slidesPerView: 1.15,
+    spaceBetween: 16,
+    centeredSlides: true,
     breakpoints: breakpoints.access_main,
     navigation: {
       nextEl: ".c-swiper__button__next.-airplane__car",
@@ -396,6 +403,9 @@ createThumbnailSwiper(".p-access__swiper.-airplane__car", ".c-swiper__thumbnail.
 // */
 createThumbnailSwiper(".p-access__swiper.-shinkansen__bus__direct", ".c-swiper__thumbnail.-shinkansen__bus__direct", {
   mainOptions: {
+    slidesPerView: 1.15,
+    spaceBetween: 16,
+    centeredSlides: true,
     breakpoints: breakpoints.access_main,
     navigation: {
       nextEl: ".c-swiper__button__next.-shinkansen__bus__direct",
@@ -420,6 +430,9 @@ createThumbnailSwiper(
   ".c-swiper__thumbnail.-shinkansen__bus__transfer",
   {
     mainOptions: {
+      slidesPerView: 1.15,
+      spaceBetween: 16,
+      centeredSlides: true,
       breakpoints: breakpoints.access_main,
       navigation: {
         nextEl: ".c-swiper__button__next.-shinkansen__bus__transfer",
@@ -442,6 +455,9 @@ createThumbnailSwiper(
 // */
 createThumbnailSwiper(".p-access__swiper.-shinkansen__tram", ".c-swiper__thumbnail.-shinkansen__tram", {
   mainOptions: {
+    slidesPerView: 1.15,
+    spaceBetween: 16,
+    centeredSlides: true,
     breakpoints: breakpoints.access_main,
     navigation: {
       nextEl: ".c-swiper__button__next.-shinkansen__tram",
@@ -464,6 +480,9 @@ createThumbnailSwiper(".p-access__swiper.-shinkansen__tram", ".c-swiper__thumbna
 
 createThumbnailSwiper(".p-access__swiper.-shinkansen__train", ".c-swiper__thumbnail.-shinkansen__train", {
   mainOptions: {
+    slidesPerView: 1.15,
+    spaceBetween: 16,
+    centeredSlides: true,
     breakpoints: breakpoints.access_main,
     navigation: {
       nextEl: ".c-swiper__button__next.-shinkansen__train",
@@ -486,6 +505,9 @@ createThumbnailSwiper(".p-access__swiper.-shinkansen__train", ".c-swiper__thumbn
 
 createThumbnailSwiper(".p-access__swiper.-expressBus", ".c-swiper__thumbnail.-expressBus", {
   mainOptions: {
+    slidesPerView: 1.15,
+    spaceBetween: 16,
+    centeredSlides: true,
     breakpoints: breakpoints.access_main,
     navigation: {
       nextEl: ".c-swiper__button__next.-expressBus",

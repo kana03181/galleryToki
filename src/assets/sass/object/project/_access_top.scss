@@ -12,10 +12,10 @@
 
 .p-access__map {
   display: block;
-  margin: clamp(32 / 16 * 1rem, 1.833rem + 0.83vw, 64 / 16 * 1rem) auto
-    clamp(32 / 16 * 1rem, 2rem + 2.5vw, 64 / 16 * 1rem);
-  aspect-ratio: 288 / 195;
+  margin: 0 auto clamp(32 / 16 * 1rem, 2rem + 2.5vw, 64 / 16 * 1rem);
+  padding-top: clamp(32 / 16 * 1rem, 1.667rem + 1.67vw, 48 / 16 * 1rem);
   overflow: hidden;
+  aspect-ratio: 288 / 195;
 
   @include mq(lg) {
     max-width: 800px;

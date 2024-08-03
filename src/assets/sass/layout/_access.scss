@@ -7,7 +7,7 @@
 -----------------------------------------------------*/
 .l-access {
   &__index {
-    margin: 0 0 clamp(88 / 16 * 1rem, 4.605rem + 4.47vw, 108 / 16 * 1rem); //viw:320-767px
+    margin: 0 0 clamp(64 / 16 * 1rem, 2.571rem + 7.14vw, 96 / 16 * 1rem); //viw:320-767px
 
     @include mq(lg) {
       margin: 0;
@@ -15,26 +15,21 @@
   }
 
   &__contents {
-    margin-top: clamp(88 / 16 * 1rem, 3.491rem + 10.04vw, 133 / 16 * 1rem); //viw:320-768px
-
-    @include mq(md) {
-      margin-top: calc(133 / 768 * 100vw);
-    }
-
-    @include mq(lg) {
-      margin-top: calc(133 / 1024 * 100vw);
-    }
-
-    @include mq(xl) {
-      margin-top: calc(133 / 1280 * 100vw);
-    }
-
-    @include mq(xxl) {
-      margin-top: calc(133 / 1440 * 100vw);
-    }
+    margin-top: clamp(42 / 16 * 1rem, 2.063rem + 2.81vw, 69 / 16 * 1rem); //viw:320-768px
 
     & + .l-access__contents {
-      margin-top: clamp(64 / 16 * 1rem, 2.833rem + 5.83vw, 120 / 16 * 1rem); //viw:320-1280px
+      margin-top: clamp(64 / 16 * 1rem, 3.5rem + 2.5vw, 88 / 16 * 1rem); //viw:320-1280px
     }
+  }
+
+  &__wrapper {
+    @include mq(lg) {
+      width: 90%;
+      margin: auto;
+    }
+  }
+
+  &__mainContents {
+    margin-bottom: clamp(64 / 16 * 1rem, 2.417rem + 7.92vw, 140 / 16 * 1rem);
   }
 }
