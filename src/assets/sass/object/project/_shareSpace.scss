@@ -10,7 +10,7 @@
   margin-top: pxToRem(48px);
   padding: 0 clamp(10 / 16 * 1rem, -0.227rem + 4.26vw, 40 / 16 * 1rem)
     clamp(24 / 16 * 1rem, 0.591rem + 4.55vw, 56 / 16 * 1rem); //viw:320-1024px
-  border-radius: 15px 65px 15px 15px;
+  border-radius: pxToRem(15px) pxToRem(65px) pxToRem(15px) pxToRem(15px);
   background-color: $base-color;
 
   @include mq(md) {
@@ -58,13 +58,13 @@
       left: 0;
       width: 100%;
       height: 100%;
-      border-radius: 15px 30px;
+      border-radius: pxToRem(15px) pxToRem(30px);
       background-color: $base-color;
 
       @include mq(md) {
         top: 32px;
         left: calc(20 / 768 * 100vw);
-        border-radius: 15px 65px;
+        border-radius: pxToRem(15px) pxToRem(65px);
       }
 
       @include mq(lg) {

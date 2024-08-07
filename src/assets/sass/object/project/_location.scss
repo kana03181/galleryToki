@@ -18,9 +18,21 @@
   text-align: center;
 }
 
-.p-location__shop__text {
-  padding-top: clamp(24 / 16 * 1rem, 1.167rem + 1.67vw, 40 / 16 * 1rem);
-  font-size: clamp(15 / 16 * 1rem, 0.917rem + 0.1vw, 16 / 16 * 1rem); //view:320-1280px
+.p-location__shop {
+  &__texts {
+    text-align: center;
+  }
+
+  &__text {
+    padding-top: clamp(24 / 16 * 1rem, 1.167rem + 1.67vw, 40 / 16 * 1rem);
+    font-size: clamp(15 / 16 * 1rem, 0.917rem + 0.1vw, 16 / 16 * 1rem); //view:320-1280px
+
+    &.-sm {
+      display: inline-block;
+      padding-top: 0;
+      padding-left: pxToRem(19px);
+    }
+  }
 }
 
 .p-location__text {
@@ -160,111 +172,115 @@
 }
 
 .p-location__link {
-  transition: color var(--duration2) var(--ease6);
+  transition: var(--duration2) var(--ease6);
+  transition-property: color;
   color: $primary-text-color;
   text-decoration: underline;
 
   &:hover {
-    transition: color var(--duration2) var(--ease6);
+    transition: var(--duration2) var(--ease6);
+    transition-property: color;
     color: $text-link-color-hover1;
   }
 }
 
 .p-location__shop__link {
-  display: block;
+  display: inline-block;
   position: relative;
+  margin-top: pxToRem(8px);
+  transition: var(--duration2) var(--ease6);
+  transition-property: color;
+  color: $primary-text-color;
 
-  &::before {
-    content: "WEBサイトへ";
-    position: absolute;
-    z-index: 1;
-    width: 100%;
-    height: 100%;
-    transition: opacity var(--duration2) var(--ease6);
-    border-radius: 10px;
-    opacity: 0;
-    background-color: $primary-text-color;
-    color: #fff;
-    inset: 0;
+  &:hover {
+    transition: var(--duration2) var(--ease6);
+    transition-property: color;
+    color: $text-link-color-hover1;
   }
 
-  &:hover::before {
-    transition: opacity var(--duration2) var(--ease6);
-    opacity: 0.25;
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 4px;
+    left: 0;
+    width: clamp(12 / 16 * 1rem, 0.708rem + 0.21vw, 14 / 16 * 1rem);
+    height: clamp(12 / 16 * 1rem, 0.708rem + 0.21vw, 14 / 16 * 1rem);
+    background-image: url("data:image/svg+xml;base64,PCEtLT94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPy0tPgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTguMS4xLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+Cgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9Il94MzJfIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHN0eWxlPSJ3aWR0aDogMzJweDsgaGVpZ2h0OiAzMnB4OyBvcGFjaXR5OiAxOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+Cgkuc3Qwe2ZpbGw6IzRCNEI0Qjt9Cjwvc3R5bGU+CjxnPgoJPHBhdGggY2xhc3M9InN0MCIgZD0iTTk2LDB2NDE2aDQxNlYwSDk2eiBNNDcyLDM3NkgxMzZWNDBoMzM2VjM3NnoiIHN0eWxlPSJmaWxsOiByZ2IoMzMsIDMzLCAzMyk7Ij48L3BhdGg+Cgk8cG9seWdvbiBjbGFzcz0ic3QwIiBwb2ludHM9IjQwLDQ3MiA0MCwyOTYgNDAsMTM2IDQwLDk2IDAsOTYgMCw1MTIgNDE2LDUxMiA0MTYsNDcyIDM3Niw0NzIgCSIgc3R5bGU9ImZpbGw6IHJnYigzMywgMzMsIDMzKTsiPjwvcG9seWdvbj4KCTxwb2x5Z29uIGNsYXNzPSJzdDAiIHBvaW50cz0iMjMyLjgxMiwzMTIuODI5IDM1MC42NzEsMTk0Ljk2OSAzNTAuNjcxLDI3OS43NjYgMzkwLjY3MSwyNzkuNzY2IDM5MC42NzEsMTI2LjY4OCAyMzcuNTk0LDEyNi42ODggCgkJMjM3LjU5NCwxNjYuNjg4IDMyMi4zOSwxNjYuNjg4IDIwNC41MzEsMjg0LjU0NyAJIiBzdHlsZT0iZmlsbDogcmdiKDMzLCAzMywgMzMpOyI+PC9wb2x5Z29uPgo8L2c+Cjwvc3ZnPgo=");
+    background-repeat: no-repeat;
   }
 }
 
-.p-location__shop__thumnail {
+.p-location__shop__img {
   overflow: hidden;
-  border-radius: 10px;
+  border-radius: pxToRem(10px);
   aspect-ratio: 287 / 184;
 
   @include mq(lg) {
     aspect-ratio: 800 / 469;
   }
-}
 
-.p-location__shop__thumnail img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: 50% 100%;
+  & img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 100%;
 
-  @include mq(lg) {
-    &.-toribou {
-      object-position: 50% 8%;
-    }
+    @include mq(lg) {
+      &.-toribou {
+        object-position: 50% 8%;
+      }
 
-    &.-cocosu {
-      object-position: 50% 55%;
-    }
+      &.-cocosu {
+        object-position: 50% 55%;
+      }
 
-    &.-yuu {
-      object-position: 50% 90%;
-    }
+      &.-yuu {
+        object-position: 50% 90%;
+      }
 
-    &.-ruvan {
-      object-position: 50% 80%;
-    }
+      &.-ruvan {
+        object-position: 50% 80%;
+      }
 
-    &.-shishitora {
-      object-position: 50% 64%;
-    }
+      &.-shishitora {
+        object-position: 50% 64%;
+      }
 
-    &.-superkid {
-      object-position: 50% 25%;
-    }
+      &.-superkid {
+        object-position: 50% 25%;
+      }
 
-    &.-nikkori {
-      object-position: 50% 79%;
-    }
+      &.-nikkori {
+        object-position: 50% 79%;
+      }
 
-    &.-torimaru {
-      object-position: 50% 56%;
-    }
+      &.-torimaru {
+        object-position: 50% 56%;
+      }
 
-    &.-ashibi {
-      object-position: 50% 50%;
-    }
+      &.-ashibi {
+        object-position: 50% 50%;
+      }
 
-    &.-momotaro {
-      object-position: 50% 63%;
-    }
+      &.-momotaro {
+        object-position: 50% 63%;
+      }
 
-    &.-nogami {
-      object-position: 50% 63%;
-    }
+      &.-nogami {
+        object-position: 50% 63%;
+      }
 
-    &.-berushe {
-      object-position: 50% 50%;
-    }
+      &.-berushe {
+        object-position: 50% 50%;
+      }
 
-    &.-hakatatorokaratei {
-      object-position: 50% 58%;
-    }
+      &.-hakatatorokaratei {
+        object-position: 50% 58%;
+      }
 
-    &.-okashinotobira {
-      object-position: 50% 60%;
+      &.-okashinotobira {
+        object-position: 50% 60%;
+      }
     }
   }
 }
@@ -272,7 +288,6 @@
 .p-location__swiper {
   width: 100%;
   margin: auto;
-  padding-bottom: clamp(40 / 16 * 1rem, 2.167rem + 1.67vw, 56 / 16 * 1rem);
   overflow-x: hidden;
 
   @include mq(md) {
@@ -280,7 +295,27 @@
   }
 
   @include mq(lg) {
+    position: relative;
     max-width: 800px;
+    overflow-x: initial;
+  }
+
+  @include mq(xxl) {
+    max-width: 900px;
+  }
+
+  &__wrap {
+    width: 100%;
+    margin: auto;
+    margin-bottom: clamp(40 / 16 * 1rem, 2.167rem + 1.67vw, 56 / 16 * 1rem);
+
+    @include mq(lg) {
+      position: relative;
+      width: 100vw;
+      margin-right: calc(50% - 50vw);
+      margin-left: calc(50% - 50vw);
+      overflow-x: hidden;
+    }
   }
 }
 
@@ -289,10 +324,14 @@
   flex-direction: column;
   row-gap: pxToRem(16px);
 
+  &.-time {
+    row-gap: clamp(16 / 16 * 1rem, 0.917rem + 0.42vw, 20 / 16 * 1rem); //view:320-1280px
+  }
+
   &__label {
     width: fit-content;
     padding: pxToRem(4px) pxToRem(15px);
-    border-radius: 15px;
+    border-radius: pxToRem(15px);
     color: $base-color;
     font-size: pxToRem(13px);
 
@@ -321,6 +360,10 @@
       word-break: keep-all;
       overflow-wrap: break-word;
 
+      @include mq(xs) {
+        width: fit-content;
+      }
+
       @include mq(md) {
         font-size: pxToRem(16px);
       }
@@ -338,6 +381,10 @@
 
     &.-time {
       row-gap: pxToRem(8px);
+
+      @include mq(md) {
+        row-gap: pxToRem(16px);
+      }
     }
   }
 }
@@ -381,9 +428,13 @@
     grid-template-columns: clamp(135 / 16 * 1rem, 8.162rem + 1.23vw, 140 / 16 * 1rem); //view:320-767px
   }
 
-  &.-time {
-    min-height: 56px;
-  }
+  // &.-time {
+  //   min-height: 56px;
+
+  //   @include mq(md) {
+  //     min-height: initial;
+  //   }
+  // }
 }
 
 .p-location__time__items {

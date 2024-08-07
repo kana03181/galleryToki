@@ -5,27 +5,20 @@
 /*
   plan
 -----------------------------------------------------*/
-// #plan {
-//   scroll-margin-top: -30px;
-
-//   @include mq(md) {
-//     scroll-margin-top: -25px;
-//   }
-
-//   @include mq(lg) {
-//     scroll-margin-top: -90px;
-//   }
-// }
 
 .l-plan {
   margin: clamp(64 / 16 * 1rem, 3.042rem + 4.79vw, 110 / 16 * 1rem) 0
     clamp(64 / 16 * 1rem, 3.042rem + 4.79vw, 110 / 16 * 1rem);
 }
 
-.p-plan__option {
+.l-plan__option {
   @include mq(lg) {
     width: 100%;
     max-width: $lg-content-width;
     margin: auto;
+  }
+
+  @include mq(xxl) {
+    max-width: $xxl-content-width;
   }
 }

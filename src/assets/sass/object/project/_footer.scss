@@ -128,11 +128,13 @@
   @include mq(lg) {
     display: inline-block;
     position: relative;
-    transition: color var(--duration2) var(--ease2);
+    transition: var(--duration2) var(--ease2);
+    transition-property: color;
     letter-spacing: 0.12em;
 
     &:hover {
-      transition: color var(--duration2) var(--ease2);
+      transition: var(--duration2) var(--ease2);
+      transition-property: color;
       color: $quaternary-text-color;
     }
   }
@@ -157,4 +159,8 @@
   font-size: pxToRem(10px);
   letter-spacing: 0.03em;
   text-align: center;
+
+  @include mq(xs) {
+    font-size: pxToRem(12px);
+  }
 }

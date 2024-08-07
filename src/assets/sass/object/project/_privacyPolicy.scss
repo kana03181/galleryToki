@@ -57,10 +57,14 @@
   }
 
   &__list__item {
+    width: 80%;
+    max-width: 1800px;
     font-size: clamp(15 / 16 * 1rem, 0.917rem + 0.1vw, 16 / 16 * 1rem); //viw:320-1280px
     font-weight: 500;
     letter-spacing: 0.08em;
     line-height: 1.8;
+    word-break: keep-all;
+    overflow-wrap: break-word;
 
     &.-lowercase {
       list-style-type: lower-latin;
@@ -80,6 +84,8 @@
   }
 
   &__text {
+    width: 80%;
+    max-width: 1800px;
     font-size: clamp(15 / 16 * 1rem, 0.917rem + 0.1vw, 16 / 16 * 1rem); //viw:320-1280px
     font-weight: 500;
     letter-spacing: 0.08em;
@@ -88,6 +94,7 @@
 
     &.-lead {
       display: inline-block;
+      text-align: center;
     }
 
     &__link {

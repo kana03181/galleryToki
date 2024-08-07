@@ -6,5 +6,6 @@
   concept
 -----------------------------------------------------*/
 .l-concept {
-  margin-bottom: clamp(56 / 16 * 1rem, 2.167rem + 6.67vw, 120 / 16 * 1rem); //viw:320-1280px
+  margin: clamp(120 / 16 * 1rem, 6rem + 7.5vw, 192 / 16 * 1rem) 0
+    clamp(56 / 16 * 1rem, 2.167rem + 6.67vw, 120 / 16 * 1rem); //viw:320-1280px
 }

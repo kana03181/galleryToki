@@ -24,7 +24,7 @@ export default function () {
     gsap.to(spans_sm, {
       y: 0,
       opacity: 1,
-      duration: 0.45,
+      duration: 0.73,
       scrollTrigger: {
         trigger: spanToUp_sm,
         start: "top 80%",
@@ -37,7 +37,7 @@ export default function () {
 
       stagger: {
         from: "start",
-        each: 0.3,
+        each: 0.13,
       },
     });
 
@@ -79,7 +79,7 @@ export default function () {
     gsap.to(spans_md, {
       y: 0,
       opacity: 1,
-      duration: 0.45,
+      duration: 0.63,
       scrollTrigger: {
         trigger: spanToUp_md,
         start: "top 80%",
@@ -92,7 +92,7 @@ export default function () {
 
       stagger: {
         from: "start",
-        each: 0.25,
+        each: 0.13,
       },
     });
 
@@ -104,7 +104,7 @@ export default function () {
       {
         "--w_size": "100%",
         opacity: 1,
-        duration: 1.5,
+        duration: 1.3,
         delay: 0.2,
         scrollTrigger: {
           trigger: spanToUp_md,
@@ -134,7 +134,7 @@ export default function () {
     gsap.to(spans_md2, {
       y: 0,
       opacity: 1,
-      duration: 0.45,
+      duration: 0.63,
       scrollTrigger: {
         trigger: spanToUp_md2,
         start: "top 80%",
@@ -147,7 +147,7 @@ export default function () {
 
       stagger: {
         from: "start",
-        each: 0.25,
+        each: 0.13,
       },
     });
 
@@ -159,8 +159,8 @@ export default function () {
       {
         "--w_size": "100%",
         opacity: 1,
-        duration: 2,
-        delay: 0.25,
+        duration: 1.6,
+        delay: 0.2,
         scrollTrigger: {
           trigger: spanToUp_md2,
           start: "top 80%",
@@ -189,7 +189,7 @@ export default function () {
     gsap.to(spans_lg, {
       y: 0,
       opacity: 1,
-      duration: 0.45,
+      duration: 0.77,
       scrollTrigger: {
         trigger: spanToUp_lg,
         start: "top 80%",
@@ -202,7 +202,7 @@ export default function () {
 
       stagger: {
         from: "start",
-        each: 0.2,
+        each: 0.13,
       },
     });
 
@@ -214,8 +214,8 @@ export default function () {
       {
         "--w_size": "100%",
         opacity: 1,
-        duration: 2.8,
-        delay: 0.2,
+        duration: 2.35,
+        delay: 0.4,
         scrollTrigger: {
           trigger: spanToUp_lg,
           start: "top 80%",
@@ -299,7 +299,7 @@ export default function () {
       y: 0,
       autoAlpha: 0.8,
       stagger: 0.3,
-      duration: 0.65,
+      duration: 0.8,
       scrollTrigger: {
         trigger: ".js-feature__purpose__title",
         start: "top 70%",
@@ -361,7 +361,7 @@ export default function () {
 
           stagger: {
             from: "start",
-            each: 0.9,
+            each: 0.69,
           },
         }
       );
@@ -378,9 +378,10 @@ export default function () {
     {
       y: 0,
       autoAlpha: 0.9,
+      duration: 0.78,
       stagger: {
         from: "start",
-        each: 0.55,
+        each: 0.69,
       },
 
       scrollTrigger: {
@@ -398,14 +399,14 @@ export default function () {
     gsap.fromTo(
       toUp,
       {
-        y: 50,
+        y: 30,
         autoAlpha: 0,
       },
       {
         y: 0,
         autoAlpha: 1,
         stagger: 0.3,
-        duration: 1,
+        duration: 0.8,
         scrollTrigger: {
           trigger: toUp,
           start: "top 90%",

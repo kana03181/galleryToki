@@ -7,8 +7,15 @@
 -----------------------------------------------------*/
 .l-container {
   width: 90%;
-  // max-width: $content-width;
   margin: 0 auto;
+
+  &.-contact {
+    max-width: 641px;
+
+    @include mq(lg) {
+      max-width: $lg-content-width;
+    }
+  }
 
   @include mq(lg) {
     &.-access__index {
@@ -19,7 +26,6 @@
   @include mq(lg) {
     &.-access__main {
       width: 100%;
-      // max-width: 1000px;
       margin: auto;
     }
   }

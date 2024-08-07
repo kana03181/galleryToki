@@ -18,8 +18,12 @@
   aspect-ratio: 288 / 195;
 
   @include mq(lg) {
-    max-width: 800px;
+    max-width: $lg-content-width;
     aspect-ratio: 800 / 469;
+  }
+
+  @include mq(xxl) {
+    max-width: $xxl-content-width;
   }
 
   & iframe {

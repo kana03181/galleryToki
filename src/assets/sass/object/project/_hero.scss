@@ -86,81 +86,81 @@
   writing-mode: vertical-rl;
 }
 
-.p-hero__reservation {
-  display: block;
-  position: relative;
-  position: absolute;
-  z-index: 2;
-  bottom: 2.6666vh;
-  left: 2.5vw;
-  width: 18.75%;
-  max-width: 100px;
-  transition: background-color 1s cubic-bezier(0.12, 0.17, 0.68, 1.15), color 1s cubic-bezier(0.12, 0.17, 0.68, 1.15);
-  border-radius: 50%;
-  background-color: $primary-button-color;
-  color: $base-color;
+// .p-hero__reservation {
+//   display: block;
+//   position: relative;
+//   position: absolute;
+//   z-index: 2;
+//   bottom: 2.6666vh;
+//   left: 2.5vw;
+//   width: 18.75%;
+//   max-width: 100px;
+//   transition: background-color 1s cubic-bezier(0.12, 0.17, 0.68, 1.15), color 1s cubic-bezier(0.12, 0.17, 0.68, 1.15);
+//   border-radius: 50%;
+//   background-color: $primary-button-color;
+//   color: $base-color;
 
-  &:hover {
-    transition: background-color 1s cubic-bezier(0.12, 0.17, 0.68, 1.15), color 1s cubic-bezier(0.12, 0.17, 0.68, 1.15);
-    background-color: $base-color;
-    color: $primary-button-color;
-  }
+//   &:hover {
+//     transition: background-color 1s cubic-bezier(0.12, 0.17, 0.68, 1.15), color 1s cubic-bezier(0.12, 0.17, 0.68, 1.15);
+//     background-color: $base-color;
+//     color: $primary-button-color;
+//   }
 
-  @include mq(md) {
-    bottom: 4vh;
-    left: 4.94788vw;
-    width: 15.625%;
-    max-width: 130px;
-  }
+//   @include mq(md) {
+//     bottom: 4vh;
+//     left: 4.94788vw;
+//     width: 15.625%;
+//     max-width: 130px;
+//   }
 
-  @include mq(lg) {
-    bottom: 7.2222vh;
-    left: calc(64 / 1024 * 100vw);
-  }
+//   @include mq(lg) {
+//     bottom: 7.2222vh;
+//     left: calc(64 / 1024 * 100vw);
+//   }
 
-  @include mq(xl) {
-    bottom: 7.2222vh;
-    // left: 8.125vw;
-    left: calc(104 / 1280 * 100vw);
-  }
+//   @include mq(xl) {
+//     bottom: 7.2222vh;
+//     // left: 8.125vw;
+//     left: calc(104 / 1280 * 100vw);
+//   }
 
-  &__link {
-    position: relative;
-    width: 100%;
-    height: 0;
-    padding-top: 100%;
-  }
+//   &__link {
+//     position: relative;
+//     width: 100%;
+//     height: 0;
+//     padding-top: 100%;
+//   }
 
-  &__text {
-    position: absolute;
-    top: 50%;
-    right: 0;
-    left: 0;
-    width: 75%;
-    margin: 0 auto;
-    transform: translateY(-50%);
-    font-size: clamp(10 / 16 * 1rem, 0.401rem + 1.12vw, 15 / 16 * 1rem); //viw:320-767px
-    font-weight: 700;
-    line-height: 1.4;
-    text-align: center;
-    word-break: keep-all;
-    overflow-wrap: break-word;
+//   &__text {
+//     position: absolute;
+//     top: 50%;
+//     right: 0;
+//     left: 0;
+//     width: 75%;
+//     margin: 0 auto;
+//     transform: translateY(-50%);
+//     font-size: clamp(10 / 16 * 1rem, 0.401rem + 1.12vw, 15 / 16 * 1rem); //viw:320-767px
+//     font-weight: 700;
+//     line-height: 1.4;
+//     text-align: center;
+//     word-break: keep-all;
+//     overflow-wrap: break-word;
 
-    @include mq(xl) {
-      font-size: clamp(15 / 16 * 1rem, 0.844rem + 0.2vw, 16 / 16 * 1rem); //viw:768-1280px
-    }
-  }
-}
+//     @include mq(xl) {
+//       font-size: clamp(15 / 16 * 1rem, 0.844rem + 0.2vw, 16 / 16 * 1rem); //viw:768-1280px
+//     }
+//   }
+// }
 
-@keyframes scale {
-  0% {
-    transform: scale(1);
-  }
+// @keyframes scale {
+//   0% {
+//     transform: scale(1);
+//   }
 
-  100% {
-    transform: scale(1.2);
-  }
-}
+//   100% {
+//     transform: scale(1.2);
+//   }
+// }
 
 @keyframes SlideFromRight {
   from {
@@ -171,26 +171,6 @@
     opacity: 1;
   }
 }
-
-// circle {
-//   animation: circle 5s cubic-bezier(0.43, -0.11, 0.19, 1) 6s infinite;
-//   stroke-width: 1px;
-//   stroke: $senary-accent-color;
-//   opacity: 0;
-//   fill: transparent;
-// }
-
-// @keyframes circle {
-//   0% {
-//     stroke-dasharray: 0 194;
-//     opacity: 1;
-//   }
-
-//   100% {
-//     stroke-dasharray: 194 194;
-//     opacity: 1;
-//   }
-// }
 
 .p-hero__swiper {
   position: relative;

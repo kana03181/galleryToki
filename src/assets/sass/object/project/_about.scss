@@ -60,14 +60,14 @@
 .p-about__img {
   position: relative;
   overflow: hidden;
-  border-radius: 10px;
+  border-radius: pxToRem(10px);
   aspect-ratio: 288 / 171;
 
   @include mq(lg) {
     width: calc(523 / 1024 * 100vw);
     height: calc(536 / 1024 * 100vw);
     margin-bottom: pxToRem(40px);
-    border-radius: 0 65px 65px 0;
+    border-radius: 0 pxToRem(65px) pxToRem(65px) 0;
     aspect-ratio: 588 / 503;
   }
 
@@ -95,7 +95,7 @@
         left: 0;
         width: calc(549 / 1024 * 100vw);
         height: clamp(536 / 16 * 1rem, -0.633rem + 53.33vw, 672 / 16 * 1rem);
-        border-radius: 0 65px 65px 0;
+        border-radius: 0 pxToRem(65px) pxToRem(65px) 0;
         background-color: $background-color;
       }
 

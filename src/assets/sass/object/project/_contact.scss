@@ -9,10 +9,10 @@
 .p-contact {
   &__header {
     width: 100%;
-    max-width: 900px;
+    max-width: $lg-content-width;
     margin: 0 auto clamp(32 / 16 * 1rem, 1.5rem + 2.5vw, 56 / 16 * 1rem); //viw:320-1280px
-    border: 1px solid $main-color;
-    border-radius: 30px;
+    border: 2px solid $main-color;
+    border-radius: pxToRem(10px);
   }
 
   &__text {
@@ -33,13 +33,10 @@
 
 .p-contact__form {
   &__wrapper {
-    width: 100%;
+    width: fit-content;
+    max-width: $lg-content-width;
     margin: auto;
     margin-bottom: clamp(64 / 16 * 1rem, 2.417rem + 7.92vw, 140 / 16 * 1rem);
-
-    @include mq(md) {
-      width: fit-content;
-    }
   }
 
   &__inner {
@@ -118,13 +115,15 @@
   }
 
   &__link {
-    transition: color 0.6s cubic-bezier(0.14, 0.21, 0.59, 1);
+    transition: var(--duration1) var(--ease2);
+    transition-property: color;
     color: $primary-text-color;
     font-weight: 700;
     text-decoration: underline;
 
     &:hover {
-      transition: color 0.6s cubic-bezier(0.14, 0.21, 0.59, 1);
+      transition: var(--duration1) var(--ease2);
+      transition-property: color;
       color: $quaternary-text-color;
     }
   }

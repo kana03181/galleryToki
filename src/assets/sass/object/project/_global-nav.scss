@@ -113,7 +113,9 @@
 }
 
 .p-global-nav__text.-en {
-  transition: color var(--duration2) var(--ease2);
+  // transition: var(--duration2) var(--ease2);
+  // transition-property: color;
+  color: $primary-text-color;
   font-size: clamp(28 / 16 * 1rem, 1.667rem + 0.42vw, 32 / 16 * 1rem); //320-1279px
   font-weight: 700;
   letter-spacing: 0.12em;
@@ -160,12 +162,19 @@
   display: block;
   position: relative;
   padding: pxToRem(12px) pxToRem(16px);
-  transition: color var(--duration2) var(--ease2);
+  // transition: var(--duration2) var(--ease2);
+  // transition-property: color;
   color: $primary-text-color;
   letter-spacing: 0.07em;
 
+  & > .p-global-nav__text.-en {
+    transition: var(--duration2) var(--ease2);
+    transition-property: color;
+  }
+
   &:hover > .p-global-nav__text.-en {
-    transition: color var(--duration2) var(--ease2);
+    transition: var(--duration2) var(--ease2);
+    transition-property: color;
     color: $primary-button-color;
   }
 
@@ -194,6 +203,6 @@
   }
 }
 
-.p-global-nav__link.-faq > .p-global-nav__text {
-  text-transform: uppercase;
-}
+// .p-global-nav__link.-faq > .p-global-nav__text {
+//   text-transform: uppercase;
+// }

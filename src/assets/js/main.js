@@ -82,6 +82,23 @@ const breakpoints = {
     },
   },
 
+  location: {
+    1024: {
+      slidesPerView: 1.15,
+      spaceBetween: 64,
+    },
+
+    1280: {
+      slidesPerView: 0.999,
+      spaceBetween: 88,
+    },
+
+    1440: {
+      slidesPerView: 0.998,
+      spaceBetween: 88,
+    },
+  },
+
   rooms: {
     768: {
       spaceBetween: 16,
@@ -190,6 +207,7 @@ document.addEventListener("DOMContentLoaded", function () {
 createSwiper(".p-room__facility__swiper.-shareSpace", {
   loop: false,
   spaceBetween: 32,
+  speed: 630,
   slidesPerView: "auto",
   breakpoints: breakpoints.shareSpace,
   navigation: {
@@ -210,7 +228,10 @@ createSwiper(".p-room__facility__swiper.-shareSpace", {
 createSwiper(".p-location__swiper", {
   loop: false,
   spaceBetween: 32,
-  slidesPerView: "auto",
+  speed: 630,
+  breakpoints: breakpoints.location,
+  centeredSlides: true,
+  // slidesPerView: 1.15,
 
   navigation: {
     nextEl: ".c-swiper__button__next",
@@ -218,7 +239,7 @@ createSwiper(".p-location__swiper", {
   },
 
   pagination: {
-    el: ".c-swiper_pagination.-location",
+    el: ".swiper-pagination.-locationPage",
     type: "bullets",
     clickable: "clickable",
   },
@@ -253,6 +274,7 @@ const createThumbnailSwiper = (mainSwiperSelector, thumbnailSelector, options) =
   const mainSwiperInstance = new Swiper(mainSwiperSelector, {
     loop: false,
     spaceBetween: 32,
+    speed: 630,
     slidesPerView: "auto",
     ...options?.mainOptions,
     thumbs: {
@@ -270,6 +292,7 @@ const createThumbnailSwiper = (mainSwiperSelector, thumbnailSelector, options) =
 // */
 createThumbnailSwiper(".p-rooms__swiper.-room1", ".c-swiper__thumbnail.-room1", {
   mainOptions: {
+    effect: "fade",
     breakpoints: breakpoints.roomFacility,
     navigation: {
       nextEl: ".c-swiper__button__next.-room1",
@@ -287,6 +310,7 @@ createThumbnailSwiper(".p-rooms__swiper.-room1", ".c-swiper__thumbnail.-room1", 
 // */
 createThumbnailSwiper(".p-rooms__swiper.-room2", ".c-swiper__thumbnail.-room2", {
   mainOptions: {
+    effect: "fade",
     breakpoints: breakpoints.roomFacility,
     navigation: {
       nextEl: ".c-swiper__button__next.-room2",
@@ -304,6 +328,7 @@ createThumbnailSwiper(".p-rooms__swiper.-room2", ".c-swiper__thumbnail.-room2", 
 // */
 createThumbnailSwiper(".p-rooms__swiper.-living", ".c-swiper__thumbnail.-living", {
   mainOptions: {
+    effect: "fade",
     breakpoints: breakpoints.roomFacility,
     navigation: {
       nextEl: ".c-swiper__button__next.-living",
@@ -321,6 +346,7 @@ createThumbnailSwiper(".p-rooms__swiper.-living", ".c-swiper__thumbnail.-living"
 // */
 createThumbnailSwiper(".p-rooms__swiper.-bathroom", ".c-swiper__thumbnail.-bathroom", {
   mainOptions: {
+    effect: "fade",
     breakpoints: breakpoints.roomFacility,
     navigation: {
       nextEl: ".c-swiper__button__next.-bathroom",
@@ -338,6 +364,7 @@ createThumbnailSwiper(".p-rooms__swiper.-bathroom", ".c-swiper__thumbnail.-bathr
 // */
 createThumbnailSwiper(".p-rooms__swiper.-kitchen", ".c-swiper__thumbnail.-kitchen", {
   mainOptions: {
+    effect: "fade",
     breakpoints: breakpoints.roomFacility,
     navigation: {
       nextEl: ".c-swiper__button__next.-kitchen",

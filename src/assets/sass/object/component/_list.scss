@@ -9,7 +9,7 @@
 .c-list {
   padding: clamp(24 / 16 * 1rem, 0.591rem + 4.55vw, 56 / 16 * 1rem)
     clamp(16 / 16 * 1rem, -0.136rem + 5.68vw, 56 / 16 * 1rem);
-  border-radius: 10px;
+  border-radius: pxToRem(10px);
 
   &__caution {
     display: inline-block;
@@ -83,10 +83,9 @@
     display: inline-block;
     margin-bottom: clamp(8 / 16 * 1rem, 0.333rem + 0.83vw, 16 / 16 * 1rem);
     padding: pxToRem(8px) pxToRem(12px);
-    border-radius: 30px;
+    border-radius: pxToRem(30px);
     background-color: $main-color;
     color: $base-color;
-    // font-size: clamp(0.938rem, 0.909rem + 0.14vw, 1rem); //viw:320-1024px
     font-size: pxToRem(16px); //viw:320-1024px
   }
 

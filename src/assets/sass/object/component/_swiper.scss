@@ -31,20 +31,28 @@
   }
 
   &.-location {
-    width: 80%;
-    max-width: 463px;
-
-    @include mq(md) {
-      width: 58%;
-      max-width: initial;
-    }
+    width: 75%;
+    max-width: 395px;
 
     @include mq(lg) {
-      width: 52%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      width: calc(687px - calc(64 / 1024 * 100vw));
+      max-width: 800px;
+      height: 402.938px;
+      margin: 0 auto;
     }
 
     @include mq(xl) {
-      width: 54%;
+      width: calc(800px - calc(64 / 1280 * 100vw));
+      height: 469.5px;
+    }
+
+    @include mq(xxl) {
+      width: calc(900px - calc(64 / 1440 * 100vw));
+      height: 528.77px;
     }
   }
 
@@ -93,32 +101,42 @@
     }
 
     @include mq(xxl) {
-      height: calc(495.22 / 1440 * 100vw); // 画像の高さ / ブラウザ幅 * 100vw
+      // height: calc(495.22 / 1440 * 100vw); // 画像の高さ / ブラウザ幅 * 100vw
+      height: clamp(495.22 / 16 * 1rem, -4.609rem + 39.51vw, 937.75 / 16 * 1rem); // 画像の高さ / ブラウザ幅 * 100vw
     }
   }
 }
 
 .c-swiper__button__next,
 .c-swiper__button__prev {
-  transition: background-color 0.6s cubic-bezier(0.33, -0.01, 0.66, 0.97);
-  border: 1px solid $main-color;
+  transition: var(--duration3) var(--ease8);
+  transition-property: background-color;
+  border: 2px solid $main-color;
   background-color: $main-color;
 
   &::after {
-    transition: background-color 0.6s cubic-bezier(0.33, -0.01, 0.66, 0.97);
+    transition: var(--duration3) var(--ease8);
+    transition-property: background-color;
     background-color: $base-color;
   }
 
   &:hover {
-    transition: background-color 0.6s cubic-bezier(0.33, -0.01, 0.66, 0.97);
-    border: 1px solid $main-color;
+    transition: var(--duration3) var(--ease8);
+    transition-property: background-color;
+    // border: 2px solid $main-color;
     background-color: $base-color;
 
     &::after {
-      transition: background-color 0.6s cubic-bezier(0.33, -0.01, 0.66, 0.97);
+      transition: var(--duration3) var(--ease8);
+      transition-property: background-color;
       background-color: $main-color;
     }
   }
+}
+
+.c-swiper__button__next.-access,
+.c-swiper__button__prev.-access {
+  border: 0;
 }
 
 .c-swiper__button__next.-shareSpace,
@@ -138,20 +156,23 @@
   }
 }
 
-.c-swiper_pagination {
-  &.-location {
-    width: 54%;
-    max-width: 251px;
-    margin: 0 auto;
-    text-align: left;
+// .c-swiper_pagination {
+//   &.-location {
+//     // display: block;
+//     width: 54%;
+//     max-width: 251px;
+//     height: clamp(2rem, 1.196rem + 4.02vw, 3.125rem);
+//     // margin: 0 auto;
+//     text-align: left;
+//     inset: initial;
 
-    @include mq(md) {
-      width: 100%;
-      max-width: initial;
-      text-align: center;
-    }
-  }
-}
+//     @include mq(md) {
+//       width: 100%;
+//       max-width: initial;
+//       text-align: center;
+//     }
+//   }
+// }
 
 .c-swiper__thumbnail {
   &.-access {
@@ -179,13 +200,11 @@
   }
 
   &__slide {
-    transition: opacity 1s cubic-bezier(0.05, 0.31, 0.73, 1.02);
+    transition: var(--duration3) var(--ease4);
+    transition-property: opacity;
     opacity: 0.5;
 
     &.-rooms {
-      // width: 100% !important ;
-      // height: auto;
-      // width: 43.29%;
       width: clamp(58 / 16 * 1rem, 1.083rem + 12.71vw, 180 / 16 * 1rem);
       height: 100%;
 
@@ -203,18 +222,19 @@
     }
 
     &:hover {
-      transition: opacity 1s cubic-bezier(0.05, 0.31, 0.73, 1.02);
+      transition: var(--duration3) var(--ease4);
+      transition-property: opacity;
       opacity: 1;
     }
   }
 
   &__image {
     overflow: hidden;
-    border-radius: 10px;
+    border-radius: pxToRem(10px);
     aspect-ratio: 58 / 38;
 
     @include mq(lg) {
-      border-radius: 15px;
+      border-radius: pxToRem(15px);
       aspect-ratio: 130 / 85;
     }
 

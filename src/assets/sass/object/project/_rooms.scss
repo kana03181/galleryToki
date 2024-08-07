@@ -33,11 +33,11 @@
 
   &__image {
     overflow: hidden;
-    border-radius: 0 50px 15px 0;
+    border-radius: 0 pxToRem(50px) pxToRem(15px) 0;
     aspect-ratio: 294 / 195;
 
     @include mq(md) {
-      border-radius: 15px 65px;
+      border-radius: pxToRem(15px) pxToRem(65px);
     }
 
     @include mq(lg) {
@@ -60,48 +60,48 @@
   }
 }
 
-.p-rooms__swiper__thumbnail {
-  width: 17.177%;
-  margin-top: pxToRem(-32px);
+// .p-rooms__swiper__thumbnail {
+//   width: 17.177%;
+//   margin-top: pxToRem(-32px);
 
-  &__wrapper {
-    display: flex;
-    align-items: center;
-    gap: clamp(8 / 16 * 1rem, 0.045rem + 2.27vw, 24 / 16 * 1rem); //viw:320-1024px
+//   &__wrapper {
+//     display: flex;
+//     align-items: center;
+//     gap: clamp(8 / 16 * 1rem, 0.045rem + 2.27vw, 24 / 16 * 1rem); //viw:320-1024px
 
-    @include mq(lg) {
-      flex-direction: column;
-      align-items: end;
-    }
-  }
+//     @include mq(lg) {
+//       flex-direction: column;
+//       align-items: end;
+//     }
+//   }
 
-  &__slide {
-    width: 100% !important ;
-    height: auto;
-    transition: opacity 1s cubic-bezier(0.05, 0.31, 0.73, 1.02);
-    opacity: 0.5;
+//   &__slide {
+//     width: 100% !important ;
+//     height: auto;
+//     transition: opacity 1s cubic-bezier(0.05, 0.31, 0.73, 1.02);
+//     opacity: 0.5;
 
-    &:hover {
-      transition: opacity 1s cubic-bezier(0.05, 0.31, 0.73, 1.02);
-      opacity: 1;
-    }
-  }
+//     &:hover {
+//       transition: opacity 1s cubic-bezier(0.05, 0.31, 0.73, 1.02);
+//       opacity: 1;
+//     }
+//   }
 
-  &__image {
-    overflow: hidden;
-    border-radius: 10px;
-    aspect-ratio: 58 / 38;
+//   &__image {
+//     overflow: hidden;
+//     border-radius: 10px;
+//     aspect-ratio: 58 / 38;
 
-    @include mq(lg) {
-      border-radius: 15px;
-      aspect-ratio: 180 / 120;
-    }
-  }
-}
+//     @include mq(lg) {
+//       border-radius: 15px;
+//       aspect-ratio: 180 / 120;
+//     }
+//   }
+// }
 
-.p-rooms__swiper__thumbnail .swiper-slide.swiper-slide-thumb-active {
-  opacity: 1;
-}
+// .p-rooms__swiper__thumbnail .swiper-slide.swiper-slide-thumb-active {
+//   opacity: 1;
+// }
 
 // /*
 //   rooms
@@ -114,14 +114,14 @@
     margin-top: clamp(48 / 16 * 1rem, 2.545rem + 2.27vw, 64 / 16 * 1rem); //viw:320-1024px
     padding: 0 clamp(10 / 16 * 1rem, -0.227rem + 4.26vw, 40 / 16 * 1rem)
       clamp(24 / 16 * 1rem, 0.591rem + 4.55vw, 56 / 16 * 1rem); //viw:320-1024px
-    border-radius: 15px 30px;
+    border-radius: pxToRem(15px) pxToRem(30px);
     background-color: $base-color;
 
     @include mq(md) {
       max-width: 900px;
       margin-left: calc(20 / 768 * 100vw);
       padding: 0;
-      border-radius: 15px 65px;
+      border-radius: pxToRem(15px) pxToRem(65px);
     }
 
     @include mq(lg) {
@@ -141,8 +141,12 @@
   &__caution {
     position: relative;
     width: 100%;
-    max-width: 900px;
+    max-width: $lg-content-width;
     margin: auto;
+
+    @include mq(xxl) {
+      max-width: $xxl-content-width;
+    }
 
     &.-rooms {
       padding: clamp(56 / 16 * 1rem, 2.833rem + 3.33vw, 88 / 16 * 1rem) 0
@@ -214,7 +218,7 @@
   &__request {
     padding: clamp(24 / 16 * 1rem, 0.833rem + 3.33vw, 56 / 16 * 1rem) clamp(10 / 16 * 1rem, 3.13vw, 40 / 16 * 1rem)
       clamp(24 / 16 * 1rem, 0.833rem + 3.33vw, 56 / 16 * 1rem) clamp(10 / 16 * 1rem, 3.13vw, 40 / 16 * 1rem); //viw:320-1280px
-    border-radius: 30px;
+    border-radius: pxToRem(10px);
     background-color: $base-color;
 
     &.-shareSpace {
@@ -908,12 +912,16 @@
       width: 100%;
       padding: clamp(24 / 16 * 1rem, 0.591rem + 4.55vw, 56 / 16 * 1rem)
         clamp(16 / 16 * 1rem, -0.136rem + 5.68vw, 56 / 16 * 1rem);
-      border-radius: 10px;
+      border-radius: pxToRem(10px);
       background-color: $base-color;
 
       @include mq(lg) {
-        max-width: 800px;
+        max-width: $lg-content-width;
         margin: 0 auto;
+      }
+
+      @include mq(xxl) {
+        max-width: $xxl-content-width;
       }
     }
 

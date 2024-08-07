@@ -31,4 +31,8 @@
     max-width: $lg-content-width;
     margin: auto;
   }
+
+  @include mq(xxl) {
+    max-width: $xxl-content-width;
+  }
 }

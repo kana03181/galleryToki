@@ -13,6 +13,25 @@
   justify-content: center;
   column-gap: clamp(0.5rem, 0.458rem + 0.21vw, 0.625rem); //viw:320-1280px
   inset: 0;
+
+  &.-locationPage {
+    position: initial;
+    width: 37%;
+    max-width: 251px;
+    height: clamp(2rem, 1.196rem + 4.02vw, 3.125rem);
+    text-align: left;
+    inset: initial;
+
+    @include mq(md) {
+      width: 100%;
+      max-width: initial;
+      text-align: center;
+    }
+
+    @include mq(lg) {
+      height: initial;
+    }
+  }
 }
 
 .swiper-pagination-bullet {
@@ -54,7 +73,7 @@
   &::after {
     width: clamp(12 / 16 * 1rem, 0.661rem + 0.45vw, 14 / 16 * 1rem); //viw:320-768px
     height: clamp(10 / 16 * 1rem, 0.536rem + 0.45vw, 12 / 16 * 1rem); //viw:320-768px
-    margin-right: clamp(1 / 16 * 1rem, -0.071rem + 0.67vw, 4 / 16 * 1rem);
+    margin-right: clamp(3 / 16 * 1rem, 0.143rem + 0.22vw, 4 / 16 * 1rem); //viw:320-768px
     transform: rotate(-90deg);
     clip-path: polygon(50% 0, 100% 100%, 0 100%);
   }
@@ -66,7 +85,7 @@
   &::after {
     width: clamp(12 / 16 * 1rem, 0.661rem + 0.45vw, 14 / 16 * 1rem); //viw:320-768px
     height: clamp(10 / 16 * 1rem, 0.536rem + 0.45vw, 12 / 16 * 1rem); //viw:320-768px
-    margin-left: clamp(1 / 16 * 1rem, -0.071rem + 0.67vw, 4 / 16 * 1rem);
+    margin-left: clamp(3 / 16 * 1rem, 0.143rem + 0.22vw, 4 / 16 * 1rem); //viw:320-768px
     transform: rotate(90deg);
     clip-path: polygon(50% 0, 100% 100%, 0 100%);
   }

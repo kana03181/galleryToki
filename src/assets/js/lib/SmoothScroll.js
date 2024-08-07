@@ -45,7 +45,7 @@ export default function () {
 
   const scrollToTarget = (element) => {
     const isPrefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    const duration = isPrefersReduced ? 0 : 2300; // ユーザーの設定による
+    const duration = isPrefersReduced ? 0 : 630; // スクロール時間を調整
     smoothScroll(element, duration); // スムーズスクロールを実行
   };
 

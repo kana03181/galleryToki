@@ -8,7 +8,7 @@
 
 .c-accordion {
   border: 2px solid $main-color;
-  border-radius: 10px;
+  border-radius: pxToRem(10px);
   background-color: $base-color;
 
   &__wrapper {
@@ -44,8 +44,7 @@
       justify-content: center;
       padding: clamp(16 / 16 * 1rem, 0.958rem + 0.21vw, 18 / 16 * 1rem) //viw:320-1280px
         clamp(16 / 16 * 1rem, 0.958rem + 0.21vw, 18 / 16 * 1rem)
-        clamp(16 / 16 * 1rem, 0.958rem + 0.21vw, 18 / 16 * 1rem)
-        clamp(47 / 16 * 1rem, 2.896rem + 0.21vw, 49 / 16 * 1rem); // 16px + アイコンのwidth(23px) + アイコン右の余白(8px)
+        clamp(16 / 16 * 1rem, 0.958rem + 0.21vw, 18 / 16 * 1rem) pxToRem(31px); // アイコンのwidth + アイコン右の余白(8px)
       column-gap: pxToRem(5px);
     }
 
@@ -67,15 +66,23 @@
     }
 
     &::after {
-      transform: rotate(90deg);
-      transition: transform 0.3s;
+      transition: var(--duration1) var(--ease6);
+      transition-property: rotate;
+      rotate: 90deg;
     }
   }
 }
 
+.c-accordion:first-of-type .c-accordion__inner.-location {
+  padding: clamp(16 / 16 * 1rem, 0.958rem + 0.21vw, 18 / 16 * 1rem) //viw:320-1280px
+    clamp(16 / 16 * 1rem, 0.958rem + 0.21vw, 18 / 16 * 1rem) clamp(16 / 16 * 1rem, 0.958rem + 0.21vw, 18 / 16 * 1rem)
+    pxToRem(28px); // アイコンのwidth + アイコン右の余白(8px)
+}
+
 .is-opened .c-accordion__inner::after {
-  transform: rotate(0deg);
-  transition: transform 0.3s;
+  transition: var(--duration1) var(--ease6);
+  transition-property: rotate;
+  rotate: 0deg;
 }
 
 .c-accordion__box {
@@ -87,18 +94,16 @@
     letter-spacing: 0.08em;
 
     &.-faq {
-      padding: clamp(16 / 16 * 1rem, 0.958rem + 0.21vw, 18 / 16 * 1rem)
-        clamp(32 / 16 * 1rem, 1.917rem + 0.42vw, 36 / 16 * 1rem)
-        clamp(16 / 16 * 1rem, 0.958rem + 0.21vw, 18 / 16 * 1rem)
+      padding: 0 clamp(32 / 16 * 1rem, 1.917rem + 0.42vw, 36 / 16 * 1rem)
+        clamp(24 / 16 * 1rem, 1.417rem + 0.42vw, 28 / 16 * 1rem)
         clamp(16 / 16 * 1rem, 0.958rem + 0.21vw, 18 / 16 * 1rem); //右以外 最小：16px 最大：18px viw:320-1280px 右 最小：32px 最大：36px viw:320-1280px
       column-gap: pxToRem(8px);
     }
 
     &.-location {
       flex-direction: column;
-      padding: clamp(16 / 16 * 1rem, 0.667rem + 1.67vw, 32 / 16 * 1rem)
-        clamp(32 / 16 * 1rem, 1.917rem + 0.42vw, 36 / 16 * 1rem)
-        clamp(24 / 16 * 1rem, 1.333rem + 0.83vw, 32 / 16 * 1rem)
+      padding: 0 clamp(32 / 16 * 1rem, 1.917rem + 0.42vw, 36 / 16 * 1rem)
+        clamp(28 / 16 * 1rem, 1.583rem + 0.83vw, 36 / 16 * 1rem)
         clamp(16 / 16 * 1rem, 0.958rem + 0.21vw, 18 / 16 * 1rem); //上 最小：16px 最大：32px viw:320-1280px 左 最小：16px 最大：18px viw:320-1280px 右 最小：32px 最大：36px viw:320-1280px 下 最小：24px 最大：32px viw:320-1280px
     }
   }
@@ -189,7 +194,10 @@
 .c-accordion:first-of-type .c-accordion__box__text.-location {
   &::before {
     content: "";
-    left: -28px;
+    top: 2px;
+    left: -22px;
+    width: 16px;
+    height: 21px;
     background-image: url(../../assets/img/top/location/location_icon_walk.svg);
   }
 }
@@ -205,7 +213,9 @@
 .c-accordion:nth-child(3) .c-accordion__box__text.-location {
   &::before {
     content: "";
-    left: -31px;
+    left: -29px;
+    width: 22px;
+    height: 22px;
     background-image: url(../../assets/img/top/location/location_icon_time.svg);
   }
 }

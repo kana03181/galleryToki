@@ -6,25 +6,6 @@
   room__facility
 -----------------------------------------------------*/
 .l-room__facility {
-  position: relative;
   padding: clamp(56 / 16 * 1rem, 2.583rem + 4.58vw, 100 / 16 * 1rem) 0
     clamp(64 / 16 * 1rem, 3.25rem + 3.75vw, 100 / 16 * 1rem); //viw:320-1280px
-
-  &::before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 0 65px 65px 0;
-    background-color: #fff6c5;
-
-    @include mq(lg) {
-      right: initial;
-      left: 0;
-      width: 92.9688%;
-    }
-  }
 }

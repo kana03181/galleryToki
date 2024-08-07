@@ -72,27 +72,25 @@
 }
 
 .p-concept__img.-top {
-  // width: 71.22%;
   width: calc(141 / 320 * 100vw);
-  margin-top: calc(-40 / 320 * 100vw);
+  margin-top: pxToRem(-40px);
   margin-bottom: calc(16 / 320 * 100vw);
   overflow: hidden;
-  border-radius: 15px 0 0 15px;
+  border-radius: pxToRem(15px) 0 0 pxToRem(15px);
   aspect-ratio: 141 / 235;
 
   @include mq(md) {
     max-height: 55vh;
-    margin-top: calc(-60 / 768 * 100vw);
+    margin-top: pxToRem(-60px);
     margin-bottom: calc(56 / 768 * 100vw);
   }
 
   @include mq(lg) {
-    // width: 71.087%;
     width: calc(413 / 1024 * 100vw);
     max-height: initial;
-    margin-top: calc(-72 / 1024 * 100vw);
+    margin-top: pxToRem(-72px);
     margin-bottom: clamp(64 / 16 * 1rem, 3.833rem + 0.83vw, 72 / 16 * 1rem); //viw:1024-1280px
-    border-radius: 15px;
+    border-radius: pxToRem(15px);
     aspect-ratio: 413 / 533;
   }
 
@@ -112,14 +110,14 @@
   // width: 87.88%;
   width: calc(175 / 320 * 100vw);
   overflow: hidden;
-  border-radius: 15px 0 0 15px;
+  border-radius: pxToRem(15px) 0 0 pxToRem(15px);
   aspect-ratio: 174 / 116;
 
   @include mq(lg) {
     aspect-ratio: 500 / 334;
     // width: 86.06%;
     width: calc(500 / 1024 * 100vw);
-    border-radius: 15px;
+    border-radius: pxToRem(15px);
   }
 
   @include mq(xl) {

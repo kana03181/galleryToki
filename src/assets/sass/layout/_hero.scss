@@ -3,9 +3,9 @@
 @use "../global" as *;
 
 .l-hero {
-  margin-bottom: clamp(100 / 16 * 1rem, 0.893rem + 26.79vw, 220 / 16 * 1rem); //viw:320-768px
+  // margin-bottom: clamp(100 / 16 * 1rem, 0.893rem + 26.79vw, 220 / 16 * 1rem); //viw:320-768px
 
-  @include mq(md) {
-    margin-bottom: clamp(220 / 16 * 1rem, 6.25rem + 15.63vw, 260 / 16 * 1rem); //viw:768-1280px
-  }
+  // @include mq(md) {
+  //   margin-bottom: clamp(220 / 16 * 1rem, 6.25rem + 15.63vw, 260 / 16 * 1rem); //viw:768-1280px
+  // }
 }
