@@ -9,10 +9,10 @@
   display: grid;
 
   &.-feature {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
     @include mq(lg) {
-      // grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: 1fr;
       justify-content: center;
       column-gap: clamp(24 / 16 * 1rem, 1.167rem + 1.67vw, 40 / 16 * 1rem);
       row-gap: 0;
@@ -22,7 +22,6 @@
   &.-about {
     @include mq(lg) {
       display: grid;
-      // grid-template-columns: calc(549 / 1024 * 100vw) calc(400 / 1024 * 100vw);
       grid-template-columns: calc(549 / 1024 * 100vw) 1fr;
       grid-template-rows: min-content minmax(min-content, 400px);
       column-gap: pxToRem(40px);
@@ -44,10 +43,10 @@
 
   &.-plan {
     grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
 
     @include mq(lg) {
       grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-      // grid-template-columns: repeat(2, 1fr);
       column-gap: pxToRem(88px);
     }
   }
@@ -56,7 +55,6 @@
     gap: pxToRem(72px);
 
     @include mq(lg) {
-      // grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       grid-template-columns: repeat(3, 1fr);
       grid-template-rows: 1fr;
       justify-content: center;
@@ -82,7 +80,6 @@
   //** rooms ** //
   &__swipers__wrapper {
     display: grid;
-    // grid-template-columns: repeat(2, 1fr);
     grid-template-columns: calc(190 / 320 * 100vw) 1fr;
     grid-template-rows: 1fr calc(38 / 320 * 100vw);
     row-gap: clamp(16 / 16 * 1rem, 0.286rem + 3.57vw, 32 / 16 * 1rem); //viw:320-768px

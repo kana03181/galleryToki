@@ -94,12 +94,11 @@
 
   @include mq(md) {
     grid-template-columns: repeat(3, minmax(140px, 250px));
-    // padding: pxToRem(56px) 0 pxToRem(72px);
   }
 
   &__item__wrap {
     border-radius: 50%;
-    background-color: $secondary-accent-color;
+    background-color: $secondary-sub-color;
   }
 
   &__item {
@@ -136,12 +135,15 @@
     &.-room {
       grid-column: 1/2;
       grid-row: 1/2;
+      margin-right: -0.59em;
+      letter-spacing: 0.59em;
     }
 
     &.-maximum {
       grid-column: 1/2;
       grid-row: 2/3;
-      text-align-last: justify;
+      margin-right: -0.59em;
+      letter-spacing: 0.59em;
     }
 
     &.-person {
@@ -179,21 +181,11 @@
 .p-plan__detail .p-plan__detail__item__wrap:first-of-type .p-plan__detail__text {
   align-items: baseline;
   padding-left: pxToRem(1.8px);
-  // column-gap: pxToRem(3px);
-
-  // @include mq(md) {
-  //   column-gap: pxToRem(5px);
-  // }
 }
 
 .p-plan__detail .p-plan__detail__item__wrap:first-of-type .p-plan__price__number.-large {
   padding-right: clamp(3.5 / 16 * 1rem, 0.188rem + 0.16vw, 5 / 16 * 1rem);
   padding-left: clamp(4.7 / 16 * 1rem, 0.288rem + 0.03vw, 5 / 16 * 1rem);
-
-  // @include mq(lg) {
-  //   padding-right: pxToRem(5px);
-  //   padding-left: pxToRem(5px);
-  // }
 }
 
 .p-plan__detail .p-plan__detail__item__wrap:nth-of-type(2) .p-plan__detail__text {
@@ -204,7 +196,6 @@
 .p-plan__detail .p-plan__detail__item__wrap:last-of-type .p-plan__detail__text {
   display: grid;
   top: 50%;
-  // grid-template-columns: 0.5fr 0.1fr 0.2fr;
   grid-template-columns: 0.5fr clamp(22 / 16 * 1rem, 1.241rem + 0.67vw, 25 / 16 * 1rem) 0.2fr; //viw:320-767px
   grid-template-rows:
     clamp(14 / 16 * 1rem, 0.786rem + 0.45vw, 16 / 16 * 1rem)
@@ -217,7 +208,6 @@
   font-size: calc(10 / 16 * 1rem + 0.25vw);
 
   @include mq(md) {
-    // grid-template-columns: 0.3fr 0.6fr 0.2fr;
     grid-template-columns: 0.1fr clamp(30 / 16 * 1rem, 1.406rem + 0.98vw, 35 / 16 * 1rem) 0.2fr; //viw:768-1280px
     grid-template-rows:
       clamp(16 / 16 * 1rem, 0.625rem + 0.78vw, 20 / 16 * 1rem)

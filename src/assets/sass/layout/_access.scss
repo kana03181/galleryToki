@@ -30,6 +30,8 @@
   }
 
   &__mainContents {
-    margin-bottom: clamp(64 / 16 * 1rem, 2.417rem + 7.92vw, 140 / 16 * 1rem);
+    @include mq(lg) {
+      margin-bottom: clamp(64 / 16 * 1rem, 2.417rem + 7.92vw, 140 / 16 * 1rem);
+    }
   }
 }

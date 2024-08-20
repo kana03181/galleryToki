@@ -30,9 +30,9 @@
       grid-template-rows: subgrid;
       row-gap: clamp(16 / 16 * 1rem, 0.833rem + 0.83vw, 24 / 16 * 1rem);
 
-      // @include mq(md) {
-      //   row-gap: pxToRem(24px);
-      // }
+      @-moz-document url-prefix() {
+        display: flex;
+      }
     }
 
     &.-locationImg {

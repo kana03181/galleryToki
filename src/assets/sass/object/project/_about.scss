@@ -96,7 +96,7 @@
         width: calc(549 / 1024 * 100vw);
         height: clamp(536 / 16 * 1rem, -0.633rem + 53.33vw, 672 / 16 * 1rem);
         border-radius: 0 pxToRem(65px) pxToRem(65px) 0;
-        background-color: $background-color;
+        background-color: rgba(247, 239, 219, 0.8);
       }
 
       @include mq(xl) {

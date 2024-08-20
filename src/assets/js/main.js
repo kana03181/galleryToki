@@ -12,11 +12,11 @@ closetPolyfill();
 // import ScrollObserver from './lib/ScrollObserver';
 // import Toggle from "./lib/Toggle";
 // import Close from "./lib/Close";
-// import Slider from "./lib/Slider";
 // import { dropdown } from './lib/dropdown';
 // import { inview } from "./lib/inview";
 // import swiper from "./lib/swiper";
 
+import header from "./lib/header";
 import gsap from "./lib/gsap";
 import hamburger from "./lib/hamburger";
 import windowResize from "./lib/windowResize";
@@ -28,6 +28,7 @@ import { form_Tel, form_Email } from "./lib/validation";
 import Swiper from "swiper/bundle";
 import "swiper/swiper-bundle.css";
 
+new header();
 new gsap();
 new SmoothScroll();
 new hamburger();
@@ -136,7 +137,7 @@ const createSwiper = (selector, options) => {
 //   画面サイズ1024px以上の時はswiperを破棄。それ以下の時は再生成する。
 // */
 const targetSwiper = document.querySelector(".p-feature__swiper");
-const breakPoint = 1023; // Swiperを破棄するブレークポイント
+const breakPoint = 1024; // Swiperを破棄するブレークポイント
 let featureSwiper = null; // Swiperインスタンスを保持する変数
 
 // Swiperを生成/破棄する関数
@@ -181,21 +182,31 @@ manageSwiper(); // 初期状態でSwiperを管理
 document.addEventListener("DOMContentLoaded", function () {
   const swiperContainer = document.querySelector(".js-hero__swiper__wrapper");
   if (swiperContainer) {
-    createSwiper(".p-hero__swiper", {
+    const heroSwiper = new Swiper(".p-hero__swiper", {
       loop: true,
       speed: 2000,
+      spaceBetween: 32,
       effect: "fade",
       slidesPerView: "auto",
+      allowTouchMove: false,
       autoplay: {
         delay: 2500,
+        disableOnInteraction: false,
       },
       breakpoints: breakpoints.hero,
       pagination: {
         el: ".p-hero__swiper__pagination",
         type: "bullets",
-        clickable: "clickable",
+        clickable: true,
       },
     });
+
+    // Swiper表示後に5秒間autoplayを停止する
+    heroSwiper.autoplay.stop(); // 最初に自動再生を停止
+
+    setTimeout(function () {
+      heroSwiper.autoplay.start(); // 5秒後に自動再生を開始
+    }, 5000);
 
     swiperContainer.style.visibility = "visible";
   }

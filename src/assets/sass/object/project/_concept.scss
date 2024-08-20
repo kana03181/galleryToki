@@ -59,7 +59,7 @@
     align-items: flex-end;
     padding: 0 0 clamp(40 / 16 * 1rem, 1.364rem + 5.68vw, 80 / 16 * 1rem) calc(40 / 320 * 100vw);
     border-radius: pxToRem(30px) 0 0 pxToRem(30px);
-    background-color: $background-color;
+    background-color: rgba($color: $background-color, $alpha: 0.8);
 
     @include mq(md) {
       padding: 0 0 clamp(40 / 16 * 1rem, 1.364rem + 5.68vw, 80 / 16 * 1rem) calc(60 / 320 * 100vw);
@@ -107,7 +107,6 @@
 }
 
 .p-concept__img.-bottom {
-  // width: 87.88%;
   width: calc(175 / 320 * 100vw);
   overflow: hidden;
   border-radius: pxToRem(15px) 0 0 pxToRem(15px);
@@ -115,7 +114,6 @@
 
   @include mq(lg) {
     aspect-ratio: 500 / 334;
-    // width: 86.06%;
     width: calc(500 / 1024 * 100vw);
     border-radius: pxToRem(15px);
   }
@@ -140,11 +138,6 @@
   align-self: center;
   justify-content: center;
   height: fit-content;
-  // padding-top: calc(65 / 320 * 100vw);
-
-  // @include mq(md) {
-  //   padding-top: 0;
-  // }
 
   @include mq(lg) {
     align-self: flex-start;
@@ -161,28 +154,31 @@
   z-index: -1;
   flex-direction: column;
   justify-content: center;
-  writing-mode: vertical-rl;
+  // writing-mode: vertical-rl;
 }
 
 .p-concept__heading {
   display: block;
-  height: clamp(167 / 16 * 1rem, 6.098rem + 20.76vw, 257 / 16 * 1rem); //viw:320-768px
-  font-size: clamp(18 / 16 * 1rem, 0.667rem + 2.29vw, 36 / 16 * 1rem); //viw:320-1280px
+  height: clamp(250 / 16 * 1rem, 11.563rem + 20.31vw, 341 / 16 * 1rem); //view:320-768px
+  font-size: clamp(18 / 16 * 1rem, 0.833rem + 1.46vw, 32 / 16 * 1rem); //view:320-1280px
   font-weight: 500;
   letter-spacing: 0.6em;
   line-height: 1;
   writing-mode: vertical-rl;
 
   @include mq(md) {
-    height: clamp(257 / 16 * 1rem, 7.063rem + 18.75vw, 305 / 16 * 1rem); //viw:768-1024px
+    height: clamp(341 / 16 * 1rem, 11.524rem + 20.39vw, 393 / 16 * 1rem); //view:768-1023px
   }
 
   @include mq(lg) {
-    height: clamp(305 / 16 * 1rem, 14.313rem + 7.42vw, 324 / 16 * 1rem); //viw:1024-1280px
+    height: clamp(393 / 16 * 1rem, 11.563rem + 20.31vw, 445 / 16 * 1rem); //view:1024-1280px
   }
 
-  @include mq(xl) {
-    height: pxToRem(326px);
+  &__number {
+    writing-mode: horizontal-tb;
+    unicode-bidi: embed;
+    padding: 0 0 0.6em 0.2em;
+    letter-spacing: 0.2em;
   }
 
   &__text {
@@ -190,7 +186,11 @@
     white-space: nowrap;
 
     &:nth-of-type(2) {
-      padding: 0 clamp(10 / 16 * 1rem, 0.167rem + 2.29vw, 32 / 16 * 1rem); //min:10px, max32px viw:320-1280px
+      padding: 0 clamp(10 / 16 * 1rem, 0.167rem + 2.29vw, 32 / 16 * 1rem); //view:320-1280px
+    }
+
+    &:nth-of-type(3) {
+      padding: 0 0.2em;
     }
   }
 }

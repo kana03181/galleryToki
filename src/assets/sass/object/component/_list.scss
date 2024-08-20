@@ -84,7 +84,7 @@
     margin-bottom: clamp(8 / 16 * 1rem, 0.333rem + 0.83vw, 16 / 16 * 1rem);
     padding: pxToRem(8px) pxToRem(12px);
     border-radius: pxToRem(30px);
-    background-color: $main-color;
+    background-color: $primary-sub-color;
     color: $base-color;
     font-size: pxToRem(16px); //viw:320-1024px
   }

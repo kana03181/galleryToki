@@ -4,18 +4,18 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="" />
+    <meta name="description" content="阿蘇くまもと空港から車で約20分の場所に位置する民泊 ギャラリー 鴇。管理人が住む一軒家をスタッフ居住型の宿泊施設として運営しています。宿泊されるお客様はお食事を済ましてお越しになったり、共有のキッチンを利用して料理をしたりとさまざま。ちょうどいい田舎の民家で、ゆったりとした時間を過ごしください。" />
     <!-- <meta property="og:url" content="【サイトURL】" /> -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="民泊 Gallery TOKI" />
-    <meta property="og:description" content="" />
-    <meta property="og:site_name" content="民泊 Gallery TOKI" />
+    <meta property="og:title" content="民泊 ギャラリー 鴇" />
+    <meta property="og:description" content="阿蘇くまもと空港から車で約20分の場所に位置する民泊 ギャラリー 鴇。管理人が住む一軒家をスタッフ居住型の宿泊施設として運営しています。宿泊されるお客様はお食事を済ましてお越しになったり、共有のキッチンを利用して料理をしたりとさまざま。ちょうどいい田舎の民家で、ゆったりとした時間を過ごしください。" />
+    <meta property="og:site_name" content="民泊 ギャラリー 鴇" />
     <!-- <meta property="og:image" content="【サイトURL】OGP画像のファイルパス" /> -->
     <meta property="og:locale" content="ja_JP" />
     <!-- <link rel="canonical" href="【サイトURL】/" /> -->
     <link rel="stylesheet" href="/assets/css/common.css" />
-    <link rel="shortcut icon" href="/favicon.ico" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="shortcut icon" href="assets/img/common/favicon.png" />
+    <link rel="apple-touch-icon" href="assets/img/common/apple-touch-icon.png" />
     <link rel="author" href="/humans.txt" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,16 +26,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
-    <title>民泊 Gallery TOKI</title>
+    <title>民泊 ギャラリー 鴇</title>
     <script src="/assets/js/main.bundle.js" defer></script>
   </head>
   <body>
-    <header class="l-header" data-fixed-header>
+    <header class="l-header js-header" data-fixed-header>
       <div class="l-container">
         <div class="l-header__inner">
           <h1 class="p-logo">
             <a href="index.html" class="p-logo__link -header">
-              <img class="p-logo__img" src="assets/img/common/logo_pc.png" srcset="assets/img/common/logo_pc_2x.png 2x" width="150" height="57" alt="民泊gallery鴇" decoding="async">
+              <img class="p-logo__img" src="assets/img/common/logo.svg" width="150" height="57" alt="民泊 ギャラリー鴇" decoding="async">
             </a>
           </h1>
           <nav class="p-header__nav">
@@ -68,20 +68,16 @@
         </div>
       </div>
     </header>
-    <main id="main" class="l-main">
-      <div class="l-hero">
-        <div class="l-wrapper -hero">
+    <main id="main" class="l-main -top">
+      <div class="l-hero p-hero">
+        <div class="l-container">
           <div class="p-hero__items">
             <div class="p-hero__body">
-              <p class="p-hero__copy">また来たい<br>熊本の民泊</p>
+              <p class="p-hero__copy">
+                <span class="p-hero__copy__text">また、行きたい。</span><span class="p-hero__copy__text">ちょうどいい田舎の<wbr>実家のような民泊</span>
+              </p>
             </div>
             <!-- /.p-hero__body -->
-            <!-- <a href="reservation.html" target="_self" class="p-hero__reservation">
-              <div class="p-hero__reservation__link">
-                <p class="p-hero__reservation__text">ご予約は<wbr>こちら</p>
-              </div>
-            </a> -->
-            <!-- /.p-hero__reservation -->
             <div class="swiper p-hero__swiper ">
               <ul class="swiper-wrapper p-hero__swiper__wrapper js-hero__swiper__wrapper" >
                 <li class="swiper-slide p-hero__swiper__slide -first">
@@ -111,11 +107,10 @@
               </ul>
             </div>
             <!-- /.swiper p-hero__swiper -->
-            <!-- <div class="swiper-pagination p-hero__swiper__pagination"></div> -->
           </div>
           <!-- /.p-hero__items -->
         </div>
-        <!-- /.l-wrapper -hero -->
+        <!-- /.l-container -->
       </div>
       <!-- /.l-hero -->
       <section class="l-concept">
@@ -123,7 +118,11 @@
           <div class="p-concept__items__wrap js-concept-trigger">
             <div class="p-concept__header__flex js-concept__items">
               <div class="p-concept__header">
-                <p class="p-concept__heading"><span class="p-concept__heading__text">実家のような</span><span class="p-concept__heading__text">雰囲気の宿で</span><span class="p-concept__heading__text">ひとやすみ</span></p>
+                <p class="p-concept__heading">
+                  <span class="p-concept__heading__text">空港から車で約<span class="p-concept__heading__number">20</span>分</span>
+                  <span class="p-concept__heading__text">熊本・上益城にある</span>
+                  <span class="p-concept__heading__text">民家でひとやすみ</span>
+                </p>
               </div>
             </div>
             <div class="p-concept__body js-concept__items">
@@ -131,7 +130,7 @@
                 <p class="p-concept__text"><span class="p-concept__word">「ただいま」</span>と思わず口ずさみそうになる、<wbr>どこか懐かしい雰囲気。</p>
                 <p class="p-concept__text">当宿は普通の民家なので、<wbr>ホテルのようなかしこまった感じは<wbr>ありません。</p>
                 <p class="p-concept__text">アットホームで、温かい。<wbr>まるで“第二の実家”のように<wbr>くつろげる。<wbr>そんな宿となっています。</p>
-                <p class="p-concept__text">日常の忙しさや悩みなどは<wbr>一旦忘れて、<br>ゆったりとした、<wbr>田舎ならではの時間を<wbr>過ごしてみませんか？</p>
+                <p class="p-concept__text">お一人で、家族や友人と<br>ゆったりとした、<wbr>田舎ならではの時間を<wbr>過ごしてみませんか？</p>
               </div>
               <!-- /.p-concept__text__wrap -->
             </div>
@@ -165,7 +164,7 @@
                 <span class="c-common__title__ja -about">民宿ギャラリー鴇について</span>
               </h2>
               <div class="p-about__texts">
-                <p class="p-about__sentence">熊本空港から車で約20分、グランメッセ熊本から車で約15分の場所に位置する民泊 ギャラリー 鴇。管理人が住む一軒家をスタッフ居住型の宿泊施設として運営しています。2階に宿泊部屋、1階に共有のキッチン・リビング、浴室、トイレがございます。一棟貸切ではございませんのでご注意ください。</p>
+                <p class="p-about__sentence">阿蘇くまもと空港から車で約20分、グランメッセ熊本から車で約15分の場所に位置する民泊 ギャラリー 鴇。管理人が住む一軒家をスタッフ居住型の宿泊施設として運営しています。2階に宿泊部屋、1階に共有のキッチン・リビング、浴室、トイレがございます。一棟貸切ではございませんのでご注意ください。</p>
                 <p class="p-about__sentence">周辺にはスーパーやコンビニ、コインランドリーが徒歩圏内にあり、管理人が経営しているお持ち帰り専門の焼き鳥屋もございます。宿泊されるお客様はお食事を済ましてお越しになったり、共有のキッチンを利用して料理をしたりとさまざま。</p>
                 <p class="p-about__sentence">国籍問わず、外国人のお客様も多数ご宿泊にいらっしゃいます。</p>
               </div>
@@ -366,7 +365,7 @@
             <div class="p-plan__price">
               <div class="p-plan__price__wrap">
                 <p class="p-plan__price__text">お1人様料金</p>
-                <p class="p-plan__price__person"><span class="p-plan__price__number -large -price">6900</span>円<span class="p-plan__price__tax">（税込）</span></p>
+                <p class="p-plan__price__person"><span class="p-plan__price__number -large -price">6960</span>円<span class="p-plan__price__tax">（税込）</span></p>
               </div>
               <ul class="p-plan__detail">
                 <li class="p-plan__detail__item__wrap js-plan__item">
@@ -382,9 +381,9 @@
                 <li class="p-plan__detail__item__wrap js-plan__item">
                   <div class="p-plan__detail__item">
                     <p class="p-plan__detail__text">
-                      <span class="p-plan__detail__word -room">1部屋</span>
+                      <span class="p-plan__detail__word -room">定員</span>
                       <span class="p-plan__detail__word -maximum">最大</span>
-                      <span class="p-plan__detail__word p-plan__price__number -large -person">3</span>
+                      <span class="p-plan__detail__word p-plan__price__number -large -person">5</span>
                       <span class="p-plan__detail__word -unit">名</span>
                       <span class="p-plan__detail__word -limit">まで</span>
                     </p>
@@ -1325,7 +1324,7 @@
           <address class="p-footer__items">
             <p class="p-footer__logo">
               <a href="#" class="p-logo__link  -footer">
-                <img class="p-logo__img" src="assets/img/common/logo_pc.png" srcset="assets/img/common/logo_pc_2x.png 2x" width="150" height="57" alt="民泊gallery鴇" decoding="async">
+                <img class="p-logo__img" src="assets/img/common/logo.svg" width="150" height="57" alt="民泊 ギャラリー鴇" decoding="async">
               </a>
             </p>
             <div class="p-footer__address__date">
@@ -1352,7 +1351,7 @@
         <!-- /.p-footer__item__wrap -->
         <p class="p-footer__button">
           <a href="#top" class="c-button -allow">
-            <img src="assets/img/common/common_footer_button.svg" width="23" height="23" alt="上矢印" decoding="async">
+            <img src="assets/img/common/common_footer_button.svg" width="23" height="23" alt="" decoding="async">
           </a>
         </p>
         <small class="p-footer__copyright">&copy;minpaku gallery toki all rights reserved</small>

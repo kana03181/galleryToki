@@ -18,7 +18,7 @@
     width: 100%;
     height: 100%;
     border-radius: 0 pxToRem(65px) pxToRem(65px) 0;
-    background-color: #fff6c5;
+    background-color: rgba($color: $background-color, $alpha: 0.8);
 
     @include mq(lg) {
       right: initial;

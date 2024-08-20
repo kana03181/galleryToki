@@ -42,7 +42,7 @@
       padding-bottom: pxToRem(8px);
 
       &::before {
-        background-color: $main-color;
+        background-color: $primary-sub-color;
       }
     }
 
@@ -108,7 +108,7 @@
       left: 0;
       margin: auto 0;
       border-radius: 50%;
-      background-color: $main-color;
+      background-color: $primary-sub-color;
     }
 
     &.-rooms {
@@ -193,7 +193,7 @@
       left: 0;
       width: var(--w_size);
       height: var(--h_size);
-      background-color: $main-color;
+      background-color: $primary-sub-color;
     }
 
     &.-rooms {

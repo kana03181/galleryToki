@@ -72,15 +72,6 @@
   }
 
   &.-access {
-    // position: absolute;
-    // z-index: 1;
-    // top: clamp(2rem, 1.375rem + 3.13vw, 3.875rem);
-    // right: 0;
-    // left: 0;
-    // width: 100%;
-    // height: calc(186 / 320 * 100vw); // 画像の高さ / ブラウザ幅 * 100vw
-    // margin: auto 0;
-    // padding: 0 clamp(10 / 16 * 1rem, 0.333rem + 1.46vw, 24 / 16 * 1rem);
     display: none;
 
     @include mq(lg) {
@@ -111,8 +102,8 @@
 .c-swiper__button__prev {
   transition: var(--duration3) var(--ease8);
   transition-property: background-color;
-  border: 2px solid $main-color;
-  background-color: $main-color;
+  border: 2px solid $primary-sub-color;
+  background-color: $primary-sub-color;
 
   &::after {
     transition: var(--duration3) var(--ease8);
@@ -129,7 +120,7 @@
     &::after {
       transition: var(--duration3) var(--ease8);
       transition-property: background-color;
-      background-color: $main-color;
+      background-color: $primary-sub-color;
     }
   }
 }
@@ -144,35 +135,17 @@
   background-color: $base-color;
 
   &::after {
-    background-color: $main-color;
+    background-color: $primary-sub-color;
   }
 
   &:hover {
-    background-color: $main-color;
+    background-color: $primary-sub-color;
 
     &::after {
       background-color: $base-color;
     }
   }
 }
-
-// .c-swiper_pagination {
-//   &.-location {
-//     // display: block;
-//     width: 54%;
-//     max-width: 251px;
-//     height: clamp(2rem, 1.196rem + 4.02vw, 3.125rem);
-//     // margin: 0 auto;
-//     text-align: left;
-//     inset: initial;
-
-//     @include mq(md) {
-//       width: 100%;
-//       max-width: initial;
-//       text-align: center;
-//     }
-//   }
-// }
 
 .c-swiper__thumbnail {
   &.-access {

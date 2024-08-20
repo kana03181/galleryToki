@@ -21,7 +21,7 @@
   transition-property: transform;
   border: 0;
   border-radius: 50px;
-  background-color: $main-color;
+  background-color: $primary-sub-color;
   text-align: center;
 
   @include mq(md) {

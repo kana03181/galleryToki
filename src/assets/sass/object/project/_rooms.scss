@@ -850,7 +850,7 @@
     }
 
     &__time {
-      padding-bottom: pxToRem(12px);
+      padding-bottom: clamp(24 / 16 * 1rem, 1.333rem + 0.83vw, 32 / 16 * 1rem);
     }
 
     &__text {
@@ -948,10 +948,10 @@
   word-break: keep-all;
   overflow-wrap: break-word;
 
-  @include mq(md) {
-    display: flex;
-    flex-wrap: nowrap;
-  }
+  // @include mq(md) {
+  //   display: flex;
+  //   flex-wrap: nowrap;
+  // }
 }
 
 .p-rooms__caution__marker + .p-rooms__caution__marker {

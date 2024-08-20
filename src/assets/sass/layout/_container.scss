@@ -9,11 +9,12 @@
   width: 90%;
   margin: 0 auto;
 
-  &.-contact {
-    max-width: 641px;
+  &.-contact,
+  &.-reservation {
+    max-width: $lg-content-width;
 
-    @include mq(lg) {
-      max-width: $lg-content-width;
+    @include mq(xxl) {
+      max-width: $xxl-content-width;
     }
   }
 

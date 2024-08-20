@@ -42,13 +42,14 @@
 }
 
 .swiper-pagination-bullet-active {
-  background: $main-color;
+  background: $primary-sub-color;
 }
 
 //slide button
 .swiper-button-prev,
 .swiper-button-next {
   position: relative;
+  z-index: 2;
   top: initial;
   width: clamp(32 / 16 * 1rem, 1.196rem + 4.02vw, 50 / 16 * 1rem); //viw:320-768px
   height: clamp(32 / 16 * 1rem, 1.196rem + 4.02vw, 50 / 16 * 1rem); //viw:320-768px
@@ -102,6 +103,7 @@
 }
 
 .swiper-container-horizontal > .swiper-scrollbar {
+  z-index: -1;
   right: 0;
   left: 0;
   width: 72.32%;
@@ -114,5 +116,5 @@
 }
 
 .swiper-scrollbar-drag {
-  background-color: $main-color;
+  background-color: $primary-sub-color;
 }

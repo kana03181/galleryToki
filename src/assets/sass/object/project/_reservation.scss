@@ -7,16 +7,26 @@
 */
 
 .p-reservation {
-  &__website__wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    row-gap: clamp(16 / 16 * 1rem, 0.833rem + 0.83vw, 24 / 16 * 1rem); //viw:320-1280px
-    margin-bottom: clamp(88 / 16 * 1rem, 4.417rem + 5.42vw, 140 / 16 * 1rem);
-  }
-
-  &__website {
+  &__link {
     width: 100%;
+
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      max-width: $lg-content-width;
+      margin: auto;
+      margin-bottom: clamp(64 / 16 * 1rem, 2.417rem + 7.92vw, 140 / 16 * 1rem); //viw:320-1280px
+      padding: clamp(40 / 16 * 1rem, 2.167rem + 1.67vw, 56 / 16 * 1rem) clamp(10 / 16 * 1rem, 3.13vw, 40 / 16 * 1rem); //viw:320-1280px
+      border-radius: pxToRem(30px);
+      background-color: $base-color;
+      row-gap: clamp(16 / 16 * 1rem, 0.833rem + 0.83vw, 24 / 16 * 1rem); //viw:320-1280px
+
+      @include mq(xxl) {
+        max-width: $xxl-content-width;
+      }
+    }
   }
 }

@@ -23,7 +23,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: $background-color;
+    background-color: rgba($color: $background-color, $alpha: 0.8);
 
     @include mq(md) {
       right: 0;

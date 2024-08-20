@@ -33,8 +33,7 @@
     }
 
     @include mq(lg) {
-      width: calc(140 / 1024 * 100vw);
-      max-width: 140px;
+      width: calc(150 / 1024 * 100vw);
     }
   }
 }

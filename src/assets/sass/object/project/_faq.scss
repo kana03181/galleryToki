@@ -17,7 +17,7 @@
     width: 100%;
     height: 100%;
     border-radius: pxToRem(65px) 0 0 pxToRem(65px);
-    background-color: $background-color;
+    background-color: rgba($color: $background-color, $alpha: 0.8);
 
     @include mq(lg) {
       width: 92.9688%;

@@ -162,8 +162,6 @@
   display: block;
   position: relative;
   padding: pxToRem(12px) pxToRem(16px);
-  // transition: var(--duration2) var(--ease2);
-  // transition-property: color;
   color: $primary-text-color;
   letter-spacing: 0.07em;
 
@@ -175,7 +173,7 @@
   &:hover > .p-global-nav__text.-en {
     transition: var(--duration2) var(--ease2);
     transition-property: color;
-    color: $primary-button-color;
+    color: $primary-sub-color;
   }
 
   @include mq(xl) {
@@ -193,7 +191,7 @@
       transition: opacity var(--duration1) var(--ease2);
       border-radius: 50%;
       opacity: 0;
-      background: $main-color;
+      background: $primary-sub-color;
     }
 
     &:hover::after {
@@ -202,7 +200,3 @@
     }
   }
 }
-
-// .p-global-nav__link.-faq > .p-global-nav__text {
-//   text-transform: uppercase;
-// }

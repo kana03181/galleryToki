@@ -7,7 +7,7 @@
 */
 .p-access {
   position: relative;
-  background-color: $background-color;
+  background-color: rgba($color: $background-color, $alpha: 0.8);
 }
 
 .p-access__map {

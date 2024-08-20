@@ -7,11 +7,5 @@
 */
 
 .p-body {
-  &.-room__facility {
-    background-color: $background-color;
-  }
-
-  &.-privacyPolicy {
-    background-color: $background-color;
-  }
+  background-color: rgba($color: $background-color, $alpha: 0.5);
 }

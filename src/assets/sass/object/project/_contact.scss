@@ -11,16 +11,11 @@
     width: 100%;
     max-width: $lg-content-width;
     margin: 0 auto clamp(32 / 16 * 1rem, 1.5rem + 2.5vw, 56 / 16 * 1rem); //viw:320-1280px
-    border: 2px solid $main-color;
-    border-radius: pxToRem(10px);
   }
 
   &__text {
     width: fit-content;
     margin: auto;
-    padding: clamp(24 / 16 * 1rem, 0.833rem + 3.33vw, 56 / 16 * 1rem)
-      clamp(10 / 16 * 1rem, 0.417rem + 1.04vw, 20 / 16 * 1rem) clamp(24 / 16 * 1rem, 0.833rem + 3.33vw, 56 / 16 * 1rem)
-      clamp(10 / 16 * 1rem, 0.417rem + 1.04vw, 20 / 16 * 1rem); //viw:320-1280px
   }
 
   &__sentence {
@@ -32,11 +27,21 @@
 }
 
 .p-contact__form {
+  max-width: 694px;
+  margin: 0 auto;
+
   &__wrapper {
-    width: fit-content;
+    width: 100%;
     max-width: $lg-content-width;
     margin: auto;
-    margin-bottom: clamp(64 / 16 * 1rem, 2.417rem + 7.92vw, 140 / 16 * 1rem);
+    margin-bottom: clamp(64 / 16 * 1rem, 2.417rem + 7.92vw, 140 / 16 * 1rem); //viw:320-1280px
+    padding: clamp(40 / 16 * 1rem, 2.167rem + 1.67vw, 56 / 16 * 1rem) clamp(10 / 16 * 1rem, 3.13vw, 40 / 16 * 1rem); //viw:320-1280px
+    border-radius: pxToRem(30px);
+    background-color: $base-color;
+
+    @include mq(xxl) {
+      max-width: $xxl-content-width;
+    }
   }
 
   &__inner {

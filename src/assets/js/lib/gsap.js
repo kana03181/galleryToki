@@ -134,7 +134,7 @@ export default function () {
     gsap.to(spans_md2, {
       y: 0,
       opacity: 1,
-      duration: 0.63,
+      duration: 0.55,
       scrollTrigger: {
         trigger: spanToUp_md2,
         start: "top 80%",
@@ -159,7 +159,7 @@ export default function () {
       {
         "--w_size": "100%",
         opacity: 1,
-        duration: 1.6,
+        duration: 1.3,
         delay: 0.2,
         scrollTrigger: {
           trigger: spanToUp_md2,
@@ -189,7 +189,7 @@ export default function () {
     gsap.to(spans_lg, {
       y: 0,
       opacity: 1,
-      duration: 0.77,
+      duration: 0.65,
       scrollTrigger: {
         trigger: spanToUp_lg,
         start: "top 80%",
@@ -202,7 +202,7 @@ export default function () {
 
       stagger: {
         from: "start",
-        each: 0.13,
+        each: 0.12,
       },
     });
 
@@ -214,8 +214,8 @@ export default function () {
       {
         "--w_size": "100%",
         opacity: 1,
-        duration: 2.35,
-        delay: 0.4,
+        duration: 1.85,
+        delay: 0.35,
         scrollTrigger: {
           trigger: spanToUp_lg,
           start: "top 80%",
@@ -372,7 +372,7 @@ export default function () {
   gsap.fromTo(
     ".js-plan__item",
     {
-      y: 100,
+      y: 30,
       autoAlpha: 0,
     },
     {
