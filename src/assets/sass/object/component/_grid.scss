@@ -19,9 +19,10 @@
   &__item {
     &.-feature {
       display: grid;
+      box-sizing: border-box;
       grid-row: span 3;
       grid-template-rows: subgrid;
-      row-gap: clamp(16 / 16 * 1rem, 0.833rem + 0.83vw, 20 / 16 * 1rem); //viw:320-1280px
+      min-height: 378px;
     }
 
     &.-plan {

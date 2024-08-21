@@ -22,7 +22,7 @@
 
   &__thumbnail {
     order: 0;
-    overflow: hidden;
+    // overflow: hidden;
   }
 
   &__image {
@@ -44,7 +44,6 @@
   }
 
   @include mq(lg) {
-    // max-width: fit-content;
     margin: initial;
     padding: pxToRem(24px);
   }
@@ -105,6 +104,8 @@
 }
 
 .c-card__text.-feature {
+  grid-column: 1 / -1;
+  grid-row-start: -1;
   color: $quaternary-text-color;
   font-size: clamp(14 / 16 * 1rem, 0.833rem + 0.21vw, 16 / 16 * 1rem); //最小：14px 最大：16px viw:320-1280px
   line-height: 1.7;
@@ -119,6 +120,9 @@
 }
 
 .c-card__text.-plan {
+  grid-column: 1 / -1;
+  grid-row-start: 4;
+
   font-size: clamp(14 / 16 * 1rem, 0.833rem + 0.21vw, 16 / 16 * 1rem); //viw:320-1280px
   line-height: 1.97;
 
@@ -129,27 +133,35 @@
 }
 
 .c-card__thumbnail.-feature {
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
   order: -1;
-  border-radius: pxToRem(10px) pxToRem(34px) pxToRem(10px) pxToRem(10px);
   aspect-ratio: 256 / 181;
 
   @include mq(md) {
     aspect-ratio: 297 / 198;
   }
+
+  & img {
+    border-radius: pxToRem(10px) pxToRem(34px) pxToRem(10px) pxToRem(10px);
+  }
 }
 
 .c-card__thumbnail.-plan {
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
+
   order: -1;
-  border-radius: pxToRem(10px);
   aspect-ratio: 240 / 187;
 
   @include mq(xl) {
     aspect-ratio: 300 / 242;
   }
-}
 
-.c-card__thumbnail.-plan img {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
+  & img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: pxToRem(10px);
+  }
 }

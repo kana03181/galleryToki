@@ -5,18 +5,33 @@
 /*
   feature
 */
-.p-feature__grid {
-  padding: clamp(70 / 16 * 1rem, 3.806rem + 2.84vw, 90 / 16 * 1rem) 0
-    clamp(72 / 16 * 1rem, 4rem + 2.5vw, 96 / 16 * 1rem);
 
-  @include mq(xl) {
-    padding: clamp(70 / 16 * 1rem, 3.806rem + 2.84vw, 90 / 16 * 1rem) pxToRem(15px)
-      clamp(72 / 16 * 1rem, 4rem + 2.5vw, 96 / 16 * 1rem);
+.p-feature__contents {
+  display: flex;
+  flex-direction: column;
+}
+
+.p-feature__grid {
+  &__wrap {
+    padding: clamp(70 / 16 * 1rem, 3.806rem + 2.84vw, 90 / 16 * 1rem) 0 0;
+
+    @include mq(xl) {
+      padding: clamp(70 / 16 * 1rem, 3.806rem + 2.84vw, 90 / 16 * 1rem) pxToRem(15px) 0;
+    }
   }
+}
+
+.p-feature__card__titles {
+  display: grid;
+  grid-column: 1 / -1;
+  grid-row-start: 2;
 }
 
 .p-feature__card__title {
   display: block;
+  grid-column: 1 / -1;
+  grid-row-start: 1;
+  margin: clamp(1rem, 0.833rem + 0.83vw, 1.25rem) 0 clamp(1rem, 0.833rem + 0.83vw, 1.25rem);
   font-size: pxToRem(20px);
   font-weight: 500;
   letter-spacing: 0.1em;
@@ -29,41 +44,49 @@
   }
 }
 
-.p-feature__purpose__title {
-  position: relative;
-  width: clamp(218 / 16 * 1rem, 9.205rem + 22.1vw, 317 / 16 * 1rem); //viw:320-1280px
-  margin: 0 auto;
-  font-size: clamp(19 / 16 * 1rem, 0.786rem + 2.01vw, 28 / 16 * 1rem); //viw:320-1280px
-  font-weight: 700;
-  line-height: 1;
-  text-align: center;
+.p-feature__purpose {
+  margin-top: clamp(72 / 16 * 1rem, 4rem + 2.5vw, 96 / 16 * 1rem);
 
-  &::before,
-  &::after {
-    content: "";
-    position: absolute;
-    width: 2px;
-    height: clamp(1.25rem, 0.987rem + 1.32vw, 1.563rem); //最小：20px 最大：25px viw:320-700px
-    background-color: $primary-text-color;
+  @include mq(xl) {
+    margin-top: clamp(72 / 16 * 1rem, 4rem + 2.5vw, 96 / 16 * 1rem);
   }
 
-  &::before {
-    bottom: -1px;
-    left: -13px;
-    transform: rotate(-45deg);
+  &__title {
+    position: relative;
+    width: clamp(218 / 16 * 1rem, 9.205rem + 22.1vw, 317 / 16 * 1rem); //viw:320-1280px
+    margin: 0 auto;
+    font-size: clamp(19 / 16 * 1rem, 0.786rem + 2.01vw, 28 / 16 * 1rem); //viw:320-1280px
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
 
-    @include mq(md) {
-      left: -26 px;
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 2px;
+      height: clamp(1.25rem, 0.987rem + 1.32vw, 1.563rem); //最小：20px 最大：25px viw:320-700px
+      background-color: $primary-text-color;
     }
-  }
 
-  &::after {
-    right: -10px;
-    bottom: -1px;
-    transform: rotate(45deg);
+    &::before {
+      bottom: -1px;
+      left: -13px;
+      transform: rotate(-45deg);
 
-    @include mq(md) {
+      @include mq(md) {
+        left: -26 px;
+      }
+    }
+
+    &::after {
       right: -10px;
+      bottom: -1px;
+      transform: rotate(45deg);
+
+      @include mq(md) {
+        right: -10px;
+      }
     }
   }
 }

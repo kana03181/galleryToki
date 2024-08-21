@@ -11,6 +11,8 @@
   &.-feature {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
+    height: 100%;
+
     @include mq(lg) {
       grid-template-columns: repeat(3, 1fr);
       justify-content: center;
