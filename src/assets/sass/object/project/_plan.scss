@@ -53,7 +53,7 @@
     &.-large.-price {
       font-family: $font-number;
       font-size: pxToRem(32px);
-      font-size: clamp(32 / 16 * 1rem, 1.667rem + 1.67vw, 48 / 16 * 1rem); // viw:320-1280px
+      font-size: clamp(32 / 16 * 1rem, 1.667rem + 1.67vw, 48 / 16 * 1rem); // view:320-1280px
       font-weight: 700;
       letter-spacing: 0.03em;
       line-height: 1.2;
@@ -72,7 +72,7 @@
   }
 
   &__tax {
-    font-size: clamp(12 / 16 * 1rem, 0.708rem + 0.21vw, 14 / 16 * 1rem); //最小：12px 最大：14px viw:320-1280px
+    font-size: clamp(12 / 16 * 1rem, 0.708rem + 0.21vw, 14 / 16 * 1rem); //view:320-1280px
     font-weight: 500;
   }
 }
@@ -196,10 +196,10 @@
 .p-plan__detail .p-plan__detail__item__wrap:last-of-type .p-plan__detail__text {
   display: grid;
   top: 50%;
-  grid-template-columns: 0.5fr clamp(22 / 16 * 1rem, 1.241rem + 0.67vw, 25 / 16 * 1rem) 0.2fr; //viw:320-767px
+  grid-template-columns: 0.5fr clamp(22 / 16 * 1rem, 1.241rem + 0.67vw, 25 / 16 * 1rem) 0.2fr; //view:320-767px
   grid-template-rows:
     clamp(14 / 16 * 1rem, 0.786rem + 0.45vw, 16 / 16 * 1rem)
-    clamp(14 / 16 * 1rem, 0.786rem + 0.45vw, 16 / 16 * 1rem); //viw:320-767px
+    clamp(14 / 16 * 1rem, 0.786rem + 0.45vw, 16 / 16 * 1rem); //view:320-767px
   align-items: center;
   justify-content: center;
   padding: pxToRem(10px) pxToRem(10px) pxToRem(10px) pxToRem(15px);
@@ -208,10 +208,10 @@
   font-size: calc(10 / 16 * 1rem + 0.25vw);
 
   @include mq(md) {
-    grid-template-columns: 0.1fr clamp(30 / 16 * 1rem, 1.406rem + 0.98vw, 35 / 16 * 1rem) 0.2fr; //viw:768-1280px
+    grid-template-columns: 0.1fr clamp(30 / 16 * 1rem, 1.406rem + 0.98vw, 35 / 16 * 1rem) 0.2fr; //view:768-1280px
     grid-template-rows:
       clamp(16 / 16 * 1rem, 0.625rem + 0.78vw, 20 / 16 * 1rem)
-      clamp(16 / 16 * 1rem, 0.625rem + 0.78vw, 20 / 16 * 1rem); //viw:768-1280px
+      clamp(16 / 16 * 1rem, 0.625rem + 0.78vw, 20 / 16 * 1rem); //view:768-1280px
     column-gap: pxToRem(5px);
     transform: translateY(-52%);
     font-size: calc(15 / 16 * 1rem + 0.25vw);
@@ -236,7 +236,7 @@
   &__title {
     position: relative;
     padding-left: pxToRem(32px);
-    font-size: clamp(20 / 16 * 1rem, 1.083rem + 0.83vw, 28 / 16 * 1rem); //viw:320-1280px
+    font-size: clamp(20 / 16 * 1rem, 1.083rem + 0.83vw, 28 / 16 * 1rem); //view:320-1280px
     font-weight: 700;
     letter-spacing: 0.03em;
 
@@ -253,17 +253,10 @@
     }
   }
 
-  // &__items {
-  //   padding: clamp(44 / 16 * 1rem, 2.542rem + 1.04vw, 54 / 16 * 1rem)
-  //     clamp(12 / 16 * 1rem, 0.5rem + 1.25vw, 24 / 16 * 1rem) clamp(56 / 16 * 1rem, 3.333rem + 0.83vw, 64 / 16 * 1rem) 0;
-  // }
-
   &__name {
-    grid-column: 1 / -1;
-    grid-row-start: 2;
     padding-top: pxToRem(8px);
     font-size: pxToRem(20px);
-    font-size: clamp(20 / 16 * 1rem, 1.167rem + 0.42vw, 24 / 16 * 1rem); //最小：20px 最大：24px viw:320-1280px
+    font-size: clamp(20 / 16 * 1rem, 1.167rem + 0.42vw, 24 / 16 * 1rem); // view:320-1280px
     font-weight: 700;
     letter-spacing: 0.08em;
     line-height: 1.25;
@@ -275,12 +268,9 @@
 
   &__detail {
     display: flex;
-    grid-column: 1 / -1;
-    grid-row-start: 3;
     align-items: center;
     justify-content: space-between;
-    font-size: pxToRem(12px);
-    font-size: clamp(12 / 16 * 1rem, 0.688rem + 0.31vw, 15 / 16 * 1rem); // viw:320-1280px
+    font-size: clamp(12 / 16 * 1rem, 0.688rem + 0.31vw, 15 / 16 * 1rem); // view:320-1280px
     font-weight: 500;
     letter-spacing: 0.03em;
     line-height: 1;
@@ -300,12 +290,3 @@
     }
   }
 }
-
-// .p-plan__option__number {
-//   font-size: pxToRem(20px);
-//   font-weight: 700;
-
-//   @include mq(md) {
-//     font-size: pxToRem(24px);
-//   }
-// }

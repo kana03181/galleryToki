@@ -6,11 +6,6 @@
   feature
 */
 
-.p-feature__contents {
-  display: flex;
-  flex-direction: column;
-}
-
 .p-feature__grid {
   &__wrap {
     padding: clamp(70 / 16 * 1rem, 3.806rem + 2.84vw, 90 / 16 * 1rem) 0 0;
@@ -21,16 +16,8 @@
   }
 }
 
-.p-feature__card__titles {
-  display: grid;
-  grid-column: 1 / -1;
-  grid-row-start: 2;
-}
-
 .p-feature__card__title {
   display: block;
-  grid-column: 1 / -1;
-  grid-row-start: 1;
   margin: clamp(1rem, 0.833rem + 0.83vw, 1.25rem) 0 clamp(1rem, 0.833rem + 0.83vw, 1.25rem);
   font-size: pxToRem(20px);
   font-weight: 500;

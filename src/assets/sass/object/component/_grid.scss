@@ -19,16 +19,16 @@
   &__item {
     &.-feature {
       display: grid;
-      box-sizing: border-box;
       grid-row: span 3;
       grid-template-rows: subgrid;
-      min-height: 378px;
+      align-items: flex-start;
     }
 
     &.-plan {
       display: grid;
       grid-row: span 4;
       grid-template-rows: subgrid;
+      align-items: flex-start;
       row-gap: clamp(16 / 16 * 1rem, 0.833rem + 0.83vw, 24 / 16 * 1rem);
 
       @-moz-document url-prefix() {
