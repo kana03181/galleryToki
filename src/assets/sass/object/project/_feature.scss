@@ -149,7 +149,7 @@
     margin: 0;
     transform: translateY(-50%);
     color: $base-color;
-    font-size: clamp(12 / 16 * 1rem, 0.616rem + 0.67vw, 12 / 16 * 1rem); //min-:320-768px
+    font-size: clamp(12 / 16 * 1rem, 0.616rem + 0.67vw, 15 / 16 * 1rem); //view:320-768px
     font-weight: 700;
     letter-spacing: 0.08em;
     line-height: 1.1;
