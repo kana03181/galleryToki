@@ -23,7 +23,7 @@
   &.-about {
     @include mq(lg) {
       display: grid;
-      grid-template-columns: calc(549 / 1024 * 100vw) 1fr;
+      grid-template-columns: calc(542 / 1024 * 100vw) 1fr;
       grid-template-rows: min-content minmax(min-content, 400px);
       column-gap: pxToRem(40px);
       row-gap: pxToRem(32px);

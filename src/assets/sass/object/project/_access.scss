@@ -88,9 +88,7 @@
       width: 100%;
       max-width: 900px;
       margin: auto;
-      // padding: clamp(40 / 16 * 1rem, 2.167rem + 1.67vw, 56 / 16 * 1rem) 0; //viw:320-1280px
       border-radius: pxToRem(10px);
-      // background-color: $background-color-index;
       row-gap: clamp(24 / 16 * 1rem, 1.167rem + 1.67vw, 40 / 16 * 1rem); //viw:320-1280px
 
       @include mq(lg) {

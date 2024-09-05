@@ -7,7 +7,7 @@ export default function () {
 
     function addClassOnResize() {
       let windowWidth = document.documentElement.clientWidth;
-      if (windowWidth <= 1279) {
+      if (windowWidth <= 1280) {
         body.classList.add("is-resize");
       } else {
         body.classList.remove("is-resize");

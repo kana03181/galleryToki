@@ -77,6 +77,10 @@
     margin-bottom: pxToRem(64px);
   }
 
+  @include mq(xxl) {
+    margin-bottom: calc(64 / 1440 * 100vw);
+  }
+
   &__wrapper {
     width: 100%;
     margin-top: clamp(32 / 16 * 1rem, 1.667rem + 1.67vw, 48 / 16 * 1rem);
@@ -84,6 +88,10 @@
     @include mq(lg) {
       grid-area: 1 / 1 / 3 / 2;
       margin-top: 0;
+    }
+
+    @include mq(xl) {
+      align-self: flex-end;
     }
 
     &::after {
@@ -100,9 +108,10 @@
       }
 
       @include mq(xl) {
-        top: 64px;
+        top: initial;
+        bottom: 0;
         width: calc(644 / 1280 * 100vw);
-        height: calc(100% - 64px);
+        height: calc(503 / 1280 * 100vw);
       }
     }
   }
@@ -112,13 +121,13 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 50% 25%;
+  object-position: left top;
 
   @include mq(lg) {
-    object-position: 8% 0%;
+    object-position: 23% top;
   }
 
   @include mq(xl) {
-    object-position: 0% 0%;
+    object-position: 15% 0%;
   }
 }

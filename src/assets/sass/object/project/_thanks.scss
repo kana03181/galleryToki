@@ -32,8 +32,16 @@
     }
 
     &__link {
+      transition: var(--duration2) var(--ease6);
+      transition-property: color;
       color: $primary-text-color;
       text-decoration: underline;
+
+      &:hover {
+        transition: var(--duration2) var(--ease6);
+        transition-property: color;
+        color: $text-link-color-hover1;
+      }
     }
   }
 }

@@ -7,41 +7,27 @@ closetPolyfill();
 
 // Libraly
 // import Loading from "./lib/Loading";
-// import $ from "jquery";
 // import SmoothScroll from "smooth-scroll";
 // import ScrollObserver from './lib/ScrollObserver';
-// import Toggle from "./lib/Toggle";
-// import Close from "./lib/Close";
-// import { dropdown } from './lib/dropdown';
-// import { inview } from "./lib/inview";
-// import swiper from "./lib/swiper";
 
-import header from "./lib/header";
 import gsap from "./lib/gsap";
 import hamburger from "./lib/hamburger";
 import windowResize from "./lib/windowResize";
 import SmoothScroll from "./lib/SmoothScroll";
 import accordion from "./lib/accordion";
 import IntersectionObserver from "./lib/IntersectionObserver";
-// import validation from "./lib/validation";
-import { form_Tel, form_Email } from "./lib/validation";
+import validateContactForm from "./lib/validation";
 import Swiper from "swiper/bundle";
 import "swiper/swiper-bundle.css";
 
-new header();
 new gsap();
 new SmoothScroll();
 new hamburger();
 new windowResize();
 new accordion();
 new IntersectionObserver();
-// new validation();
-new form_Tel();
-new form_Email();
-// swiper();
-// new swiper();
+new validateContactForm();
 // new Loading();
-// new Toggle(".js-drawer");
 // new SmoothScroll('a[href*="#"]');
 
 //**********  ここから下はswiperのJS  **********/
@@ -180,9 +166,14 @@ manageSwiper(); // 初期状態でSwiperを管理
 //   swiper(hero)
 // */
 document.addEventListener("DOMContentLoaded", function () {
-  const swiperContainer = document.querySelector(".js-hero__swiper__wrapper");
-  if (swiperContainer) {
-    const heroSwiper = new Swiper(".p-hero__swiper", {
+  const hero = document.querySelector(".js-hero");
+  const heroSlider = document.querySelector(".js-hero__swiper");
+  const heroSlides = document.querySelectorAll(".js-hero__swiper__slide");
+
+  hero.style.animation = "heroFadeIn 3s cubic-bezier(0.27, -0.12, 0.58, 1) 0.8s forwards";
+
+  if (heroSlider) {
+    const heroSwiper = new Swiper(".js-hero__swiper", {
       loop: true,
       speed: 2000,
       spaceBetween: 32,
@@ -194,11 +185,22 @@ document.addEventListener("DOMContentLoaded", function () {
         disableOnInteraction: false,
       },
       breakpoints: breakpoints.hero,
-      pagination: {
-        el: ".p-hero__swiper__pagination",
-        type: "bullets",
-        clickable: true,
-      },
+      observer: true,
+      observeParents: true,
+      // on:{
+      //   init:function(){
+      //     hero.style.opacity = "0";
+      //   },
+      //   imageReady:function(){
+      //     hero.style.transition = "opacity 0.5s";
+      //     hero.style.opacity = "1";
+      //   }
+      // }
+    });
+
+    heroSlides.forEach((slide) => {
+      slide.style.visibility = "inherit";
+      slide.style.transitionProperty = "transform,opacity";
     });
 
     // Swiper表示後に5秒間autoplayを停止する
@@ -207,8 +209,6 @@ document.addEventListener("DOMContentLoaded", function () {
     setTimeout(function () {
       heroSwiper.autoplay.start(); // 5秒後に自動再生を開始
     }, 5000);
-
-    swiperContainer.style.visibility = "visible";
   }
 });
 
