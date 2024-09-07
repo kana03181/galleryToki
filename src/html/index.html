@@ -17,18 +17,14 @@
     <link rel="shortcut icon" href="assets/img/common/favicon.png" />
     <link rel="apple-touch-icon" href="assets/img/common/apple-touch-icon.png" />
     <link rel="author" href="/humans.txt" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" as="style" fetchpriority="high" href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500&family=Zen+Kaku+Gothic+Antique:wght@400;500;700&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500&family=Zen+Kaku+Gothic+Antique:wght@400;500;700&display=swap" media="print" onload='this.media="all"' />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" as="style" fetchpriority="high" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique:wght@400;500;700&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique:wght@400;500;700&display=swap" media="print" onload='this.media="all"' />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" as="style" fetchpriority="high" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" media="print" onload='this.media="all"' />
+    <link rel="preload" as="font" href="assets/fonts/ZenKakuGothicAntique-Regular.woff2" type="font/woff2" crossorigin>
+    <link rel="preload" as="font" href="assets/fonts/ZenKakuGothicAntique-Medium.woff2" type="font/woff2" crossorigin>
+    <link rel="preload" as="font" href="assets/fonts/ZenKakuGothicAntique-Bold.woff2" type="font/woff2" crossorigin>
+    <link rel="preload" as="font" href="assets/fonts/FiraSans-Regular.woff2" type="font/woff2" crossorigin>
+    <link rel="preload" as="font" href="assets/fonts/FiraSans-Medium.woff2" type="font/woff2" crossorigin>
+    <link rel="preload" as="font" href="assets/fonts/FiraSans-Bold.woff2" type="font/woff2" crossorigin>
+    <link rel="preload" as="font" href="assets/fonts/NotoSansJP-Medium.woff2" type="font/woff2" crossorigin>
+    <link rel="preload" as="font" href="assets/fonts/NotoSansJP-Bold.woff2" type="font/woff2" crossorigin>
     <title>民泊 ギャラリー 鴇 | ちょうどいい田舎の実家のような宿</title>
     <script src="/assets/js/main.bundle.js" defer></script>
     <!-- Google tag (gtag.js) -->
@@ -84,7 +80,7 @@
       <div class="l-hero p-hero js-hero">
         <div class="l-container">
           <div class="p-hero__items">
-            <div class="p-hero__body">
+            <div class="p-hero__body js-hero__body">
               <p class="p-hero__copy">
                 <span class="p-hero__copy__text">また、行きたい。</span><span class="p-hero__copy__text">ちょうどいい田舎の<wbr>実家のような民泊</span>
               </p>
@@ -156,14 +152,16 @@
                   <picture>
                     <source type="image/avif" srcset="assets/img/top/concept/concept_entrance_282w.avif 282w, assets/img/top/concept/concept_entrance_564w.avif 564w, assets/img/top/concept/concept_entrance_826w.avif 826w, assets/img/top/concept/concept_entrance_1128w.avif 1128w" sizes="(max-width:1280px) 413px">
                     <source type="image/webp" srcset="assets/img/top/concept/concept_entrance_282w.webp 282w, assets/img/top/concept/concept_entrance_564w.webp 564w, assets/img/top/concept/concept_entrance_826w.webp 826w, assets/img/top/concept/concept_entrance_1128w.webp 1128w" sizes="(max-width:1280px) 413px">
-                    <img src="assets/img/top/concept/concept_entrance.jpg" srcset="assets/img/top/concept/concept_entrance_282w.jpg 282w, assets/img/top/concept/concept_entrance_564w.jpg 564w, assets/img/top/concept/concept_entrance_826w.jpg 826w, assets/img/top/concept/concept_entrance_1128w.jpg 1128w" width="413" height="533" sizes="(max-width:1280px) 413px" alt="民泊gallery鴇の玄関" loading="eager" decoding="async">
+                    <source type="image/jpeg" srcset="assets/img/top/concept/concept_entrance_282w.jpg 282w, assets/img/top/concept/concept_entrance_564w.jpg 564w, assets/img/top/concept/concept_entrance_826w.jpg 826w, assets/img/top/concept/concept_entrance_1128w.jpg 1128w" sizes="(max-width:1280px) 413px">
+                    <img src="assets/img/top/concept/concept_entrance_2x.jpg"  width="413" height="533" alt="民泊gallery 鴇の玄関" loading="eager" decoding="async">
                   </picture>
                 </figure>
                 <figure class="p-concept__img -bottom">
                   <picture>
                     <source type="image/avif" srcset="assets/img/top/concept/concept_room_350w.avif 350w, assets/img/top/concept/concept_room_500w.avif 500w, assets/img/top/concept/concept_room_700w.avif 700w, assets/img/top/concept/concept_room_1400w.avif 1400w" sizes="(max-width:1280px) 500px">
                     <source type="image/webp" srcset="assets/img/top/concept/concept_room_350w.webp 350w, assets/img/top/concept/concept_room_500w.webp 500w, assets/img/top/concept/concept_room_700w.webp 700w, assets/img/top/concept/concept_room_1400w.webp 1400w" sizes="(max-width:1280px) 500px">
-                    <img src="assets/img/top/concept/concept_room.jpg" srcset="assets/img/top/concept/concept_room_350w.jpg 350w, assets/img/top/concept/concept_room_500w.jpg 500w, assets/img/top/concept/concept_room_700w.jpg 700w, assets/img/top/concept/concept_room_1400w.jpg 1400w" width="500" height="334" sizes="(max-width:1280px) 500px" alt="民泊gallery鴇の部屋" loading="eager" decoding="async">
+                    <source type="image/jpeg" srcset="assets/img/top/concept/concept_room_350w.jpg 350w, assets/img/top/concept/concept_room_500w.jpg 500w, assets/img/top/concept/concept_room_700w.jpg 700w, assets/img/top/concept/concept_room_1400w.jpg 1400w" sizes="(max-width:1280px) 500px">
+                    <img src="assets/img/top/concept/concept_room_2x.jpg" width="500" height="334" alt="民泊 gallery 鴇の部屋" loading="eager" decoding="async">
                   </picture>
                 </figure>
               </div>
@@ -189,12 +187,13 @@
               <div class="p-about__img__wrapper">
                 <figure class="p-about__img">
                   <picture>
-                    <source type="image/avif" srcset="assets/img/top/about/about_house_sp_576w.avif 576w, assets/img/top/about/about_house_sp_1152w.avif 1152w" media="(max-width:1023px)" sizes="(max-width:1280px) 576px">
-                    <source type="image/webp" srcset="assets/img/top/about/about_house_sp_576w.webp 576w, assets/img/top/about/about_house_sp_1152w.webp 1152w" media="(max-width:1023px)" sizes="(max-width:1280px) 576px">
-                    <source type="image/jpg" srcset="assets/img/top/about/about_house_sp_576w.jpg 576w, assets/img/top/about/about_house_sp_1152w.jpg 1152w" media="(max-width:1023px)" sizes="(max-width:1280px) 576px">
-                    <source type="image/avif" srcset="assets/img/top/about/about_house_pc_588w.avif 588w, assets/img/top/about/about_house_pc_1176w.avif 1176w" media="(max-width:1024px)" sizes="(max-width:1279px) 588px">
-                    <source type="image/webp" srcset="assets/img/top/about/about_house_pc_588w.webp 588w, assets/img/top/about/about_house_pc_1176w.webp 1176w" media="(max-width:1024px)" sizes="(max-width:1279px) 588px">
-                    <img src="assets/img/top/about/about_house_pc_2x.jpg" srcset="assets/img/top/about/about_house_pc_588w.jpg 588w, assets/img/top/about/about_house_pc_1176w.jpg 1176w" width="588" height="503" sizes="(max-width:1280px) 588px" alt="民泊ギャラリー鴇の外観" decoding="async" loading="lazy">
+                    <source type="image/avif" srcset="assets/img/top/about/about_house_sp_576w.avif 576w, assets/img/top/about/about_house_sp_864w.avif 864w, assets/img/top/about/about_house_sp_1152w.avif 1152w" media="(max-width:1023px)" sizes="(max-width:1280px) 576px">
+                    <source type="image/webp" srcset="assets/img/top/about/about_house_sp_576w.webp 576w, assets/img/top/about/about_house_sp_864w.webp 864w, assets/img/top/about/about_house_sp_1152w.webp 1152w" media="(max-width:1023px)" sizes="(max-width:1280px) 576px">
+                    <source type="image/jpg" srcset="assets/img/top/about/about_house_sp_576w.jpg 576w, assets/img/top/about/about_house_sp_864w.jpg 864w, assets/img/top/about/about_house_sp_1152w.jpg 1152w" media="(max-width:1023px)" sizes="(max-width:1280px) 576px">
+                    <source type="image/avif" srcset="assets/img/top/about/about_house_pc_588w.avif 588w, assets/img/top/about/about_house_pc_1176w.avif 1176w" media="(min-width:1024px)" sizes="(max-width:1280px) 588px">
+                    <source type="image/webp" srcset="assets/img/top/about/about_house_pc_588w.webp 588w, assets/img/top/about/about_house_pc_1176w.webp 1176w" media="(min-width:1024px)" sizes="(max-width:1280px) 588px">
+                    <source type="image/jpeg" srcset="assets/img/top/about/about_house_pc_588w.jpg 588w, assets/img/top/about/about_house_pc_1176w.jpg 1176w" media="(min-width:1024px)" sizes="(max-width:1280px) 588px">
+                    <img src="assets/img/top/about/about_house_pc_2x.jpg" width="588" height="503" alt="民泊ギャラリー鴇の外観" decoding="async" loading="lazy">
                   </picture>
                 </figure>
               </div>
@@ -223,7 +222,12 @@
                     </h3>
                     <p class="c-card__text -feature">1日1組限定のため、他のお客様と一緒に過ごすことはございません。夜は管理人（女性）も在宅しておりますので、女性1人でも安心してお過ごしいただけます。お帰りの際は無料で送迎いたします。</p>
                     <figure class="c-card__thumbnail -feature">
-                      <img class="c-card__image" src="assets/img/top/feature/feature_guest.jpg" srcset="assets/img/top/feature/feature_guest_2x.jpg 2x" width="768" height="589" alt="民泊ギャラリー鴇に来たお客様" decoding="async" loading="lazy">
+                      <picture>
+                        <source type="image/avif" srcset="assets/img/top/feature/feature_guest_512w.avif 512w, assets/img/top/feature/feature_guest_768w.avif 768w, assets/img/top/feature/feature_guest_1024w.avif 1024w" sizes="(max-width:1280px) 297px">
+                        <source type="image/webp" srcset="assets/img/top/feature/feature_guest_512w.webp 576w, assets/img/top/feature/feature_guest_768w.webp 768w, assets/img/top/feature/feature_guest_1024w.webp 1024w" sizes="(max-width:1280px) 297px">
+                        <source type="image/jpeg" srcset="assets/img/top/feature/feature_guest_512w.jpg 576w, assets/img/top/feature/feature_guest_768w.jpg 768w, assets/img/top/feature/feature_guest_1024w.jpg 1024w" sizes="(max-width:1280px) 297px">
+                        <img class="c-card__image" src="assets/img/top/feature/feature_guest_2x.jpg" width="297" height="198" alt="民泊 ギャラリー 鴇に来たお客様" decoding="async" loading="lazy">
+                      </picture>
                     </figure>
                   </li>
                   <li class="c-card c-grid__item -feature js-feature-trigger">
@@ -233,7 +237,12 @@
                     </h3>
                     <p class="c-card__text -feature">素泊まりのみでご案内しており、食事の提供はしておりません。共有のキッチンで食事を作ったり、外食したり。お客様によってさまざまです。</p>
                     <figure class="c-card__thumbnail -feature">
-                      <img class="c-card__image" src="assets/img/top/feature/feature_plan.jpg" srcset="assets/img/top/feature/feature_plan_2x.jpg 2x" width="768" height="512" alt="民泊ギャラリー鴇の部屋" decoding="async" loading="lazy">
+                      <picture>
+                        <source type="image/avif" srcset="assets/img/top/feature/feature_plan_512w.avif 512w, assets/img/top/feature/feature_plan_768w.avif 768w, assets/img/top/feature/feature_plan_1024w.avif 1024w" sizes="(max-width:1280px) 297px">
+                        <source type="image/webp" srcset="assets/img/top/feature/feature_plan_512w.webp 576w, assets/img/top/feature/feature_plan_768w.webp 768w, assets/img/top/feature/feature_plan_1024w.webp 1024w" sizes="(max-width:1280px) 297px">
+                        <source type="image/jpeg" srcset="assets/img/top/feature/feature_plan_512w.jpg 576w, assets/img/top/feature/feature_plan_768w.jpg 768w, assets/img/top/feature/feature_plan_1024w.jpg 1024w" sizes="(max-width:1280px) 297px">
+                        <img class="c-card__image" src="assets/img/top/feature/feature_plan_2x.jpg" width="297" height="198" alt="民泊 ギャラリー 鴇の宿泊部屋1" decoding="async" loading="lazy">
+                      </picture>
                     </figure>
                   </li>
                   <li class="c-card c-grid__item -feature js-feature-trigger">
@@ -243,7 +252,12 @@
                     </h3>
                     <p class="c-card__text -feature">お皿、電子レンジ、コンロなど、共有スペースにあるものはご自由にご利用いただけます。アメニティや設備も充実しており、宿泊する上で必要なものは一通り揃っています。</p>
                     <figure class="c-card__thumbnail -feature">
-                      <img class="c-card__image" src="assets/img/top/feature/feature_shareSpace.jpg" srcset="assets/img/top/feature/feature_shareSpace_2x.jpg 2x" width="768" height="511" alt="民泊ギャラリー鴇の共有スペース" decoding="async" loading="lazy">
+                      <picture>
+                        <source type="image/avif" srcset="assets/img/top/feature/feature_shareSpace_512w.avif 512w, assets/img/top/feature/feature_shareSpace_768w.avif 768w, assets/img/top/feature/feature_shareSpace_1024w.avif 1024w" sizes="(max-width:1280px) 297px">
+                        <source type="image/webp" srcset="assets/img/top/feature/feature_shareSpace_512w.webp 576w, assets/img/top/feature/feature_shareSpace_768w.webp 768w, assets/img/top/feature/feature_shareSpace_1024w.webp 1024w" sizes="(max-width:1280px) 297px">
+                        <source type="image/jpeg" srcset="assets/img/top/feature/feature_shareSpace_512w.jpg 576w, assets/img/top/feature/feature_shareSpace_768w.jpg 768w, assets/img/top/feature/feature_shareSpace_1024w.jpg 1024w," sizes="(max-width:1280px) 297px">
+                        <img class="c-card__image" src="assets/img/top/feature/feature_shareSpace_2x.jpg" width="297" height="198" alt="民泊 ギャラリー 鴇のキッチン" decoding="async" loading="lazy">
+                      </picture>
                     </figure>
                   </li>
                 </ol>
@@ -315,8 +329,10 @@
                 <p class="p-room__facility__name" lang="en">Room1</p>
                 <figure class="p-room__facility__image">
                   <picture>
-                    <source type="image/webp" srcset="assets/img/top/room_facility/room_facility_room1_sp.webp 1x, assets/img/top/room_facility/room_facility_room1_sp_2x.webp 2x" width="768" height="545" media="(max-width:1023px)">
-                    <img src="assets/img/top/room_facility/room_facility_room1_pc.jpg" srcset="assets/img/top/room_facility/room_facility_room1_pc_2x.jpg 2x" width="700" height="471" alt="宿泊部屋1" decoding="async" loading="lazy">
+                    <source type="image/avif" srcset="assets/img/top/room_facility/room_facility_room1_576w.avif 576w, assets/img/top/room_facility/room_facility_room1_864w.avif 864w, assets/img/top/room_facility/room_facility_room1_1152w.avif 1152w" sizes="(max-width:1280px) 357px">
+                    <source type="image/webp" srcset="assets/img/top/room_facility/room_facility_room1_576w.webp 576w, assets/img/top/room_facility/room_facility_room1_864w.webp 864w, assets/img/top/room_facility/room_facility_room1_1152w.webp 1152w" sizes="(max-width:1280px) 357px">
+                    <source type="image/jpeg" srcset="assets/img/top/room_facility/room_facility_room1_576w.jpg 576w, assets/img/top/room_facility/room_facility_room1_864w.jpg 864w, assets/img/top/room_facility/room_facility_room1_1152w.jpg 1152w" sizes="(max-width:1280px) 357px">
+                    <img src="assets/img/top/room_facility/room_facility_room1_2x.jpg" width="357" height="240" alt="民泊 ギャラリー 鴇の宿泊部屋1" decoding="async" loading="lazy">
                   </picture>
                 </figure>
               </div>
@@ -324,8 +340,10 @@
                 <p class="p-room__facility__name" lang="en">Room2</p>
                 <figure class="p-room__facility__image">
                   <picture>
-                    <source type="image/webp" srcset="assets/img/top/room_facility/room_facility_room2_sp.webp 1x, assets/img/top/room_facility/room_facility_room2_sp_2x.webp 2x" width="768" height="512" media="(max-width:1023px)">
-                    <img src="assets/img/top/room_facility/room_facility_room2_pc.jpg" srcset="assets/img/top/room_facility/room_facility_room2_pc_2x.jpg 2x" width="700" height="471" alt="宿泊部屋2" decoding="async" loading="lazy">
+                    <source type="image/avif" srcset="assets/img/top/room_facility/room_facility_room2_576w.avif 576w, assets/img/top/room_facility/room_facility_room2_864w.avif 864w, assets/img/top/room_facility/room_facility_room2_1152w.avif 1152w" sizes="(max-width:1280px) 357px">
+                    <source type="image/webp" srcset="assets/img/top/room_facility/room_facility_room2_576w.webp 576w, assets/img/top/room_facility/room_facility_room2_864w.webp 864w, assets/img/top/room_facility/room_facility_room2_1152w.webp 1152w" sizes="(max-width:1280px) 357px">
+                    <source type="image/jpeg" srcset="assets/img/top/room_facility/room_facility_room2_576w.jpg 576w, assets/img/top/room_facility/room_facility_room2_864w.jpg 864w, assets/img/top/room_facility/room_facility_room2_1152w.jpg 1152w" sizes="(max-width:1280px) 357px">
+                    <img src="assets/img/top/room_facility/room_facility_room2_2x.jpg" width="357" height="240" alt="民泊 ギャラリー 鴇の宿泊部屋2" decoding="async" loading="lazy">
                   </picture>
                 </figure>
               </div>
@@ -336,8 +354,10 @@
                     <div class="swiper-slide p-room__facility__swiper__slide">
                       <figure class="p-room__facility__image ">
                         <picture>
-                          <source type="image/webp" srcset="assets/img/top/room_facility/room_facility_shareSpace_sp.webp 1x, assets/img/top/room_facility/room_facility_shareSpace_sp_2x.webp 2x" width="768" height="512" media="(max-width:1023px)">
-                          <img src="assets/img/top/room_facility/room_facility_shareSpace_pc.jpg" srcset="assets/img/top/room_facility/room_facility_shareSpace_pc_2x.jpg 2x" width="700" height="471" alt="共有スペース" decoding="async" loading="lazy">
+                          <source type="image/avif" srcset="assets/img/top/room_facility/room_facility_shareSpace_576w.avif 576w, assets/img/top/room_facility/room_facility_shareSpace_864w.avif 864w, assets/img/top/room_facility/room_facility_shareSpace_1152w.avif 1152w" sizes="(max-width:1280px) 357px">
+                          <source type="image/webp" srcset="assets/img/top/room_facility/room_facility_shareSpace_576w.webp 576w, assets/img/top/room_facility/room_facility_shareSpace_864w.webp 864w, assets/img/top/room_facility/room_facility_shareSpace_1152w.webp 1152w" sizes="(max-width:1280px) 357px">
+                          <source type="image/jpeg" srcset="assets/img/top/room_facility/room_facility_shareSpace_576w.jpg 576w, assets/img/top/room_facility/room_facility_shareSpace_864w.jpg 864w, assets/img/top/room_facility/room_facility_shareSpace_1152w.jpg 1152w" sizes="(max-width:1280px) 357px">
+                          <img src="assets/img/top/room_facility/room_facility_shareSpace_2x.jpg" width="357" height="240" alt="民泊 ギャラリー 鴇のリビング" decoding="async" loading="lazy">
                         </picture>
                       </figure>
                     </div>
@@ -345,8 +365,10 @@
                     <div class="swiper-slide p-room__facility__swiper__slide">
                       <figure class="p-room__facility__image">
                         <picture>
-                          <source type="image/webp" srcset="assets/img/top/room_facility/room_facility_kitchen_sp.webp 1x, assets/img/top/room_facility/room_facility_kitchen_sp_2x.webp 2x" width="768" height="512" media="(max-width:1023px)">
-                          <img src="assets/img/top/room_facility/room_facility_kitchen_pc.jpg" srcset="assets/img/top/room_facility/room_facility_kitchen_pc_2x.jpg 2x" width="700" height="471" alt="キッチン" decoding="async" loading="lazy">
+                          <source type="image/avif" srcset="assets/img/top/room_facility/room_facility_kitchen_576w.avif 576w, assets/img/top/room_facility/room_facility_kitchen_864w.avif 864w, assets/img/top/room_facility/room_facility_kitchen_1152w.avif 1152w" sizes="(max-width:1280px) 357px">
+                          <source type="image/webp" srcset="assets/img/top/room_facility/room_facility_kitchen_576w.webp 576w, assets/img/top/room_facility/room_facility_kitchen_864w.webp 864w, assets/img/top/room_facility/room_facility_kitchen_1152w.webp 1152w" sizes="(max-width:1280px) 357px">
+                          <source type="image/jpeg" srcset="assets/img/top/room_facility/room_facility_kitchen_576w.jpg 576w, assets/img/top/room_facility/room_facility_kitchen_864w.jpg 864w, assets/img/top/room_facility/room_facility_kitchen_1152w.jpg 1152w" sizes="(max-width:1280px) 357px">
+                          <img src="assets/img/top/room_facility/room_facility_kitchen_2x.jpg" width="357" height="240" alt="民泊 ギャラリー 鴇のキッチン" decoding="async" loading="lazy">
                         </picture>
                       </figure>
                     </div>
@@ -354,8 +376,10 @@
                     <div class="swiper-slide p-room__facility__swiper__slide">
                       <figure class="p-room__facility__image">
                         <picture>
-                          <source type="image/webp" srcset="assets/img/top/room_facility/room_facility_bathroom2_sp.webp 1x, assets/img/top/room_facility/room_facility_bathroom2_sp_2x.webp 2x" width="768" height="509" media="(max-width:1023px)">
-                          <img src="assets/img/top/room_facility/room_facility_bathroom2_pc.jpg" srcset="assets/img/top/room_facility/room_facility_bathroom2_pc_2x.jpg 2x" width="700" height="471" alt="洗面所" decoding="async" loading="lazy">
+                          <source type="image/avif" srcset="assets/img/top/room_facility/room_facility_bathroom_576w.avif 576w, assets/img/top/room_facility/room_facility_bathroom_864w.avif 864w, assets/img/top/room_facility/room_facility_bathroom_1152w.avif 1152w" sizes="(max-width:1280px) 357px">
+                          <source type="image/webp" srcset="assets/img/top/room_facility/room_facility_bathroom_576w.webp 576w, assets/img/top/room_facility/room_facility_bathroom_864w.webp 864w, assets/img/top/room_facility/room_facility_bathroom_1152w.webp 1152w" sizes="(max-width:1280px) 357px">
+                          <source type="image/jpeg" srcset="assets/img/top/room_facility/room_facility_bathroom_576w.jpg 576w, assets/img/top/room_facility/room_facility_bathroom_864w.jpg 864w, assets/img/top/room_facility/room_facility_bathroom_1152w.jpg 1152w" sizes="(max-width:1280px) 357px">
+                          <img src="assets/img/top/room_facility/room_facility_bathroom_2x.jpg" width="357" height="240" alt="民泊 ギャラリー 鴇の洗面所" decoding="async">
                         </picture>
                       </figure>
                     </div>
@@ -432,8 +456,10 @@
                     <p class="c-card__text -plan">管理人が経営している焼き鳥屋「やきとり鳥ぼう」で実際に焼き鳥を焼く体験ができます。ご自身で焼いたものを施設に持ち帰り、その日のお食事としてお召し上がりいただけます。</p>
                     <figure class="c-card__thumbnail -plan p-plan__option__image -first">
                       <picture>
-                        <source type="image/webp" srcset="assets/img/top/plan/plan_option1_sp.webp 1x, assets/img/top/plan/plan_option1_sp_2x.webp 2x" width="768" height="1025" media="(max-width:1023px)">
-                        <img src="assets/img/top/plan/plan_option1_pc.jpg" srcset="assets/img/top/plan/plan_option1_pc_2x.jpg 2x" width="330" height="441" alt="共有スペース" decoding="async" loading="lazy">
+                        <source type="image/avif" srcset="assets/img/top/plan/plan_option1_480w.avif 480w, assets/img/top/plan/plan_option1_720w.avif 720w, assets/img/top/plan/plan_option1_960w.avif 960w" sizes="(max-width:1280px) 300px">
+                        <source type="image/webp" srcset="assets/img/top/plan/plan_option1_480w.webp 480w, assets/img/top/plan/plan_option1_720w.webp 720w, assets/img/top/plan/plan_option1_960w.webp 960w" sizes="(max-width:1280px) 300px">
+                        <source type="image/jpeg" srcset="assets/img/top/plan/plan_option1_480w.jpg 576w, assets/img/top/plan/plan_option1_720w.jpg 720w, assets/img/top/plan/plan_option1_960w.jpg 960w" sizes="(max-width:1280px) 300px">
+                        <img src="assets/img/top/plan/plan_option1_2x.jpg" width="300" height="242" alt="焼き鳥を焼く手" decoding="async" loading="lazy">
                       </picture>
                     </figure>
                   </li>
@@ -446,8 +472,10 @@
                       <p class="c-card__text -plan">日本の伝統衣装である着物を実際に着る体験です。必要な道具はこちらでご用意しますので、手ぶらで参加することが<wbr>できます。着付け師の資格を持つ管理人が着方をレクチャーいたします。</p>
                     <figure class="c-card__thumbnail -plan p-plan__option__image -second">
                       <picture>
-                        <source type="image/webp" srcset="assets/img/top/plan/plan_option2_sp.webp 1x, assets/img/top/plan/plan_option2_sp_2x.webp 2x" width="768" height="1025" media="(max-width:1023px)">
-                        <img src="assets/img/top/plan/plan_option2_pc.jpg" srcset="assets/img/top/plan/plan_option2_pc_2x.jpg 2x" width="330" height="441" alt="共有スペース" decoding="async" loading="lazy">
+                        <source type="image/avif" srcset="assets/img/top/plan/plan_option2_480w.avif 480w, assets/img/top/plan/plan_option2_720w.avif 720w, assets/img/top/plan/plan_option2_960w.avif 960w" sizes="(max-width:1280px) 300px">
+                        <source type="image/webp" srcset="assets/img/top/plan/plan_option2_480w.webp 480w, assets/img/top/plan/plan_option2_720w.webp 720w, assets/img/top/plan/plan_option2_960w.webp 960w" sizes="(max-width:1280px) 300px">
+                        <source type="image/jpeg" srcset="assets/img/top/plan/plan_option2_480w.jpg 480w, assets/img/top/plan/plan_option2_720w.jpg 720w, assets/img/top/plan/plan_option2_960w.jpg 960w" sizes="(max-width:1280px) 300px">
+                        <img src="assets/img/top/plan/plan_option2_2x.jpg" width="300" height="242" alt="着付け体験で着物を着たお客様" decoding="async" loading="lazy">
                       </picture>
                     </figure>
                   </li>
@@ -1145,8 +1173,10 @@
                   <div class="swiper-slide p-location__swiper__slide">
                     <figure class="p-location__shop__img">
                       <picture>
-                        <source type="image/webp" srcset="assets/img/top/location/location_yakitoritoribou_sp.webp 1x, assets/img/top/location/location_yakitoritoribou_sp_2x.webp 2x" width="768" height="539" media="(max-width:767px)">
-                        <img class="-toribou" src="assets/img/top/location/location_yakitoritoribou_pc.jpg" srcset="assets/img/top/location/location_yakitoritoribou_pc_2x.jpg 2x" width="800" height="513" alt="焼き鳥鳥ぼう" decoding="async" loading="lazy">
+                        <source type="image/avif" srcset="assets/img/top/location/location_yakitoritoribou_574w.avif 574w, assets/img/top/location/location_yakitoritoribou_861w.avif 861w, assets/img/top/location/location_yakitoritoribou_1148w.avif 1148w" sizes="(max-width:1280px) 300px">
+                        <source type="image/webp" srcset="assets/img/top/location/location_yakitoritoribou_574w.webp 574w, assets/img/top/location/location_yakitoritoribou_861w.webp 861w, assets/img/top/location/location_yakitoritoribou_1148w.webp 1148w" sizes="(max-width:1280px) 300px">
+                        <source type="image/jpeg" srcset="assets/img/top/location/location_yakitoritoribou_574w.jpg 574w, assets/img/top/location/location_yakitoritoribou_861w.jpg 861w, assets/img/top/location/location_yakitoritoribou_1148w.jpg 1148w" sizes="(max-width:1280px) 300px">
+                        <img class="-toribou" src="assets/img/top/location/location_yakitoritoribou_2x.jpg" width="800" height="469" alt="お持ち帰り焼き鳥専門店 鳥ぼう" decoding="async" loading="lazy">
                       </picture>
                     </figure>
                     <p class="p-location__shop__text">お持ち帰り焼き鳥専門店 鳥ぼう</p>
@@ -1155,8 +1185,10 @@
                   <div class="swiper-slide p-location__swiper__slide">
                     <figure class="p-location__shop__img">
                       <picture>
-                        <source type="image/webp" srcset="assets/img/top/location/location_cocos_sp.webp 1x, assets/img/top/location/location_cocos_sp_2x.webp 2x" width="768" height="510" media="(max-width:767px)">
-                        <img class="-cocosu" src="assets/img/top/location/location_cocos_pc.jpg" srcset="assets/img/top/location/location_cocos_pc_2x.jpg 2x" width="800" height="513" alt="ココス" decoding="async" loading="lazy">
+                        <source type="image/avif" srcset="assets/img/top/location/location_cocos_574w.avif 574w, assets/img/top/location/location_cocos_861w.avif 861w, assets/img/top/location/location_cocos_1148w.avif 1148w" sizes="(max-width:1280px) 300px">
+                        <source type="image/webp" srcset="assets/img/top/location/location_cocos_574w.webp 574w, assets/img/top/location/location_cocos_861w.webp 861w, assets/img/top/location/location_cocos_1148w.webp 1148w" sizes="(max-width:1280px) 300px">
+                        <source type="image/jpeg" srcset="assets/img/top/location/location_cocos_574w.jpg 574w, assets/img/top/location/location_cocos_861w.jpg 861w, assets/img/top/location/location_cocos_1148w.jpg 1148w" sizes="(max-width:1280px) 300px">
+                        <img class="-cocos" src="assets/img/top/ocation/location_cocos_2x.jpg" width="800" height="469" alt="ココス 熊本小峯店" decoding="async" loading="lazy">
                       </picture>
                     </figure>
                     <p class="p-location__shop__text">ココス 熊本小峯店</p>
@@ -1165,8 +1197,10 @@
                   <div class="swiper-slide p-location__swiper__slide">
                     <figure class="p-location__shop__img">
                       <picture>
-                        <source type="image/webp" srcset="assets/img/top/location/location_syunsaibouyu_sp.webp 1x, assets/img/top/location/location_syunsaibouyu_sp_2x.webp 2x" width="768" height="510" media="(max-width:767px)">
-                        <img class="-yuu" src="assets/img/top/location/location_syunsaibouyu_pc.jpg" srcset="assets/img/top/location/location_syunsaibouyu_pc_2x.jpg 2x" width="800" height="513" alt="旬彩房 悠" decoding="async" loading="lazy">
+                        <source type="image/avif" srcset="assets/img/top/location/location_syunsaibouyu_574w.avif 574w, assets/img/top/location/location_syunsaibouyu_861w.avif 861w, assets/img/top/location/location_syunsaibouyu_1148w.avif 1148w" sizes="(max-width:1280px) 300px">
+                        <source type="image/webp" srcset="assets/img/top/location/location_syunsaibouyu_574w.webp 574w, assets/img/top/location/location_syunsaibouyu_861w.webp 861w, assets/img/top/location/location_syunsaibouyu_1148w.webp 1148w" sizes="(max-width:1280px) 300px">
+                        <source type="image/jpeg" srcset="assets/img/top/location/location_syunsaibouyu_574w.jpg 574w, assets/img/top/location/location_syunsaibouyu_861w.jpg 861w, assets/img/top/location/location_syunsaibouyu_1148w.jpg 1148w" sizes="(max-width:1280px) 300px">
+                        <img class="-yuu" src="assets/img/top/ocation/location_syunsaibouyu_2x.jpg" width="800" height="469" alt="旬彩房 悠" decoding="async" loading="lazy">
                       </picture>
                     </figure>
                     <p class="p-location__shop__text">旬彩房 悠</p>
@@ -1175,8 +1209,10 @@
                   <div class="swiper-slide p-location__swiper__slide">
                     <figure class="p-location__shop__img">
                       <picture>
-                        <source type="image/webp" srcset="assets/img/top/location/location_panoruvan_sp.webp 1x, assets/img/top/location/location_panoruvan_sp_2x.webp 2x" width="768" height="510" media="(max-width:767px)">
-                        <img class="-ruvan" src="assets/img/top/location/location_panoruvan_pc.jpg" srcset="assets/img/top/location/location_panoruvan_pc_2x.jpg 2x" width="800" height="513" alt="パン オ ルヴァン 小峯本店" decoding="async" loading="lazy">
+                        <source type="image/avif" srcset="assets/img/top/location/location_panoruvan_574w.avif 574w, assets/img/top/location/location_panoruvan_861w.avif 861w, assets/img/top/location/location_panoruvan_1148w.avif 1148w" sizes="(max-width:1280px) 300px">
+                        <source type="image/webp" srcset="assets/img/top/location/location_panoruvan_574w.webp 574w, assets/img/top/location/location_panoruvan_861w.webp 861w, assets/img/top/location/location_panoruvan_1148w.webp 1148w" sizes="(max-width:1280px) 300px">
+                        <source type="image/jpeg" srcset="assets/img/top/location/location_panoruvan_574w.jpg 574w, assets/img/top/location/location_panoruvan_861w.jpg 861w, assets/img/top/location/location_panoruvan_1148w.jpg 1148w" sizes="(max-width:1280px) 300px">
+                        <img class="-ruvan" src="assets/img/top/ocation/location_panoruvan_2x.jpg" width="800" height="469" alt="パン オ ルヴァン 小峯本店" decoding="async" loading="lazy">
                       </picture>
                     </figure>
                     <div class="p-location__shop__texts">
@@ -1191,8 +1227,10 @@
                   <div class="swiper-slide p-location__swiper__slide">
                     <figure class="p-location__shop__img">
                       <picture>
-                        <source type="image/webp" srcset="assets/img/top/location/location_shishitora_sp.webp 1x, assets/img/top/location/location_shishitora_sp_2x.webp 2x" width="768" height="511" media="(max-width:767px)">
-                        <img class="-shishitora" src="assets/img/top/location/location_shishitora_pc.jpg" srcset="assets/img/top/location/location_shishitora_pc_2x.jpg 2x" width="800" height="513" alt="ラーメン 中華そば 獅子虎" decoding="async" loading="lazy">
+                        <source type="image/avif" srcset="assets/img/top/location/location_shishitora_574w.avif 574w, assets/img/top/location/location_shishitora_861w.avif 861w, assets/img/top/location/location_shishitora_1148w.avif 1148w" sizes="(max-width:1280px) 300px">
+                        <source type="image/webp" srcset="assets/img/top/location/location_shishitora_574w.webp 574w, assets/img/top/location/location_shishitora_861w.webp 861w, assets/img/top/location/location_shishitora_1148w.webp 1148w" sizes="(max-width:1280px) 300px">
+                        <source type="image/jpeg" srcset="assets/img/top/location/location_shishitora_574w.jpg 574w, assets/img/top/location/location_shishitora_861w.jpg 861w, assets/img/top/location/location_shishitora_1148w.jpg 1148w" sizes="(max-width:1280px) 300px">
+                        <img class="-shishitora" src="assets/img/top/ocation/location_shishitora_2x.jpg" width="800" height="469" alt="ラーメン 中華そば 獅子虎" decoding="async" loading="lazy">
                       </picture>
                     </figure>
                     <div class="p-location__shop__texts">
@@ -1207,8 +1245,10 @@
                   <div class="swiper-slide p-location__swiper__slide">
                     <figure class="p-location__shop__img">
                       <picture>
-                        <source type="image/webp" srcset="assets/img/top/location/location_superkid_sp.webp 1x, assets/img/top/location/location_superkid_sp_2x.webp 2x" width="768" height="512" media="(max-width:767px)">
-                        <img class="-superkid" src="assets/img/top/location/location_superkid_pc.jpg" srcset="assets/img/top/location/location_superkid_pc_2x.jpg 2x" width="800" height="513" alt="スーパー・キッド 小峯店" decoding="async" loading="lazy">
+                        <source type="image/avif" srcset="assets/img/top/location/location_superkid_574w.avif 574w, assets/img/top/location/location_superkid_861w.avif 861w, assets/img/top/location/location_superkid_1148w.avif 1148w" sizes="(max-width:1280px) 300px">
+                        <source type="image/webp" srcset="assets/img/top/location/location_superkid_574w.webp 574w, assets/img/top/location/location_superkid_861w.webp 861w, assets/img/top/location/location_superkid_1148w.webp 1148w" sizes="(max-width:1280px) 300px">
+                        <source type="image/jpeg" srcset="assets/img/top/location/location_superkid_574w.jpg 574w, assets/img/top/location/location_superkid_861w.jpg 861w, assets/img/top/location/location_superkid_1148w.jpg 1148w" sizes="(max-width:1280px) 300px">
+                        <img class="-superkid" src="assets/img/top/ocation/location_superkid_2x.jpg" width="800" height="469" alt="スーパー・キッド 小峯店" decoding="async" loading="lazy">
                       </picture>
                     </figure>
                     <div class="p-location__shop__texts">
@@ -1223,8 +1263,10 @@
                   <div class="swiper-slide p-location__swiper__slide">
                     <figure class="p-location__shop__img">
                       <picture>
-                        <source type="image/webp" srcset="assets/img/top/location/location_coinlaundry_sp.webp 1x, assets/img/top/location/location_coinlaundry_sp_2x.webp 2x" width="768" height="512" media="(max-width:767px)">
-                        <img class="-nikkori" src="assets/img/top/location/location_coinlaundry_pc.jpg" srcset="assets/img/top/location/location_coinlaundry_pc_2x.jpg 2x" width="800" height="513" alt="コインランドリーにっこり小峯店" decoding="async" loading="lazy">
+                        <source type="image/avif" srcset="assets/img/top/location/location_coinlaundry_574w.avif 574w, assets/img/top/location/location_coinlaundry_861w.avif 861w, assets/img/top/location/location_coinlaundry_1148w.avif 1148w" sizes="(max-width:1280px) 300px">
+                        <source type="image/webp" srcset="assets/img/top/location/location_coinlaundry_574w.webp 574w, assets/img/top/location/location_coinlaundry_861w.webp 861w, assets/img/top/location/location_coinlaundry_1148w.webp 1148w" sizes="(max-width:1280px) 300px">
+                        <source type="image/jpeg" srcset="assets/img/top/location/location_coinlaundry_574w.jpg 574w, assets/img/top/location/location_coinlaundry_861w.jpg 861w, assets/img/top/location/location_coinlaundry_1148w.jpg 1148w" sizes="(max-width:1280px) 300px">
+                        <img class="-nikkori" src="assets/img/top/ocation/location_coinlaundry_2x.jpg" width="800" height="469" alt="コインランドリーにっこり小峯店" decoding="async" loading="lazy">
                       </picture>
                     </figure>
                     <p class="p-location__shop__text">コインランドリーにっこり小峯店</p>
@@ -1233,8 +1275,10 @@
                   <div class="swiper-slide p-location__swiper__slide">
                     <figure class="p-location__shop__img">
                       <picture>
-                        <source type="image/webp" srcset="assets/img/top/location/location_lunaBurger_sp.webp 1x, assets/img/top/location/location_lunaBurger_sp_2x.webp 2x" width="768" height="512" media="(max-width:767px)">
-                        <img class="-lunaBurger" src="assets/img/top/location/location_lunaBurger_pc.jpg" srcset="assets/img/top/location/location_lunaBurger_pc_2x.jpg 2x" width="800" height="513" alt="Luna Burger" decoding="async" loading="lazy">
+                        <source type="image/avif" srcset="assets/img/top/location/location_lunaBurger_574w.avif 574w, assets/img/top/location/location_lunaBurger_861w.avif 861w, assets/img/top/location/location_lunaBurger_1148w.avif 1148w" sizes="(max-width:1280px) 300px">
+                        <source type="image/webp" srcset="assets/img/top/location/location_lunaBurger_574w.webp 574w, assets/img/top/location/location_lunaBurger_861w.webp 861w, assets/img/top/location/location_lunaBurger_1148w.webp 1148w" sizes="(max-width:1280px) 300px">
+                        <source type="image/jpeg" srcset="assets/img/top/location/location_lunaBurger_574w.jpg 574w, assets/img/top/location/location_lunaBurger_861w.jpg 861w, assets/img/top/location/location_lunaBurger_1148w.jpg 1148w" sizes="(max-width:1280px) 300px">
+                        <img class="-lunaBurger" src="assets/img/top/ocation/location__lunaBurger_2x.jpg" width="800" height="469" alt="Luna Burger" decoding="async" loading="lazy">
                       </picture>
                     </figure>
                     <div class="p-location__shop__texts">
@@ -1249,8 +1293,10 @@
                   <div class="swiper-slide p-location__swiper__slide">
                     <figure class="p-location__shop__img">
                       <picture>
-                        <source type="image/webp" srcset="assets/img/top/location/location_karaagetorimaru_sp.webp 1x, assets/img/top/location/location_karaagetorimaru_sp_2x.webp 2x" width="768" height="512" media="(max-width:767px)">
-                        <img class="-torimaru" src="assets/img/top/location/location_karaagetorimaru_pc.jpg" srcset="assets/img/top/location/location_karaagetorimaru_pc_2x.jpg 2x" width="800" height="513" alt="熊本からあげ とりまる。小峯店" decoding="async" loading="lazy">
+                        <source type="image/avif" srcset="assets/img/top/location/location_karaagetorimaru_574w.avif 574w, assets/img/top/location/location_karaagetorimaru_861w.avif 861w, assets/img/top/location/location_karaagetorimaru_1148w.avif 1148w" sizes="(max-width:1280px) 300px">
+                        <source type="image/webp" srcset="assets/img/top/location/location_karaagetorimaru_574w.webp 574w, assets/img/top/location/location_karaagetorimaru_861w.webp 861w, assets/img/top/location/location_karaagetorimaru_1148w.webp 1148w" sizes="(max-width:1280px) 300px">
+                        <source type="image/jpeg" srcset="assets/img/top/location/location_karaagetorimaru_574w.jpg 574w, assets/img/top/location/location_karaagetorimaru_861w.jpg 861w, assets/img/top/location/location_karaagetorimaru_1148w.jpg 1148w" sizes="(max-width:1280px) 300px">
+                        <img class="-torimaru" src="assets/img/top/ocation/location__karaagetorimaru_2x.jpg" width="800" height="469" alt="熊本からあげ とりまる。小峯店" decoding="async" loading="lazy">
                       </picture>
                     </figure>
                     <div class="p-location__shop__texts">
@@ -1265,8 +1311,10 @@
                   <div class="swiper-slide p-location__swiper__slide">
                     <figure class="p-location__shop__img">
                       <picture>
-                        <source type="image/webp" srcset="assets/img/top/location/location_asibi_sp.webp 1x, assets/img/top/location/location_asibi_sp_2x.webp 2x" width="768" height="512" media="(max-width:767px)">
-                        <img class="-ashibi" src="assets/img/top/location/location_asibi_pc.jpg" srcset="assets/img/top/location/location_asibi_pc_2x.jpg 2x" width="800" height="513" alt="居酒屋 馬酔木" decoding="async" loading="lazy">
+                        <source type="image/avif" srcset="assets/img/top/location/location_asibi_574w.avif 574w, assets/img/top/location/location_asibi_861w.avif 861w, assets/img/top/location/location_asibi_1148w.avif 1148w" sizes="(max-width:1280px) 300px">
+                        <source type="image/webp" srcset="assets/img/top/location/location_asibi_574w.webp 574w, assets/img/top/location/location_asibi_861w.webp 861w, assets/img/top/location/location_asibi_1148w.webp 1148w" sizes="(max-width:1280px) 300px">
+                        <source type="image/jpeg" srcset="assets/img/top/location/location_asibi_574w.jpg 574w, assets/img/top/location/location_asibi_861w.jpg 861w, assets/img/top/location/location_asibi_1148w.jpg 1148w" sizes="(max-width:1280px) 300px">
+                        <img class="-ashibi" src="assets/img/top/ocation/location_asibi_2x.jpg" width="800" height="469" alt="居酒屋 馬酔木" decoding="async" loading="lazy">
                       </picture>
                     </figure>
                     <p class="p-location__shop__text">居酒屋 馬酔木</p>
@@ -1275,8 +1323,10 @@
                   <div class="swiper-slide p-location__swiper__slide">
                     <figure class="p-location__shop__img">
                       <picture>
-                        <source type="image/webp" srcset="assets/img/top/location/location_momotaro_sp.webp 1x, assets/img/top/location/location_momotaro_sp_2x.webp 2x" width="768" height="512" media="(max-width:767px)">
-                        <img class="-momotaro" src="assets/img/top/location/location_momotaro_pc.jpg" srcset="assets/img/top/location/location_momotaro_pc_2x.jpg 2x" width="800" height="513" alt="居酒屋 桃太郎" decoding="async" loading="lazy">
+                        <source type="image/avif" srcset="assets/img/top/location/location_momotaro_574w.avif 574w, assets/img/top/location/location_momotaro_861w.avif 861w, assets/img/top/location/location_momotaro_1148w.avif 1148w" sizes="(max-width:1280px) 300px">
+                        <source type="image/webp" srcset="assets/img/top/location/location_momotaro_574w.webp 574w, assets/img/top/location/location_momotaro_861w.webp 861w, assets/img/top/location/location_momotaro_1148w.webp 1148w" sizes="(max-width:1280px) 300px">
+                        <source type="image/jpeg" srcset="assets/img/top/location/location_momotaro_574w.jpg 574w, assets/img/top/location/location_momotaro_861w.jpg 861w, assets/img/top/location/location_momotaro_1148w.jpg 1148w" sizes="(max-width:1280px) 300px">
+                        <img class="-momotaro" src="assets/img/top/ocation/location_momotaro_2x.jpg" width="800" height="469" alt="居酒屋 桃太郎" decoding="async" loading="lazy">
                       </picture>
                     </figure>
                     <p class="p-location__shop__text">居酒屋 桃太郎</p>
@@ -1285,8 +1335,10 @@
                   <div class="swiper-slide p-location__swiper__slide">
                     <figure class="p-location__shop__img">
                       <picture>
-                        <source type="image/webp" srcset="assets/img/top/location/location_berushe_sp.webp 1x, assets/img/top/location/location_berushe_sp_2x.webp 2x" width="768" height="509" media="(max-width:767px)">
-                        <img class="-berushe" src="assets/img/top/location/location_berushe_pc.jpg" srcset="assets/img/top/location/location_berushe_pc_2x.jpg 2x" width="800" height="513" alt="チーズケーキのベルジェ" decoding="async" loading="lazy">
+                        <source type="image/avif" srcset="assets/img/top/location/location_berushe_574w.avif 574w, assets/img/top/location/location_berushe_861w.avif 861w, assets/img/top/location/location_berushe_1148w.avif 1148w" sizes="(max-width:1280px) 300px">
+                        <source type="image/webp" srcset="assets/img/top/location/location_berushe_574w.webp 574w, assets/img/top/location/location_berushe_861w.webp 861w, assets/img/top/location/location_berushe_1148w.webp 1148w" sizes="(max-width:1280px) 300px">
+                        <source type="image/jpeg" srcset="assets/img/top/location/location_berushe_574w.jpg 574w, assets/img/top/location/location_berushe_861w.jpg 861w, assets/img/top/location/location_berushe_1148w.jpg 1148w" sizes="(max-width:1280px) 300px">
+                        <img class="-berushe" src="assets/img/top/ocation/location_berushe_2x.jpg" width="800" height="469" alt="チーズケーキのベルジェ" decoding="async" loading="lazy">
                       </picture>
                     </figure>
                     <div class="p-location__shop__texts">
@@ -1301,8 +1353,10 @@
                   <div class="swiper-slide p-location__swiper__slide">
                     <figure class="p-location__shop__img -hakatatorokaratei">
                       <picture>
-                        <source type="image/webp" srcset="assets/img/top/location/location_hakatatorokaratei_sp.webp 1x, assets/img/top/location/location_hakatatorokaratei_sp_2x.webp 2x" width="768" height="512" media="(max-width:767px)">
-                        <img class="-hakatatorokaratei" src="assets/img/top/location/location_hakatatorokaratei_pc.jpg" srcset="assets/img/top/location/location_hakatatorokaratei_pc_2x.jpg 2x" width="800" height="513" alt="博多 とよ唐亭" decoding="async" loading="lazy">
+                        <source type="image/avif" srcset="assets/img/top/location/location_hakatatorokaratei_574w.avif 574w, assets/img/top/location/location_hakatatorokaratei_861w.avif 861w, assets/img/top/location/location_hakatatorokaratei_1148w.avif 1148w" sizes="(max-width:1280px) 300px">
+                        <source type="image/webp" srcset="assets/img/top/location/location_hakatatorokaratei_574w.webp 574w, assets/img/top/location/location_hakatatorokaratei_861w.webp 861w, assets/img/top/location/location_hakatatorokaratei_1148w.webp 1148w" sizes="(max-width:1280px) 300px">
+                        <source type="image/jpeg" srcset="assets/img/top/location/location_hakatatorokaratei_574w.jpg 574w, assets/img/top/location/location_hakatatorokaratei_861w.jpg 861w, assets/img/top/location/location_hakatatorokaratei_1148w.jpg 1148w" sizes="(max-width:1280px) 300px">
+                        <img class="-hakatatorokaratei" src="assets/img/top/ocation/location_hakatatorokaratei_2x.jpg" width="800" height="469" alt="博多 とよ唐亭" decoding="async" loading="lazy">
                       </picture>
                     </figure>
                     <div class="p-location__shop__texts">
@@ -1317,8 +1371,10 @@
                   <div class="swiper-slide p-location__swiper__slide">
                     <figure class="p-location__shop__img">
                       <picture>
-                        <source type="image/webp" srcset="assets/img/top/location/location_doragonkitchen_sp.webp 1x, assets/img/top/location/location_doragonkitchen_sp_2x.webp 2x" width="768" height="513" media="(max-width:767px)">
-                        <img src="assets/img/top/location/location_doragonkitchen_pc.jpg" srcset="assets/img/top/location/location_doragonkitchen_pc_2x.jpg 2x" width="800" height="513" alt="ドラゴンキッチン 益城本店" decoding="async" loading="lazy">
+                        <source type="image/avif" srcset="assets/img/top/location/location_doragonkitchen_574w.avif 574w, assets/img/top/location/location_doragonkitchen_861w.avif 861w, assets/img/top/location/location_doragonkitchen_1148w.avif 1148w" sizes="(max-width:1280px) 300px">
+                        <source type="image/webp" srcset="assets/img/top/location/location_doragonkitchen_574w.webp 574w, assets/img/top/location/location_doragonkitchen_861w.webp 861w, assets/img/top/location/location_doragonkitchen_1148w.webp 1148w" sizes="(max-width:1280px) 300px">
+                        <source type="image/jpeg" srcset="assets/img/top/location/location_doragonkitchen_574w.jpg 574w, assets/img/top/location/location_doragonkitchen_861w.jpg 861w, assets/img/top/location/location_doragonkitchen_1148w.jpg 1148w" sizes="(max-width:1280px) 300px">
+                        <img src="assets/img/top/ocation/location_doragonkitchen_2x.jpg" width="800" height="469" alt="ドラゴンキッチン 益城本店" decoding="async" loading="lazy">
                       </picture>
                     </figure>
                     <div class="p-location__shop__texts">

@@ -173,8 +173,8 @@ module.exports = {
           noErrorOnMissing: true,
         },
         {
-          from: `${dir.src}/${dir.assets}/font`,
-          to: `${dir.assets}/font`,
+          from: `${dir.src}/${dir.assets}/fonts`,
+          to: `${dir.assets}/fonts`,
           noErrorOnMissing: true,
         },
         {

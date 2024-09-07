@@ -6,3 +6,92 @@
 $font-set-primary: "Zen Kaku Gothic Antique", sans-serif;
 $font-en: "Fira Sans", sans-serif;
 $font-number: "Noto Sans JP", sans-serif;
+
+@font-face {
+  font-family: "Zen Kaku Gothic Antique";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/assets/fonts/ZenKakuGothicAntique-Regular.woff2") format("woff2"),
+    url("/assets/fonts/ZenKakuGothicAntique-Regular.woff") format("woff"),
+    url("/assets/fonts/ZenKakuGothicAntique-Regular.eot") format("embedded-opentype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Zen Kaku Gothic Antique";
+  font-style: normal;
+  font-weight: 500;
+  src: url("/assets/fonts/ZenKakuGothicAntique-Medium.woff2") format("woff2"),
+    url("/assets/fonts/ZenKakuGothicAntique-Medium.woff") format("woff"),
+    url("/assets/fonts/ZenKakuGothicAntique-Medium.eot") format("embedded-opentype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Zen Kaku Gothic Antique";
+  font-style: normal;
+  font-weight: 700;
+  src: url("/assets/fonts/ZenKakuGothicAntique-Bold.woff2") format("woff2"),
+    url("/assets/fonts/ZenKakuGothicAntique-Bold.woff") format("woff"),
+    url("/assets/fonts/ZenKakuGothicAntique-Bold.eot") format("embedded-opentype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Fira Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/assets/fonts/FiraSans-Regular.woff2") format("woff2"),
+    url("/assets/fonts/FiraSans-Regular.woff") format("woff"),
+    url("/assets/fonts/FiraSans-Regular.eot") format("embedded-opentype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Fira Sans";
+  font-style: normal;
+  font-weight: 500;
+  src: url("/assets/fonts/FiraSans-Medium.woff2") format("woff2"),
+    url("/assets/fonts/FiraSans-Medium.woff") format("woff"),
+    url("/assets/fonts/FiraSans-Medium.eot") format("embedded-opentype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Fira Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("/assets/fonts/FiraSans-Bold.woff2") format("woff2"), url("/assets/fonts/FiraSans-Bold.woff") format("woff"),
+    url("/assets/fonts/FiraSans-Bold.eot") format("embedded-opentype");
+  font-display: swap;
+}
+
+// @font-face {
+//   font-family: "Noto Sans JP";
+//   font-style: normal;
+//   font-weight: 400;
+//   src: url("/assets/fonts/NotoSansJP-Regular-subset.woff2") format("woff2"),
+//     url("/assets/fonts/NotoSansJP-Regular-subset.woff") format("woff"),
+//     url("/assets/fonts/NotoSansJP-Regular-subset.eot") format("embedded-opentype");
+//   font-display: swap;
+// }
+
+@font-face {
+  font-family: "Noto Sans JP";
+  font-style: normal;
+  font-weight: 500;
+  src: url("/assets/fonts/NotoSansJP-Medium.woff2") format("woff2"),
+    url("/assets/fonts/NotoSansJP-Medium.woff") format("woff"),
+    url("/assets/fonts/NotoSansJP-Medium.eot") format("embedded-opentype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Sans JP";
+  font-style: normal;
+  font-weight: 700;
+  src: url("/assets/fonts/NotoSansJP-Bold.woff2") format("woff2"),
+    url("/assets/fonts/NotoSansJP-Bold.woff") format("woff"),
+    url("/assets/fonts/NotoSansJP-Bold.eot") format("embedded-opentype");
+  font-display: swap;
+}

@@ -15,7 +15,6 @@
     z-index: 2;
     right: clamp(14 / 16 * 1rem, 0.071rem + 4.02vw, 32 / 16 * 1rem); //view:320-768
     bottom: 16px;
-    animation: textFadeIn 1.5s cubic-bezier(0.27, -0.12, 0.58, 1) 2.5s forwards;
     opacity: 0;
     color: $base-color;
     writing-mode: vertical-rl;
@@ -98,6 +97,10 @@
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   opacity: 0;
+}
+
+.js-hero__body.fade-in {
+  animation: textFadeIn 1.5s cubic-bezier(0.27, -0.12, 0.58, 1) 1.7s forwards;
 }
 
 .p-hero__swiper {

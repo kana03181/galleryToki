@@ -104,11 +104,12 @@
   @include mq(lg) {
     aspect-ratio: 357 / 240;
   }
-}
 
-.p-room__facility__image img {
-  object-fit: cover;
-  height: 100%;
+  & img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }
 
 .p-swiper__wrapper {

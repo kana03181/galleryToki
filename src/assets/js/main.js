@@ -169,6 +169,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const hero = document.querySelector(".js-hero");
   const heroSlider = document.querySelector(".js-hero__swiper");
   const heroSlides = document.querySelectorAll(".js-hero__swiper__slide");
+  const heroText = document.querySelector(".js-hero__body");
 
   hero.style.animation = "heroFadeIn 3s cubic-bezier(0.27, -0.12, 0.58, 1) 0.8s forwards";
 
@@ -187,15 +188,6 @@ document.addEventListener("DOMContentLoaded", function () {
       breakpoints: breakpoints.hero,
       observer: true,
       observeParents: true,
-      // on:{
-      //   init:function(){
-      //     hero.style.opacity = "0";
-      //   },
-      //   imageReady:function(){
-      //     hero.style.transition = "opacity 0.5s";
-      //     hero.style.opacity = "1";
-      //   }
-      // }
     });
 
     heroSlides.forEach((slide) => {
@@ -209,6 +201,8 @@ document.addEventListener("DOMContentLoaded", function () {
     setTimeout(function () {
       heroSwiper.autoplay.start(); // 5秒後に自動再生を開始
     }, 5000);
+
+    heroText.classList.add("fade-in");
   }
 });
 
@@ -242,11 +236,10 @@ createSwiper(".p-location__swiper", {
   speed: 630,
   breakpoints: breakpoints.location,
   centeredSlides: true,
-  // slidesPerView: 1.15,
 
   navigation: {
-    nextEl: ".c-swiper__button__next",
-    prevEl: ".c-swiper__button__prev",
+    nextEl: ".c-swiper__button__next.-location",
+    prevEl: ".c-swiper__button__prev.-location",
   },
 
   pagination: {
