@@ -171,7 +171,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const heroSlides = document.querySelectorAll(".js-hero__swiper__slide");
   const heroText = document.querySelector(".js-hero__body");
 
-  hero.style.animation = "heroFadeIn 3s cubic-bezier(0.27, -0.12, 0.58, 1) 0.8s forwards";
+  if (hero) {
+    hero.style.animation = "heroFadeIn 3s cubic-bezier(0.27, -0.12, 0.58, 1) 0.8s forwards";
+  }
 
   if (heroSlider) {
     const heroSwiper = new Swiper(".js-hero__swiper", {
