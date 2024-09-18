@@ -36,6 +36,16 @@
 
       gtag('config', 'G-HTPXZH93YX');
     </script>
+    <script src="https://www.google.com/recaptcha/api.js?render=6LcBlkgqAAAAACjxCoPOZ3ls0Hq3EX3NUdP2B5yk"></script>
+    <script>
+      grecaptcha.ready(function () {
+        grecaptcha
+          .execute("6LcBlkgqAAAAACjxCoPOZ3ls0Hq3EX3NUdP2B5yk", { action: "homepage" })
+          .then(function (token) {
+            document.getElementById("recaptchaToken").value = token;
+          });
+      });
+    </script>
   </head>
   <body class="p-body">
     <header class="l-header js-header" data-fixed-header>
@@ -137,6 +147,7 @@
                 <p class="p-contact__form__item -privacyPolicy">
                   <label class="p-contact__form__inner -privacyPolicy">
                     <input type="checkbox" name="agree" id="agree" class="p-contact__form__checkbox" value="同意" required>
+                    <input type="hidden" id="recaptchaToken" name="googleReCaptchaToken" />
                     <span class="p-contact__form__text -privacyPolicy"><a href="privacyPolicy.html" target="_blank" class="p-contact__form__link">個人情報保護方針</a>に同意します</span>
                   </label>
                 </p>
